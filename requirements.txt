@@ -22,6 +22,7 @@ django-extensions==3.2.3
 gunicorn==20.1.0
 
 # Fuzzy Matching (choose one)
+fuzzywuzzy==0.18.0
 RapidFuzz==3.12.2
 python-Levenshtein==0.25.0  # Optional speedup for RapidFuzz
 
