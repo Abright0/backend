@@ -28,8 +28,9 @@ SECRET_KEY = 'django-insecure-ck$4%s+h=j@ll&4!&)*%oz2=)e-vp%dmd0-82a&98y=p!6bt6@
 DEBUG = True
 
 ALLOWED_HOSTS = ['*', '.up.railway.app']
+
 CORS_ALLOWED_ORIGINS = [
-    "https://frontend-production-953d.up.railway.app/",
+    "https://frontend-production-953d.up.railway.app",
 ]
 
 # Application definition
