@@ -105,9 +105,11 @@ MIDDLEWARE = [
 #    "http://127.0.0.1:3000",
 #]
 
-CORS_ALLOWED_ORIGINS = [
-    "https://frontend-production-953d.up.railway.app",
+CSRF_TRUSTED_ORIGINS = [
+    "https://backend-production-5f3d.up.railway.app",   # ✅ this is your backend origin
+    "https://frontend-production-953d.up.railway.app",  # ✅ your frontend origin
 ]
+
 
 CORS_ALLOW_CREDENTIALS = False  # If you need to send cookies
 
