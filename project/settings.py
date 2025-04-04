@@ -105,6 +105,10 @@ MIDDLEWARE = [
 #    "http://127.0.0.1:3000",
 #]
 
+CORS_ALLOWED_ORIGINS = [
+    "frontend-production-953d.up.railway.app",
+]
+
 CORS_ALLOW_CREDENTIALS = True  # If you need to send cookies
 
 # If you need to allow specific HTTP methods
