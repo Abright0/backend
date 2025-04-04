@@ -91,9 +91,9 @@ SIMPLE_JWT = {
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -109,11 +109,11 @@ CORS_ALLOWED_ORIGINS = [
     "https://frontend-production-953d.up.railway.app",
 ]
 
+CORS_ALLOW_CREDENTIALS = True  # If you need to send cookies
+
 CSRF_TRUSTED_ORIGINS = [
     "https://frontend-production-953d.up.railway.app",
 ]
-
-CORS_ALLOW_CREDENTIALS = True  # If you need to send cookies
 
 # If you need to allow specific HTTP methods
 CORS_ALLOW_METHODS = [
