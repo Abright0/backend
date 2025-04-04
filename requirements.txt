@@ -6,22 +6,24 @@ sqlparse==0.5.3
 # REST Framework & JWT
 djangorestframework==3.15.2
 djangorestframework-simplejwt==5.5.0
-PyJWT==2.9.0  # SimpleJWT dependency
+PyJWT==2.7.0  # Pinned to work with simplejwt 5.5.0
 
 # Database
-psycopg2-binary==2.9.9  # PostgreSQL adapter
+psycopg2-binary==2.9.9
 
 # API Utilities
-django-filter==25.1  # Filtering for DRF
-django-cors-headers==4.7.0  # CORS support
+django-filter==25.1
+django-cors-headers==4.3.1  # Corrected version
 
-# Development & Debugging (optional)
-django-extensions==3.2.3  # Useful for runserver_plus, shell_plus
-gunicorn==20.1.0  # Production WSGI server
+# Development & Debugging
+django-extensions==3.2.3
 
-# Fuzzy Matching (if needed)
-RapidFuzz==3.12.2  # Faster alternative to fuzzywuzzy
-python-Levenshtein==0.27.1  # Optional speedup for RapidFuzz
+# Production Server
+gunicorn==20.1.0
 
-# Security & Linting (recommended)
-typing_extensions==4.12.2  # Backward-compatible type hints
+# Fuzzy Matching (choose one)
+RapidFuzz==3.12.2
+python-Levenshtein==0.25.0  # Optional speedup for RapidFuzz
+
+# Type Support
+typing_extensions==4.12.2

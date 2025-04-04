@@ -3,13 +3,13 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
-from .accounts.views import UserViewSet
-from .stores.views import StoreViewSet
+from api.accounts.views import UserViewSet
+from api.stores.views import StoreViewSet
 from api.products.views import ProductListCreate, ProductImportView, SearchProductView
 from api.orders.views import OrderViewSet
 from api.assignments.views import AssignmentViewSet
 
-from .views import LogoutView
+from api.views import LogoutView
 
 from django.conf import settings
 from django.conf.urls.static import static
