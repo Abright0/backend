@@ -117,7 +117,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://frontend-production-953d.up.railway.app",
 ]
 
-CORS_ALLOW_CREDENTIALS = False  # If you need to send cookies
+CORS_ALLOW_CREDENTIALS = True  # If you need to send cookies
 
 # If you need to allow specific HTTP methods
 CORS_ALLOW_METHODS = [
