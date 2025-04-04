@@ -106,7 +106,7 @@ MIDDLEWARE = [
 #]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://frontend-production-953d.up.railway.app/",
+    "https://frontend-production-953d.up.railway.app",
 ]
 
 CORS_ALLOW_CREDENTIALS = True  # If you need to send cookies
