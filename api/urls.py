@@ -1,3 +1,4 @@
+# backend/api/urls.py
 from django.urls import path, include
 
 from rest_framework.routers import DefaultRouter
@@ -25,14 +26,14 @@ router.register(r'assignments', AssignmentViewSet)
 # API URL configuration
 urlpatterns = [
     path('', include(router.urls)),
-    path('api/login/', TokenObtainPairView.as_view()),
-    path('api/token/refresh/', TokenRefreshView.as_view()),
-    path('api/logout/', LogoutView.as_view()),
+    path('login/', TokenObtainPairView.as_view()),
+    path('token/refresh/', TokenRefreshView.as_view()),
+    path('logout/', LogoutView.as_view()),
     # DELETE LATER
     path('products/', ProductListCreate.as_view(), name='product-list-create'),
     path('import-products/', ProductImportView.as_view(), name="import-products"),
     path('search-product/', SearchProductView.as_view(), name="search-product"),
-    path(r'api/users/me/', UserViewSet.as_view({'get':'me'})),
-    path(r'api/users/me/stores/', UserViewSet.as_view({'get':'my_stores'})),
+    path('users/me/', UserViewSet.as_view({'get':'me'})),
+    path('users/me/stores/', UserViewSet.as_view({'get':'my_stores'})),
     ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
