@@ -25,9 +25,9 @@ router.register(r'assignments', AssignmentViewSet)
 # API URL configuration
 urlpatterns = [
     path('', include(router.urls)),
-    path('login/', TokenObtainPairView.as_view()),
-    path('token/refresh/', TokenRefreshView.as_view()),
-    path('logout/', LogoutView.as_view()),
+    path('api/login/', TokenObtainPairView.as_view()),
+    path('api/token/refresh/', TokenRefreshView.as_view()),
+    path('api/logout/', LogoutView.as_view()),
     # DELETE LATER
     path('products/', ProductListCreate.as_view(), name='product-list-create'),
     path('import-products/', ProductImportView.as_view(), name="import-products"),
