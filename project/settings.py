@@ -108,16 +108,12 @@ MIDDLEWARE = [
 #]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://backend-production-5f3d.up.railway.app",   # ✅ this is your backend origin
-    "https://frontend-production-953d.up.railway.app",  # ✅ your frontend origin
+    "https://backend-production-5f3d.up.railway.app",   
+    "https://frontend-production-953d.up.railway.app",
 ]
 
 
 CORS_ALLOW_CREDENTIALS = False  # If you need to send cookies
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://frontend-production-953d.up.railway.app",
-]
 
 # If you need to allow specific HTTP methods
 CORS_ALLOW_METHODS = [
