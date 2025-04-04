@@ -34,6 +34,10 @@ CORS_ALLOWED_ORIGINS = [
     "https://backend-production-5f3d.up.railway.app"
 ]
 
+
+STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -95,11 +99,12 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 #CORS_ALLOWED_ORIGINS = [
@@ -111,7 +116,6 @@ CSRF_TRUSTED_ORIGINS = [
     "https://backend-production-5f3d.up.railway.app",   
     "https://frontend-production-953d.up.railway.app",
 ]
-
 
 CORS_ALLOW_CREDENTIALS = False  # If you need to send cookies
 
@@ -222,7 +226,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

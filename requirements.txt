@@ -28,3 +28,6 @@ python-Levenshtein==0.25.0  # Optional speedup for RapidFuzz
 
 # Type Support
 typing_extensions==4.12.2
+
+
+whitenoise>=6.0
