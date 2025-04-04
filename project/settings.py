@@ -29,7 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*', '.up.railway.app']
 CORS_ALLOWED_ORIGINS = [
-    "https://fullstack-production-7ab8.up.railway.app",
+    "https://frontend-production-953d.up.railway.app/",
 ]
 
 # Application definition
@@ -106,6 +106,10 @@ MIDDLEWARE = [
 #]
 
 CORS_ALLOWED_ORIGINS = [
+    "https://frontend-production-953d.up.railway.app",
+]
+
+CSRF_TRUSTED_ORIGINS = [
     "https://frontend-production-953d.up.railway.app",
 ]
 
