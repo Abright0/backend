@@ -32,8 +32,8 @@ urlpatterns = [
     path('products/', ProductListCreate.as_view(), name='product-list-create'),
     path('import-products/', ProductImportView.as_view(), name="import-products"),
     path('search-product/', SearchProductView.as_view(), name="search-product"),
-    path('api/users/me/', UserViewSet.as_view({'get':'me'})),
-    path('api/users/me/stores', UserViewSet.as_view({'get':'my_stores'})),
+    path(r'api/users/me/', UserViewSet.as_view({'get':'me'})),
+    path(r'api/users/me/stores', UserViewSet.as_view({'get':'my_stores'})),
     ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
