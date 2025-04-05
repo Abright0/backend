@@ -1,33 +1,16 @@
-# Core Django & ASGI
-Django==5.1.7
 asgiref==3.8.1
-sqlparse==0.5.3
-
-# REST Framework & JWT
-djangorestframework==3.15.2
-djangorestframework-simplejwt==5.5.0
-PyJWT==2.7.0  # Pinned to work with simplejwt 5.5.0
-
-# Database
-psycopg2-binary==2.9.9
-
-# API Utilities
-django-filter==25.1
-django-cors-headers==4.3.1  # Corrected version
-
-# Development & Debugging
+Django==5.1.7
+django-cors-headers==4.7.0
 django-extensions==3.2.3
-
-# Production Server
-gunicorn==20.1.0
-
-# Fuzzy Matching (choose one)
+django-filter==25.1
+djangorestframework==3.15.2
+djangorestframework_simplejwt==5.5.0
 fuzzywuzzy==0.18.0
+Levenshtein==0.27.1
+psycopg2-binary==2.9.10
+PyJWT==2.9.0
+python-Levenshtein==0.27.1
 RapidFuzz==3.12.2
-python-Levenshtein==0.25.0  # Optional speedup for RapidFuzz
-
-# Type Support
+sqlparse==0.5.3
 typing_extensions==4.12.2
-
-
-whitenoise>=6.0
+whitenoise==6.9.0

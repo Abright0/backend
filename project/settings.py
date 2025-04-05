@@ -31,7 +31,8 @@ ALLOWED_HOSTS = ['*', '.up.railway.app']
 
 CORS_ALLOWED_ORIGINS = [
     "https://frontend-production-953d.up.railway.app",
-    "https://backend-production-5f3d.up.railway.app"
+    "https://backend-production-5f3d.up.railway.app",
+    "http://localhost:3000"
 ]
 
 
@@ -163,19 +164,31 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'project.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('PGDATABASE'),
-        'USER': os.environ.get('PGUSER'),
-        'PASSWORD': os.environ.get('PGPASSWORD'),
-        'HOST': os.environ.get('PGHOST'),
-        'PORT': os.environ.get('PGPORT'),
+# DATABASE
+if os.environ.get('RAILWAY_ENVIRONMENT') == 'production':
+    # PostgreSQL configuration (Production on Railway)
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ.get('PGDATABASE'),
+            'USER': os.environ.get('PGUSER'),
+            'PASSWORD': os.environ.get('PGPASSWORD'),
+            'HOST': os.environ.get('PGHOST'),
+            'PORT': os.environ.get('PGPORT'),
+        }
     }
-}
+    SITE_URL = 'https://backend-production-xyz.up.railway.app'
+else:
+    # SQLite configuration (Local Development)
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+    SITE_URL = 'http://localhost:8000'
+
 
 #DATABASES = {
 #    'default': {

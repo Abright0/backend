@@ -3486,3 +3486,180 @@ INFO 2025-04-03 23:58:27,847 autoreload 596510 140693424652288 Watching for file
 INFO 2025-04-04 00:57:32,370 autoreload 596510 140693424652288 /home/abright/Work/WebApp/backend/project/settings.py changed, reloading.
 INFO 2025-04-04 00:57:32,595 autoreload 603016 139950923493376 Watching for file changes with StatReloader
 INFO 2025-04-04 01:01:53,050 autoreload 603016 139950923493376 /home/abright/Work/WebApp/backend/project/settings.py changed, reloading.
+INFO 2025-04-05 17:21:07,738 autoreload 677085 140510214684672 Watching for file changes with StatReloader
+INFO 2025-04-05 17:22:51,672 autoreload 677215 140110915612672 Watching for file changes with StatReloader
+INFO 2025-04-05 17:26:23,162 autoreload 677657 140592285700096 Watching for file changes with StatReloader
+INFO 2025-04-05 17:28:39,763 autoreload 677774 140070413582336 Watching for file changes with StatReloader
+INFO 2025-04-05 17:29:50,528 autoreload 677933 140524715003904 Watching for file changes with StatReloader
+INFO 2025-04-05 17:30:04,718 autoreload 677964 140636348878848 Watching for file changes with StatReloader
+INFO 2025-04-05 17:34:49,021 autoreload 678297 139748594098176 Watching for file changes with StatReloader
+INFO 2025-04-05 17:35:34,786 autoreload 678341 139671215341568 Watching for file changes with StatReloader
+INFO 2025-04-05 17:35:42,414 autoreload 678347 139809530494976 Watching for file changes with StatReloader
+INFO 2025-04-05 17:45:56,759 autoreload 678347 139809530494976 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-05 17:45:57,429 autoreload 678815 140124087042048 Watching for file changes with StatReloader
+INFO 2025-04-05 17:46:02,778 autoreload 678815 140124087042048 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-05 17:46:03,511 autoreload 678858 140689715679232 Watching for file changes with StatReloader
+INFO 2025-04-05 17:46:27,077 autoreload 678956 140379180855296 Watching for file changes with StatReloader
+INFO 2025-04-05 17:47:04,624 autoreload 679045 139829388107776 Watching for file changes with StatReloader
+INFO 2025-04-05 17:47:49,805 autoreload 679077 140266618687488 Watching for file changes with StatReloader
+INFO 2025-04-05 17:49:03,393 autoreload 679129 140343902842880 Watching for file changes with StatReloader
+INFO 2025-04-05 17:49:14,701 autoreload 679133 139855855468544 Watching for file changes with StatReloader
+WARNING 2025-04-05 17:49:23,080 log 679133 139855762687552 Not Found: /orders
+WARNING 2025-04-05 17:49:23,081 basehttp 679133 139855762687552 "GET /orders HTTP/1.1" 404 2510
+WARNING 2025-04-05 17:49:27,216 log 679133 139855762687552 Unauthorized: /api/orders/
+WARNING 2025-04-05 17:49:27,217 basehttp 679133 139855762687552 "GET /api/orders/ HTTP/1.1" 401 5159
+INFO 2025-04-05 17:49:27,248 basehttp 679133 139855754294848 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-04-05 17:49:27,248 basehttp 679133 139855535269440 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-04-05 17:49:27,249 basehttp 679133 139855518484032 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-04-05 17:49:27,250 basehttp 679133 139855526876736 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-04-05 17:49:27,250 basehttp 679133 139855543662144 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-04-05 17:49:27,250 basehttp 679133 139855762687552 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-04-05 17:49:27,254 basehttp 679133 139855535269440 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-04-05 17:49:27,255 basehttp 679133 139855543662144 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-04-05 17:49:27,256 basehttp 679133 139855754294848 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-04-05 17:49:27,256 basehttp 679133 139855526876736 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-04-05 17:49:27,256 basehttp 679133 139855762687552 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-04-05 17:49:27,307 basehttp 679133 139855762687552 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+WARNING 2025-04-05 17:49:30,082 log 679133 139855762687552 Not Found: /api//
+WARNING 2025-04-05 17:49:30,082 basehttp 679133 139855762687552 "GET /api// HTTP/1.1" 404 21094
+WARNING 2025-04-05 17:49:31,801 log 679133 139855762687552 Unauthorized: /api/
+WARNING 2025-04-05 17:49:31,801 basehttp 679133 139855762687552 "GET /api/ HTTP/1.1" 401 5009
+ERROR 2025-04-05 17:49:34,442 log 679133 139855762687552 Internal Server Error: /schema/
+Traceback (most recent call last):
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/schemas/views.py", line 48, in handle_exception
+    return super().handle_exception(exc)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 406, in initial
+    neg = self.perform_content_negotiation(request)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 306, in perform_content_negotiation
+    renderers = self.get_renderers()
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 260, in get_renderers
+    return [renderer() for renderer in self.renderer_classes]
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 260, in <listcomp>
+    return [renderer() for renderer in self.renderer_classes]
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 1059, in __init__
+    assert yaml, 'Using OpenAPIRenderer, but `pyyaml` is not installed.'
+AssertionError: Using OpenAPIRenderer, but `pyyaml` is not installed.
+ERROR 2025-04-05 17:49:34,443 basehttp 679133 139855762687552 "GET /schema/ HTTP/1.1" 500 116903
+INFO 2025-04-05 17:49:36,065 basehttp 679133 139855762687552 "GET /schema HTTP/1.1" 301 0
+ERROR 2025-04-05 17:49:36,104 log 679133 139855543662144 Internal Server Error: /schema/
+Traceback (most recent call last):
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/schemas/views.py", line 48, in handle_exception
+    return super().handle_exception(exc)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 406, in initial
+    neg = self.perform_content_negotiation(request)
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 306, in perform_content_negotiation
+    renderers = self.get_renderers()
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 260, in get_renderers
+    return [renderer() for renderer in self.renderer_classes]
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 260, in <listcomp>
+    return [renderer() for renderer in self.renderer_classes]
+  File "/home/abright/Work/WebApp/backend/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 1059, in __init__
+    assert yaml, 'Using OpenAPIRenderer, but `pyyaml` is not installed.'
+AssertionError: Using OpenAPIRenderer, but `pyyaml` is not installed.
+ERROR 2025-04-05 17:49:36,104 basehttp 679133 139855543662144 "GET /schema/ HTTP/1.1" 500 116903
+INFO 2025-04-05 17:50:14,341 basehttp 679133 139855543662144 "GET /admin HTTP/1.1" 301 0
+INFO 2025-04-05 17:50:14,357 basehttp 679133 139855754294848 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-04-05 17:50:14,376 basehttp 679133 139855754294848 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4159
+INFO 2025-04-05 17:50:14,444 basehttp 679133 139855754294848 "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO 2025-04-05 17:50:14,446 basehttp 679133 139855526876736 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO 2025-04-05 17:50:14,446 basehttp 679133 139855535269440 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-04-05 17:50:14,450 basehttp 679133 139855526876736 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-04-05 17:50:14,451 basehttp 679133 139855518484032 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-04-05 17:50:14,451 basehttp 679133 139855543662144 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO 2025-04-05 17:50:14,488 basehttp 679133 139855754294848 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-04-05 17:50:18,917 basehttp 679133 139855754294848 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-04-05 17:50:18,933 basehttp 679133 139855754294848 "GET /admin/ HTTP/1.1" 200 8073
+INFO 2025-04-05 17:50:19,011 basehttp 679133 139855754294848 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-04-05 17:50:19,072 basehttp 679133 139855754294848 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-04-05 17:50:19,074 basehttp 679133 139855526876736 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-04-05 17:50:21,827 basehttp 679133 139855754294848 "GET /admin/accounts/user/ HTTP/1.1" 200 14134
+INFO 2025-04-05 17:50:21,842 basehttp 679133 139855754294848 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2025-04-05 17:50:21,847 basehttp 679133 139855543662144 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-04-05 17:50:21,850 basehttp 679133 139855518484032 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-04-05 17:50:21,850 basehttp 679133 139855543662144 "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2025-04-05 17:50:21,850 basehttp 679133 139855762687552 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+INFO 2025-04-05 17:50:21,851 basehttp 679133 139855535269440 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-04-05 17:50:21,855 basehttp 679133 139855762687552 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-04-05 17:50:21,855 basehttp 679133 139855526876736 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-05 17:50:21,856 basehttp 679133 139855518484032 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-04-05 17:50:21,857 basehttp 679133 139855526876736 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-04-05 17:50:21,858 basehttp 679133 139855535269440 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-04-05 17:50:21,890 basehttp 679133 139855754294848 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-04-05 17:50:21,907 basehttp 679133 139855535269440 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-04-05 17:50:21,922 basehttp 679133 139855526876736 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-04-05 17:50:21,922 basehttp 679133 139855518484032 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-04-05 17:50:21,922 basehttp 679133 139855762687552 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-04-05 17:50:31,149 basehttp 679133 139855762687552 "GET /admin/accounts/user/ HTTP/1.1" 200 14134
+INFO 2025-04-05 17:50:31,184 basehttp 679133 139855762687552 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-05 17:50:33,193 basehttp 679133 139855762687552 "GET /admin/accounts/user/ HTTP/1.1" 200 14134
+INFO 2025-04-05 17:50:33,212 basehttp 679133 139855762687552 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-05 17:50:34,895 basehttp 679133 139855762687552 "GET /admin/accounts/user/1/change/ HTTP/1.1" 200 28184
+INFO 2025-04-05 17:50:34,910 basehttp 679133 139855762687552 "GET /static/admin/css/forms.css HTTP/1.1" 200 8794
+INFO 2025-04-05 17:50:34,917 basehttp 679133 139855518484032 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-05 17:50:34,919 basehttp 679133 139855754294848 "GET /static/admin/js/SelectBox.js HTTP/1.1" 200 4530
+INFO 2025-04-05 17:50:34,920 basehttp 679133 139855526876736 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-04-05 17:50:34,920 basehttp 679133 139855535269440 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-04-05 17:50:34,921 basehttp 679133 139855543662144 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 200 15502
+INFO 2025-04-05 17:50:34,921 basehttp 679133 139855518484032 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-04-05 17:50:34,969 basehttp 679133 139855762687552 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-04-05 17:50:34,970 basehttp 679133 139855543662144 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+INFO 2025-04-05 17:50:35,033 basehttp 679133 139855762687552 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 200 3291
+INFO 2025-04-05 17:50:35,033 basehttp 679133 139855518484032 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-04-05 17:50:35,033 basehttp 679133 139855543662144 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-04-05 17:50:38,662 basehttp 679133 139855762687552 "POST /admin/accounts/user/1/change/ HTTP/1.1" 302 0
+INFO 2025-04-05 17:50:38,680 basehttp 679133 139855762687552 "GET /admin/accounts/user/ HTTP/1.1" 200 14331
+INFO 2025-04-05 17:50:38,784 basehttp 679133 139855762687552 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-05 17:55:17,715 autoreload 679133 139855855468544 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-05 17:55:18,499 autoreload 679938 140411950239744 Watching for file changes with StatReloader
+INFO 2025-04-05 18:03:50,512 basehttp 679938 140411788985920 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-04-05 18:04:36,785 autoreload 679938 140411950239744 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-05 18:04:37,519 autoreload 680307 140556304142336 Watching for file changes with StatReloader
+INFO 2025-04-05 18:06:28,965 autoreload 680307 140556304142336 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-05 18:06:29,702 autoreload 680363 140470585794560 Watching for file changes with StatReloader
+INFO 2025-04-05 18:06:33,343 autoreload 680385 140553546813440 Watching for file changes with StatReloader
+INFO 2025-04-05 18:06:37,708 basehttp 680385 140553384494656 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-04-05 18:06:38,166 basehttp 680385 140553384494656 "POST /api/login/ HTTP/1.1" 200 483
+INFO 2025-04-05 18:06:38,212 basehttp 680385 140553384494656 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-04-05 18:06:38,264 basehttp 680385 140553384494656 "GET /api/users/me/ HTTP/1.1" 200 265
+INFO 2025-04-05 18:06:38,320 basehttp 680385 140553384494656 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-04-05 18:06:38,389 basehttp 680385 140553384494656 "GET /api/users/1/stores/ HTTP/1.1" 200 521
+INFO 2025-04-05 18:06:38,454 basehttp 680385 140553384494656 "OPTIONS /api/users/1/ HTTP/1.1" 200 0
+INFO 2025-04-05 18:06:38,508 basehttp 680385 140553384494656 "GET /api/users/1/ HTTP/1.1" 200 265
+INFO 2025-04-05 18:06:45,758 basehttp 680385 140553384494656 "OPTIONS /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-04-05 18:06:45,769 basehttp 680385 140553376101952 "GET /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 52
+INFO 2025-04-05 18:06:48,847 basehttp 680385 140553384494656 "OPTIONS /api/users/ HTTP/1.1" 200 0
+INFO 2025-04-05 18:06:48,854 basehttp 680385 140553376101952 "GET /api/users/ HTTP/1.1" 200 317
+INFO 2025-04-05 18:06:48,860 basehttp 680385 140553384494656 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+INFO 2025-04-05 18:06:48,909 basehttp 680385 140553376101952 "GET /api/users/email_verification_status/ HTTP/1.1" 200 11
