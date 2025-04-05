@@ -16,7 +16,7 @@ from api.stores.serializers import StoreSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
+    queryset = User.objects.order_by('id')  # or any consistent field like 'email', 'username'
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated]
 

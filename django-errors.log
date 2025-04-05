@@ -3664,3 +3664,17 @@ INFO 2025-04-05 18:06:48,854 basehttp 680385 140553376101952 "GET /api/users/ HT
 INFO 2025-04-05 18:06:48,860 basehttp 680385 140553384494656 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
 INFO 2025-04-05 18:06:48,909 basehttp 680385 140553376101952 "GET /api/users/email_verification_status/ HTTP/1.1" 200 11
 INFO 2025-04-05 18:21:11,145 autoreload 682206 140469961367552 Watching for file changes with StatReloader
+INFO 2025-04-05 18:22:59,516 autoreload 682206 140469961367552 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-05 18:23:00,227 autoreload 682632 140340686553088 Watching for file changes with StatReloader
+INFO 2025-04-05 18:23:09,661 autoreload 682632 140340686553088 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-05 18:23:10,356 autoreload 682653 139725605699584 Watching for file changes with StatReloader
+INFO 2025-04-05 18:38:46,445 autoreload 682653 139725605699584 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-05 18:38:47,157 autoreload 682866 140175240347648 Watching for file changes with StatReloader
+INFO 2025-04-05 18:38:57,530 autoreload 682866 140175240347648 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-05 18:38:58,225 autoreload 682889 140014079303680 Watching for file changes with StatReloader
+INFO 2025-04-05 18:38:59,454 autoreload 682889 140014079303680 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-05 18:39:00,150 autoreload 682911 140625155477504 Watching for file changes with StatReloader
+INFO 2025-04-05 18:39:03,476 autoreload 682911 140625155477504 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-05 18:39:04,214 autoreload 682931 140651436232704 Watching for file changes with StatReloader
+INFO 2025-04-05 18:39:08,492 autoreload 682931 140651436232704 /home/abright/Work/FarmFreight/backend/api/stores/serializers.py changed, reloading.
+INFO 2025-04-05 18:39:09,196 autoreload 683024 140550964465664 Watching for file changes with StatReloader
