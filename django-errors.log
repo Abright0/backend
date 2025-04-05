@@ -3663,3 +3663,4 @@ INFO 2025-04-05 18:06:48,847 basehttp 680385 140553384494656 "OPTIONS /api/users
 INFO 2025-04-05 18:06:48,854 basehttp 680385 140553376101952 "GET /api/users/ HTTP/1.1" 200 317
 INFO 2025-04-05 18:06:48,860 basehttp 680385 140553384494656 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
 INFO 2025-04-05 18:06:48,909 basehttp 680385 140553376101952 "GET /api/users/email_verification_status/ HTTP/1.1" 200 11
+INFO 2025-04-05 18:21:11,145 autoreload 682206 140469961367552 Watching for file changes with StatReloader
