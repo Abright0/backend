@@ -21,8 +21,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 GS_BUCKET_NAME = 'farm-freight'
 # Define the path to your service account key file
-GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, '/home/abright/Desktop/KEYS/fresh-fusion-456617-s8-e919b86cfbd8.json')
 
+# Check if using environment variable or file path
+if 'GOOGLE_CREDENTIALS_JSON' in os.environ:
+    # Create credentials from environment variable
+    service_account_info = json.loads(os.environ['GOOGLE_CREDENTIALS_JSON'])
+    GS_CREDENTIALS = service_account.Credentials.from_service_account_info(service_account_info)
+else:
+    # Fallback to file path (for local development)
+    GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, 'path/to/credentials.json')
+    GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
+
+    
 # Create credentials object
 GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
 
