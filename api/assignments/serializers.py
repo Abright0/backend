@@ -1,47 +1,73 @@
+# api/assignments/serializers.py
 from rest_framework import serializers
-from accounts.models import User
-from orders.models import Order
-from assignments.models import Assignment
+from assignments.models import DeliveryAttempt, ScheduledItem, DeliveryPhoto
+from assignments.utils import generate_signed_url
 
+class ScheduledItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ScheduledItem
+        fields = '__all__'
 
-class AssignmentSerializer(serializers.ModelSerializer):
-    drivers = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), many=True)
-    previous_assignments = serializers.ListField(child=serializers.DictField(), read_only=True)
+class DeliveryAttemptSerializer(serializers.ModelSerializer):
+    scheduled_items = ScheduledItemSerializer(many=True, read_only=True)
 
     class Meta:
-        model = Assignment
-        fields = ['id', 'order', 'drivers', 'status', 'assigned_delivery_date', 'assigned_delivery_time', 'previous_assignments']
-    
-    def create(self, validated_data):
-        drivers_data = validated_data.pop('drivers', [])
-        assignment = Assignment.objects.create(**validated_data)
-        assignment.drivers.set(drivers_data)
-        assignment.save()
-        
-        assignment.add_to_history(
-            status=assignment.status,
-            delivery_date=assignment.assigned_delivery_date,
-            delivery_time=assignment.assigned_delivery_time,
-            result="Assignment created",
-            drivers=assignment.drivers.all()
-        )
-        return assignment
+        model = DeliveryAttempt
+        fields = '__all__'
 
     def update(self, instance, validated_data):
-        drivers_data = validated_data.pop('drivers', None)
-        if drivers_data is not None:
-            instance.drivers.set(drivers_data) # updates the drivers
+        # Capture status before updating
+        previous_status = instance.status
 
+        # Update fields
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
-
         instance.save()
 
-        instance.add_to_history(
-            status=instance.status,
-            delivery_date=instance.assigned_delivery_date,
-            delivery_time=instance.assigned_delivery_time,
-            result="Assignment updated",
-            drivers=instance.drivers.all()
-        )
+        # Trigger message only when ready, and not yet sent
+        if (
+            instance.status == 'en_route' and
+            instance.mins_to_arrival and
+            instance.miles_to_arrival and
+            not instance.arrival_sms_sent
+        ):
+            self.send_en_route_sms(instance)
+            instance.arrival_sms_sent = True
+            instance.save(update_fields=['arrival_sms_sent'])
+
         return instance
+
+
+    def send_en_route_sms(self, attempt):
+        order = attempt.order
+        store = order.store  # make sure order has a FK to Store
+        phone_number = order.customer.phone_number
+
+        context = {
+            "customer_name": order.customer.name,
+            "order_id": order.invoice_num,
+            "mins_to_arrival": attempt.mins_to_arrival,
+            "miles_to_arrival": attempt.miles_to_arrival,
+            "phone_number": phone_number,
+        }
+
+        trigger_message("driver_en_route", context, store)
+
+class DeliveryPhotoSerializer(serializers.ModelSerializer):
+    signed_url = serializers.SerializerMethodField()
+
+    class Meta:
+        model = DeliveryPhoto
+        fields = ['id', 'caption', 'signed_url']
+
+    def get_signed_url(self, obj):
+        return generate_signed_url(obj.image.name)
+
+
+class DeliveryAttemptSerializer(serializers.ModelSerializer):
+    scheduled_items = ScheduledItemSerializer(many=True, read_only=True)
+    photos = DeliveryPhotoSerializer(many=True, read_only=True)  # <-- Add this line
+
+    class Meta:
+        model = DeliveryAttempt
+        fields = '__all__'

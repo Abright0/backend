@@ -1,46 +1,77 @@
+# backend/assignments/models.py
 from django.db import models
 from accounts.models import User
-from orders.models import Order
+from orders.models import Order, OrderItem
 
-from datetime import date, time
-
-class Assignment(models.Model):
-    ORDER_STATUS_CHOICES = [
+class DeliveryAttempt(models.Model):
+    STATUS_CHOICES = [
         ('order_placed', 'Order Placed'),
         ('accepted_by_driver', 'Accepted by Driver(s)'),
         ('en_route', 'En Route'),
         ('complete', 'Complete'),
         ('misdelivery', 'Misdelivery'),
-        ('redelivery_assigned', 'Redelivery Assigned'),
-        ('redelivery_in_progress', 'Redelivery In Progress'),
-        ('redelivery_complete', 'Redelivery Complete'),
+        ('rescheduled','Rescheduled'),
         ('canceled', 'Canceled'),
-    ]  
-    
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='assignments')
-    drivers = models.ManyToManyField(User, related_name='assigned_orders')
-    status = models.CharField(max_length=30, choices=ORDER_STATUS_CHOICES, default='order_placed')
-    assigned_delivery_date = models.DateField()
-    assigned_delivery_time = models.TimeField()
-    previous_assignments = models.JSONField(default=list)  # Store history as a list of dictionaries
+    ]
+    status_changed_at = models.DateTimeField(auto_now=True)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='delivery_attempts')
+    drivers = models.ManyToManyField(User, related_name='drivers')
+    mins_to_arrival = models.TextField(blank=True, null=True)
+    miles_to_arrival = models.TextField(blank=True, null=True)
+    status = models.CharField(max_length=30, choices=STATUS_CHOICES)
+    delivery_date = models.DateField()
+    delivery_time = models.TimeField()
+    result = models.TextField(blank=True, null=True)  # e.g., 'no one at address'
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    #def mark_item_issue(self, order_item, issue):
+    #    attempted = self.attempted_items.filter(order_item=order_item).first()
+    #    if attempted:
+    #        attempted.issue = issue
+    #        attempted.save()
 
     def __str__(self):
-        return f"Assignment for Order {self.order.id} - Status: {self.get_status_display()}"
-    
-    def add_to_history(self, status, delivery_date, delivery_time, result, drivers):
-            history_entry = {
-                'status': status,
-                'delivery_date': delivery_date.isoformat() if isinstance(delivery_date, date) else str(delivery_date),
-                'delivery_time': delivery_time.strftime('%H:%M:%S') if isinstance(delivery_time, time) else str(delivery_time),
-                'result': result,
-                'drivers': [driver.id for driver in drivers]
-            }
-            
-            current_history = self.previous_assignments or []
-            current_history.append(history_entry)
-            self.previous_assignments = current_history
-            self.save()
+        return f"Attempt for Order {self.order.invoice_num} - {self.get_status_display()} on {self.delivery_date}"
+
+class ScheduledItem(models.Model):
+    delivery_attempt = models.ForeignKey(
+        DeliveryAttempt,
+        on_delete=models.CASCADE,
+        related_name='scheduled_items'
+    )
+    order_item = models.ForeignKey(
+        OrderItem,
+        on_delete=models.CASCADE,
+        related_name='scheduled_attempts'
+    )
+    quantity = models.PositiveIntegerField()
+
+    def __str__(self):
+        return f"{self.order_item.product_name_input} - Qty: {self.quantity}"
+
+
+class DeliveryPhoto(models.Model):
+    delivery_attempt = models.ForeignKey(
+        DeliveryAttempt,
+        on_delete=models.CASCADE,
+        related_name='photos'
+    )
+    image = models.ImageField(upload_to='delivery_photos/') #stored on S3
+    caption = models.CharField(max_length=255, blank=True)
+    upload_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Photo for {self.delivery_attempt} - {self.caption or 'No caption'}"
+
+
+from assignments.utils import generate_signed_url
+
+class DeliveryPhotoSerializer(serializers.ModelSerializer):
+    signed_url = serializers.SerializerMethodField()
 
     class Meta:
-        verbose_name = 'Assignment'
-        verbose_name_plural = 'Assignments'
+        model = DeliveryPhoto
+        fields = ['id', 'caption', 'signed_url']
+
+    def get_signed_url(self, obj):
+        return generate_signed_url(obj.image.name)

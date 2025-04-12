@@ -3678,3 +3678,157 @@ INFO 2025-04-05 18:39:03,476 autoreload 682911 140625155477504 /home/abright/Wor
 INFO 2025-04-05 18:39:04,214 autoreload 682931 140651436232704 Watching for file changes with StatReloader
 INFO 2025-04-05 18:39:08,492 autoreload 682931 140651436232704 /home/abright/Work/FarmFreight/backend/api/stores/serializers.py changed, reloading.
 INFO 2025-04-05 18:39:09,196 autoreload 683024 140550964465664 Watching for file changes with StatReloader
+INFO 2025-04-06 03:07:51,062 basehttp 683024 140550872106560 "OPTIONS /api/users/1/ HTTP/1.1" 200 0
+INFO 2025-04-06 03:07:51,063 basehttp 683024 140550791493184 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-04-06 03:07:51,078 log 683024 140550791493184 Unauthorized: /api/users/1/
+WARNING 2025-04-06 03:07:51,079 log 683024 140550872106560 Unauthorized: /api/users/1/stores/
+WARNING 2025-04-06 03:07:51,079 basehttp 683024 140550791493184 "GET /api/users/1/ HTTP/1.1" 401 172
+WARNING 2025-04-06 03:07:51,079 basehttp 683024 140550872106560 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+INFO 2025-04-06 03:07:51,110 basehttp 683024 140550783100480 "OPTIONS /api/users/ HTTP/1.1" 200 0
+WARNING 2025-04-06 03:07:51,113 log 683024 140550774707776 Unauthorized: /api/users/
+WARNING 2025-04-06 03:07:51,114 basehttp 683024 140550774707776 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-04-06 03:07:51,124 log 683024 140550783100480 Unauthorized: /api/users/1/stores/
+WARNING 2025-04-06 03:07:51,124 basehttp 683024 140550783100480 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+INFO 2025-04-06 03:07:51,124 basehttp 683024 140550766315072 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-04-06 03:07:51,130 basehttp 683024 140550766315072 "POST /api/token/refresh/ HTTP/1.1" 200 241
+INFO 2025-04-06 03:07:51,182 basehttp 683024 140550766315072 "GET /api/users/ HTTP/1.1" 200 317
+INFO 2025-04-06 03:07:51,187 basehttp 683024 140550783100480 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+INFO 2025-04-06 03:07:51,191 basehttp 683024 140550766315072 "GET /api/users/email_verification_status/ HTTP/1.1" 200 11
+INFO 2025-04-07 01:01:18,855 basehttp 683024 140550766315072 "OPTIONS /api/users/1/ HTTP/1.1" 200 0
+INFO 2025-04-07 01:01:18,855 basehttp 683024 140550783100480 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-04-07 01:01:18,859 log 683024 140550766315072 Unauthorized: /api/users/1/
+WARNING 2025-04-07 01:01:18,862 log 683024 140550783100480 Unauthorized: /api/users/1/stores/
+WARNING 2025-04-07 01:01:18,862 basehttp 683024 140550766315072 "GET /api/users/1/ HTTP/1.1" 401 172
+WARNING 2025-04-07 01:01:18,862 basehttp 683024 140550783100480 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-04-07 01:01:18,927 log 683024 140550783100480 Unauthorized: /api/users/1/stores/
+INFO 2025-04-07 01:01:18,928 basehttp 683024 140550766315072 "OPTIONS /api/users/ HTTP/1.1" 200 0
+WARNING 2025-04-07 01:01:18,928 basehttp 683024 140550783100480 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-04-07 01:01:18,933 log 683024 140550872106560 Unauthorized: /api/users/
+WARNING 2025-04-07 01:01:18,933 basehttp 683024 140550872106560 "GET /api/users/ HTTP/1.1" 401 172
+INFO 2025-04-07 01:01:18,937 basehttp 683024 140550783100480 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-04-07 01:01:18,986 log 683024 140550783100480 Unauthorized: /api/token/refresh/
+WARNING 2025-04-07 01:01:18,987 basehttp 683024 140550783100480 "POST /api/token/refresh/ HTTP/1.1" 401 54
+INFO 2025-04-07 01:01:19,037 basehttp 683024 140550783100480 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+WARNING 2025-04-07 01:01:19,082 log 683024 140550872106560 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-04-07 01:01:19,083 basehttp 683024 140550872106560 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-04-07 01:01:19,087 log 683024 140550783100480 Unauthorized: /api/token/refresh/
+WARNING 2025-04-07 01:01:19,087 basehttp 683024 140550783100480 "POST /api/token/refresh/ HTTP/1.1" 401 54
+INFO 2025-04-07 23:32:09,542 basehttp 683024 140550766315072 "OPTIONS /api/users/1/ HTTP/1.1" 200 0
+INFO 2025-04-07 23:32:09,542 basehttp 683024 140550783100480 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-04-07 23:32:09,546 log 683024 140550783100480 Unauthorized: /api/users/1/
+WARNING 2025-04-07 23:32:09,547 log 683024 140550766315072 Unauthorized: /api/users/1/stores/
+WARNING 2025-04-07 23:32:09,548 basehttp 683024 140550783100480 "GET /api/users/1/ HTTP/1.1" 401 172
+WARNING 2025-04-07 23:32:09,548 basehttp 683024 140550766315072 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-04-07 23:32:09,606 log 683024 140550766315072 Unauthorized: /api/users/1/stores/
+INFO 2025-04-07 23:32:09,607 basehttp 683024 140550783100480 "OPTIONS /api/users/ HTTP/1.1" 200 0
+WARNING 2025-04-07 23:32:09,607 basehttp 683024 140550766315072 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-04-07 23:32:09,655 log 683024 140550872106560 Unauthorized: /api/users/
+WARNING 2025-04-07 23:32:09,656 basehttp 683024 140550872106560 "GET /api/users/ HTTP/1.1" 401 172
+INFO 2025-04-07 23:32:09,659 basehttp 683024 140550766315072 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-04-07 23:32:09,707 log 683024 140550766315072 Unauthorized: /api/token/refresh/
+WARNING 2025-04-07 23:32:09,707 basehttp 683024 140550766315072 "POST /api/token/refresh/ HTTP/1.1" 401 54
+INFO 2025-04-07 23:32:09,752 basehttp 683024 140550766315072 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+WARNING 2025-04-07 23:32:09,798 log 683024 140550872106560 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-04-07 23:32:09,799 basehttp 683024 140550872106560 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-04-07 23:32:09,803 log 683024 140550766315072 Unauthorized: /api/token/refresh/
+WARNING 2025-04-07 23:32:09,803 basehttp 683024 140550766315072 "POST /api/token/refresh/ HTTP/1.1" 401 54
+INFO 2025-04-07 23:39:53,980 autoreload 683024 140550964465664 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-07 23:39:54,687 autoreload 717215 140599310733312 Watching for file changes with StatReloader
+WARNING 2025-04-11 12:55:08,728 log 61892 139723415044096 Forbidden: /api/orders/
+WARNING 2025-04-11 12:55:09,565 log 61892 139723415044096 Forbidden: /api/orders/
+WARNING 2025-04-11 12:55:36,103 log 61971 140059922182144 Forbidden: /api/orders/
+WARNING 2025-04-11 12:55:37,033 log 61971 140059922182144 Forbidden: /api/orders/
+INFO 2025-04-12 20:08:30,125 autoreload 92208 140542137389056 Watching for file changes with StatReloader
+INFO 2025-04-12 20:09:00,139 autoreload 92221 140070533365760 Watching for file changes with StatReloader
+INFO 2025-04-12 20:09:24,603 autoreload 92277 140647247986688 Watching for file changes with StatReloader
+INFO 2025-04-12 20:09:45,860 autoreload 92308 139825651310592 Watching for file changes with StatReloader
+WARNING 2025-04-12 20:09:59,113 log 92308 139825478891072 Unauthorized: /api/orders/
+WARNING 2025-04-12 20:09:59,113 basehttp 92308 139825478891072 "GET /api/orders/ HTTP/1.1" 401 5159
+INFO 2025-04-12 20:09:59,146 basehttp 92308 139825470498368 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-04-12 20:09:59,148 basehttp 92308 139825436927552 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-04-12 20:09:59,149 basehttp 92308 139825478891072 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-04-12 20:09:59,149 basehttp 92308 139825445320256 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-04-12 20:09:59,149 basehttp 92308 139825453712960 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-04-12 20:09:59,150 basehttp 92308 139825470498368 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-04-12 20:09:59,150 basehttp 92308 139825462105664 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-04-12 20:09:59,153 basehttp 92308 139825453712960 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-04-12 20:09:59,153 basehttp 92308 139825445320256 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-04-12 20:09:59,153 basehttp 92308 139825436927552 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-04-12 20:09:59,153 basehttp 92308 139825462105664 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-04-12 20:09:59,206 basehttp 92308 139825462105664 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-04-12 20:10:01,642 basehttp 92308 139825462105664 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-04-12 20:10:01,656 basehttp 92308 139825462105664 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4159
+INFO 2025-04-12 20:10:01,745 basehttp 92308 139825462105664 "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO 2025-04-12 20:10:01,751 basehttp 92308 139825470498368 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-04-12 20:10:01,751 basehttp 92308 139825453712960 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-04-12 20:10:01,751 basehttp 92308 139825462105664 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO 2025-04-12 20:10:01,752 basehttp 92308 139825436927552 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-04-12 20:10:01,752 basehttp 92308 139825445320256 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO 2025-04-12 20:10:01,755 basehttp 92308 139825445320256 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-04-12 20:10:06,465 basehttp 92308 139825445320256 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4320
+INFO 2025-04-12 20:10:50,057 basehttp 92308 139825445320256 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-04-12 20:10:50,070 basehttp 92308 139825445320256 "GET /admin/ HTTP/1.1" 200 7694
+INFO 2025-04-12 20:10:50,138 basehttp 92308 139825445320256 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-04-12 20:10:50,191 basehttp 92308 139825445320256 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-04-12 20:10:50,191 basehttp 92308 139825462105664 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-04-12 20:10:55,618 basehttp 92308 139825445320256 "GET /admin/ HTTP/1.1" 200 7694
+INFO 2025-04-12 20:11:35,426 autoreload 92406 139797751885824 Watching for file changes with StatReloader
+INFO 2025-04-12 20:11:39,108 basehttp 92406 139797584545344 "GET /admin/ HTTP/1.1" 200 7694
+INFO 2025-04-12 20:11:42,623 basehttp 92406 139797584545344 "GET /admin/ HTTP/1.1" 200 7694
+INFO 2025-04-12 20:11:43,666 basehttp 92406 139797584545344 "GET /admin/ HTTP/1.1" 200 7694
+INFO 2025-04-12 20:11:45,246 basehttp 92406 139797584545344 "POST /admin/logout/ HTTP/1.1" 200 3555
+INFO 2025-04-12 20:11:46,792 basehttp 92406 139797584545344 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-04-12 20:11:46,810 basehttp 92406 139797584545344 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4159
+INFO 2025-04-12 20:11:52,384 basehttp 92406 139797584545344 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-04-12 20:11:52,396 basehttp 92406 139797584545344 "GET /admin/ HTTP/1.1" 200 7694
+INFO 2025-04-12 20:11:57,292 basehttp 92406 139797584545344 "GET /admin/accounts/user/ HTTP/1.1" 200 14129
+INFO 2025-04-12 20:11:57,325 basehttp 92406 139797469316672 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-04-12 20:11:57,325 basehttp 92406 139797477709376 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2025-04-12 20:11:57,326 basehttp 92406 139797494494784 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+INFO 2025-04-12 20:11:57,328 basehttp 92406 139797584545344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-12 20:11:57,329 basehttp 92406 139797469316672 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-04-12 20:11:57,347 basehttp 92406 139797494494784 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-04-12 20:11:57,347 basehttp 92406 139797477709376 "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2025-04-12 20:11:57,348 basehttp 92406 139797574055488 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-04-12 20:11:57,349 basehttp 92406 139797486102080 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-04-12 20:11:57,351 basehttp 92406 139797574055488 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-04-12 20:11:57,351 basehttp 92406 139797486102080 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-04-12 20:11:57,383 basehttp 92406 139797469316672 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-04-12 20:11:57,414 basehttp 92406 139797486102080 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-04-12 20:11:57,433 basehttp 92406 139797469316672 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-04-12 20:11:57,442 basehttp 92406 139797574055488 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-04-12 20:11:57,442 basehttp 92406 139797477709376 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-04-12 20:11:57,442 basehttp 92406 139797494494784 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-04-12 20:12:01,162 basehttp 92406 139797469316672 "GET /admin/auth/group/ HTTP/1.1" 200 8902
+INFO 2025-04-12 20:12:01,190 basehttp 92406 139797469316672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-12 20:12:02,397 basehttp 92406 139797469316672 "GET /admin/token_blacklist/blacklistedtoken/ HTTP/1.1" 200 9000
+INFO 2025-04-12 20:12:02,424 basehttp 92406 139797469316672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-12 20:12:05,011 basehttp 92406 139797469316672 "GET /admin/ HTTP/1.1" 200 7694
+INFO 2025-04-12 20:12:05,955 basehttp 92406 139797469316672 "GET /admin/accounts/user/ HTTP/1.1" 200 14129
+INFO 2025-04-12 20:12:05,985 basehttp 92406 139797469316672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-04-12 20:40:41,751 autoreload 92406 139797751885824 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:40:42,472 autoreload 94059 139909670998016 Watching for file changes with StatReloader
+INFO 2025-04-12 20:40:48,888 autoreload 94059 139909670998016 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:40:49,591 autoreload 94080 140510394454016 Watching for file changes with StatReloader
+INFO 2025-04-12 20:40:51,893 autoreload 94080 140510394454016 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:40:52,620 autoreload 94101 139675497881600 Watching for file changes with StatReloader
+INFO 2025-04-12 20:43:47,353 autoreload 94101 139675497881600 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:43:48,072 autoreload 94250 140529808883712 Watching for file changes with StatReloader
+INFO 2025-04-12 20:44:17,717 autoreload 94275 140054995640320 Watching for file changes with StatReloader
+INFO 2025-04-12 20:45:25,005 autoreload 94275 140054995640320 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:45:25,832 autoreload 94348 139776356257792 Watching for file changes with StatReloader
+INFO 2025-04-12 20:51:23,941 autoreload 94348 139776356257792 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:51:24,683 autoreload 94767 140574999117824 Watching for file changes with StatReloader
+INFO 2025-04-12 20:53:00,714 autoreload 94767 140574999117824 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:53:01,464 autoreload 94835 139723684884480 Watching for file changes with StatReloader
+INFO 2025-04-12 20:53:14,067 autoreload 94835 139723684884480 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:53:14,807 autoreload 94865 140597961428992 Watching for file changes with StatReloader
+INFO 2025-04-12 20:53:54,134 autoreload 94865 140597961428992 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:53:54,837 autoreload 94919 140550836137984 Watching for file changes with StatReloader
+INFO 2025-04-12 20:54:07,500 autoreload 94919 140550836137984 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:54:08,244 autoreload 94951 139897402679296 Watching for file changes with StatReloader
+INFO 2025-04-12 20:54:17,535 autoreload 94954 139729573707776 Watching for file changes with StatReloader
+INFO 2025-04-12 20:55:16,292 autoreload 94954 139729573707776 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 20:55:17,196 autoreload 95013 140574513377280 Watching for file changes with StatReloader
+INFO 2025-04-12 20:55:20,567 autoreload 95054 139760595423232 Watching for file changes with StatReloader
+INFO 2025-04-12 20:55:28,964 autoreload 95059 140699432587264 Watching for file changes with StatReloader

@@ -14,9 +14,39 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+from google.oauth2 import service_account
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+GS_BUCKET_NAME = 'farm-freight'
+# Define the path to your service account key file
+GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, '/home/abright/Desktop/KEYS/fresh-fusion-456617-s8-e919b86cfbd8.json')
+
+# Create credentials object
+GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
+
+# Define the STORAGES setting
+STORAGES = {
+    'default': {
+        'BACKEND': 'storages.backends.gcloud.GoogleCloudStorage',
+        'OPTIONS': {
+            'bucket_name': 'farm-freight',
+            'credentials': GS_CREDENTIALS,
+        },
+    },
+    'staticfiles': {
+        'BACKEND': 'storages.backends.gcloud.GoogleCloudStorage',
+        'OPTIONS': {
+            'bucket_name': 'farm-freight',
+            'credentials': GS_CREDENTIALS,
+        },
+    },
+}
+
+# Define MEDIA_URL and STATIC_URL
+MEDIA_URL = f'https://storage.googleapis.com/farm-freight/media/'
+STATIC_URL = f'https://storage.googleapis.com/farm-freight/static/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -59,7 +89,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'rest_framework_simplejwt.token_blacklist',
     'django_extensions',
-    'corsheaders'
+    'corsheaders',
+    "storages"
 ]
 
 REST_FRAMEWORK = {
@@ -190,6 +221,7 @@ else:
     SITE_URL = 'http://localhost:8000'
 
 
+
 #DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql',
@@ -258,12 +290,6 @@ SITE_NAME = 'Forge'#SITE_NAME = 'Forge'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-
-
-
-
 # Configure logging to capture email sending errors
 LOGGING = {
     'version': 1,
@@ -301,3 +327,5 @@ LOGGING = {
         },
     },
 }
+
+print("🔥 GCS settings.py loaded")

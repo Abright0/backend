@@ -34,3 +34,5 @@ class OrderItem(models.Model):
     
     def __str__(self):
         return f"{self.product_name_input} x{self.quantity}"
+
+

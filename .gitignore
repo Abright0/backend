@@ -1,1 +1,19 @@
-db.sqlite3
+# Python/Django
+*.pyc
+*.pyo
+__pycache__/
+*.sqlite3
+.env
+local_settings.py
+media/
+staticfiles/
+migrations/
+
+# Other common exclusions
+*.log
+.DS_Store
+.idea/
+.vscode/
+venv/
+.vscodium/
+
