@@ -35,7 +35,7 @@ else:
 
     
 # Create credentials object
-GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
+#GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
 
 # Define the STORAGES setting
 STORAGES = {
