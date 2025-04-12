@@ -62,16 +62,3 @@ class DeliveryPhoto(models.Model):
 
     def __str__(self):
         return f"Photo for {self.delivery_attempt} - {self.caption or 'No caption'}"
-
-
-from assignments.utils import generate_signed_url
-
-class DeliveryPhotoSerializer(serializers.ModelSerializer):
-    signed_url = serializers.SerializerMethodField()
-
-    class Meta:
-        model = DeliveryPhoto
-        fields = ['id', 'caption', 'signed_url']
-
-    def get_signed_url(self, obj):
-        return generate_signed_url(obj.image.name)

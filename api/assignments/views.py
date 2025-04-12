@@ -1,9 +1,8 @@
 # api/assignments/views.py
 from rest_framework import viewsets
-from .serializers import DeliveryAttemptSerializer, ScheduledItemSerializer
+from .serializers import DeliveryAttemptSerializer, ScheduledItemSerializer, DeliveryPhotoSerializer
 from assignments.models import DeliveryAttempt, ScheduledItem
 from assignments.models import DeliveryPhoto
-from assignments.serializers import DeliveryPhotoSerializer
 from rest_framework.permissions import IsAuthenticated, AllowAny
 
 class DeliveryAttemptViewSet(viewsets.ModelViewSet):

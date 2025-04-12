@@ -30,9 +30,8 @@ if 'GOOGLE_CREDENTIALS_JSON' in os.environ:
     GS_CREDENTIALS = service_account.Credentials.from_service_account_info(service_account_info)
 else:
     # Fallback to file path (for local development)
-    GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, 'path/to/credentials.json')
+    GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, '/home/abright/Desktop/KEYS/fresh-fusion-456617-s8-e919b86cfbd8.json')
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
-
     
 # Create credentials object
 #GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
