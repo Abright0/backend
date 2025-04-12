@@ -80,12 +80,3 @@ class DeliveryPhotoSerializer(serializers.ModelSerializer):
 
     def get_signed_url(self, obj):
         return generate_signed_url(obj.image.name)
-
-
-class DeliveryAttemptSerializer(serializers.ModelSerializer):
-    scheduled_items = ScheduledItemSerializer(many=True, read_only=True)
-    photos = DeliveryPhotoSerializer(many=True, read_only=True)  # <-- Add this line
-
-    class Meta:
-        model = DeliveryAttempt
-        fields = '__all__'
