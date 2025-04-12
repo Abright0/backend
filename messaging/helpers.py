@@ -27,3 +27,12 @@ def trigger_message(event_type, context, store):
         pass
 
     return False
+
+
+def send_completion_sms(self, attempt):
+    context = {
+        "customer_name": attempt.customer.name,
+        # Add more if needed
+    }
+    store = attempt.store
+    trigger_message("driver_complete", context, store)

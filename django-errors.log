@@ -3842,3 +3842,4 @@ INFO 2025-04-12 22:40:32,657 autoreload 147113 139621471387648 Watching for file
 INFO 2025-04-12 22:40:33,923 autoreload 147113 139621471387648 /home/abright/Work/FarmFreight/backend/api/assignments/views.py changed, reloading.
 INFO 2025-04-12 22:40:34,724 autoreload 147119 140069299093504 Watching for file changes with StatReloader
 INFO 2025-04-12 22:42:55,025 autoreload 147271 140057850949632 Watching for file changes with StatReloader
+INFO 2025-04-12 22:57:21,144 autoreload 153537 140319472807936 Watching for file changes with StatReloader

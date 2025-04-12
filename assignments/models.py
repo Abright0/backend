@@ -13,6 +13,10 @@ class DeliveryAttempt(models.Model):
         ('rescheduled','Rescheduled'),
         ('canceled', 'Canceled'),
     ]
+
+
+    completion_sms_sent = models.BooleanField(default=False)  # NEW
+
     status_changed_at = models.DateTimeField(auto_now=True)
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='delivery_attempts')
     drivers = models.ManyToManyField(User, related_name='drivers')
@@ -32,6 +36,14 @@ class DeliveryAttempt(models.Model):
 
     def __str__(self):
         return f"Attempt for Order {self.order.invoice_num} - {self.get_status_display()} on {self.delivery_date}"
+
+    def has_required_photos(self):
+        """
+        Return True if at least one delivery photo exists for this attempt.
+        """
+        return self.photos.exists()
+
+
 
 class ScheduledItem(models.Model):
     delivery_attempt = models.ForeignKey(

@@ -34,8 +34,18 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
             self.send_en_route_sms(instance)
             instance.arrival_sms_sent = True
             instance.save(update_fields=['arrival_sms_sent'])
+        
+        if (
+            instance.status == 'complete' and
+            instance.has_required_photos() and  # assumes you create this helper method
+            not instance.completion_sms_sent
+        ):
+            self.send_completion_sms(instance)
+            instance.completion_sms_sent = True
+            instance.save(update_fields=['completion_sms_sent'])
 
-        return instance
+
+        return super().update(instance, validated_data)
 
 
     def send_en_route_sms(self, attempt):
@@ -53,12 +63,20 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
 
         trigger_message("driver_en_route", context, store)
 
+    def send_completion_sms(self, attempt):
+        context = {
+            "customer_name": attempt.customer.name,  # or however you store customer
+            # Add other variables if needed
+        }
+        store = attempt.store
+        trigger_message("driver_complete", context, store)
+
 class DeliveryPhotoSerializer(serializers.ModelSerializer):
     signed_url = serializers.SerializerMethodField()
 
     class Meta:
         model = DeliveryPhoto
-        fields = ['id', 'caption', 'signed_url']
+        fields = ['id', 'caption', 'image', 'signed_url', 'delivery_attempt']
 
     def get_signed_url(self, obj):
         return generate_signed_url(obj.image.name)
