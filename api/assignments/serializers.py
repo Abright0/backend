@@ -16,60 +16,83 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def update(self, instance, validated_data):
-        # Capture status before updating
         previous_status = instance.status
+        new_status = validated_data.get('status', previous_status)
 
-        # Update fields
+        # Block status change to 'complete' if no photos
+        if new_status == 'complete' and not instance.has_required_photos():
+            raise serializers.ValidationError("Cannot mark as complete: delivery photos are required.")
+
+        # Block status change to 'en_route' if arrival data missing
+        mins = validated_data.get('mins_to_arrival') or instance.mins_to_arrival
+        miles = validated_data.get('miles_to_arrival') or instance.miles_to_arrival
+
+        if new_status == 'en_route' and (not mins or not miles):
+            raise serializers.ValidationError("Cannot mark as en route: arrival time and distance must be provided.")
+
+        # Proceed with update
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
         instance.save()
 
-        # Trigger message only when ready, and not yet sent
-        if (
-            instance.status == 'en_route' and
-            instance.mins_to_arrival and
-            instance.miles_to_arrival and
-            not instance.arrival_sms_sent
-        ):
-            self.send_en_route_sms(instance)
-            instance.arrival_sms_sent = True
-            instance.save(update_fields=['arrival_sms_sent'])
-        
-        if (
-            instance.status == 'complete' and
-            instance.has_required_photos() and  # assumes you create this helper method
-            not instance.completion_sms_sent
-        ):
-            self.send_completion_sms(instance)
-            instance.completion_sms_sent = True
-            instance.save(update_fields=['completion_sms_sent'])
+        current_status = instance.status
+        store = instance.order.store
 
+        # Status → Event mapping
+        status_event_map = {
+            'accepted_by_driver': 'drive_preparing',
+            'en_route': 'driver_en_route',
+            'complete': 'driver_complete',
+            'misdelivery': 'driver_misdelivery',
+            'rescheduled': 'driver_rescheduled',
+            'canceled': 'driver_canceled',
+        }
+
+        event_type = status_event_map.get(current_status)
+        if event_type:
+            should_send = True
+
+            # Extra SMS send safeguard
+            if current_status == 'complete' and not instance.has_required_photos():
+                should_send = False
+            if current_status == 'en_route' and (not instance.mins_to_arrival or not instance.miles_to_arrival):
+                should_send = False
+
+            if should_send:
+                self.send_status_sms(instance, event_type)
 
         return super().update(instance, validated_data)
 
 
-    def send_en_route_sms(self, attempt):
+    def send_status_sms(self, attempt, event_type):
         order = attempt.order
-        store = order.store  # make sure order has a FK to Store
-        phone_number = order.customer.phone_number
-
         context = {
             "customer_name": order.customer.name,
             "order_id": order.invoice_num,
-            "mins_to_arrival": attempt.mins_to_arrival,
-            "miles_to_arrival": attempt.miles_to_arrival,
-            "phone_number": phone_number,
+            "phone_number": order.customer.phone_number,
         }
 
-        trigger_message("driver_en_route", context, store)
+        # Add en_route fields if they exist (safe fallback)
+        if event_type == 'driver_en_route':
+            if attempt.mins_to_arrival:
+                context["mins_to_arrival"] = attempt.mins_to_arrival
+            if attempt.miles_to_arrival:
+                context["miles_to_arrival"] = attempt.miles_to_arrival
 
-    def send_completion_sms(self, attempt):
-        context = {
-            "customer_name": attempt.customer.name,  # or however you store customer
-            # Add other variables if needed
-        }
-        store = attempt.store
-        trigger_message("driver_complete", context, store)
+        # Add photo links for complete
+        if event_type == 'driver_complete':
+            photo_qs = attempt.photos.all()
+            if photo_qs.exists():
+                signed_urls = [generate_signed_url(p.image.name) for p in photo_qs]
+                context["photo_links"] = "\n".join(signed_urls)
+            else:
+                context["photo_links"] = "No delivery photos available."
+
+        trigger_message(event_type, context, order.store)
+
+
+
+
 
 class DeliveryPhotoSerializer(serializers.ModelSerializer):
     signed_url = serializers.SerializerMethodField()

@@ -42,7 +42,7 @@ class OrderViewSet(viewsets.ModelViewSet):
         user = self.request.user
         
         # Base queryset with prefetch optimizations
-        queryset = Order.objects.all()
+        queryset = Order.objects.prefetch_related('delivery_attempts')
         
         # Optimize querysets with select_related and prefetch_related
         if self.action == 'list' and self.request.query_params.get('view') == 'list':

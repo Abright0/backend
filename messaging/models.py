@@ -1,17 +1,25 @@
-# backend/messaging/models.py
+# backend/messaging.models.py
 from django.db import models
+from stores.models import Store
 
 class MessageTemplate(models.Model):
-    EVENT_CHOICES = [
-        ('driver_en_route', 'Driver En Route'),
-        ('order_complete', 'Order Complete'),
-        ('photos_submitted', 'Photos Submitted'),
-        ('redelivery_assigned', 'Redelivery Assigned'),
-        # add more as needed
-    ]
+    store = models.ForeignKey(Store, on_delete=models.CASCADE)
+    event = models.CharField(
+        max_length=50,
+        choices=[
+            ('drive_preparing', 'Driver Preparing Delivery'),
+            ('driver_en_route', 'Driver En Route'),
+            ('driver_complete', 'Delivery Complete'),
+            ('driver_misdelivery', 'Misdelivery'),
+            ('driver_rescheduled', 'Rescheduled'),
+            ('driver_canceled', 'Canceled'),
+        ]
+    )
+    content = models.TextField()
+    active = models.BooleanField(default=True)
 
-    event = models.CharField(max_length=50, choices=EVENT_CHOICES, unique=True)
-    content = models.TextField(help_text="Use Django template syntax. Ex: 'Hi {{ customer_name }}, your order {{ order_id }} is complete.'")
+    class Meta:
+        unique_together = ('store', 'event')
 
     def __str__(self):
-        return f"{self.get_event_display()}"
+        return f"{self.store.name} - {self.event} ({'Active' if self.active else 'Inactive'})"

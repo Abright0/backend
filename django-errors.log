@@ -3843,3 +3843,205 @@ INFO 2025-04-12 22:40:33,923 autoreload 147113 139621471387648 /home/abright/Wor
 INFO 2025-04-12 22:40:34,724 autoreload 147119 140069299093504 Watching for file changes with StatReloader
 INFO 2025-04-12 22:42:55,025 autoreload 147271 140057850949632 Watching for file changes with StatReloader
 INFO 2025-04-12 22:57:21,144 autoreload 153537 140319472807936 Watching for file changes with StatReloader
+INFO 2025-04-12 23:05:39,222 autoreload 161319 140296833708032 Watching for file changes with StatReloader
+INFO 2025-04-12 23:32:02,968 autoreload 168777 139936325472256 Watching for file changes with StatReloader
+INFO 2025-04-12 23:32:42,391 autoreload 168777 139936325472256 /home/abright/Work/FarmFreight/backend/api/messaging/views.py changed, reloading.
+INFO 2025-04-12 23:32:43,186 autoreload 168878 140587219865600 Watching for file changes with StatReloader
+INFO 2025-04-12 23:35:37,091 autoreload 168878 140587219865600 /home/abright/Work/FarmFreight/backend/messaging/models.py changed, reloading.
+INFO 2025-04-12 23:35:37,920 autoreload 169128 139803199574016 Watching for file changes with StatReloader
+INFO 2025-04-12 23:38:19,431 autoreload 169293 139813353975808 Watching for file changes with StatReloader
+INFO 2025-04-12 23:38:44,393 autoreload 169293 139813353975808 /home/abright/Work/FarmFreight/backend/messaging/models.py changed, reloading.
+INFO 2025-04-12 23:38:45,169 autoreload 169318 139764033613824 Watching for file changes with StatReloader
+INFO 2025-04-12 23:39:29,726 autoreload 169318 139764033613824 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-12 23:39:30,503 autoreload 169409 139819600863232 Watching for file changes with StatReloader
+INFO 2025-04-12 23:39:46,195 autoreload 169409 139819600863232 /home/abright/Work/FarmFreight/backend/api/messaging/serializers.py changed, reloading.
+INFO 2025-04-12 23:39:46,976 autoreload 169464 140074085052416 Watching for file changes with StatReloader
+ERROR 2025-04-12 23:40:35,854 log 169464 140073911670336 Internal Server Error: /schema/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/schemas/views.py", line 48, in handle_exception
+    return super().handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 497, in dispatch
+    self.initial(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 406, in initial
+    neg = self.perform_content_negotiation(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 306, in perform_content_negotiation
+    renderers = self.get_renderers()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 260, in get_renderers
+    return [renderer() for renderer in self.renderer_classes]
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 260, in <listcomp>
+    return [renderer() for renderer in self.renderer_classes]
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 1059, in __init__
+    assert yaml, 'Using OpenAPIRenderer, but `pyyaml` is not installed.'
+AssertionError: Using OpenAPIRenderer, but `pyyaml` is not installed.
+ERROR 2025-04-12 23:40:35,855 basehttp 169464 140073911670336 "GET /schema/ HTTP/1.1" 500 118509
+WARNING 2025-04-12 23:40:35,926 log 169464 140073911670336 Not Found: /favicon.ico
+WARNING 2025-04-12 23:40:35,926 basehttp 169464 140073911670336 "GET /favicon.ico HTTP/1.1" 404 2525
+INFO 2025-04-12 23:41:27,736 autoreload 169555 139956325974016 Watching for file changes with StatReloader
+WARNING 2025-04-12 23:41:29,336 log 169555 139956153353792 Unauthorized: /schema/
+WARNING 2025-04-12 23:41:29,336 basehttp 169555 139956153353792 "GET /schema/ HTTP/1.1" 401 14043
+WARNING 2025-04-12 23:41:35,420 log 169555 139956153353792 Unauthorized: /schema/
+WARNING 2025-04-12 23:41:35,420 basehttp 169555 139956153353792 "GET /schema/ HTTP/1.1" 401 14043
+WARNING 2025-04-12 23:41:37,558 log 169555 139956153353792 Not Found: /schema/api
+WARNING 2025-04-12 23:41:37,558 basehttp 169555 139956153353792 "GET /schema/api HTTP/1.1" 404 2522
+WARNING 2025-04-12 23:41:39,973 log 169555 139956153353792 Unauthorized: /api/orders/
+WARNING 2025-04-12 23:41:39,973 basehttp 169555 139956153353792 "GET /api/orders/ HTTP/1.1" 401 14190
+WARNING 2025-04-12 23:41:43,929 log 169555 139956153353792 Unauthorized: /api/orders/
+WARNING 2025-04-12 23:41:43,929 basehttp 169555 139956153353792 "GET /api/orders/ HTTP/1.1" 401 14190
+INFO 2025-04-12 23:41:52,381 autoreload 169555 139956325974016 /home/abright/Work/FarmFreight/backend/api/messaging/serializers.py changed, reloading.
+INFO 2025-04-12 23:41:53,136 autoreload 169631 140255790428160 Watching for file changes with StatReloader
+INFO 2025-04-12 23:42:15,131 autoreload 169631 140255790428160 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-04-12 23:42:15,980 autoreload 169690 140265970057216 Watching for file changes with StatReloader
+ERROR 2025-04-12 23:42:16,689 log 169690 140265797846592 Internal Server Error: /api/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 110, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 67, in get_queryset
+    accessible_stores = user.stores.all()
+AttributeError: 'AnonymousUser' object has no attribute 'stores'
+ERROR 2025-04-12 23:42:16,690 basehttp 169690 140265797846592 "GET /api/orders/ HTTP/1.1" 500 104147
+INFO 2025-04-12 23:42:43,081 autoreload 169690 140265970057216 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-04-12 23:42:43,874 autoreload 169743 139941299884032 Watching for file changes with StatReloader
+WARNING 2025-04-13 00:07:25,703 log 170900 139793027956736 Not Found: /api/users/me/stores/
+INFO 2025-04-13 00:07:26,978 utils 170900 139793027956736 Password reset email sent to user@example.com
+ERROR 2025-04-13 00:07:38,162 log 170900 139793027956736 Internal Server Error: /api/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 112, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 222, in paginate_queryset
+    return list(self.page)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 191, in __len__
+    return len(self.object_list)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1930, in _fetch_all
+    self._prefetch_related_objects()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1320, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 2355, in prefetch_related_objects
+    raise AttributeError(
+AttributeError: Cannot find 'assignments' on Order object, 'assignments' is an invalid parameter to prefetch_related()
+ERROR 2025-04-13 00:07:39,436 log 170900 139793027956736 Internal Server Error: /api/orders/1/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 227, in update
+    order = self.get_object()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 100, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/shortcuts.py", line 86, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 645, in get
+    num = len(clone)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1930, in _fetch_all
+    self._prefetch_related_objects()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1320, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 2355, in prefetch_related_objects
+    raise AttributeError(
+AttributeError: Cannot find 'assignments' on Order object, 'assignments' is an invalid parameter to prefetch_related()
+WARNING 2025-04-13 00:07:44,537 log 170900 139793027956736 Bad Request: /api/stores/
+WARNING 2025-04-13 00:18:30,986 log 171602 139669237719040 Forbidden: /api/users/email_verification_status/
+WARNING 2025-04-13 00:18:32,699 log 171602 139669237719040 Not Found: /api/users/me/stores/
+WARNING 2025-04-13 00:18:33,556 log 171602 139669237719040 Bad Request: /api/users/register/
+INFO 2025-04-13 00:18:34,417 utils 171602 139669237719040 Password reset email sent to user@example.com
+WARNING 2025-04-13 00:21:52,158 log 171929 139861092118528 Forbidden: /api/users/email_verification_status/
+WARNING 2025-04-13 00:21:54,685 log 171929 139861092118528 Bad Request: /api/users/register/
+INFO 2025-04-13 00:21:55,534 utils 171929 139861092118528 Password reset email sent to user@example.com
+INFO 2025-04-13 00:21:56,794 utils 171929 139861092118528 Verification email sent to verifyme@example.com
+WARNING 2025-04-13 00:23:05,485 log 172106 140510386049024 Forbidden: /api/users/email_verification_status/
+WARNING 2025-04-13 00:23:08,048 log 172106 140510386049024 Bad Request: /api/users/register/
+INFO 2025-04-13 00:23:08,891 utils 172106 140510386049024 Password reset email sent to user@example.com
+INFO 2025-04-13 00:23:10,149 utils 172106 140510386049024 Verification email sent to verifyme@example.com
+WARNING 2025-04-13 00:25:12,729 log 172521 140581539876864 Forbidden: /api/users/email_verification_status/
+INFO 2025-04-13 00:25:15,715 utils 172521 140581539876864 Verification email sent to newuser@example.com
+ERROR 2025-04-13 00:25:15,715 log 172521 140581539876864 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 186, in register
+    send_verification_email(user)
+NameError: name 'send_verification_email' is not defined
+INFO 2025-04-13 00:25:16,564 utils 172521 140581539876864 Password reset email sent to user@example.com
+INFO 2025-04-13 00:25:17,829 utils 172521 140581539876864 Verification email sent to verifyme@example.com

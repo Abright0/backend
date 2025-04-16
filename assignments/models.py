@@ -14,7 +14,6 @@ class DeliveryAttempt(models.Model):
         ('canceled', 'Canceled'),
     ]
 
-
     completion_sms_sent = models.BooleanField(default=False)  # NEW
 
     status_changed_at = models.DateTimeField(auto_now=True)
