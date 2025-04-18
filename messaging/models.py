@@ -7,7 +7,7 @@ class MessageTemplate(models.Model):
     event = models.CharField(
         max_length=50,
         choices=[
-            ('drive_preparing', 'Driver Preparing Delivery'),
+            ('driver_preparing', 'Driver Preparing Delivery'),
             ('driver_en_route', 'Driver En Route'),
             ('driver_complete', 'Delivery Complete'),
             ('driver_misdelivery', 'Misdelivery'),
