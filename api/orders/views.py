@@ -1,3 +1,4 @@
+# backend/api/orders/views.pys
 from django.db import transaction
 from django.db.models import Q, Prefetch
 from rest_framework import status, viewsets, filters
@@ -9,6 +10,7 @@ from orders.models import Order, OrderItem
 from products.models import Product
 from stores.models import Store
 from .serializers import OrderSerializer, OrderDetailSerializer, OrderPhotoSerializer
+from assignments.models import DeliveryAttempt
 
 class OrderViewSet(viewsets.ModelViewSet):
     """
@@ -36,72 +38,50 @@ class OrderViewSet(viewsets.ModelViewSet):
             return OrderDetailSerializer
 
     def get_queryset(self):
-        """
-        Return orders that the user has access to based on their store permissions.
-        """
         user = self.request.user
-        
-        # Base queryset with prefetch optimizations
         queryset = Order.objects.prefetch_related('delivery_attempts')
-        
-        # Optimize querysets with select_related and prefetch_related
+
         if self.action == 'list' and self.request.query_params.get('view') == 'list':
-            # Lighter query for list view
-            queryset = queryset.select_related('store')
-            
-            # Join with assignments to get status
-            queryset = queryset.prefetch_related(
-                Prefetch('assignments', to_attr='prefetched_assignments')
+            queryset = queryset.select_related('store').prefetch_related(
+                Prefetch('delivery_attempts', to_attr='prefetched_attempts')
             )
         else:
-            # More detailed query for detail view
-            queryset = queryset.select_related('store')
-            queryset = queryset.prefetch_related(
+            queryset = queryset.select_related('store').prefetch_related(
                 'items',
-                Prefetch('assignments', to_attr='prefetched_assignments')
+                Prefetch('delivery_attempts', to_attr='prefetched_attempts')
             )
-        
-        # Filter by stores the user has access to
-        if not user.is_superuser:  # Superusers can see all orders
-            # Get the stores this user has access to through ManyToManyField
+
+        if not user.is_superuser:
             accessible_stores = user.stores.all()
-            
-            # If user is a driver, they see orders assigned to them plus orders from their stores
             if user.is_driver:
-                driver_orders = Order.objects.filter(assignments__drivers=user)
+                driver_orders = Order.objects.filter(delivery_attempts__drivers=user)
                 user_store_orders = Order.objects.filter(store__in=accessible_stores)
-                # Combine both querysets
                 queryset = (driver_orders | user_store_orders).distinct()
             else:
-                # Regular users only see orders from their accessible stores
                 queryset = queryset.filter(store__in=accessible_stores)
-        
-        # Filter by store_id if provided
+
         store_id = self.request.query_params.get('store_id')
         if store_id:
-            # Verify this user has access to the specified store
-            if not user.is_superuser:
-                if not user.stores.filter(id=store_id).exists():
-                    # If user doesn't have access to this store, return empty queryset
-                    return Order.objects.none()
-            
+            if not user.is_superuser and not user.stores.filter(id=store_id).exists():
+                return Order.objects.none()
             queryset = queryset.filter(store_id=store_id)
-            
-        # Filter by status if provided (map frontend status names to model statuses)
+
         status = self.request.query_params.get('status')
         if status and status != 'all':
-            # Map frontend status names to assignment statuses
             status_mapping = {
                 'Order Placed': 'order_placed',
                 'Assigned': 'accepted_by_driver',
-                'En Route': 'in_progress',
-                'Completed': 'complete'
+                'En Route': 'en_route',
+                'Completed': 'complete',
+                'Misdelivery': 'misdelivery',
+                'Rescheduled': 'rescheduled',
+                'Canceled': 'canceled',
             }
-            
             if status in status_mapping:
-                queryset = queryset.filter(assignments__status=status_mapping[status])
-        
+                queryset = queryset.filter(delivery_attempts__status=status_mapping[status])
+
         return queryset
+
 
     def list(self, request, *args, **kwargs):
         """
@@ -201,12 +181,13 @@ class OrderViewSet(viewsets.ModelViewSet):
                 # Use provided preferred time or default to noon
                 delivery_time = data.get("preferred_delivery_time") or time(12, 0)
                 '''
-                Assignment.objects.create(
-                    order=order,
-                    status='order_placed',
-                    assigned_delivery_date=delivery_date,
-                    assigned_delivery_time=delivery_time
-                )'''
+                    DeliveryAttempt.objects.create(
+                        order=order,
+                        status='order_placed',
+                        delivery_date=delivery_date,
+                        delivery_time=delivery_time
+                    )
+                '''
                 
                 # Return the serialized order with detail serializer
                 return Response(
@@ -221,92 +202,69 @@ class OrderViewSet(viewsets.ModelViewSet):
             )
     
     def update(self, request, *args, **kwargs):
-        """
-        Update an order with validation for store access.
-        """
         order = self.get_object()
-        
-        # Check if user has permission to update this order's store
+
         if not request.user.is_superuser:
             if not request.user.stores.filter(id=order.store.id).exists():
                 return Response(
                     {"error": "You don't have permission to update orders for this store."},
                     status=status.HTTP_403_FORBIDDEN
                 )
-        
-        # If updating store, verify user has access to the new store
+
         new_store_id = request.data.get('store_id') or request.data.get('store')
         if new_store_id and str(order.store.id) != str(new_store_id):
             try:
                 new_store = Store.objects.get(pk=new_store_id)
-                if not request.user.is_superuser:
-                    if not request.user.stores.filter(id=new_store.id).exists():
-                        return Response(
-                            {"error": "You don't have permission to move orders to this store."},
-                            status=status.HTTP_403_FORBIDDEN
-                        )
+                if not request.user.is_superuser and not request.user.stores.filter(id=new_store.id).exists():
+                    return Response(
+                        {"error": "You don't have permission to move orders to this store."},
+                        status=status.HTTP_403_FORBIDDEN
+                    )
             except Store.DoesNotExist:
                 return Response(
                     {"error": f"Store with ID {new_store_id} does not exist."},
                     status=status.HTTP_400_BAD_REQUEST
                 )
-                
-        # Handle assignment status update if provided
+
+        # Handle delivery attempt status update if provided
         new_status = request.data.get('status')
         if new_status:
             try:
-                # Map frontend status names to assignment statuses
                 status_mapping = {
                     'Order Placed': 'order_placed',
                     'Assigned': 'accepted_by_driver',
-                    'En Route': 'in_progress',
+                    'En Route': 'en_route',
                     'Completed': 'complete',
-                    # Add other status mappings as needed
+                    'Misdelivery': 'misdelivery',
+                    'Rescheduled': 'rescheduled',
+                    'Canceled': 'canceled',
                 }
-                
-                # Get the current assignment or create one if it doesn't exist
-                assignment = order.assignments.latest('id')
-                
-                # Only update if status is different
-                if new_status in status_mapping and assignment.status != status_mapping[new_status]:
-                    # Store previous state in history
-                    assignment.add_to_history(
-                        assignment.status, 
-                        assignment.assigned_delivery_date,
-                        assignment.assigned_delivery_time,
-                        "Updated from frontend",
-                        list(assignment.drivers.all())
-                    )
-                    
-                    # Update the assignment with new status
-                    assignment.status = status_mapping[new_status]
-                    assignment.save()
+                delivery_attempt = order.delivery_attempts.order_by('-created_at').first()
+                if new_status in status_mapping:
+                    mapped_status = status_mapping[new_status]
+                    if delivery_attempt and delivery_attempt.status != mapped_status:
+                        delivery_attempt.status = mapped_status
+                        delivery_attempt.save()
             except Exception as e:
-                # Continue with order update even if assignment update fails
-                print(f"Error updating assignment status: {e}")
-        
+                print(f"Error updating delivery attempt status: {e}")
+
         return super().update(request, *args, **kwargs)
+
 
     @action(detail=True, methods=['get'])
     def photos(self, request, pk=None):
-        """
-        Get photos associated with an order.
-        """
         order = self.get_object()
-        
-        # In a real implementation, you would fetch photos from a photos model
-        # Here we return a dummy response for now
-        photos = []
-        
-        if order.hasImage:
-            # Example data - in real app, fetch from database or storage
-            photos = [
-                {
-                    "id": 1,
-                    "url": f"https://example.com/orders/{order.id}/photos/1.jpg",
-                    "caption": "Delivery Photo",
-                    "uploaded_at": "2025-03-22T12:00:00Z"
-                }
-            ]
-        
-        return Response(photos)
+        attempts = order.delivery_attempts.all()
+
+        photos = DeliveryPhoto.objects.filter(delivery_attempt__in=attempts)
+
+        photo_list = [
+            {
+                "id": photo.id,
+                "url": photo.image.url,
+                "caption": photo.caption,
+                "uploaded_at": photo.upload_at.isoformat()
+            }
+            for photo in photos
+        ]
+        return Response(photo_list)

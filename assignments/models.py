@@ -15,7 +15,7 @@ class DeliveryAttempt(models.Model):
     ]
 
     completion_sms_sent = models.BooleanField(default=False)  # NEW
-
+ 
     status_changed_at = models.DateTimeField(auto_now=True)
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='delivery_attempts')
     drivers = models.ManyToManyField(User, related_name='drivers')
