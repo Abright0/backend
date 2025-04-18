@@ -4045,3 +4045,132 @@ Traceback (most recent call last):
 NameError: name 'send_verification_email' is not defined
 INFO 2025-04-13 00:25:16,564 utils 172521 140581539876864 Password reset email sent to user@example.com
 INFO 2025-04-13 00:25:17,829 utils 172521 140581539876864 Verification email sent to verifyme@example.com
+WARNING 2025-04-18 20:48:06,697 log 10752 139765542940672 Forbidden: /api/users/email_verification_status/
+INFO 2025-04-18 20:48:09,718 utils 10752 139765542940672 Verification email sent to newuser@example.com
+ERROR 2025-04-18 20:48:09,719 log 10752 139765542940672 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 186, in register
+    send_verification_email(user)
+NameError: name 'send_verification_email' is not defined
+INFO 2025-04-18 20:48:10,579 utils 10752 139765542940672 Password reset email sent to user@example.com
+INFO 2025-04-18 20:48:11,895 utils 10752 139765542940672 Verification email sent to verifyme@example.com
+INFO 2025-04-18 20:53:42,282 utils 10977 140161059483648 Verification email sent to newuser@example.com
+ERROR 2025-04-18 20:53:42,282 log 10977 140161059483648 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 186, in register
+    send_verification_email(user)
+NameError: name 'send_verification_email' is not defined
+WARNING 2025-04-18 20:54:50,777 log 11054 140392156033024 Not Found: /api/users/me/stores/
+INFO 2025-04-18 20:54:51,993 utils 11054 140392156033024 Verification email sent to newuser@example.com
+ERROR 2025-04-18 20:54:51,994 log 11054 140392156033024 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 186, in register
+    send_verification_email(user)
+NameError: name 'send_verification_email' is not defined
+WARNING 2025-04-18 20:55:53,402 log 11140 139652804771840 Not Found: /api/users/me/stores/
+INFO 2025-04-18 20:56:34,500 autoreload 11355 140536736198656 Watching for file changes with StatReloader
+WARNING 2025-04-18 20:56:42,299 log 11355 140536561268288 Not Found: /
+WARNING 2025-04-18 20:56:42,299 basehttp 11355 140536561268288 "GET / HTTP/1.1" 404 2474
+WARNING 2025-04-18 20:56:42,336 log 11355 140536561268288 Not Found: /favicon.ico
+WARNING 2025-04-18 20:56:42,336 basehttp 11355 140536561268288 "GET /favicon.ico HTTP/1.1" 404 2525
+INFO 2025-04-18 20:56:45,912 basehttp 11355 140536561268288 "GET /api HTTP/1.1" 301 0
+WARNING 2025-04-18 20:56:46,163 log 11355 140536561268288 Unauthorized: /api/
+WARNING 2025-04-18 20:56:46,163 basehttp 11355 140536561268288 "GET /api/ HTTP/1.1" 401 14040
+WARNING 2025-04-18 20:56:53,209 log 11355 140536561268288 Not Found: /api/users/me/store
+WARNING 2025-04-18 20:56:53,209 basehttp 11355 140536561268288 "GET /api/users/me/store HTTP/1.1" 404 29105
+WARNING 2025-04-18 20:59:01,902 log 11539 139933211914240 Not Found: /api/users/me/store/
+INFO 2025-04-18 21:03:12,990 autoreload 11355 140536736198656 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-18 21:03:13,746 autoreload 12585 140194673561600 Watching for file changes with StatReloader
+WARNING 2025-04-18 21:04:48,316 log 12718 140518916825088 Not Found: /api/users/me/stores/
+INFO 2025-04-18 21:05:11,545 basehttp 12585 140194499053120 "GET /api/users/me/stores HTTP/1.1" 301 0
+WARNING 2025-04-18 21:05:11,826 log 12585 140194499053120 Unauthorized: /api/users/me/stores/
+WARNING 2025-04-18 21:05:11,827 basehttp 12585 140194499053120 "GET /api/users/me/stores/ HTTP/1.1" 401 14409
+WARNING 2025-04-18 21:05:25,775 log 12759 139805203968000 Not Found: /api/users/me/stores/
+WARNING 2025-04-18 21:06:28,260 log 12822 139977093025792 Not Found: /api/users/me/stores/
+WARNING 2025-04-18 21:08:55,648 log 13038 140428223729664 Not Found: /api/users/me/stores/
+WARNING 2025-04-18 21:10:34,637 log 12585 140194499053120 Unauthorized: /api/users/stores/
+WARNING 2025-04-18 21:10:34,638 basehttp 12585 140194499053120 "GET /api/users/stores/ HTTP/1.1" 401 14356
+WARNING 2025-04-18 21:10:45,993 log 13313 140669858816000 Not Found: /api/users/stores/
+INFO 2025-04-18 21:11:46,725 autoreload 12585 140194673561600 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-18 21:11:47,486 autoreload 13361 139892087689216 Watching for file changes with StatReloader
+INFO 2025-04-18 21:11:48,833 autoreload 13361 139892087689216 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-18 21:11:49,543 autoreload 13365 140408777887744 Watching for file changes with StatReloader
+INFO 2025-04-18 21:11:51,917 autoreload 13365 140408777887744 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-18 21:11:52,674 autoreload 13383 140182976520192 Watching for file changes with StatReloader
+INFO 2025-04-18 21:14:37,337 autoreload 13383 140182976520192 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-18 21:14:38,113 autoreload 13618 140137228816384 Watching for file changes with StatReloader
+INFO 2025-04-18 21:16:01,749 autoreload 13618 140137228816384 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-18 21:16:02,528 autoreload 13790 140320037990400 Watching for file changes with StatReloader
+INFO 2025-04-18 21:16:32,105 basehttp 13790 140319863559744 "GET /api/users/my_stores HTTP/1.1" 301 0
+WARNING 2025-04-18 21:16:32,374 log 13790 140319863559744 Unauthorized: /api/users/my_stores/
+WARNING 2025-04-18 21:16:32,375 basehttp 13790 140319863559744 "GET /api/users/my_stores/ HTTP/1.1" 401 14327
+WARNING 2025-04-18 21:16:37,445 log 13790 140319863559744 Not Found: /api/users/me/my_stores/
+WARNING 2025-04-18 21:16:37,445 basehttp 13790 140319863559744 "GET /api/users/me/my_stores/ HTTP/1.1" 404 29120
+WARNING 2025-04-18 21:16:38,972 log 13790 140319863559744 Unauthorized: /api/users/my_stores/
+WARNING 2025-04-18 21:16:38,972 basehttp 13790 140319863559744 "GET /api/users/my_stores/ HTTP/1.1" 401 14327
+INFO 2025-04-18 21:17:55,816 autoreload 13790 140320037990400 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-18 21:17:56,611 autoreload 13879 140160564916224 Watching for file changes with StatReloader
+INFO 2025-04-18 21:18:08,167 autoreload 13879 140160564916224 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-18 21:18:08,948 autoreload 13940 140336176476160 Watching for file changes with StatReloader
+INFO 2025-04-18 21:18:19,581 autoreload 13940 140336176476160 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-18 21:18:20,366 autoreload 13985 139667548270592 Watching for file changes with StatReloader
+INFO 2025-04-18 21:18:27,893 autoreload 13985 139667548270592 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-18 21:18:28,675 autoreload 14007 140071956377600 Watching for file changes with StatReloader
+INFO 2025-04-18 21:19:08,167 autoreload 14007 140071956377600 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-18 21:19:08,882 autoreload 14056 140562283704320 Watching for file changes with StatReloader
+INFO 2025-04-18 21:19:22,515 autoreload 14056 140562283704320 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-18 21:19:23,262 autoreload 14084 140079499059200 Watching for file changes with StatReloader
+INFO 2025-04-18 21:19:31,801 autoreload 14084 140079499059200 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-18 21:19:32,567 autoreload 14123 140649946591232 Watching for file changes with StatReloader
+INFO 2025-04-18 21:19:52,431 autoreload 14123 140649946591232 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-18 21:19:53,217 autoreload 14174 140299680313344 Watching for file changes with StatReloader
+INFO 2025-04-18 21:19:57,712 autoreload 14174 140299680313344 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-18 21:19:58,508 autoreload 14194 139714185736192 Watching for file changes with StatReloader

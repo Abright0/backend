@@ -63,8 +63,7 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
 
         return super().update(instance, validated_data)
 
-
-    def send_status_sms(self, attempt, event_type):
+    def build_context_for_event(self, attempt, event_type):
         order = attempt.order
         context = {
             "customer_name": order.customer.name,
@@ -72,15 +71,13 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
             "phone_number": order.customer.phone_number,
         }
 
-        # Add en_route fields if they exist (safe fallback)
         if event_type == 'driver_en_route':
             if attempt.mins_to_arrival:
                 context["mins_to_arrival"] = attempt.mins_to_arrival
             if attempt.miles_to_arrival:
                 context["miles_to_arrival"] = attempt.miles_to_arrival
 
-        # Add photo links for complete
-        if event_type == 'driver_complete':
+        elif event_type == 'driver_complete':
             photo_qs = attempt.photos.all()
             if photo_qs.exists():
                 signed_urls = [generate_signed_url(p.image.name) for p in photo_qs]
@@ -88,7 +85,12 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
             else:
                 context["photo_links"] = "No delivery photos available."
 
-        trigger_message(event_type, context, order.store)
+        return context
+            
+    def send_status_sms(self, attempt, event_type):
+        context = self.build_context_for_event(attempt, event_type)
+        trigger_message(event_type, context, attempt.order.store)
+
 
 
 

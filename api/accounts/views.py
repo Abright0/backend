@@ -156,13 +156,13 @@ class UserViewSet(viewsets.ModelViewSet):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-    @action(detail=False, methods=['get'])
+    @action(detail=False, methods=['get'], url_path='me')
     def me(self, request):
         "Return the current user's profile"
         serializer = self.get_serializer(request.user)
         return Response(serializer.data)
 
-    @action(detail=False, methods=['get'])
+    @action(detail=False, methods=['get'], url_path='me/stores')
     def my_stores(self, request):
         "Get stores for the current user"
         stores = request.user.stores.all()

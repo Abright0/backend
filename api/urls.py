@@ -1,3 +1,5 @@
+# api/urls.py
+
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework_nested.routers import NestedDefaultRouter
@@ -12,7 +14,7 @@ from api.assignments.views import (
     ScheduledItemViewSet,
     DeliveryPhotoViewSet,
 )
-from api.messaging.views import MessageTemplateViewSet, template_variable_info  # ✅ New import
+from api.messaging.views import MessageTemplateViewSet, template_variable_info
 from api.views import LogoutView
 
 from django.conf import settings
@@ -42,7 +44,7 @@ urlpatterns = [
     path('', include(attempts_router.urls)),
     path('', include(photos_router.urls)),
 
-    path('messaging/template-vars/', template_variable_info, name="template_variable_info"), 
+    path('messaging/template-vars/', template_variable_info, name="template_variable_info"),
 
     path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view()),
@@ -51,9 +53,6 @@ urlpatterns = [
     path('products/', ProductListCreate.as_view(), name='product-list-create'),
     path('import-products/', ProductImportView.as_view(), name="import-products"),
     path('search-product/', SearchProductView.as_view(), name="search-product"),
-
-    path('users/me/', UserViewSet.as_view({'get':'me'})),
-    path('users/me/stores/', UserViewSet.as_view({'get':'my_stores'})),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
