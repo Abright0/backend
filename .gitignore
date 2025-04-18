@@ -17,3 +17,4 @@ migrations/
 venv/
 .vscodium/
 
+django-errors.log

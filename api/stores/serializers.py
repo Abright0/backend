@@ -1,3 +1,4 @@
+# api/stores/serializers.py
 from rest_framework import serializers
 from stores.models import Store
 

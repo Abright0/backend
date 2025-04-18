@@ -4174,3 +4174,7 @@ INFO 2025-04-18 21:19:52,431 autoreload 14123 140649946591232 /home/abright/Work
 INFO 2025-04-18 21:19:53,217 autoreload 14174 140299680313344 Watching for file changes with StatReloader
 INFO 2025-04-18 21:19:57,712 autoreload 14174 140299680313344 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
 INFO 2025-04-18 21:19:58,508 autoreload 14194 139714185736192 Watching for file changes with StatReloader
+INFO 2025-04-18 21:21:59,302 autoreload 14194 139714185736192 /home/abright/Work/FarmFreight/backend/api/stores/views.py changed, reloading.
+INFO 2025-04-18 21:22:00,111 autoreload 14499 140269067804672 Watching for file changes with StatReloader
+INFO 2025-04-18 21:22:09,726 autoreload 14499 140269067804672 /home/abright/Work/FarmFreight/backend/api/stores/serializers.py changed, reloading.
+INFO 2025-04-18 21:22:10,484 autoreload 14563 140047745921024 Watching for file changes with StatReloader

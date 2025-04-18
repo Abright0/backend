@@ -35,7 +35,8 @@ class UserViewSetTests(APITestCase):
 
     def test_get_my_stores(self):
         store = Store.objects.create(name="Test Store")
-         # store.store_users.add(self.user)  # Adjust based on actual model
+        store.store_users.add(self.user)
+        # store.store_users.add(self.user)  # Adjust based on actual model
         self.authenticate(self.user)
 
         response = self.client.get("/api/users/me/stores/")
