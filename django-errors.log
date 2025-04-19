@@ -5333,3 +5333,7 @@ twilio.base.exceptions.TwilioRestException:
 [34m[49mhttps://www.twilio.com/docs/errors/21617[0m
 
 
+INFO 2025-04-19 19:17:31,270 autoreload 49606 139942372478976 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 19:17:32,066 autoreload 52084 140138524704768 Watching for file changes with StatReloader
+INFO 2025-04-19 19:17:34,467 autoreload 52084 140138524704768 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 19:17:35,253 autoreload 52105 140444903256064 Watching for file changes with StatReloader

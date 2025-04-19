@@ -126,8 +126,6 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
 
         return instance
 
-
-
     def build_context_for_event(self, attempt, event_type):
         order = attempt.order
         context = {
