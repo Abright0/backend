@@ -2,6 +2,14 @@
 from django.db import models
 from accounts.models import User
 from orders.models import Order, OrderItem
+import os
+from datetime import datetime
+
+def delivery_photo_upload_path(instance, filename):
+    ext = os.path.splitext(filename)[1] or ".jpg"  # fallback if no extension
+    timestamp = datetime.now().strftime('%Y%m%dT%H%M%S%f')
+    return f"delivery_photos/photo_{timestamp}{ext}"
+
 
 class DeliveryAttempt(models.Model):
     STATUS_CHOICES = [
@@ -66,11 +74,11 @@ class ScheduledItem(models.Model):
 
 class DeliveryPhoto(models.Model):
     delivery_attempt = models.ForeignKey(
-        DeliveryAttempt,
+        'assignments.DeliveryAttempt',
         on_delete=models.CASCADE,
         related_name='photos'
     )
-    image = models.ImageField(upload_to='delivery_photos/') #stored on S3
+    image = models.ImageField(upload_to=delivery_photo_upload_path)
     caption = models.CharField(max_length=255, blank=True)
     upload_at = models.DateTimeField(auto_now_add=True)
 

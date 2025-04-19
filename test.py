@@ -13,6 +13,7 @@ from orders.models import Order
 from assignments.models import DeliveryAttempt
 
 import itertools
+import random
 
 from PIL import Image
 from io import BytesIO
@@ -184,6 +185,26 @@ class UserViewSetTests(APITestCase):
             for photo in response.data:
                 self.assertIn('signed_url', photo)
                 print(photo)
+
+
+        import random
+        from assignments.models import DeliveryAttempt, DeliveryPhoto
+
+        # Get all attempts for this order
+        delivery_attempts = DeliveryAttempt.objects.filter(order_id=order_id)
+
+        # Randomly pick one
+        random_attempt = random.choice(list(delivery_attempts))
+        print(f"🔍 Chosen attempt ID: {random_attempt.id} — Status: {random_attempt.status}")
+
+        # Get all photos for this attempt
+        photos = DeliveryPhoto.objects.filter(delivery_attempt=random_attempt)
+
+        # Print photo info
+        for photo in photos:
+            print(f"📸 Photo ID: {photo.id}, Caption: {photo.caption}, Image: {photo.image.url}")
+
+
 
         ######################
         # Order Delete

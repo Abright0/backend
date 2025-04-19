@@ -31,7 +31,7 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
         return data
 
     def create(self, validated_data):
-        print("CREATE CUSTOM")
+        print("CREATE delivery attempt")
 
         scheduled_items_data = validated_data.pop('scheduled_items', [])
         drivers_data = validated_data.pop('drivers', [])  # <-- handle M2M separately
@@ -70,7 +70,6 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
             ScheduledItem.objects.create(delivery_attempt=delivery_attempt, **item_data)
 
         return delivery_attempt
-
 
 
     def update(self, instance, validated_data):
@@ -160,13 +159,3 @@ class DeliveryPhotoSerializer(serializers.ModelSerializer):
 
     def get_signed_url(self, obj):
         return generate_signed_url(obj.image.name)
-
-    def create(self, validated_data):
-        image = validated_data.get('image')
-
-        if image:
-            ext = os.path.splitext(image.name)[1]  # keep original extension
-            timestamp = datetime.now().strftime("%Y%m%dT%H%M%S%f")  # includes microseconds
-            image.name = f"photo_{timestamp}{ext}"  # e.g., photo_20250419T142530.jpg
-
-        return super().create(validated_data)

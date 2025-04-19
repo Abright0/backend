@@ -4833,3 +4833,137 @@ INFO 2025-04-19 15:09:26,244 autoreload 36397 140013129510912 /home/abright/Work
 INFO 2025-04-19 15:09:26,982 autoreload 36630 140195479367680 Watching for file changes with StatReloader
 INFO 2025-04-19 15:19:53,615 autoreload 36630 140195479367680 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
 INFO 2025-04-19 15:19:54,405 autoreload 37403 140632769871872 Watching for file changes with StatReloader
+INFO 2025-04-19 15:24:36,846 autoreload 37403 140632769871872 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:24:37,636 autoreload 37799 140452256550912 Watching for file changes with StatReloader
+INFO 2025-04-19 15:25:31,286 autoreload 37799 140452256550912 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:25:32,071 autoreload 37903 140008713773056 Watching for file changes with StatReloader
+INFO 2025-04-19 15:25:37,536 autoreload 37903 140008713773056 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:25:38,343 autoreload 37945 139848469987328 Watching for file changes with StatReloader
+INFO 2025-04-19 15:26:37,247 autoreload 37945 139848469987328 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:26:38,025 autoreload 38042 140437374894080 Watching for file changes with StatReloader
+INFO 2025-04-19 15:28:56,127 autoreload 38042 140437374894080 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 15:28:56,915 autoreload 38084 140534383833088 Watching for file changes with StatReloader
+INFO 2025-04-19 15:30:08,330 autoreload 38084 140534383833088 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 15:30:09,085 autoreload 38117 140650089332736 Watching for file changes with StatReloader
+INFO 2025-04-19 15:30:19,792 autoreload 38117 140650089332736 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:30:20,603 autoreload 38140 140359867633664 Watching for file changes with StatReloader
+INFO 2025-04-19 15:30:21,993 autoreload 38140 140359867633664 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:30:22,814 autoreload 38146 140522576064512 Watching for file changes with StatReloader
+INFO 2025-04-19 15:30:32,467 autoreload 38146 140522576064512 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 15:30:33,227 autoreload 38170 140283409481728 Watching for file changes with StatReloader
+ERROR 2025-04-19 15:30:40,212 log 38173 140587499282432 Internal Server Error: /api/orders/1/delivery-attempts/1/photos/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/views.py", line 47, in create
+    photo = DeliveryPhoto.objects.create(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1835, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1758, in as_sql
+    value_rows = [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1759, in <listcomp>
+    [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1760, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1708, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/fields/files.py", line 338, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/fields/files.py", line 98, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/fields/files.py", line 353, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "/home/abright/Work/FarmFreight/backend/assignments/models.py", line 8, in delivery_photo_upload_path
+    ext = os.path.splitext(filename)[1] or ".jpg"  # fallback if no extension
+NameError: name 'os' is not defined
+INFO 2025-04-19 15:30:46,863 autoreload 38170 140283409481728 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 15:30:47,632 autoreload 38224 139801332621312 Watching for file changes with StatReloader
+ERROR 2025-04-19 15:30:52,744 log 38225 140255296983040 Internal Server Error: /api/orders/1/delivery-attempts/1/photos/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/views.py", line 47, in create
+    photo = DeliveryPhoto.objects.create(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1835, in execute_sql
+    for sql, params in self.as_sql():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1758, in as_sql
+    value_rows = [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1759, in <listcomp>
+    [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1760, in <listcomp>
+    self.prepare_value(field, self.pre_save_val(field, obj))
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1708, in pre_save_val
+    return field.pre_save(obj, add=True)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/fields/files.py", line 338, in pre_save
+    file.save(file.name, file.file, save=False)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/fields/files.py", line 98, in save
+    name = self.field.generate_filename(self.instance, name)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/fields/files.py", line 353, in generate_filename
+    filename = self.upload_to(instance, filename)
+  File "/home/abright/Work/FarmFreight/backend/assignments/models.py", line 9, in delivery_photo_upload_path
+    timestamp = datetime.now().strftime('%Y%m%dT%H%M%S%f')
+NameError: name 'datetime' is not defined
+INFO 2025-04-19 15:31:05,449 autoreload 38224 139801332621312 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 15:31:06,235 autoreload 38328 139776527618048 Watching for file changes with StatReloader
+INFO 2025-04-19 15:32:28,759 autoreload 38328 139776527618048 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 15:32:29,577 autoreload 38731 140269024759808 Watching for file changes with StatReloader
