@@ -5,6 +5,8 @@ from assignments.utils import generate_signed_url
 
 from messaging.helpers import trigger_message
 
+from django.utils import timezone
+from django.conf import settings
 from datetime import datetime
 
 class ScheduledItemSerializer(serializers.ModelSerializer):
@@ -96,7 +98,7 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
 
         instance.save()
         print(instance.status)
-        #
+        
         if drivers is not None:
             instance.drivers.set(drivers)
 
@@ -143,10 +145,22 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
         elif event_type == 'driver_complete':
             photo_qs = attempt.photos.all()
             if photo_qs.exists():
-                signed_urls = [generate_signed_url(p.image.name) for p in photo_qs]
-                context["photo_links"] = "\n".join(signed_urls)
+                links = []
+
+                # Fallback-safe domain for redirect links
+                domain = getattr(settings, "DELIVERY_LINK_DOMAIN", "https://yourfallbackdomain.com")
+
+                for photo in photo_qs:
+                    if not photo.signed_url or not photo.signed_url_expiry or photo.signed_url_expiry < timezone.now():
+                        photo.create_signed_url(expiration_minutes=2880)  # 48 hours
+
+                    short_link = f"{domain}/p/{photo.id}"
+                    links.append(short_link)
+
+                context["photo_links"] = "\n".join(links)
             else:
                 context["photo_links"] = "No delivery photos available."
+
 
         return context
             
@@ -164,4 +178,6 @@ class DeliveryPhotoSerializer(serializers.ModelSerializer):
         fields = ['id', 'caption', 'image', 'signed_url', 'delivery_attempt']
 
     def get_signed_url(self, obj):
-        return generate_signed_url(obj.image.name)
+        if obj.signed_url and obj.signed_url_expiry and obj.signed_url_expiry > timezone.now():
+            return obj.signed_url
+        return None

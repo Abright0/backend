@@ -4,6 +4,10 @@ from accounts.models import User
 from orders.models import Order, OrderItem
 import os
 from datetime import datetime
+from assignments.utils import generate_signed_url
+
+from django.utils import timezone
+from datetime import timedelta
 
 def delivery_photo_upload_path(instance, filename):
     ext = os.path.splitext(filename)[1] or ".jpg"  # fallback if no extension
@@ -79,6 +83,15 @@ class DeliveryPhoto(models.Model):
     image = models.ImageField(upload_to=delivery_photo_upload_path)
     caption = models.CharField(max_length=255, blank=True)
     upload_at = models.DateTimeField(auto_now_add=True)
+
+    # new fields
+    signed_url = models.URLField(blank=True, null=True)
+    signed_url_expiry = models.DateTimeField(blank=True, null=True)
+
+    def create_signed_url(self, expiration_minutes=2880):  # 48 hours
+        self.signed_url = generate_signed_url(self.image.name, expiration_minutes)
+        self.signed_url_expiry = timezone.now() + timedelta(minutes=expiration_minutes)
+        self.save()
 
     def __str__(self):
         return f"Photo for {self.delivery_attempt} - {self.caption or 'No caption'}"

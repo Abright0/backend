@@ -4,6 +4,11 @@ from django.conf import settings
 
 
 def send_sms(to_number, message):
+    if getattr(settings, 'USE_DUMMY_SMS', True):
+        print(f"[DUMMY SMS] To: {to_number}")
+        print(f"[DUMMY SMS] To: {message}")
+        return
+
     print('send_sms')
     print(to_number)
     print(message)

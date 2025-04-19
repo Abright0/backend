@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+USE_DUMMY_SMS = True
+
 
 from pathlib import Path
 
@@ -59,6 +61,7 @@ STORAGES = {
     },
 }
 
+DELIVERY_LINK_DOMAIN = "https://backend-production-5f3d.up.railway.app"
 # Define MEDIA_URL and STATIC_URL
 MEDIA_URL = f'https://storage.googleapis.com/farm-freight/media/'
 STATIC_URL = f'https://storage.googleapis.com/farm-freight/static/'

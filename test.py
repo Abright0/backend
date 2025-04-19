@@ -88,7 +88,7 @@ class UserViewSetTests(APITestCase):
             "assigned_to_driver": "Your order {{ order_id }} has been assigned to a driver.",
             "accepted_by_driver": "The driver is preparing for your delivery (Order: {{ order_id }}).",
             "driver_en_route": "Heads up {{ customer_name }}! Your driver is en route with order {{ order_id }}. ETA: {{ mins_to_arrival }} mins, {{ miles_to_arrival }} miles away.",
-            "driver_complete": "Your delivery for order {{ order_id }} is complete. Photos:\n{{ photo_links }}",
+            "driver_complete": "Your delivery for order {{ order_id }} is complete. View photos: {{ photo_links }}",
             "driver_misdelivery": "There was a delivery issue with order {{ order_id }}. Please contact support.",
             "driver_rescheduled": "Your delivery for order {{ order_id }} has been rescheduled.",
             "driver_canceled": "Your delivery for order {{ order_id }} has been canceled.",

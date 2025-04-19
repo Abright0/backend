@@ -5337,3 +5337,340 @@ INFO 2025-04-19 19:17:31,270 autoreload 49606 139942372478976 /home/abright/Work
 INFO 2025-04-19 19:17:32,066 autoreload 52084 140138524704768 Watching for file changes with StatReloader
 INFO 2025-04-19 19:17:34,467 autoreload 52084 140138524704768 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
 INFO 2025-04-19 19:17:35,253 autoreload 52105 140444903256064 Watching for file changes with StatReloader
+INFO 2025-04-19 19:47:48,738 autoreload 52105 140444903256064 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 19:47:49,472 autoreload 52957 140184220721152 Watching for file changes with StatReloader
+INFO 2025-04-19 19:49:03,831 autoreload 52957 140184220721152 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 19:49:04,569 autoreload 53013 140519560495104 Watching for file changes with StatReloader
+INFO 2025-04-19 19:50:44,614 autoreload 53013 140519560495104 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 19:50:45,341 autoreload 53059 140131914289152 Watching for file changes with StatReloader
+INFO 2025-04-19 19:51:03,171 autoreload 53059 140131914289152 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 19:51:04,016 autoreload 53134 140535903842304 Watching for file changes with StatReloader
+INFO 2025-04-19 19:51:06,363 autoreload 53134 140535903842304 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 19:51:07,244 autoreload 53151 140361983447040 Watching for file changes with StatReloader
+INFO 2025-04-19 19:51:58,030 autoreload 53151 140361983447040 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 19:51:58,935 autoreload 53191 139854755708928 Watching for file changes with StatReloader
+INFO 2025-04-19 19:52:13,607 autoreload 53191 139854755708928 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 19:52:14,476 autoreload 53250 140206370840576 Watching for file changes with StatReloader
+ERROR 2025-04-19 19:52:44,516 log 53271 140013966331904 Internal Server Error: /api/stores/5/orders/1/delivery-attempts/1/photos/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: table assignments_deliveryphoto has no column named signed_url
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/views.py", line 47, in create
+    photo = DeliveryPhoto.objects.create(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: table assignments_deliveryphoto has no column named signed_url
+ERROR 2025-04-19 19:53:12,044 log 53276 140374494097408 Internal Server Error: /api/stores/5/orders/1/delivery-attempts/1/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 203, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 126, in update
+    self.send_status_sms(instance, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 157, in send_status_sms
+    trigger_message(event_type, context, attempt.order.store)
+  File "/home/abright/Work/FarmFreight/backend/messaging/helpers.py", line 22, in trigger_message
+    send_sms(to_number, rendered_message)
+  File "/home/abright/Work/FarmFreight/backend/messaging/services/sms_service.py", line 17, in send_sms
+    client.messages.create(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACecbc0f0a17f67fcb03db426c76129101/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The concatenated message body exceeds the 1600 character limit[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21617[0m
+
+
+INFO 2025-04-19 19:55:37,103 autoreload 53250 140206370840576 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 19:55:38,005 autoreload 53459 139836001611776 Watching for file changes with StatReloader
+INFO 2025-04-19 19:55:45,556 autoreload 53459 139836001611776 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 19:55:46,418 autoreload 53477 140703314796544 Watching for file changes with StatReloader
+ERROR 2025-04-19 19:56:01,291 log 53497 140371462160384 Internal Server Error: /api/stores/5/orders/1/delivery-attempts/1/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 203, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 126, in update
+    self.send_status_sms(instance, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 165, in send_status_sms
+    context = self.build_context_for_event(attempt, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 150, in build_context_for_event
+    photo.create_signed_url(expiration_minutes=2880)  # 48 hours
+  File "/home/abright/Work/FarmFreight/backend/assignments/models.py", line 90, in create_signed_url
+    self.signed_url_expiry = timezone.now() + timedelta(minutes=expiration_minutes)
+NameError: name 'timezone' is not defined
+INFO 2025-04-19 19:57:32,235 autoreload 53477 140703314796544 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 19:57:33,111 autoreload 53648 140315455254528 Watching for file changes with StatReloader
+ERROR 2025-04-19 19:57:44,126 log 53650 140424441872384 Internal Server Error: /api/stores/5/orders/1/delivery-attempts/1/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 203, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 126, in update
+    self.send_status_sms(instance, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 165, in send_status_sms
+    context = self.build_context_for_event(attempt, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 150, in build_context_for_event
+    photo.create_signed_url(expiration_minutes=2880)  # 48 hours
+  File "/home/abright/Work/FarmFreight/backend/assignments/models.py", line 92, in create_signed_url
+    self.signed_url_expiry = timezone.now() + timedelta(minutes=expiration_minutes)
+NameError: name 'timedelta' is not defined
+INFO 2025-04-19 19:58:06,202 autoreload 53648 140315455254528 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 19:58:07,074 autoreload 53728 140174968758272 Watching for file changes with StatReloader
+INFO 2025-04-19 19:58:28,858 autoreload 53728 140174968758272 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 19:58:29,774 autoreload 53834 140363500015616 Watching for file changes with StatReloader
+INFO 2025-04-19 19:59:14,335 autoreload 53834 140363500015616 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 19:59:15,165 autoreload 53911 140016968544256 Watching for file changes with StatReloader
+INFO 2025-04-19 19:59:16,472 autoreload 53911 140016968544256 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 19:59:17,336 autoreload 53928 139943393775616 Watching for file changes with StatReloader
+INFO 2025-04-19 19:59:41,082 autoreload 53928 139943393775616 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 19:59:41,999 autoreload 54021 140247017558016 Watching for file changes with StatReloader
+INFO 2025-04-19 20:00:45,210 autoreload 54021 140247017558016 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 20:00:46,064 autoreload 54051 139900173438976 Watching for file changes with StatReloader
+INFO 2025-04-19 20:00:59,690 autoreload 54051 139900173438976 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 20:01:00,535 autoreload 54082 139744083357696 Watching for file changes with StatReloader
+INFO 2025-04-19 20:01:01,804 autoreload 54082 139744083357696 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 20:01:02,602 autoreload 54086 139881290100736 Watching for file changes with StatReloader
+INFO 2025-04-19 20:02:02,368 autoreload 54086 139881290100736 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 20:02:03,263 autoreload 54116 139675680145408 Watching for file changes with StatReloader
+INFO 2025-04-19 20:02:15,948 autoreload 54116 139675680145408 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 20:02:16,793 autoreload 54136 140499661774848 Watching for file changes with StatReloader
+INFO 2025-04-19 20:02:26,385 autoreload 54136 140499661774848 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-19 20:02:27,256 autoreload 54166 140003458871296 Watching for file changes with StatReloader
+INFO 2025-04-19 20:02:56,406 autoreload 54166 140003458871296 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-19 20:02:57,291 autoreload 54215 139869397282816 Watching for file changes with StatReloader
+INFO 2025-04-19 20:03:03,749 autoreload 54215 139869397282816 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-19 20:03:04,626 autoreload 54233 140047082848256 Watching for file changes with StatReloader
+INFO 2025-04-19 20:03:58,348 autoreload 54233 140047082848256 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-19 20:03:59,154 autoreload 54259 140298761424896 Watching for file changes with StatReloader
+INFO 2025-04-19 20:04:57,566 autoreload 54259 140298761424896 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-19 20:04:58,436 autoreload 54281 139685690695680 Watching for file changes with StatReloader
+ERROR 2025-04-19 20:05:11,683 log 54300 139714684530688 Internal Server Error: /api/stores/5/orders/1/delivery-attempts/1/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 203, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 126, in update
+    self.send_status_sms(instance, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 169, in send_status_sms
+    trigger_message(event_type, context, attempt.order.store)
+  File "/home/abright/Work/FarmFreight/backend/messaging/helpers.py", line 22, in trigger_message
+    send_sms(to_number, rendered_message)
+  File "/home/abright/Work/FarmFreight/backend/messaging/services/sms_service.py", line 17, in send_sms
+    client.messages.create(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/twilio/rest/api/v2010/account/message/__init__.py", line 589, in create
+    payload = self._version.create(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/twilio/base/version.py", line 463, in create
+    return self._parse_create(method, uri, response)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/twilio/base/version.py", line 435, in _parse_create
+    raise self.exception(method, uri, response, "Unable to create record")
+twilio.base.exceptions.TwilioRestException: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Accounts/ACecbc0f0a17f67fcb03db426c76129101/Messages.json[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Account ACecbc0f0a17f67fcb03db426c76129101 exceeded the 9 daily messages limit[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/63038[0m
+
+
+INFO 2025-04-19 20:07:40,858 autoreload 54281 139685690695680 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-19 20:07:41,757 autoreload 54391 140162604658688 Watching for file changes with StatReloader
+INFO 2025-04-19 20:08:59,335 autoreload 54391 140162604658688 /home/abright/Work/FarmFreight/backend/messaging/services/sms_service.py changed, reloading.
+INFO 2025-04-19 20:09:00,155 autoreload 54613 140057875263488 Watching for file changes with StatReloader
+INFO 2025-04-19 20:09:03,531 autoreload 54613 140057875263488 /home/abright/Work/FarmFreight/backend/messaging/services/sms_service.py changed, reloading.
+INFO 2025-04-19 20:09:04,379 autoreload 54646 140546458558464 Watching for file changes with StatReloader
+INFO 2025-04-19 20:09:23,298 autoreload 54646 140546458558464 /home/abright/Work/FarmFreight/backend/messaging/services/sms_service.py changed, reloading.
+INFO 2025-04-19 20:09:24,212 autoreload 54767 140343318499328 Watching for file changes with StatReloader
+INFO 2025-04-19 20:09:27,605 autoreload 54767 140343318499328 /home/abright/Work/FarmFreight/backend/messaging/services/sms_service.py changed, reloading.
+INFO 2025-04-19 20:09:28,441 autoreload 54811 140698575171584 Watching for file changes with StatReloader
+INFO 2025-04-19 20:09:33,861 autoreload 54811 140698575171584 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-19 20:09:34,698 autoreload 54840 140505105534976 Watching for file changes with StatReloader
+ERROR 2025-04-19 20:09:49,092 log 54858 140638670852096 Internal Server Error: /api/stores/5/orders/1/delivery-attempts/1/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 203, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 126, in update
+    self.send_status_sms(instance, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 168, in send_status_sms
+    context = self.build_context_for_event(attempt, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 150, in build_context_for_event
+    domain = getattr(settings, "DELIVERY_LINK_DOMAIN", "https://yourfallbackdomain.com")
+NameError: name 'settings' is not defined
+INFO 2025-04-19 20:10:23,318 autoreload 54840 140505105534976 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 20:10:24,199 autoreload 55012 139854782951424 Watching for file changes with StatReloader
+INFO 2025-04-19 20:10:34,538 autoreload 55012 139854782951424 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 20:10:35,410 autoreload 55039 139674307952640 Watching for file changes with StatReloader
