@@ -5,7 +5,7 @@ from assignments.models import DeliveryAttempt, ScheduledItem
 from assignments.models import DeliveryPhoto
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
-
+from orders.models import Order
 
 class DeliveryAttemptViewSet(viewsets.ModelViewSet):
     queryset = DeliveryAttempt.objects.all()
@@ -14,6 +14,13 @@ class DeliveryAttemptViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         return DeliveryAttempt.objects.filter(order_id=self.kwargs["order_pk"])
+
+    def get_serializer_context(self):
+        context = super().get_serializer_context()
+        order_id = self.kwargs.get("order_pk")
+        if order_id:
+            context["order"] = Order.objects.get(id=order_id)
+        return context
 
 class ScheduledItemViewSet(viewsets.ModelViewSet):
     queryset = ScheduledItem.objects.all()

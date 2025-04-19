@@ -1,12 +1,16 @@
 from rest_framework.test import APITestCase, APIClient
 from rest_framework import status
-from django.urls import reverse
 from rest_framework_simplejwt.tokens import RefreshToken
+
+from django.urls import reverse
 from django.utils import timezone
+from django.core.files.uploadedfile import SimpleUploadedFile
+
 
 from accounts.models import User
 from stores.models import Store
 from orders.models import Order
+from assignments.models import DeliveryAttempt
 
 
 class UserViewSetTests(APITestCase):
@@ -22,6 +26,13 @@ class UserViewSetTests(APITestCase):
             username ="user_1",
             email="admin@example.com",
             password="adminpass"
+        )
+        self.driver = User.objects.create_user(
+            username ="driver_1",
+            email="driver@example.com",
+            password="adminpass",
+            is_email_verified=True,
+            is_driver=True
         )
 
         self.store = Store.objects.create(name="Test Store")
@@ -54,7 +65,7 @@ class UserViewSetTests(APITestCase):
 
         response = self.client.get("/api/users/me/stores/")
         # grabbing stores per user
-        print(response)
+        #print(response)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertGreaterEqual(len(response.data), 1)
 
@@ -92,7 +103,7 @@ class UserViewSetTests(APITestCase):
         response = self.client.post(url, payload, format='json')
 
         # Debug output if needed
-        print("RESPONSE:", response.status_code, response.data)
+        #print("RESPONSE:", response.status_code, response.data)
 
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(response.data['store'], self.store.id)
@@ -108,7 +119,7 @@ class UserViewSetTests(APITestCase):
 
         response = self.client.patch(url, payload, format="json")
 
-        print("PATCH RESPONSE:", response.status_code, response.data)
+        #print("PATCH RESPONSE:", response.status_code, response.data)
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data["notes"], "Updated note from test")
@@ -118,7 +129,7 @@ class UserViewSetTests(APITestCase):
         url = f'/api/orders/{order.id}/'
 
         response = self.client.delete(url)
-        print("DELETE RESPONSE:", response.status_code)
+        #print("DELETE RESPONSE:", response.status_code)
 
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
         self.assertFalse(Order.objects.filter(id=order.id).exists())
@@ -126,7 +137,71 @@ class UserViewSetTests(APITestCase):
         ######################
         # Order Photos
         ######################
+
+        order_url = '/api/orders/'
+        order_payload = {
+            "store_id": self.store.id,
+            "first_name": "LANDRY",
+            "last_name": "ARGABRIGHT",
+            "phone_num": "4692478210",
+            "address": "456 Another St",
+            "customer_email": "jane@example.com",
+            "customer_num": "C123",
+            "preferred_delivery_time": "10:00",
+            "delivery_date": "4-21-2025",
+            "delivery_instructions": "Leave by garage",
+            "notes": "Please handle with care",
+            "delivery_date": timezone.now().date().isoformat(),
+            "hasImage": False,
+            "products": [
+                {
+                    "product_name": "Sample Product",
+                    "quantity": 2,
+                    "price": 9.99,
+                    "product_mpn": "SKU123"
+                }
+            ]
+        }
+        order_response = self.client.post(order_url, order_payload, format='json')
+        #print(order_response)
+        self.assertEqual(order_response.status_code, 201)
+        #print(order_response.data)
+        order_id = order_response.data['id']
         
+        ######################
+        # DELIVERY ATTEMPT
+        ######################
+
+
+        # Step 2: Create a delivery attempt for the order
+        delivery_attempt_url = f'/api/orders/{order_id}/delivery-attempts/'
+        delivery_attempt_payload = {
+            "status": "accepted_by_driver",
+            "delivery_date":order_response.data['delivery_date'],
+            "drivers":[self.driver.id]
+        }
+        da_response = self.client.post(delivery_attempt_url, delivery_attempt_payload, format='json')
+        print("DELIVERY ATTEMPT RESPONSE:", da_response.status_code, da_response.data)
+        self.assertEqual(da_response.status_code, 201)
+        delivery_attempt_id = da_response.data['id']
+
+
+
+        # Step 3: Upload a photo
+        photo_url = f'/api/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/photos/'
+        image_data = SimpleUploadedFile("test.jpg", b"file_content", content_type="image/jpeg")
+
+        response = self.client.post(photo_url, {
+            'images': [image_data],
+            'delivery_attempt': delivery_attempt_id,
+            'caption': 'Front door photo',
+        }, format='multipart')
+
+        print("PHOTO UPLOAD RESPONSE:", response.status_code, response.data)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertEqual(len(response.data), 1)
+        self.assertIn('signed_url', response.data[0])
+
 
 
         ######################

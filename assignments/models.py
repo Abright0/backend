@@ -6,6 +6,7 @@ from orders.models import Order, OrderItem
 class DeliveryAttempt(models.Model):
     STATUS_CHOICES = [
         ('order_placed', 'Order Placed'),
+        ('assigned_to_driver', 'Assigned to Driver(s)'),
         ('accepted_by_driver', 'Accepted by Driver(s)'),
         ('en_route', 'En Route'),
         ('complete', 'Complete'),
@@ -19,12 +20,14 @@ class DeliveryAttempt(models.Model):
     status_changed_at = models.DateTimeField(auto_now=True)
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='delivery_attempts')
     drivers = models.ManyToManyField(User, related_name='drivers')
+
     mins_to_arrival = models.TextField(blank=True, null=True)
     miles_to_arrival = models.TextField(blank=True, null=True)
     status = models.CharField(max_length=30, choices=STATUS_CHOICES)
+
     delivery_date = models.DateField()
     delivery_time = models.TimeField()
-    result = models.TextField(blank=True, null=True)  # e.g., 'no one at address'
+    result = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     #def mark_item_issue(self, order_item, issue):

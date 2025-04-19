@@ -1,3 +1,4 @@
+# /backend/orders/models.py
 from django.db import models
 from stores.models import Store
 from products.models import Product
@@ -15,7 +16,6 @@ class Order(models.Model):
     notes = models.TextField(null=True, blank=True)
     misdelivery_reason = models.TextField(null=True, blank=True)
     delivery_date = models.TextField(null=True, blank=True)
-    hasImage = models.BooleanField(null=True, blank=True)
 
     creation_date = models.DateTimeField(auto_now_add=True)
     notes = models.TextField(null=True, blank=True)
