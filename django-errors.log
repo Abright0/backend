@@ -4813,3 +4813,23 @@ INFO 2025-04-19 14:41:49,703 autoreload 34580 140095045902336 /home/abright/Work
 INFO 2025-04-19 14:41:50,416 autoreload 34597 140109792325632 Watching for file changes with StatReloader
 INFO 2025-04-19 14:41:59,922 autoreload 34597 140109792325632 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
 INFO 2025-04-19 14:42:00,681 autoreload 34633 140222978658304 Watching for file changes with StatReloader
+INFO 2025-04-19 15:05:14,437 autoreload 34633 140222978658304 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:05:15,215 autoreload 36140 139706344845312 Watching for file changes with StatReloader
+INFO 2025-04-19 15:06:20,495 autoreload 36140 139706344845312 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:06:21,308 autoreload 36284 140256441688064 Watching for file changes with StatReloader
+INFO 2025-04-19 15:06:24,696 autoreload 36284 140256441688064 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:06:25,467 autoreload 36306 140006600695808 Watching for file changes with StatReloader
+INFO 2025-04-19 15:06:26,858 autoreload 36306 140006600695808 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:06:27,670 autoreload 36310 140202094039040 Watching for file changes with StatReloader
+INFO 2025-04-19 15:06:29,070 autoreload 36310 140202094039040 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:06:29,862 autoreload 36313 140205357473792 Watching for file changes with StatReloader
+INFO 2025-04-19 15:06:34,353 autoreload 36313 140205357473792 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:06:35,082 autoreload 36335 140455174131712 Watching for file changes with StatReloader
+INFO 2025-04-19 15:06:37,470 autoreload 36335 140455174131712 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:06:38,206 autoreload 36355 140477112750080 Watching for file changes with StatReloader
+INFO 2025-04-19 15:07:09,425 autoreload 36355 140477112750080 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:07:10,235 autoreload 36397 140013129510912 Watching for file changes with StatReloader
+INFO 2025-04-19 15:09:26,244 autoreload 36397 140013129510912 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:09:26,982 autoreload 36630 140195479367680 Watching for file changes with StatReloader
+INFO 2025-04-19 15:19:53,615 autoreload 36630 140195479367680 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 15:19:54,405 autoreload 37403 140632769871872 Watching for file changes with StatReloader

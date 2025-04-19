@@ -3,6 +3,8 @@ from rest_framework import serializers
 from assignments.models import DeliveryAttempt, ScheduledItem, DeliveryPhoto
 from assignments.utils import generate_signed_url
 
+from datetime import datetime
+
 class ScheduledItemSerializer(serializers.ModelSerializer):
     
     class Meta:
@@ -148,6 +150,7 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
         context = self.build_context_for_event(attempt, event_type)
         trigger_message(event_type, context, attempt.order.store)
 
+
 class DeliveryPhotoSerializer(serializers.ModelSerializer):
     signed_url = serializers.SerializerMethodField()
 
@@ -157,3 +160,13 @@ class DeliveryPhotoSerializer(serializers.ModelSerializer):
 
     def get_signed_url(self, obj):
         return generate_signed_url(obj.image.name)
+
+    def create(self, validated_data):
+        image = validated_data.get('image')
+
+        if image:
+            ext = os.path.splitext(image.name)[1]  # keep original extension
+            timestamp = datetime.now().strftime("%Y%m%dT%H%M%S%f")  # includes microseconds
+            image.name = f"photo_{timestamp}{ext}"  # e.g., photo_20250419T142530.jpg
+
+        return super().create(validated_data)

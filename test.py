@@ -12,6 +12,14 @@ from stores.models import Store
 from orders.models import Order
 from assignments.models import DeliveryAttempt
 
+import itertools
+
+from PIL import Image
+from io import BytesIO
+from datetime import time
+
+import pillow_heif
+pillow_heif.register_heif_opener()
 
 class UserViewSetTests(APITestCase):
 
@@ -122,11 +130,22 @@ class UserViewSetTests(APITestCase):
         # DELIVERY ATTEMPT + PHOTO + STATUS CHECKS
         ######################
         from assignments.models import DeliveryAttempt
-        for status_code, _ in DeliveryAttempt.STATUS_CHOICES:
+        from datetime import time
+
+        common_extensions = [
+            ("jpg", "image/jpeg", "JPEG"),
+            ("png", "image/png", "PNG"),
+            ("webp", "image/webp", "WEBP"),
+            ("heic", "image/heic", "HEIC")  # Will be handled differently
+        ]
+        ext_cycle = itertools.cycle(common_extensions)
+
+        for i, (status_code, _) in enumerate(DeliveryAttempt.STATUS_CHOICES):
             da_url = f'/api/orders/{order_id}/delivery-attempts/'
             da_payload = {
                 "status": status_code,
                 "delivery_date": delivery_date,
+                "delivery_time": time(hour=10 + i % 8, minute=0).isoformat(),
                 "drivers": [self.driver.id]
             }
             da_response = self.client.post(da_url, da_payload, format='json')
@@ -134,17 +153,37 @@ class UserViewSetTests(APITestCase):
             self.assertEqual(da_response.data['status'], status_code)
             delivery_attempt_id = da_response.data['id']
 
-            # Upload a photo for each delivery attempt
+            # Generate multiple photos, including real HEIC
+            images = []
+            for photo_index in range(2):
+                ext, mime, pil_format = next(ext_cycle)
+                img = Image.new('RGB', (100, 100), color=(i * 30 % 255, photo_index * 100, 180))
+                buffer = BytesIO()
+
+                if pil_format == "HEIC":
+                    img.save(buffer, format="HEIF")  # 'HEIF' is the format string Pillow understands
+                else:
+                    img.save(buffer, format=pil_format)
+
+                buffer.seek(0)
+
+                filename = f"{status_code}_photo{photo_index + 1}.{ext}"
+                image_data = SimpleUploadedFile(filename, buffer.read(), content_type=mime)
+                images.append(image_data)
+
+            # Upload the images
             photo_url = f'/api/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/photos/'
-            image_data = SimpleUploadedFile("test.jpg", b"file_content", content_type="image/jpeg")
             response = self.client.post(photo_url, {
-                'images': [image_data],
+                'images': images,
                 'delivery_attempt': delivery_attempt_id,
-                'caption': f'Photo for status {status_code}',
+                'caption': f'{status_code} photos',
             }, format='multipart')
+
             self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-            self.assertEqual(len(response.data), 1)
-            self.assertIn('signed_url', response.data[0])
+            self.assertEqual(len(response.data), 2)
+            for photo in response.data:
+                self.assertIn('signed_url', photo)
+                print(photo)
 
         ######################
         # Order Delete
