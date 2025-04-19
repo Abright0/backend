@@ -4234,3 +4234,43 @@ WARNING 2025-04-18 22:05:32,196 log 17815 139995448823808 Unauthorized: /api/ord
 WARNING 2025-04-18 22:07:00,780 log 17892 139697908998144 Unauthorized: /api/orders/
 INFO 2025-04-18 23:25:54,431 autoreload 17387 140232617717760 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
 INFO 2025-04-18 23:25:55,238 autoreload 20371 139642021543936 Watching for file changes with StatReloader
+INFO 2025-04-18 23:33:40,114 autoreload 20371 139642021543936 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-18 23:33:40,847 autoreload 20668 140520055119872 Watching for file changes with StatReloader
+INFO 2025-04-18 23:42:28,113 autoreload 20668 140520055119872 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-18 23:42:28,856 autoreload 21684 140302545518592 Watching for file changes with StatReloader
+INFO 2025-04-18 23:44:08,590 autoreload 21684 140302545518592 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-18 23:44:09,359 autoreload 21825 140559680598016 Watching for file changes with StatReloader
+INFO 2025-04-18 23:46:20,113 autoreload 21825 140559680598016 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-18 23:46:20,961 autoreload 22218 139913891201024 Watching for file changes with StatReloader
+INFO 2025-04-19 12:51:29,488 autoreload 22218 139913891201024 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:51:30,284 autoreload 26528 140144125243392 Watching for file changes with StatReloader
+INFO 2025-04-19 12:51:39,888 autoreload 26528 140144125243392 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:51:40,681 autoreload 26557 140600978321408 Watching for file changes with StatReloader
+INFO 2025-04-19 12:51:51,385 autoreload 26557 140600978321408 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:51:52,168 autoreload 26596 139811257024512 Watching for file changes with StatReloader
+INFO 2025-04-19 12:51:54,538 autoreload 26596 139811257024512 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:51:55,335 autoreload 26614 140166025830400 Watching for file changes with StatReloader
+INFO 2025-04-19 12:51:59,760 autoreload 26614 140166025830400 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:52:00,509 autoreload 26635 139904158990336 Watching for file changes with StatReloader
+INFO 2025-04-19 12:53:14,219 autoreload 26635 139904158990336 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:53:14,989 autoreload 26672 140146800549888 Watching for file changes with StatReloader
+INFO 2025-04-19 12:53:30,756 autoreload 26672 140146800549888 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:53:31,527 autoreload 26697 140064628068352 Watching for file changes with StatReloader
+INFO 2025-04-19 12:53:34,910 autoreload 26697 140064628068352 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:53:35,666 autoreload 26716 140335294648320 Watching for file changes with StatReloader
+INFO 2025-04-19 12:53:37,056 autoreload 26716 140335294648320 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:53:37,844 autoreload 26720 140294194122752 Watching for file changes with StatReloader
+INFO 2025-04-19 12:53:40,272 autoreload 26720 140294194122752 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:53:41,048 autoreload 26741 139656010301440 Watching for file changes with StatReloader
+INFO 2025-04-19 12:53:43,465 autoreload 26741 139656010301440 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:53:44,234 autoreload 26744 140208496082944 Watching for file changes with StatReloader
+INFO 2025-04-19 12:55:30,133 autoreload 26744 140208496082944 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:55:30,856 autoreload 26862 140472305307648 Watching for file changes with StatReloader
+INFO 2025-04-19 12:56:43,648 autoreload 26862 140472305307648 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:56:44,403 autoreload 26980 140085357076480 Watching for file changes with StatReloader
+INFO 2025-04-19 12:58:21,727 autoreload 26980 140085357076480 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 12:58:22,463 autoreload 27061 140185814286336 Watching for file changes with StatReloader
+INFO 2025-04-19 12:58:49,386 autoreload 27061 140185814286336 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-04-19 12:58:50,180 autoreload 27090 139695923220480 Watching for file changes with StatReloader
+INFO 2025-04-19 12:58:55,560 autoreload 27090 139695923220480 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-04-19 12:58:56,333 autoreload 27112 139876456370176 Watching for file changes with StatReloader

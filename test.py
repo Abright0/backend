@@ -101,13 +101,32 @@ class UserViewSetTests(APITestCase):
         ######################
         # Order Update & Delete
         ######################
+        order = Order.objects.get(first_name="LANDRY", customer_email="jane@example.com")
+        url = f"/api/orders/{order.id}/"
+        payload = {"notes":"Updated note from test",
+                    "delivery_instructions":"updated instructions"}
+
+        response = self.client.patch(url, payload, format="json")
+
+        print("PATCH RESPONSE:", response.status_code, response.data)
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data["notes"], "Updated note from test")
+        self.assertEqual(response.data["delivery_instructions"], "updated instructions")
+
+
+        url = f'/api/orders/{order.id}/'
+
+        response = self.client.delete(url)
+        print("DELETE RESPONSE:", response.status_code)
+
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertFalse(Order.objects.filter(id=order.id).exists())
         
-
-
-
         ######################
         # Order Photos
         ######################
+        
 
 
         ######################

@@ -1,3 +1,4 @@
+# /backend/api/orders/serializers.py
 from rest_framework import serializers
 from orders.models import Order, OrderItem
 from stores.models import Store
@@ -73,15 +74,13 @@ class OrderSerializer(serializers.ModelSerializer):
         
         # Map backend status codes to frontend display values
         status_mapping = {
-            'order_placed': 'Order Placed',
-            'accepted_by_driver': 'Assigned',
-            'in_progress': 'En Route',
-            'complete': 'Completed',
-            'misdelivery': 'Misdelivery',
-            'redelivery_assigned': 'Redelivery Assigned',
-            'redelivery_in_progress': 'Redelivery In Progress',
-            'redelivery_complete': 'Redelivery Complete',
-            'canceled': 'Canceled',
+            ('order_placed', 'Order Placed'),
+            ('accepted_by_driver', 'Accepted by Driver(s)'),
+            ('en_route', 'En Route'),
+            ('complete', 'Complete'),
+            ('misdelivery', 'Misdelivery'),
+            ('rescheduled','Rescheduled'),
+            ('canceled', 'Canceled'),
         }
         
         return status_mapping.get(status_value, status_value)
@@ -127,13 +126,3 @@ class OrderDetailSerializer(OrderSerializer):
             'store_details', 'customer_num',
             'misdelivery_reason'
         ]
-
-
-class OrderPhotoSerializer(serializers.Serializer):
-    """
-    Serializer for Order photos.
-    """
-    id = serializers.IntegerField()
-    url = serializers.URLField()
-    caption = serializers.CharField(required=False, allow_blank=True)
-    uploaded_at = serializers.DateTimeField()

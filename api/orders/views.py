@@ -9,7 +9,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from orders.models import Order, OrderItem
 from products.models import Product
 from stores.models import Store
-from .serializers import OrderSerializer, OrderDetailSerializer, OrderPhotoSerializer
+from .serializers import OrderSerializer, OrderDetailSerializer
 from assignments.models import DeliveryAttempt
 
 class OrderViewSet(viewsets.ModelViewSet):
@@ -249,22 +249,3 @@ class OrderViewSet(viewsets.ModelViewSet):
                 print(f"Error updating delivery attempt status: {e}")
 
         return super().update(request, *args, **kwargs)
-
-
-    @action(detail=True, methods=['get'])
-    def photos(self, request, pk=None):
-        order = self.get_object()
-        attempts = order.delivery_attempts.all()
-
-        photos = DeliveryPhoto.objects.filter(delivery_attempt__in=attempts)
-
-        photo_list = [
-            {
-                "id": photo.id,
-                "url": photo.image.url,
-                "caption": photo.caption,
-                "uploaded_at": photo.upload_at.isoformat()
-            }
-            for photo in photos
-        ]
-        return Response(photo_list)
