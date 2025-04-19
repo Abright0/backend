@@ -53,8 +53,6 @@ class DeliveryAttempt(models.Model):
         """
         return self.photos.exists()
 
-
-
 class ScheduledItem(models.Model):
     delivery_attempt = models.ForeignKey(
         DeliveryAttempt,

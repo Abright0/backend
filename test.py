@@ -9,8 +9,8 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 
 from accounts.models import User
 from stores.models import Store
-from orders.models import Order
-from assignments.models import DeliveryAttempt
+from orders.models import Order, OrderItem
+from assignments.models import DeliveryAttempt, ScheduledItem
 
 import itertools
 import random
@@ -185,6 +185,19 @@ class UserViewSetTests(APITestCase):
             for photo in response.data:
                 self.assertIn('signed_url', photo)
                 print(photo)
+
+            # Get order items for this order
+            order_items = OrderItem.objects.filter(order_id=order_id)
+            self.assertTrue(order_items.exists(), "No order items found for this order")
+
+            # Create a scheduled item for each order item in this delivery attempt
+            for item in order_items:
+                scheduled = ScheduledItem.objects.create(
+                    delivery_attempt_id=delivery_attempt_id,
+                    order_item=item,
+                    quantity=min(1, item.quantity)  # 1 or less than item.quantity to stay safe
+                )
+                print(f"📦 ScheduledItem: {scheduled}")
 
 
         import random

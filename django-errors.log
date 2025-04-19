@@ -4967,3 +4967,9 @@ INFO 2025-04-19 15:31:05,449 autoreload 38224 139801332621312 /home/abright/Work
 INFO 2025-04-19 15:31:06,235 autoreload 38328 139776527618048 Watching for file changes with StatReloader
 INFO 2025-04-19 15:32:28,759 autoreload 38328 139776527618048 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
 INFO 2025-04-19 15:32:29,577 autoreload 38731 140269024759808 Watching for file changes with StatReloader
+INFO 2025-04-19 15:38:05,311 autoreload 38731 140269024759808 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 15:38:06,098 autoreload 39314 139929842278400 Watching for file changes with StatReloader
+INFO 2025-04-19 15:39:18,474 autoreload 39314 139929842278400 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 15:39:19,208 autoreload 39535 140665999032320 Watching for file changes with StatReloader
+INFO 2025-04-19 15:46:04,206 autoreload 39535 140665999032320 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 15:46:04,915 autoreload 40337 140425455534080 Watching for file changes with StatReloader
