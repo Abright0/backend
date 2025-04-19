@@ -139,8 +139,7 @@ class OrderViewSet(viewsets.ModelViewSet):
                     notes=data.get("notes", ""),
                     misdelivery_reason=data.get("misdelivery_reason", ""),
                     store=store,  # Use the actual Store object, not the ID
-                    delivery_date=data.get("delivery_date"),
-                    hasImage=data.get("hasImage", False)
+                    delivery_date=data.get("delivery_date")
                 )
                 
                 # Support both 'products' and 'items' arrays for backward compatibility

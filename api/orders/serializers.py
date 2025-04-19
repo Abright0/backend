@@ -48,7 +48,7 @@ class OrderSerializer(serializers.ModelSerializer):
             'phone_num', 'address', 'customer_email', 
             'preferred_delivery_time', 'delivery_instructions',
             'notes', 'creation_date', 'delivery_date', 
-            'store', 'store_name', 'status', 'driver', 'hasImage','items'
+            'store', 'store_name', 'status', 'driver', 'items'
         ]
     
     def get_status(self, obj):

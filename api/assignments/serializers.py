@@ -30,21 +30,23 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         print("CREATE CUSTOM")
+
         scheduled_items_data = validated_data.pop('scheduled_items', [])
+        drivers_data = validated_data.pop('drivers', [])  # <-- handle M2M separately
         order = self.context.get('order')
 
         if not order:
-            raise serializers.ValidationError("Order is required to create a delivery attempt.")
+            raise serializers.ValidationError({"order": "This field is required."})
 
         is_first_attempt = not DeliveryAttempt.objects.filter(order=order).exists()
-        print("Is first attempt")
-        print(is_first_attempt)
+        print("Is first attempt:", is_first_attempt)
 
         if is_first_attempt:
             validated_data.setdefault('delivery_date', order.delivery_date)
             validated_data.setdefault('delivery_time', order.preferred_delivery_time)
+            if not drivers_data and order.drivers.exists():
+                drivers_data = list(order.drivers.all())
         else:
-            # Validate that required fields are explicitly provided
             missing = []
             for field in ['delivery_date', 'delivery_time']:
                 if field not in validated_data:
@@ -52,9 +54,15 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
             if missing:
                 raise serializers.ValidationError({f: 'This field is required.' for f in missing})
 
-        validated_data["order"] = order  # Explicitly set this since it’s not in the payload
+        validated_data['order'] = order
         validated_data.setdefault("status", "order_placed")
+        
+        # Save without M2M first
         delivery_attempt = DeliveryAttempt.objects.create(**validated_data)
+
+        # Assign M2M relationships properly
+        if drivers_data:
+            delivery_attempt.drivers.set(drivers_data)
 
         for item_data in scheduled_items_data:
             ScheduledItem.objects.create(delivery_attempt=delivery_attempt, **item_data)

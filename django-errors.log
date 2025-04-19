@@ -4531,3 +4531,285 @@ INFO 2025-04-19 14:19:32,064 autoreload 33140 140285682794496 /home/abright/Work
 INFO 2025-04-19 14:19:32,832 autoreload 33199 139705343033344 Watching for file changes with StatReloader
 INFO 2025-04-19 14:19:39,335 autoreload 33199 139705343033344 /home/abright/Work/FarmFreight/backend/api/assignments/views.py changed, reloading.
 INFO 2025-04-19 14:19:40,114 autoreload 33225 140170126483456 Watching for file changes with StatReloader
+INFO 2025-04-19 14:20:32,783 autoreload 33225 140170126483456 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-04-19 14:20:33,560 autoreload 33381 139937484140544 Watching for file changes with StatReloader
+INFO 2025-04-19 14:20:40,137 autoreload 33381 139937484140544 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 14:20:40,919 autoreload 33405 140708414132224 Watching for file changes with StatReloader
+INFO 2025-04-19 14:20:42,317 autoreload 33405 140708414132224 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 14:20:43,092 autoreload 33424 140297438105600 Watching for file changes with StatReloader
+WARNING 2025-04-19 14:20:48,935 log 33427 140205022593024 Bad Request: /api/orders/
+WARNING 2025-04-19 14:21:14,347 log 33467 139951931039744 Bad Request: /api/orders/
+WARNING 2025-04-19 14:21:28,574 log 33489 140182625693696 Bad Request: /api/orders/
+WARNING 2025-04-19 14:21:56,241 log 33494 140435295367168 Bad Request: /api/orders/
+WARNING 2025-04-19 14:22:14,883 log 33518 140002122059776 Bad Request: /api/orders/
+INFO 2025-04-19 14:23:07,869 autoreload 33424 140297438105600 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-04-19 14:23:08,719 autoreload 33606 140423193743360 Watching for file changes with StatReloader
+INFO 2025-04-19 14:23:13,179 autoreload 33606 140423193743360 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-04-19 14:23:13,909 autoreload 33629 140429648625664 Watching for file changes with StatReloader
+INFO 2025-04-19 14:23:21,409 autoreload 33629 140429648625664 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-04-19 14:23:22,180 autoreload 33650 140353650913280 Watching for file changes with StatReloader
+ERROR 2025-04-19 14:23:39,671 log 33651 140116396675072 Internal Server Error: /api/orders/2/delivery-attempts/1/photos/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/views.py", line 52, in create
+    uploaded.append(DeliveryPhotoSerializer(photo, context={'request': request}).data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 571, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 159, in get_signed_url
+    return generate_signed_url(obj.image.name)
+  File "/home/abright/Work/FarmFreight/backend/assignments/utils.py", line 7, in generate_signed_url
+    storage_client = storage.Client()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/google/cloud/storage/client.py", line 247, in __init__
+    super(Client, self).__init__(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/google/cloud/client/__init__.py", line 338, in __init__
+    _ClientProjectMixin.__init__(self, project=project, credentials=credentials)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/google/cloud/client/__init__.py", line 286, in __init__
+    project = self._determine_default(project)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/google/cloud/client/__init__.py", line 305, in _determine_default
+    return _determine_default_project(project)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/google/cloud/_helpers/__init__.py", line 152, in _determine_default_project
+    _, project = google.auth.default()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/google/auth/_default.py", line 719, in default
+    raise exceptions.DefaultCredentialsError(_CLOUD_SDK_MISSING_CREDENTIALS)
+google.auth.exceptions.DefaultCredentialsError: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+INFO 2025-04-19 14:27:04,560 autoreload 33650 140353650913280 /home/abright/Work/FarmFreight/backend/assignments/utils.py changed, reloading.
+INFO 2025-04-19 14:27:05,359 autoreload 33739 140178747387904 Watching for file changes with StatReloader
+INFO 2025-04-19 14:27:52,966 autoreload 33739 140178747387904 /home/abright/Work/FarmFreight/backend/assignments/utils.py changed, reloading.
+INFO 2025-04-19 14:27:53,768 autoreload 33764 140415692402688 Watching for file changes with StatReloader
+INFO 2025-04-19 14:28:22,717 autoreload 33764 140415692402688 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-19 14:28:23,503 autoreload 33794 140233628205056 Watching for file changes with StatReloader
+INFO 2025-04-19 14:30:52,359 autoreload 33794 140233628205056 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-19 14:30:53,116 autoreload 34048 140177668132864 Watching for file changes with StatReloader
+INFO 2025-04-19 14:30:54,517 autoreload 34048 140177668132864 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-19 14:30:55,259 autoreload 34055 140323230121984 Watching for file changes with StatReloader
+INFO 2025-04-19 14:30:56,674 autoreload 34055 140323230121984 /home/abright/Work/FarmFreight/backend/assignments/utils.py changed, reloading.
+INFO 2025-04-19 14:30:57,414 autoreload 34076 140643295588352 Watching for file changes with StatReloader
+INFO 2025-04-19 14:33:35,806 autoreload 34076 140643295588352 /home/abright/Work/FarmFreight/backend/assignments/utils.py changed, reloading.
+INFO 2025-04-19 14:33:36,582 autoreload 34181 140115969404928 Watching for file changes with StatReloader
+INFO 2025-04-19 14:35:10,664 autoreload 34181 140115969404928 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-04-19 14:35:11,464 autoreload 34250 140034688983040 Watching for file changes with StatReloader
+ERROR 2025-04-19 14:38:21,761 log 34373 140176653930496 Internal Server Error: /api/orders/2/delivery-attempts/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: assignments_deliveryattempt.delivery_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 61, in create
+    delivery_attempt = DeliveryAttempt.objects.create(**validated_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: assignments_deliveryattempt.delivery_time
+ERROR 2025-04-19 14:39:59,564 log 34474 140692313522176 Internal Server Error: /api/orders/3/delivery-attempts/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: assignments_deliveryattempt.delivery_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 61, in create
+    delivery_attempt = DeliveryAttempt.objects.create(**validated_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: assignments_deliveryattempt.delivery_time
+ERROR 2025-04-19 14:41:16,085 log 34532 139712029982720 Internal Server Error: /api/orders/1/delivery-attempts/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: assignments_deliveryattempt.delivery_time
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 61, in create
+    delivery_attempt = DeliveryAttempt.objects.create(**validated_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: assignments_deliveryattempt.delivery_time
+INFO 2025-04-19 14:41:40,348 autoreload 34250 140034688983040 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 14:41:41,125 autoreload 34580 140095045902336 Watching for file changes with StatReloader
+INFO 2025-04-19 14:41:49,703 autoreload 34580 140095045902336 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 14:41:50,416 autoreload 34597 140109792325632 Watching for file changes with StatReloader
+INFO 2025-04-19 14:41:59,922 autoreload 34597 140109792325632 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-19 14:42:00,681 autoreload 34633 140222978658304 Watching for file changes with StatReloader
