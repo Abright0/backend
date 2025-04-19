@@ -5,6 +5,8 @@ from messaging.models import MessageTemplate
 from django.template import Template, Context
 
 def trigger_message(event_type, context, store):
+    print("TRIGGERED!!!!")
+    print("Sending SMS with:", context)
     try:
         template_obj = MessageTemplate.objects.get(event=event_type, store=store)
         if not template_obj.active:

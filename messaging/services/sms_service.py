@@ -1,11 +1,21 @@
 # backend/messaging/services/sms_service.py
 from twilio.rest import Client
+from django.conf import settings
 
-def send_sms(to_number: str, message: str) -> bool:
-    client = Client(account_sid, auth_token)
-    try:
-        client.messages.create(to=to_number, from_=from_number, body=message)
-        return True
-    except Exception as e:
-        # log exception
-        return False
+
+def send_sms(to_number, message):
+    print('send_sms')
+    print(to_number)
+    print(message)
+    print(settings.TWILIO_ACCOUNT_SID + ' ' + settings.TWILIO_AUTH_TOKEN)
+    print( settings.TWILIO_ACCOUNT_SID + ' ' + settings.TWILIO_AUTH_TOKEN)
+    if not to_number or not message:
+        return
+
+    client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+
+    client.messages.create(
+        to=to_number,
+        from_=settings.TWILIO_PHONE_NUMBER,
+        body=message
+    )

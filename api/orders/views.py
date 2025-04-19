@@ -62,7 +62,7 @@ class OrderViewSet(viewsets.ModelViewSet):
             else:
                 queryset = queryset.filter(store__in=accessible_stores)
 
-        store_id = self.request.query_params.get('store_id')
+        store_id = self.kwargs.get('store_pk') or self.request.query_params.get('store_id')
         if store_id:
             if not user.is_superuser and not user.stores.filter(id=store_id).exists():
                 return Order.objects.none()
@@ -108,7 +108,7 @@ class OrderViewSet(viewsets.ModelViewSet):
         try:
             with transaction.atomic():
                 # Get the Store instance using the store ID
-                store_id = data.get("store_id") or data.get("store")
+                store_id = self.kwargs.get("store_pk") or data.get("store_id") or data.get("store")
                 try:
                     store = Store.objects.get(pk=store_id)
                 except Store.DoesNotExist:

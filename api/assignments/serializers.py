@@ -3,6 +3,8 @@ from rest_framework import serializers
 from assignments.models import DeliveryAttempt, ScheduledItem, DeliveryPhoto
 from assignments.utils import generate_signed_url
 
+from messaging.helpers import trigger_message
+
 from datetime import datetime
 
 class ScheduledItemSerializer(serializers.ModelSerializer):
@@ -71,62 +73,67 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
 
         return delivery_attempt
 
-
     def update(self, instance, validated_data):
         previous_status = instance.status
         new_status = validated_data.get('status', previous_status)
+        print(f"Status changed: {previous_status} -> {new_status}")
 
-        # Block status change to 'complete' if no photos
+        # Block invalid transitions
         if new_status == 'complete' and not instance.has_required_photos():
             raise serializers.ValidationError("Cannot mark as complete: delivery photos are required.")
-
-        # Block status change to 'en_route' if arrival data missing
-        mins = validated_data.get('mins_to_arrival') or instance.mins_to_arrival
-        miles = validated_data.get('miles_to_arrival') or instance.miles_to_arrival
-
-        if new_status == 'en_route' and (not mins or not miles):
+        if new_status == 'en_route' and (
+            not validated_data.get('mins_to_arrival') and not instance.mins_to_arrival or
+            not validated_data.get('miles_to_arrival') and not instance.miles_to_arrival
+        ):
             raise serializers.ValidationError("Cannot mark as en route: arrival time and distance must be provided.")
 
-        # Proceed with update
+        # Separate M2M field
+        drivers = validated_data.pop('drivers', None)
+
+        # Update normal fields
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
+
         instance.save()
+        print(instance.status)
+        #
+        if drivers is not None:
+            instance.drivers.set(drivers)
 
-        current_status = instance.status
-        store = instance.order.store
+        # Messaging on status change
+        if previous_status != instance.status:
+            status_event_map = {
+                'order_placed': 'order_placed',
+                'assigned_to_driver': 'assigned_to_driver',
+                'accepted_by_driver': 'driver_preparing',
+                'en_route': 'driver_en_route',
+                'complete': 'driver_complete',
+                'misdelivery': 'driver_misdelivery',
+                'rescheduled': 'driver_rescheduled',
+                'canceled': 'driver_canceled',
+            }
+            event_type = status_event_map.get(instance.status)
 
-        # Status → Event mapping
-        status_event_map = {
-            'assigned_to_driver': 'assigned_to_driver',
-            'accepted_by_driver': 'drive_preparing',
-            'en_route': 'driver_en_route',
-            'complete': 'driver_complete',
-            'misdelivery': 'driver_misdelivery',
-            'rescheduled': 'driver_rescheduled',
-            'canceled': 'driver_canceled',
-        }
+            if event_type:
+                should_send = True
+                if instance.status == 'complete' and not instance.has_required_photos():
+                    should_send = False
+                if instance.status == 'en_route' and (not instance.mins_to_arrival or not instance.miles_to_arrival):
+                    should_send = False
 
-        event_type = status_event_map.get(current_status)
-        if event_type:
-            should_send = True
+                if should_send:
+                    self.send_status_sms(instance, event_type)
 
-            # Extra SMS send safeguard
-            if current_status == 'complete' and not instance.has_required_photos():
-                should_send = False
-            if current_status == 'en_route' and (not instance.mins_to_arrival or not instance.miles_to_arrival):
-                should_send = False
+        return instance
 
-            if should_send:
-                self.send_status_sms(instance, event_type)
 
-        return super().update(instance, validated_data)
 
     def build_context_for_event(self, attempt, event_type):
         order = attempt.order
         context = {
-            "customer_name": order.customer.name,
+            "customer_name": order.first_name,
             "order_id": order.invoice_num,
-            "phone_number": order.customer.phone_number,
+            "phone_number": order.phone_num,
         }
 
         if event_type == 'driver_en_route':
@@ -146,6 +153,7 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
         return context
             
     def send_status_sms(self, attempt, event_type):
+        print("send status sms")
         context = self.build_context_for_event(attempt, event_type)
         trigger_message(event_type, context, attempt.order.store)
 

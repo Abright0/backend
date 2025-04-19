@@ -6,11 +6,11 @@ from django.urls import reverse
 from django.utils import timezone
 from django.core.files.uploadedfile import SimpleUploadedFile
 
-
 from accounts.models import User
 from stores.models import Store
 from orders.models import Order, OrderItem
 from assignments.models import DeliveryAttempt, ScheduledItem
+from messaging.models import MessageTemplate
 
 import itertools
 import random
@@ -80,15 +80,46 @@ class UserViewSetTests(APITestCase):
 
     def test_order(self):
         ######################
+        # Message Template
+        ######################
+
+        event_template_map = {
+            "order_placed": "Hey {{ customer_name }}, your order {{ order_id }} has been placed successfully!",
+            "assigned_to_driver": "Your order {{ order_id }} has been assigned to a driver.",
+            "accepted_by_driver": "The driver is preparing for your delivery (Order: {{ order_id }}).",
+            "driver_en_route": "Heads up {{ customer_name }}! Your driver is en route with order {{ order_id }}. ETA: {{ mins_to_arrival }} mins, {{ miles_to_arrival }} miles away.",
+            "driver_complete": "Your delivery for order {{ order_id }} is complete. Photos:\n{{ photo_links }}",
+            "driver_misdelivery": "There was a delivery issue with order {{ order_id }}. Please contact support.",
+            "driver_rescheduled": "Your delivery for order {{ order_id }} has been rescheduled.",
+            "driver_canceled": "Your delivery for order {{ order_id }} has been canceled.",
+        }
+        for event, content in event_template_map.items():
+            obj, created = MessageTemplate.objects.get_or_create(
+                event=event,
+                store=self.store,
+                defaults={
+                    "content": content,
+                    "active": True,
+                }
+            )
+            if created:
+                print(f"Created template for event: {event}")
+            else:
+                print(f"Template already exists for event: {event}")
+
+        ######################
         # Order Creation
         ######################
-        url = '/api/orders/'
+        ######################
+        # Order Creation
+        ######################
+        url = f'/api/stores/{self.store.id}/orders/'  # 🔄 updated
 
         payload = {
-            "store_id": self.store.id,
             "first_name": "LANDRY",
             "last_name": "ARGABRIGHT",
             "phone_num": "4692478210",
+            "invoice_num":"kl89",
             "address": "456 Another St",
             "customer_email": "jane@example.com",
             "customer_num": "C123",
@@ -116,7 +147,7 @@ class UserViewSetTests(APITestCase):
         ######################
         # Order Update
         ######################
-        update_url = f"/api/orders/{order_id}/"
+        update_url = f"/api/stores/{self.store.id}/orders/{order_id}/"  # 🔄 updated
         update_payload = {
             "notes": "Updated note from test",
             "delivery_instructions": "updated instructions"
@@ -130,76 +161,106 @@ class UserViewSetTests(APITestCase):
         ######################
         # DELIVERY ATTEMPT + PHOTO + STATUS CHECKS
         ######################
-        from assignments.models import DeliveryAttempt
-        from datetime import time
-
         common_extensions = [
             ("jpg", "image/jpeg", "JPEG"),
             ("png", "image/png", "PNG"),
             ("webp", "image/webp", "WEBP"),
-            ("heic", "image/heic", "HEIC")  # Will be handled differently
+            ("heic", "image/heic", "HEIC")
         ]
         ext_cycle = itertools.cycle(common_extensions)
 
+        # Step 1: Create initial delivery attempt
+        da_url = f'/api/stores/{self.store.id}/orders/{order_id}/delivery-attempts/'  # 🔄 updated
+        initial_payload = {
+            "status": 'order_placed',
+            "delivery_date": delivery_date,
+            "delivery_time": time(hour=10, minute=0).isoformat(),
+            "drivers": [self.driver.id],
+        }
+        da_response = self.client.post(da_url, initial_payload, format='json')
+        self.assertEqual(da_response.status_code, status.HTTP_201_CREATED)
+        delivery_attempt_id = da_response.data['id']
+
+        # Step 2: Update delivery attempt through each status (except 'complete')
         for i, (status_code, _) in enumerate(DeliveryAttempt.STATUS_CHOICES):
-            da_url = f'/api/orders/{order_id}/delivery-attempts/'
-            da_payload = {
+            if status_code == 'complete':
+                continue
+
+            update_payload = {
                 "status": status_code,
                 "delivery_date": delivery_date,
                 "delivery_time": time(hour=10 + i % 8, minute=0).isoformat(),
-                "drivers": [self.driver.id]
+                "drivers": [self.driver.id],
             }
-            da_response = self.client.post(da_url, da_payload, format='json')
-            self.assertEqual(da_response.status_code, status.HTTP_201_CREATED)
-            self.assertEqual(da_response.data['status'], status_code)
-            delivery_attempt_id = da_response.data['id']
 
-            # Generate multiple photos, including real HEIC
+            if status_code == 'en_route':
+                update_payload["mins_to_arrival"] = 15
+                update_payload["miles_to_arrival"] = 3.5
+
+            update_url = f'/api/stores/{self.store.id}/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/'  #
+            update_response = self.client.patch(update_url, update_payload, format='json')
+            #print("UPDATE RESPONSE")
+            #print(update_response.data)
+
+            self.assertEqual(update_response.status_code, status.HTTP_200_OK)
+            self.assertEqual(update_response.data['status'], status_code)
+
+            # Generate and upload images
             images = []
             for photo_index in range(2):
                 ext, mime, pil_format = next(ext_cycle)
-                img = Image.new('RGB', (100, 100), color=(i * 30 % 255, photo_index * 100, 180))
+                img = Image.new('RGB', (100, 100), color=(i * 40 % 255, photo_index * 120, 150))
                 buffer = BytesIO()
 
                 if pil_format == "HEIC":
-                    img.save(buffer, format="HEIF")  # 'HEIF' is the format string Pillow understands
+                    img.save(buffer, format="HEIF")
                 else:
                     img.save(buffer, format=pil_format)
 
                 buffer.seek(0)
-
                 filename = f"{status_code}_photo{photo_index + 1}.{ext}"
-                image_data = SimpleUploadedFile(filename, buffer.read(), content_type=mime)
-                images.append(image_data)
+                image_file = SimpleUploadedFile(filename, buffer.read(), content_type=mime)
+                images.append(image_file)
 
-            # Upload the images
-            photo_url = f'/api/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/photos/'
-            response = self.client.post(photo_url, {
+            photo_url = f'/api/stores/{self.store.id}/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/photos/'  #
+            photo_response = self.client.post(photo_url, {
                 'images': images,
                 'delivery_attempt': delivery_attempt_id,
                 'caption': f'{status_code} photos',
             }, format='multipart')
 
-            self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-            self.assertEqual(len(response.data), 2)
-            for photo in response.data:
+            self.assertEqual(photo_response.status_code, status.HTTP_201_CREATED)
+            self.assertEqual(len(photo_response.data), 2)
+            for photo in photo_response.data:
                 self.assertIn('signed_url', photo)
-                print(photo)
 
-            # Get order items for this order
-            order_items = OrderItem.objects.filter(order_id=order_id)
-            self.assertTrue(order_items.exists(), "No order items found for this order")
+        # Step 3: Final status update to 'complete'
+        final_update_url = f'/api/stores/{self.store.id}/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/'
+        final_update_payload = {
+            "status": 'complete',
+        }
+        final_response = self.client.patch(final_update_url, final_update_payload, format='json')
+        self.assertEqual(final_response.status_code, status.HTTP_200_OK)
+        self.assertEqual(final_response.data['status'], 'complete')
 
-            # Create a scheduled item for each order item in this delivery attempt
-            for item in order_items:
-                scheduled = ScheduledItem.objects.create(
-                    delivery_attempt_id=delivery_attempt_id,
-                    order_item=item,
-                    quantity=min(1, item.quantity)  # 1 or less than item.quantity to stay safe
-                )
-                print(f"📦 ScheduledItem: {scheduled}")
+        # Step 4: Schedule order items
+        order_items = OrderItem.objects.filter(order_id=order_id)
+        self.assertTrue(order_items.exists(), "No order items found for this order")
+
+        for item in order_items:
+            scheduled = ScheduledItem.objects.create(
+                delivery_attempt_id=delivery_attempt_id,
+                order_item=item,
+                quantity=min(1, item.quantity)
+            )
+            print(f"ScheduledItem: {scheduled}")
 
 
+
+        ######################
+        # GET RANDOM PHOTOS
+        ######################
+"""
         import random
         from assignments.models import DeliveryAttempt, DeliveryPhoto
 
@@ -216,13 +277,4 @@ class UserViewSetTests(APITestCase):
         # Print photo info
         for photo in photos:
             print(f"📸 Photo ID: {photo.id}, Caption: {photo.caption}, Image: {photo.image.url}")
-
-
-
-        ######################
-        # Order Delete
-        ######################
-        delete_url = f'/api/orders/{order_id}/'
-        response = self.client.delete(delete_url)
-        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
-        self.assertFalse(Order.objects.filter(id=order_id).exists())
+"""

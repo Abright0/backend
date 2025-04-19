@@ -32,7 +32,12 @@ else:
     # Fallback to file path (for local development)
     GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, '/home/abright/Desktop/KEYS/fresh-fusion-456617-s8-e919b86cfbd8.json')
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
-    
+
+
+TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
+
 # Create credentials object
 #GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
 
