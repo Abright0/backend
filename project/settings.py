@@ -38,7 +38,7 @@ else:
 # Gmail settings
 GMAIL_SERVICE_ACCOUNT_FILE = '/home/abright/Desktop/KEYS/fresh-fusion-456617-s8-4b4bfbb6175c.json'
 GMAIL_USER_EMAIL = 'l@abrightforge.com'
-API_ENDPOINT = 'http://127.0.0.01/api/receive-email/'
+API_ENDPOINT = 'http://127.0.0.1/api/receive-email/'
 SPECIFIC_SENDER = 'googlecloud@google.com'
 
 # APScheduler config

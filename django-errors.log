@@ -5743,3 +5743,7 @@ INFO 2025-04-22 00:23:38,877 autoreload 83259 140288022282240 /home/abright/Work
 INFO 2025-04-22 00:23:39,730 autoreload 83320 139867688329216 Watching for file changes with StatReloader
 INFO 2025-04-22 00:24:28,453 autoreload 83320 139867688329216 /home/abright/Work/FarmFreight/backend/email_processor/apps.py changed, reloading.
 INFO 2025-04-22 00:24:29,391 autoreload 83411 139909490618368 Watching for file changes with StatReloader
+INFO 2025-04-22 00:32:03,858 autoreload 83411 139909490618368 /home/abright/Work/FarmFreight/backend/api/email_processor/views.py changed, reloading.
+INFO 2025-04-22 00:32:04,751 autoreload 83875 140151078838272 Watching for file changes with StatReloader
+INFO 2025-04-22 00:32:38,276 autoreload 83875 140151078838272 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-22 00:32:39,174 autoreload 83931 140419602034688 Watching for file changes with StatReloader
