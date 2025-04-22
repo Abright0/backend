@@ -9,6 +9,7 @@ class EmailProcessorConfig(AppConfig):
 
     def ready(self):
         if os.environ.get('RUN_MAIN') == 'true':
+            pass
             # Start the scheduler in a new thread after the app is fully loaded
-            from . import scheduler
-            threading.Thread(target=scheduler.start, daemon=True).start()
+            #from . import scheduler
+            #threading.Thread(target=scheduler.start, daemon=True).start()

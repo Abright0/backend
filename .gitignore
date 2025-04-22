@@ -4,6 +4,7 @@
 __pycache__/
 *.sqlite3
 .env
+.json
 local_settings.py
 media/
 staticfiles/

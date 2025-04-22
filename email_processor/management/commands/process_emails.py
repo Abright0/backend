@@ -1,7 +1,6 @@
 import base64
 import requests
 from django.core.management.base import BaseCommand
-from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from django.conf import settings
@@ -10,17 +9,16 @@ class Command(BaseCommand):
     help = "Fetches emails from a specific sender and sends them to the API."
 
     def handle(self, *args, **options):
-        SERVICE_ACCOUNT_FILE = settings.GMAIL_SERVICE_ACCOUNT_FILE
-        USER_EMAIL = settings.GMAIL_USER_EMAIL
-        API_ENDPOINT = settings.API_ENDPOINT
-        SPECIFIC_SENDER = settings.SPECIFIC_SENDER
-        SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
-
-        if not all([SERVICE_ACCOUNT_FILE, USER_EMAIL, API_ENDPOINT, SPECIFIC_SENDER]):
-            self.stdout.write(self.style.ERROR(
-                "Missing one or more required settings: GMAIL_SERVICE_ACCOUNT_FILE, GMAIL_USER_EMAIL, API_ENDPOINT, SPECIFIC_SENDER"
-            ))
+        if not settings.GMAIL_CREDENTIALS:
+            self.stdout.write(self.style.ERROR("Missing Gmail credentials."))
             return
+
+        if not all([settings.GMAIL_USER_EMAIL, settings.API_ENDPOINT, settings.SPECIFIC_SENDER]):
+            self.stdout.write(self.style.ERROR("Missing one or more Gmail config values."))
+            return
+
+        delegated = settings.GMAIL_CREDENTIALS.with_subject(settings.GMAIL_USER_EMAIL)
+        gmail = build('gmail', 'v1', credentials=delegated)
 
         def get_plain_text_body(payload):
             if 'parts' in payload:
@@ -42,20 +40,15 @@ class Command(BaseCommand):
             return ""
 
         try:
-            credentials = service_account.Credentials.from_service_account_file(
-                SERVICE_ACCOUNT_FILE, scopes=SCOPES)
-            delegated = credentials.with_subject(USER_EMAIL)
-            gmail = build('gmail', 'v1', credentials=delegated)
-
-            self.stdout.write(self.style.MIGRATE_HEADING(f"Checking emails for {USER_EMAIL} from {SPECIFIC_SENDER}..."))
+            self.stdout.write(self.style.MIGRATE_HEADING(f"Checking emails for {settings.GMAIL_USER_EMAIL} from {settings.SPECIFIC_SENDER}..."))
 
             page_token = None
             processed_count = 0
 
             while True:
                 results = gmail.users().messages().list(
-                    userId=USER_EMAIL,
-                    q=f'from:{SPECIFIC_SENDER}',
+                    userId=settings.GMAIL_USER_EMAIL,
+                    q=f'from:{settings.SPECIFIC_SENDER}',
                     maxResults=50,
                     pageToken=page_token
                 ).execute()
@@ -66,13 +59,13 @@ class Command(BaseCommand):
                         self.stdout.write(self.style.SUCCESS("No new emails found from the specified sender."))
                     break
 
-                self.stdout.write(self.style.NOTICE(f"Found {len(messages)} emails from {SPECIFIC_SENDER} on this page..."))
+                self.stdout.write(self.style.NOTICE(f"Found {len(messages)} emails from {settings.SPECIFIC_SENDER} on this page..."))
 
                 for msg in messages:
                     message_id = msg['id']
                     try:
                         email = gmail.users().messages().get(
-                            userId=USER_EMAIL, id=message_id, format='full').execute()
+                            userId=settings.GMAIL_USER_EMAIL, id=message_id, format='full').execute()
 
                         headers = email.get('payload', {}).get('headers', [])
                         subject = next((h['value'] for h in headers if h['name'].lower() == 'subject'), 'No Subject')
@@ -94,7 +87,7 @@ class Command(BaseCommand):
                         }
 
                         try:
-                            response = requests.post(API_ENDPOINT, json=email_data)
+                            response = requests.post(settings.API_ENDPOINT, json=email_data)
                             response.raise_for_status()
                             self.stdout.write(self.style.SUCCESS(f"Successfully sent data for message {message_id} to API."))
                         except requests.exceptions.RequestException as e:
@@ -102,7 +95,7 @@ class Command(BaseCommand):
                             continue
 
                         gmail.users().messages().modify(
-                            userId=USER_EMAIL,
+                            userId=settings.GMAIL_USER_EMAIL,
                             id=message_id,
                             body={'removeLabelIds': ['UNREAD']}
                         ).execute()

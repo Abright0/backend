@@ -5747,3 +5747,27 @@ INFO 2025-04-22 00:32:03,858 autoreload 83411 139909490618368 /home/abright/Work
 INFO 2025-04-22 00:32:04,751 autoreload 83875 140151078838272 Watching for file changes with StatReloader
 INFO 2025-04-22 00:32:38,276 autoreload 83875 140151078838272 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
 INFO 2025-04-22 00:32:39,174 autoreload 83931 140419602034688 Watching for file changes with StatReloader
+INFO 2025-04-22 00:41:19,159 autoreload 83931 140419602034688 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-22 00:41:20,036 autoreload 84371 139659683282944 Watching for file changes with StatReloader
+INFO 2025-04-22 00:43:52,683 autoreload 84371 139659683282944 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-22 00:43:53,548 autoreload 84507 139717101461504 Watching for file changes with StatReloader
+INFO 2025-04-22 00:43:54,866 autoreload 84507 139717101461504 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-22 00:43:55,782 autoreload 84512 139720085532672 Watching for file changes with StatReloader
+INFO 2025-04-22 00:50:49,086 autoreload 84512 139720085532672 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-22 00:50:49,986 autoreload 84763 140118559064064 Watching for file changes with StatReloader
+INFO 2025-04-22 00:59:16,277 autoreload 84763 140118559064064 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-22 00:59:17,123 autoreload 85098 139970600857600 Watching for file changes with StatReloader
+INFO 2025-04-22 01:03:24,822 autoreload 85098 139970600857600 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-22 01:04:15,068 autoreload 85386 140042740985856 Watching for file changes with StatReloader
+INFO 2025-04-22 01:04:20,552 autoreload 85386 140042740985856 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-22 01:04:21,447 autoreload 85406 139643538321408 Watching for file changes with StatReloader
+INFO 2025-04-22 01:08:21,257 autoreload 85406 139643538321408 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-22 01:08:22,187 autoreload 85610 140335375138816 Watching for file changes with StatReloader
+INFO 2025-04-22 01:09:52,296 autoreload 85610 140335375138816 /home/abright/Work/FarmFreight/backend/api/email_processor/views.py changed, reloading.
+INFO 2025-04-22 01:09:53,156 autoreload 85767 140628286844928 Watching for file changes with StatReloader
+INFO 2025-04-22 01:10:40,830 autoreload 85767 140628286844928 /home/abright/Work/FarmFreight/backend/api/email_processor/views.py changed, reloading.
+INFO 2025-04-22 01:10:41,723 autoreload 85797 140141455409152 Watching for file changes with StatReloader
+INFO 2025-04-22 01:14:18,534 autoreload 85797 140141455409152 /home/abright/Work/FarmFreight/backend/email_processor/scheduler.py changed, reloading.
+INFO 2025-04-22 01:14:19,416 autoreload 86005 140212759113728 Watching for file changes with StatReloader
+INFO 2025-04-22 01:15:34,252 autoreload 86005 140212759113728 /home/abright/Work/FarmFreight/backend/email_processor/apps.py changed, reloading.
+INFO 2025-04-22 01:15:35,173 autoreload 86054 140603935264768 Watching for file changes with StatReloader

@@ -35,8 +35,15 @@ else:
     GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, '/home/abright/Desktop/KEYS/fresh-fusion-456617-s8-e919b86cfbd8.json')
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
 
+if 'GMAIL_CREDENTIALS_JSON' in os.environ:
+        service_info = json.loads(os.environ['GMAIL_CREDENTIALS_JSON'])
+        GMAIL_CREDENTIALS = service_account.Credentials.from_service_account_info(service_info)
+else:
+    service_account_path = os.path.join('/home/abright/Desktop/KEYS/fresh-fusion-456617-s8-4b4bfbb6175c.json')
+    GMAIL_CREDENTIALS = service_account.Credentials.from_service_account_file(service_account_path)
+
+
 # Gmail settings
-GMAIL_SERVICE_ACCOUNT_FILE = '/home/abright/Desktop/KEYS/fresh-fusion-456617-s8-4b4bfbb6175c.json'
 GMAIL_USER_EMAIL = 'l@abrightforge.com'
 API_ENDPOINT = 'http://127.0.0.1/api/receive-email/'
 SPECIFIC_SENDER = 'googlecloud@google.com'
