@@ -1,5 +1,6 @@
 # email_processor/apps.py
 import os
+import threading
 from django.apps import AppConfig
 
 class EmailProcessorConfig(AppConfig):
@@ -7,7 +8,7 @@ class EmailProcessorConfig(AppConfig):
     name = 'email_processor'
 
     def ready(self):
-        if os.environ.get('RUN_MAIN', None) != 'true':
-            return
-        from . import scheduler
-        scheduler.start()
+        if os.environ.get('RUN_MAIN') == 'true':
+            # Start the scheduler in a new thread after the app is fully loaded
+            from . import scheduler
+            threading.Thread(target=scheduler.start, daemon=True).start()

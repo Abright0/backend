@@ -5733,3 +5733,13 @@ INFO 2025-04-21 23:54:39,060 autoreload 82413 139685646708736 Watching for file 
 INFO 2025-04-22 00:12:45,252 autoreload 82413 139685646708736 /home/abright/Work/FarmFreight/backend/email_processor/scheduler.py changed, reloading.
 INFO 2025-04-22 00:12:46,116 autoreload 82576 140126338318336 Watching for file changes with StatReloader
 INFO 2025-04-22 00:16:30,767 autoreload 82819 139653057921024 Watching for file changes with StatReloader
+WARNING 2025-04-22 00:19:09,316 log 82819 139652872754752 Not Found: /api/email/receive-email/
+WARNING 2025-04-22 00:19:09,317 basehttp 82819 139652872754752 "POST /api/email/receive-email/ HTTP/1.1" 404 29408
+WARNING 2025-04-22 00:19:28,780 log 82819 139652872754752 Not Found: /api/email/receive-email/
+WARNING 2025-04-22 00:19:28,781 basehttp 82819 139652872754752 "POST /api/email/receive-email/ HTTP/1.1" 404 29408
+INFO 2025-04-22 00:23:05,434 autoreload 82819 139653057921024 /home/abright/Work/FarmFreight/backend/email_processor/management/commands/process_emails.py changed, reloading.
+INFO 2025-04-22 00:23:06,396 autoreload 83259 140288022282240 Watching for file changes with StatReloader
+INFO 2025-04-22 00:23:38,877 autoreload 83259 140288022282240 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-22 00:23:39,730 autoreload 83320 139867688329216 Watching for file changes with StatReloader
+INFO 2025-04-22 00:24:28,453 autoreload 83320 139867688329216 /home/abright/Work/FarmFreight/backend/email_processor/apps.py changed, reloading.
+INFO 2025-04-22 00:24:29,391 autoreload 83411 139909490618368 Watching for file changes with StatReloader
