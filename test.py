@@ -110,9 +110,6 @@ class UserViewSetTests(APITestCase):
         ######################
         # Order Creation
         ######################
-        ######################
-        # Order Creation
-        ######################
         url = f'/api/stores/{self.store.id}/orders/'  # 🔄 updated
 
         payload = {
@@ -234,14 +231,42 @@ class UserViewSetTests(APITestCase):
             for photo in photo_response.data:
                 self.assertIn('signed_url', photo)
 
-        # Step 3: Final status update to 'complete'
+
         final_update_url = f'/api/stores/{self.store.id}/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/'
-        final_update_payload = {
-            "status": 'complete',
+        final_update_payload = {"status": 'complete'}
+
+        # Step 3-A: Ensure template is active → should trigger SMS
+        print("\n--- TESTING: Template is ACTIVE ---")
+        msg_template = MessageTemplate.objects.get(store=self.store, event='driver_complete')
+        msg_template.active = True
+        msg_template.save()
+
+        with self.captureOnCommitCallbacks(execute=True):  # Makes sure post-commit actions (like send_sms) run in tests
+            response_active = self.client.patch(final_update_url, final_update_payload, format='json')
+            self.assertEqual(response_active.status_code, status.HTTP_200_OK)
+            self.assertEqual(response_active.data['status'], 'complete')
+
+        # Step 3-B: Set template to inactive → SMS should not trigger
+        # Reset status to 'en_route' first
+        print("\n--- TESTING: Template is INACTIVE ---")
+        rollback_payload = {
+            "status": "en_route",
+            "delivery_date": delivery_date,
+            "delivery_time": time(hour=11).isoformat(),
+            "drivers": [self.driver.id],
         }
-        final_response = self.client.patch(final_update_url, final_update_payload, format='json')
-        self.assertEqual(final_response.status_code, status.HTTP_200_OK)
-        self.assertEqual(final_response.data['status'], 'complete')
+        self.client.patch(final_update_url, rollback_payload, format='json')
+
+        # Deactivate the template
+        msg_template.active = False
+        msg_template.save()
+
+        # Try to complete again
+        with self.captureOnCommitCallbacks(execute=True):
+            response_inactive = self.client.patch(final_update_url, final_update_payload, format='json')
+            self.assertEqual(response_inactive.status_code, status.HTTP_200_OK)
+            self.assertEqual(response_inactive.data['status'], 'complete')
+
 
         # Step 4: Schedule order items
         order_items = OrderItem.objects.filter(order_id=order_id)
@@ -254,7 +279,6 @@ class UserViewSetTests(APITestCase):
                 quantity=min(1, item.quantity)
             )
             print(f"ScheduledItem: {scheduled}")
-
 
 
         ######################

@@ -18,3 +18,5 @@ venv/
 .vscodium/
 
 django-errors.log
+
+*.sqlite3

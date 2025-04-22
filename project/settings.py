@@ -35,6 +35,15 @@ else:
     GOOGLE_APPLICATION_CREDENTIALS = os.path.join(BASE_DIR, '/home/abright/Desktop/KEYS/fresh-fusion-456617-s8-e919b86cfbd8.json')
     GS_CREDENTIALS = service_account.Credentials.from_service_account_file(GOOGLE_APPLICATION_CREDENTIALS)
 
+# Gmail settings
+GMAIL_SERVICE_ACCOUNT_FILE = '/home/abright/Desktop/KEYS/fresh-fusion-456617-s8-4b4bfbb6175c.json'
+GMAIL_USER_EMAIL = 'l@abrightforge.com'
+API_ENDPOINT = 'http://127.0.0.01/api/receive-email/'
+SPECIFIC_SENDER = 'googlecloud@google.com'
+
+# APScheduler config
+APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
+APSCHEDULER_RUN_NOW_TIMEOUT = 25
 
 TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
 TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
@@ -110,6 +119,8 @@ INSTALLED_APPS = [
     'corsheaders',
     "storages",
     'messaging',
+    'django_apscheduler',
+    'email_processor'
 ]
 
 REST_FRAMEWORK = {

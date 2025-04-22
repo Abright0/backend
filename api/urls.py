@@ -3,6 +3,7 @@ from rest_framework.routers import DefaultRouter
 from rest_framework_nested.routers import NestedDefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
+from api.email_processor.views import ReceiveEmailView
 from api.accounts.views import UserViewSet
 from api.stores.views import StoreViewSet
 from api.products.views import ProductListCreate, ProductImportView, SearchProductView
@@ -54,6 +55,7 @@ urlpatterns = [
     path('token/refresh/', TokenRefreshView.as_view()),
     path('logout/', LogoutView.as_view(), name='logout'),
 
+    path('receive-email/', ReceiveEmailView.as_view(), name='receive-email'),
     path('products/', ProductListCreate.as_view(), name='product-list-create'),
     path('import-products/', ProductImportView.as_view(), name="import-products"),
     path('search-product/', SearchProductView.as_view(), name="search-product"),
