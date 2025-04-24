@@ -5864,3 +5864,7 @@ INFO 2025-04-24 13:17:12,707 autoreload 119134 140194683211776 /home/abright/Wor
 INFO 2025-04-24 13:17:13,567 autoreload 119155 139941421744128 Watching for file changes with StatReloader
 INFO 2025-04-24 13:22:05,970 autoreload 119155 139941421744128 /home/abright/Work/FarmFreight/backend/manage.py changed, reloading.
 INFO 2025-04-24 13:22:06,853 autoreload 119336 140689253392384 Watching for file changes with StatReloader
+INFO 2025-04-24 13:31:58,530 autoreload 119336 140689253392384 /home/abright/Work/FarmFreight/backend/manage.py changed, reloading.
+INFO 2025-04-24 13:31:59,385 autoreload 120241 140294793703424 Watching for file changes with StatReloader
+INFO 2025-04-24 13:32:03,835 autoreload 120241 140294793703424 /home/abright/Work/FarmFreight/backend/manage.py changed, reloading.
+INFO 2025-04-24 13:32:04,792 autoreload 120275 139901291798528 Watching for file changes with StatReloader
