@@ -146,9 +146,15 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
             photo_qs = attempt.photos.all()
             if photo_qs.exists():
                 links = []
+                print("DEBUG setting is:", settings.DEBUG)
+                # Use production domain if not in debug (prod), otherwise localhost
+                if settings.DEBUG:
+                    domain = "https://localhost:8000"
+                else:
+                    domain = getattr(settings, "DELIVERY_LINK_DOMAIN", "https://your-production-domain.com")
 
-                # Fallback-safe domain for redirect links
-                domain = getattr(settings, "DELIVERY_LINK_DOMAIN", "https://yourfallbackdomain.com")
+                print("BEFORE signed_url:", photo_qs[1].signed_url)
+                print("BEFORE signed_url_expiry:", photo_qs[1].signed_url_expiry)
 
                 for photo in photo_qs:
                     if not photo.signed_url or not photo.signed_url_expiry or photo.signed_url_expiry < timezone.now():
@@ -157,10 +163,11 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
                     short_link = f"{domain}/p/{photo.id}"
                     links.append(short_link)
 
+                print("AFTER signed_url:", photo_qs[1].signed_url)
+
                 context["photo_links"] = "\n".join(links)
             else:
                 context["photo_links"] = "No delivery photos available."
-
 
         return context
             

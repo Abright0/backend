@@ -5771,3 +5771,96 @@ INFO 2025-04-22 01:14:18,534 autoreload 85797 140141455409152 /home/abright/Work
 INFO 2025-04-22 01:14:19,416 autoreload 86005 140212759113728 Watching for file changes with StatReloader
 INFO 2025-04-22 01:15:34,252 autoreload 86005 140212759113728 /home/abright/Work/FarmFreight/backend/email_processor/apps.py changed, reloading.
 INFO 2025-04-22 01:15:35,173 autoreload 86054 140603935264768 Watching for file changes with StatReloader
+INFO 2025-04-22 01:31:59,054 autoreload 86054 140603935264768 /home/abright/Work/FarmFreight/backend/email_processor/apps.py changed, reloading.
+INFO 2025-04-22 01:32:00,018 autoreload 87455 140453929664512 Watching for file changes with StatReloader
+INFO 2025-04-22 12:53:55,672 autoreload 87455 140453929664512 /home/abright/Work/FarmFreight/backend/email_processor/apps.py changed, reloading.
+INFO 2025-04-22 12:53:56,558 autoreload 89315 139792745701376 Watching for file changes with StatReloader
+INFO 2025-04-22 13:36:55,815 autoreload 89315 139792745701376 /home/abright/Work/FarmFreight/backend/email_processor/apps.py changed, reloading.
+INFO 2025-04-22 13:36:56,686 autoreload 92751 140123668611072 Watching for file changes with StatReloader
+WARNING 2025-04-24 01:18:31,911 log 111190 140227888652288 Not Found: /api/orders/
+WARNING 2025-04-24 01:18:33,169 log 111190 140227888652288 Not Found: /api/orders/
+WARNING 2025-04-24 01:18:34,438 log 111190 140227888652288 Not Found: /api/orders/
+WARNING 2025-04-24 01:18:35,692 log 111190 140227888652288 Not Found: /api/orders/
+INFO 2025-04-24 01:26:12,963 autoreload 92751 140123668611072 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 01:26:13,821 autoreload 113177 139970033356800 Watching for file changes with StatReloader
+INFO 2025-04-24 01:26:49,046 autoreload 113177 139970033356800 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-24 01:26:49,987 autoreload 113285 140665741910016 Watching for file changes with StatReloader
+INFO 2025-04-24 01:28:04,398 autoreload 113285 140665741910016 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 01:28:05,259 autoreload 113386 140527315435520 Watching for file changes with StatReloader
+INFO 2025-04-24 12:50:16,824 autoreload 113386 140527315435520 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-24 12:50:17,742 autoreload 117013 139920725315584 Watching for file changes with StatReloader
+INFO 2025-04-24 12:50:31,402 autoreload 117013 139920725315584 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 12:50:32,284 autoreload 117038 140648106205184 Watching for file changes with StatReloader
+INFO 2025-04-24 12:53:07,747 autoreload 117038 140648106205184 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 12:53:08,576 autoreload 117071 140543849533440 Watching for file changes with StatReloader
+INFO 2025-04-24 12:54:11,592 autoreload 117071 140543849533440 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 12:54:12,448 autoreload 117093 139966114996224 Watching for file changes with StatReloader
+INFO 2025-04-24 12:57:23,056 autoreload 117093 139966114996224 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 12:57:23,934 autoreload 117970 140528841695232 Watching for file changes with StatReloader
+INFO 2025-04-24 12:57:59,194 autoreload 117970 140528841695232 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 12:58:00,090 autoreload 118014 139643258167296 Watching for file changes with StatReloader
+INFO 2025-04-24 12:58:22,887 autoreload 118014 139643258167296 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 12:58:23,752 autoreload 118129 140575031169024 Watching for file changes with StatReloader
+INFO 2025-04-24 12:59:43,724 autoreload 118129 140575031169024 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 12:59:44,619 autoreload 118166 140188329136128 Watching for file changes with StatReloader
+INFO 2025-04-24 12:59:57,270 autoreload 118166 140188329136128 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 12:59:58,135 autoreload 118202 139697222053888 Watching for file changes with StatReloader
+ERROR 2025-04-24 13:00:09,143 log 118204 139794219487232 Internal Server Error: /api/stores/5/orders/1/delivery-attempts/1/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 203, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 127, in update
+    self.send_status_sms(instance, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 176, in send_status_sms
+    context = self.build_context_for_event(attempt, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 156, in build_context_for_event
+    print("BEFORE signed_url:", photo.signed_url)
+UnboundLocalError: local variable 'photo' referenced before assignment
+INFO 2025-04-24 13:00:28,136 autoreload 118202 139697222053888 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 13:00:29,015 autoreload 118287 140715021611008 Watching for file changes with StatReloader
+INFO 2025-04-24 13:00:31,372 autoreload 118287 140715021611008 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 13:00:32,287 autoreload 118306 140581224079360 Watching for file changes with StatReloader
+INFO 2025-04-24 13:04:59,435 autoreload 118306 140581224079360 /home/abright/Work/FarmFreight/backend/messaging/services/sms_service.py changed, reloading.
+INFO 2025-04-24 13:05:00,319 autoreload 118452 140676490686464 Watching for file changes with StatReloader
+INFO 2025-04-24 13:07:34,768 autoreload 118452 140676490686464 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-24 13:07:35,690 autoreload 118515 139758944452608 Watching for file changes with StatReloader
+INFO 2025-04-24 13:08:05,026 autoreload 118515 139758944452608 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 13:08:05,905 autoreload 118550 139656236331008 Watching for file changes with StatReloader
+INFO 2025-04-24 13:08:51,563 autoreload 118550 139656236331008 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 13:08:52,477 autoreload 118612 140012504522752 Watching for file changes with StatReloader
+INFO 2025-04-24 13:09:05,234 autoreload 118612 140012504522752 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-04-24 13:09:06,104 autoreload 118672 140048647864320 Watching for file changes with StatReloader
+INFO 2025-04-24 13:10:17,733 autoreload 118672 140048647864320 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-24 13:10:18,628 autoreload 118807 140639836389376 Watching for file changes with StatReloader
+INFO 2025-04-24 13:14:50,586 autoreload 118807 140639836389376 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-24 13:14:51,537 autoreload 118991 140528739835904 Watching for file changes with StatReloader
+INFO 2025-04-24 13:16:55,757 autoreload 118991 140528739835904 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-24 13:16:56,660 autoreload 119105 140427656134656 Watching for file changes with StatReloader
+INFO 2025-04-24 13:17:06,309 autoreload 119105 140427656134656 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-24 13:17:07,206 autoreload 119134 140194683211776 Watching for file changes with StatReloader
+INFO 2025-04-24 13:17:12,707 autoreload 119134 140194683211776 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-24 13:17:13,567 autoreload 119155 139941421744128 Watching for file changes with StatReloader
+INFO 2025-04-24 13:22:05,970 autoreload 119155 139941421744128 /home/abright/Work/FarmFreight/backend/manage.py changed, reloading.
+INFO 2025-04-24 13:22:06,853 autoreload 119336 140689253392384 Watching for file changes with StatReloader
