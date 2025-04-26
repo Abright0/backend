@@ -15,11 +15,6 @@ class User(AbstractUser):
     # - is_staff
     # - is_superuser
     # - date_joined
-
-    password = models.CharField(
-        ('password'),
-        max_length=128
-    )
     
     username = models.CharField(
         max_length=32, 

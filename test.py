@@ -19,6 +19,10 @@ from PIL import Image
 from io import BytesIO
 from datetime import time
 
+from datetime import timedelta
+from rest_framework_simplejwt.tokens import RefreshToken
+import time
+
 import pillow_heif
 pillow_heif.register_heif_opener()
 
@@ -26,6 +30,146 @@ from unittest.mock import patch
 
 import uuid
 from django.conf import settings
+
+
+class JWTAuthTestCase(APITestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_user(
+            username='testuser',
+            email='testuser@example.com',
+            password='StrongPass123!',
+            phone_number='5555555555'
+        )
+        self.client = APIClient()
+        self.token_url = reverse('token_obtain_pair')  # Adjust if your route is named differently
+        self.protected_url = reverse('user-list')  # Replace with your actual protected view
+
+    def _get_token_pair(self):
+        response = self.client.post(self.token_url, {
+            'username': 'testuser',
+            'password': 'StrongPass123!'
+        }, format='json')
+        return response.data['access'], response.data['refresh']
+
+    def test_valid_access_token_allows_access(self):
+        access, _ = self._get_token_pair()
+        self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {access}')
+        response = self.client.get(self.protected_url)
+        self.assertNotEqual(response.status_code, 401)
+        self.assertNotIn('token_not_valid', str(response.data))
+
+
+    def test_expired_access_token_denies_access(self):
+        # Temporarily override token lifetime for this test
+        settings.SIMPLE_JWT['ACCESS_TOKEN_LIFETIME'] = timedelta(seconds=1)
+        access, _ = self._get_token_pair()
+
+        time.sleep(130)  # Wait for token to expire
+
+        self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {access}')
+        response = self.client.get(self.protected_url)
+        print(response.data)
+        self.assertEqual(response.status_code, 401)
+        self.assertIn('token_not_valid', str(response.data))
+
+    def test_blacklisted_refresh_token_cannot_be_used(self):
+        access, refresh = self._get_token_pair()
+        blacklist_url = reverse('logout')
+
+        # Set the access token in headers (required for logout permission)
+        self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {access}')
+
+        # Blacklist the refresh token (logout)
+        response = self.client.post(blacklist_url, {'refresh': refresh}, format='json')
+        self.assertEqual(response.status_code, 200)
+
+        # Now try to use blacklisted refresh token
+        refresh_url = reverse('token_refresh')
+        response = self.client.post(refresh_url, {'refresh': refresh}, format='json')
+        self.assertEqual(response.status_code, 401)
+        self.assertIn('token_not_valid', str(response.data))
+
+class UserRegistrationViewTests(APITestCase):
+    def setUp(self):
+        self.store = Store.objects.create(name="Test Store")
+
+        self.superuser = User.objects.create_superuser(
+            username="superadmin",
+            email="super@example.com",
+            password="SuperPass123!",
+            phone_number="+1234567890"
+        )
+
+        self.manager = User.objects.create_user(
+            username="manager1",
+            email="manager1@example.com",
+            password="ManagerPass123!",
+            phone_number="+1234567891",
+            is_manager=True
+        )
+        self.manager.stores.add(self.store)
+
+        self.register_url = reverse('user-register')  # Adjust this to your actual route name
+
+    def authenticate(self, user):
+        refresh = RefreshToken.for_user(user)
+        self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {str(refresh.access_token)}')
+
+    @patch('api.accounts.serializers.send_verification_sms')
+    def test_superuser_can_create_user_for_any_store(self, mock_send_sms):
+        other_store = Store.objects.create(name="Global Store")
+        self.authenticate(self.superuser)
+
+        payload = {
+            "username": "globaluser",
+            "email": "global@example.com",
+            "password": "GlobalPass123!",
+            "phone_number": "+1234567895",
+            "stores": [other_store.id]
+        }
+
+        response = self.client.post(self.register_url, payload, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertTrue(User.objects.filter(username="globaluser").exists())
+        mock_send_sms.assert_called_once()
+
+    @patch('api.accounts.serializers.send_verification_sms')
+    def test_manager_can_create_user_for_their_own_store(self, mock_send_sms):
+        self.authenticate(self.manager)
+
+        payload = {
+            "username": "storeuser",
+            "email": "storeuser@example.com",
+            "password": "StorePass123!",
+            "phone_number": "+1234567892",
+            "stores": [self.store.id]
+        }
+
+        response = self.client.post(self.register_url, payload, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertTrue(User.objects.filter(username="storeuser").exists())
+        mock_send_sms.assert_called_once()
+
+    @patch('api.accounts.serializers.send_verification_sms')
+    def test_manager_cannot_create_user_for_other_store(self, mock_send_sms):
+        other_store = Store.objects.create(name="Other Store")
+        self.authenticate(self.manager)
+
+        payload = {
+            "username": "otherstoreuser",
+            "email": "otherstore@example.com",
+            "password": "OtherPass123!",
+            "phone_number": "+1234567893",
+            "stores": [other_store.id]
+        }
+
+        response = self.client.post(self.register_url, payload, format='json')
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn("You can only create users for stores you manage", str(response.data))
+        self.assertFalse(User.objects.filter(username="otherstoreuser").exists())
+        mock_send_sms.assert_not_called()
+
 
 
 class AccountsTestCase(APITestCase):

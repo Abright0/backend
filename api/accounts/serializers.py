@@ -5,6 +5,9 @@ from django.contrib.auth import get_user_model
 from .utils import send_verification_sms
 from stores.models import Store
 
+from django.contrib.auth.password_validation import validate_password
+from django.core.exceptions import ValidationError
+
 import re
 
 class UserSerializer(serializers.ModelSerializer):
@@ -41,7 +44,20 @@ class UserSerializer(serializers.ModelSerializer):
     def get_roles(self, obj):
         return obj.get_roles()
 
+    def validate_password(self, value):
+        """
+        Use Django's built-in password validators for strength checks.
+        """
+        try:
+            validate_password(value)
+        except ValidationError as e:
+            raise serializers.ValidationError(e.messages)
+        return value
+
     def validate(self, data):
+        """
+        Role and store permission validation logic.
+        """
         request = self.context.get('request')
         requesting_user = request.user if request else None
 
@@ -51,16 +67,59 @@ class UserSerializer(serializers.ModelSerializer):
         if not requesting_user or not getattr(requesting_user, 'is_authenticated', False):
             raise serializers.ValidationError("Authentication required.")
 
-        # ROLE VALIDATION STARTS HERE:
+        self._validate_roles(data, requesting_user)
+        self._validate_store_permissions(data, requesting_user)
+        return data
+
+    def create(self, validated_data):
+        request = self.context.get('request')
+        stores = validated_data.pop('stores', [])
+        password = validated_data.pop('password', None)
+
+        if not password:
+            raise serializers.ValidationError({"password": "Password is required."})
+
+        # Validate password strength
+        self.validate_password(password)
+
+        # Create user with hashed password
+        user = get_user_model().objects.create(**validated_data)
+        user.set_password(password)
+        user.stores.set(stores)
+
+        # Send verification SMS (non-blocking)
+        try:
+            user.generate_verification_token()
+            send_verification_sms(user)
+        except Exception as e:
+            print(f"Warning: Failed to send verification SMS to {user.phone_number}: {str(e)}")
+
+        return user
+
+    def update(self, instance, validated_data):
+        password = validated_data.pop('password', None)
+        stores = validated_data.pop('stores', None)
+
+        user = super().update(instance, validated_data)
+
+        if password:
+            self.validate_password(password)
+            user.set_password(password)
+            user.save()
+
+        if stores is not None:
+            user.stores.set(stores)
+
+        return user
+
+    def _validate_roles(self, data, requesting_user):
         role_fields = ['is_manager', 'is_customer_service', 'is_driver', 'is_superuser']
         incoming_roles = {field: data.get(field) for field in role_fields if field in data}
 
         if incoming_roles:
             if requesting_user.is_superuser:
-                # Superuser can assign anything, including superuser
-                pass
+                return  # Superuser can assign any role
             elif requesting_user.is_manager:
-                # Managers cannot assign manager or superuser roles
                 if incoming_roles.get('is_manager') or incoming_roles.get('is_superuser'):
                     raise serializers.ValidationError(
                         {"roles": "Managers cannot assign 'manager' or 'superuser' roles."}
@@ -70,12 +129,11 @@ class UserSerializer(serializers.ModelSerializer):
                     {"roles": "You do not have permission to assign or modify roles."}
                 )
 
-        # Prevent users from modifying their own roles (optional but recommended):
         if self.instance and self.instance == requesting_user and incoming_roles:
-            if not requesting_user.is_superuser:  # Superuser can modify their own roles
+            if not requesting_user.is_superuser:
                 raise serializers.ValidationError({"roles": "You cannot modify your own role assignments."})
 
-        # Existing CREATE logic (for store restrictions):
+    def _validate_store_permissions(self, data, requesting_user):
         if self.instance is None and not requesting_user.is_superuser:
             if requesting_user.is_manager:
                 requested_stores = set(store.id for store in data.get('stores', []))
@@ -86,5 +144,3 @@ class UserSerializer(serializers.ModelSerializer):
                     )
             else:
                 raise serializers.ValidationError("You don't have permission to create users.")
-
-        return data

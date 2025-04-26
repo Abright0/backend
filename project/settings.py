@@ -170,17 +170,15 @@ REST_FRAMEWORK = {
         'verify': '100/hour',      # custom - for SMS verification
     }
 
-
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME':timedelta(minutes=60),
-    'REFRESH_TOKEN_LIFETIME':timedelta(days=1),
-    'ROTATE_REFRESH_TOKENS':False,
-    'BLACKLIST_AFTER_ROTATION':True,
-    #'USER_ID_FIELD':'email',
-    #'USER_ID_CLAIM':'email',
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1),       # 1 hour sessions
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),          # Refresh token valid for 1 day
+    'ROTATE_REFRESH_TOKENS': False,                       # Optional rotation logic (off here)
+    'BLACKLIST_AFTER_ROTATION': True,                     # Refresh token gets blacklisted if rotation happens
 }
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',

@@ -6495,3 +6495,285 @@ INFO 2025-04-26 17:54:12,240 autoreload 43116 140278504628224 /home/abright/Work
 INFO 2025-04-26 17:54:12,734 autoreload 43141 139652275834880 Watching for file changes with StatReloader
 INFO 2025-04-26 17:54:50,319 autoreload 43141 139652275834880 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
 INFO 2025-04-26 17:54:50,796 autoreload 43164 139922829148160 Watching for file changes with StatReloader
+INFO 2025-04-26 17:59:47,226 autoreload 43164 139922829148160 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 17:59:47,652 autoreload 43539 140167336808448 Watching for file changes with StatReloader
+INFO 2025-04-26 17:59:48,995 autoreload 43539 140167336808448 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 17:59:49,418 autoreload 43546 140258328432640 Watching for file changes with StatReloader
+INFO 2025-04-26 17:59:50,789 autoreload 43546 140258328432640 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 17:59:51,232 autoreload 43553 140282962944000 Watching for file changes with StatReloader
+INFO 2025-04-26 18:02:52,135 autoreload 43553 140282962944000 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-04-26 18:02:52,616 autoreload 43760 140120443924480 Watching for file changes with StatReloader
+INFO 2025-04-26 18:03:02,197 autoreload 43760 140120443924480 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 18:03:02,624 autoreload 43782 139709491593216 Watching for file changes with StatReloader
+INFO 2025-04-26 18:06:47,675 autoreload 43782 139709491593216 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-04-26 18:06:48,170 autoreload 43994 140309022838784 Watching for file changes with StatReloader
+INFO 2025-04-26 18:08:48,565 autoreload 43994 140309022838784 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 18:08:49,046 autoreload 44035 139900149911552 Watching for file changes with StatReloader
+INFO 2025-04-26 18:09:41,482 autoreload 44035 139900149911552 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-04-26 18:09:41,974 autoreload 44149 140095449165824 Watching for file changes with StatReloader
+INFO 2025-04-26 18:13:54,154 autoreload 44149 140095449165824 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-04-26 18:13:54,589 autoreload 44412 139941449060352 Watching for file changes with StatReloader
+INFO 2025-04-26 18:14:17,362 autoreload 44412 139941449060352 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 18:14:17,804 autoreload 44443 139954727264256 Watching for file changes with StatReloader
+INFO 2025-04-26 18:18:10,624 autoreload 44443 139954727264256 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 18:18:11,106 autoreload 44584 140488755482624 Watching for file changes with StatReloader
+INFO 2025-04-26 18:18:13,299 autoreload 44584 140488755482624 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 18:18:13,761 autoreload 44604 140544163786752 Watching for file changes with StatReloader
+INFO 2025-04-26 18:19:12,789 autoreload 44604 140544163786752 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 18:19:13,248 autoreload 44634 139822399733760 Watching for file changes with StatReloader
+INFO 2025-04-26 18:19:14,413 autoreload 44634 139822399733760 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 18:19:14,885 autoreload 44637 140159305293824 Watching for file changes with StatReloader
+INFO 2025-04-26 18:20:09,686 autoreload 44637 140159305293824 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:20:10,136 autoreload 44666 140539213201408 Watching for file changes with StatReloader
+INFO 2025-04-26 18:20:47,516 autoreload 44666 140539213201408 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:20:47,984 autoreload 44688 139621699997696 Watching for file changes with StatReloader
+INFO 2025-04-26 18:20:54,351 autoreload 44688 139621699997696 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-04-26 18:20:54,832 autoreload 44716 139648824119296 Watching for file changes with StatReloader
+INFO 2025-04-26 18:25:19,856 autoreload 44716 139648824119296 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-04-26 18:25:20,324 autoreload 45014 140034766307328 Watching for file changes with StatReloader
+INFO 2025-04-26 18:25:28,747 autoreload 45014 140034766307328 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-04-26 18:25:29,210 autoreload 45037 139769035386880 Watching for file changes with StatReloader
+ERROR 2025-04-26 18:26:05,779 log 45062 140325643153408 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 49, in validate_password
+    validate_password(value)
+NameError: name 'validate_password' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 178, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 50, in validate_password
+    except ValidationError as e:
+NameError: name 'ValidationError' is not defined
+ERROR 2025-04-26 18:26:06,615 log 45062 140325643153408 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 49, in validate_password
+    validate_password(value)
+NameError: name 'validate_password' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 178, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 50, in validate_password
+    except ValidationError as e:
+NameError: name 'ValidationError' is not defined
+ERROR 2025-04-26 18:26:07,456 log 45062 140325643153408 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 49, in validate_password
+    validate_password(value)
+NameError: name 'validate_password' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 178, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 50, in validate_password
+    except ValidationError as e:
+NameError: name 'ValidationError' is not defined
+INFO 2025-04-26 18:26:39,977 autoreload 45037 139769035386880 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 18:26:40,431 autoreload 45093 140094846279680 Watching for file changes with StatReloader
+INFO 2025-04-26 18:26:48,998 autoreload 45093 140094846279680 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 18:26:49,475 autoreload 45150 139820776529920 Watching for file changes with StatReloader
+ERROR 2025-04-26 18:26:55,586 log 45168 139637848178688 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 178, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 51, in validate_password
+    validate_password(value)
+NameError: name 'validate_password' is not defined
+ERROR 2025-04-26 18:26:56,420 log 45168 139637848178688 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 178, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 51, in validate_password
+    validate_password(value)
+NameError: name 'validate_password' is not defined
+ERROR 2025-04-26 18:26:57,255 log 45168 139637848178688 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 178, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 501, in to_internal_value
+    validated_value = validate_method(validated_value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 51, in validate_password
+    validate_password(value)
+NameError: name 'validate_password' is not defined
+INFO 2025-04-26 18:28:35,400 autoreload 45150 139820776529920 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 18:28:35,896 autoreload 45217 140255898738688 Watching for file changes with StatReloader
+INFO 2025-04-26 18:28:39,046 utils 45219 140467076644864 Verification SMS sent to +1234567892
+WARNING 2025-04-26 18:28:39,898 log 45219 140467076644864 Bad Request: /api/users/register/
+INFO 2025-04-26 18:28:41,161 utils 45219 140467076644864 Verification SMS sent to +1234567895
+INFO 2025-04-26 18:29:32,907 autoreload 45217 140255898738688 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:29:33,335 autoreload 45272 139681040957440 Watching for file changes with StatReloader
+INFO 2025-04-26 18:31:28,596 autoreload 45272 139681040957440 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:31:29,054 autoreload 45306 139878076338176 Watching for file changes with StatReloader
+INFO 2025-04-26 18:31:33,443 autoreload 45306 139878076338176 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:31:33,876 autoreload 45335 139819221151744 Watching for file changes with StatReloader
+INFO 2025-04-26 18:31:36,228 autoreload 45335 139819221151744 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:31:36,679 autoreload 45357 140131398635520 Watching for file changes with StatReloader
+INFO 2025-04-26 18:31:40,066 autoreload 45357 140131398635520 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:31:40,566 autoreload 45370 140241616834560 Watching for file changes with StatReloader
+INFO 2025-04-26 18:31:43,960 autoreload 45370 140241616834560 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:31:44,414 autoreload 45397 140672378261504 Watching for file changes with StatReloader
+INFO 2025-04-26 18:31:47,789 autoreload 45397 140672378261504 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:31:48,253 autoreload 45420 139736780660736 Watching for file changes with StatReloader
+WARNING 2025-04-26 18:32:29,738 log 45420 139736603645504 Not Found: /api/token
+WARNING 2025-04-26 18:32:29,739 basehttp 45420 139736603645504 "GET /api/token HTTP/1.1" 404 28791
+WARNING 2025-04-26 18:32:35,028 log 45420 139736603645504 Not Found: /api/token/
+WARNING 2025-04-26 18:32:35,028 basehttp 45420 139736603645504 "GET /api/token/ HTTP/1.1" 404 28794
+WARNING 2025-04-26 18:32:54,341 log 45420 139736595252800 Not Found: /api/token/
+WARNING 2025-04-26 18:32:54,341 basehttp 45420 139736595252800 "POST /api/token/ HTTP/1.1" 404 28795
+INFO 2025-04-26 18:38:25,912 autoreload 45420 139736780660736 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 18:38:26,344 autoreload 46488 140343311257600 Watching for file changes with StatReloader
+INFO 2025-04-26 18:38:57,438 autoreload 46488 140343311257600 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:38:57,860 autoreload 46561 140574007431168 Watching for file changes with StatReloader
+INFO 2025-04-26 18:38:59,201 autoreload 46561 140574007431168 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:38:59,629 autoreload 46567 140472973889536 Watching for file changes with StatReloader
+INFO 2025-04-26 18:39:10,258 autoreload 46567 140472973889536 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:39:10,729 autoreload 46639 140421387698176 Watching for file changes with StatReloader
+WARNING 2025-04-26 18:39:16,483 log 46639 140421279827520 Not Found: /api/token/
+WARNING 2025-04-26 18:39:16,483 basehttp 46639 140421279827520 "GET /api/token/ HTTP/1.1" 404 28794
+WARNING 2025-04-26 18:41:36,395 log 46758 140391824379904 Unauthorized: /api/logout/
+INFO 2025-04-26 18:44:51,765 autoreload 46639 140421387698176 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 18:44:52,232 autoreload 46920 140601235812352 Watching for file changes with StatReloader
+WARNING 2025-04-26 18:44:55,519 log 46922 139979670212608 Unauthorized: /api/token/refresh/
+WARNING 2025-04-26 18:46:39,419 log 46989 140336863928320 Unauthorized: /api/token/refresh/
+WARNING 2025-04-26 18:47:10,138 log 47055 139795823144960 Unauthorized: /api/token/refresh/
+INFO 2025-04-26 18:48:13,433 autoreload 46920 140601235812352 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-04-26 18:48:13,902 autoreload 47160 140276910084096 Watching for file changes with StatReloader
+WARNING 2025-04-26 18:48:32,083 log 47200 140310089211904 Unauthorized: /api/token/refresh/
+WARNING 2025-04-26 18:50:43,021 log 47200 140310089211904 Unauthorized: /api/users/

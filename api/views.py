@@ -1,7 +1,10 @@
 
 # backend/api/views.py
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.tokens import RefreshToken, BlacklistMixin
+
+
 
 from rest_framework.response import Response
 from rest_framework import status
@@ -9,24 +12,25 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.views import APIView
 
 
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        data = super().validate(attrs)
+        data['user'] = {
+            'id': self.user.id,
+            'email': self.user.email,
+            'username': self.user.username,
+            'first_name': self.user.first_name,
+            'last_name': self.user.last_name,
+            'is_superuser': self.user.is_superuser,
+            'is_manager': self.user.is_manager,
+            'is_driver': self.user.is_driver,
+            'is_customer_service': self.user.is_customer_service
+        }
+        return data
+        
 class LoginView(TokenObtainPairView):
-    def post(self, request, *args, **kwargs):
-        response = super().post(request, *args, **kwargs)
-        if response.status_code == 200:
-            user = self.user
-            # Add more user details to the response
-            response.data['user'] = {
-                'id': user.id,
-                'email': user.email,
-                'username': user.username,
-                'first_name': user.first_name,
-                'last_name': user.last_name,
-                'is_superuser': user.is_superuser,
-                'is_manager': user.is_manager,
-                'is_driver': user.is_driver,
-                'is_customer_service': user.is_customer_service
-            }
-        return response
+    serializer_class = CustomTokenObtainPairSerializer
+
 
 class LogoutView(APIView):
     permission_classes = [IsAuthenticated]
