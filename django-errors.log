@@ -6481,3 +6481,17 @@ INFO 2025-04-26 17:17:49,021 autoreload 39978 140654632226816 /home/abright/Work
 INFO 2025-04-26 17:17:49,505 autoreload 39998 140163560435712 Watching for file changes with StatReloader
 WARNING 2025-04-26 17:18:04,011 log 39998 140163452814912 Bad Request: /api/verify-phone/
 WARNING 2025-04-26 17:18:04,011 basehttp 39998 140163452814912 "GET /api/verify-phone/ HTTP/1.1" 400 14394
+INFO 2025-04-26 17:45:24,318 autoreload 39998 140163560435712 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-04-26 17:45:24,816 autoreload 42774 139799717552128 Watching for file changes with StatReloader
+INFO 2025-04-26 17:45:33,433 autoreload 42774 139799717552128 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 17:45:33,896 autoreload 42800 139815328788480 Watching for file changes with StatReloader
+INFO 2025-04-26 17:45:50,764 autoreload 42800 139815328788480 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 17:45:51,204 autoreload 42830 140463564222464 Watching for file changes with StatReloader
+INFO 2025-04-26 17:46:02,892 autoreload 42830 140463564222464 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 17:46:03,360 autoreload 42862 140445830500352 Watching for file changes with StatReloader
+INFO 2025-04-26 17:53:59,052 autoreload 42862 140445830500352 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 17:53:59,544 autoreload 43116 140278504628224 Watching for file changes with StatReloader
+INFO 2025-04-26 17:54:12,240 autoreload 43116 140278504628224 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 17:54:12,734 autoreload 43141 139652275834880 Watching for file changes with StatReloader
+INFO 2025-04-26 17:54:50,319 autoreload 43141 139652275834880 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-04-26 17:54:50,796 autoreload 43164 139922829148160 Watching for file changes with StatReloader

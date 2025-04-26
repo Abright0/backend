@@ -422,7 +422,7 @@ class UserViewSetTests(APITestCase):
         ######################
         # Order Update
         ######################
-        update_url = f"/api/stores/{self.store.id}/orders/{order_id}/"  # 🔄 updated
+        update_url = f"/api/stores/{self.store.id}/orders/{order_id}/"  # updated
         update_payload = {
             "notes": "Updated note from test",
             "delivery_instructions": "updated instructions"
@@ -445,7 +445,7 @@ class UserViewSetTests(APITestCase):
         ext_cycle = itertools.cycle(common_extensions)
 
         # Step 1: Create initial delivery attempt
-        da_url = f'/api/stores/{self.store.id}/orders/{order_id}/delivery-attempts/'  # 🔄 updated
+        da_url = f'/api/stores/{self.store.id}/orders/{order_id}/delivery-attempts/'  # updated
         initial_payload = {
             "status": 'order_placed',
             "delivery_date": delivery_date,
@@ -571,12 +571,12 @@ class UserViewSetTests(APITestCase):
 
         # Randomly pick one
         random_attempt = random.choice(list(delivery_attempts))
-        print(f"🔍 Chosen attempt ID: {random_attempt.id} — Status: {random_attempt.status}")
+        print(f" Chosen attempt ID: {random_attempt.id} — Status: {random_attempt.status}")
 
         # Get all photos for this attempt
         photos = DeliveryPhoto.objects.filter(delivery_attempt=random_attempt)
 
         # Print photo info
         for photo in photos:
-            print(f"📸 Photo ID: {photo.id}, Caption: {photo.caption}, Image: {photo.image.url}")
+            print(f" Photo ID: {photo.id}, Caption: {photo.caption}, Image: {photo.image.url}")
 """

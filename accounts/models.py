@@ -61,3 +61,20 @@ class User(AbstractUser):
         self.save()
         print(f"Generated token for user {self.username}: {self.phone_verification_token}")
         return self.phone_verification_token
+
+    def get_roles(self):
+        if self.is_superuser:
+            return ['superuser']
+        
+        roles = []
+        if self.is_manager and self.is_customer_service and self.is_driver:
+            roles.append('store_manager')
+        elif self.is_manager and self.is_customer_service:
+            roles.append('inside_manager')
+        elif self.is_manager and self.is_driver:
+            roles.append('warehouse_manager')
+        elif self.is_customer_service:
+            roles.append('customer_service')
+        elif self.is_driver:
+            roles.append('driver')
+        return roles
