@@ -1,87 +1,53 @@
-from django.core.mail import send_mail
-from django.contrib.auth.tokens import default_token_generator
-from django.utils import timezone
+# api/accounts/utils.py
+from messaging.services.sms_service import send_sms
 from django.conf import settings
-from django.template.loader import render_to_string
-
-import project.settings
+from django.utils import timezone
 import logging
 
 logger = logging.getLogger(__name__)
 
-def send_verification_email(user):
+def send_verification_sms(user):
     """
-    Send verification email with improved error handling
+    Send verification SMS with improved error handling
     """
     try:
-        subject = 'Verify your email address'
         token = user.generate_verification_token()
-        verification_link = f"{settings.SITE_URL}/verify_email/{token}"
+        verification_link = f"{settings.SITE_URL}/verify_phone/{token}"
 
-        context = {
-            'user': user,
-            'verification_link': verification_link
-        }
-        
-        html_message = render_to_string('accounts/email_verification.html', context)
-        plain_message = render_to_string('accounts/email_verification.txt', context)
-        
-        send_mail(
-            subject,
-            plain_message,
-            settings.DEFAULT_FROM_EMAIL,
-            [user.email],
-            html_message=html_message,
-            fail_silently=True,  # Changed to True to prevent crashing
-        )
-        
-        logger.info(f"Verification email sent to {user.email}")
+        message = f"Hi {user.first_name}, verify your account here: {verification_link}"
+
+        if not user.phone_number:
+            logger.warning(f"No phone number found for user {user.username}. Cannot send SMS.")
+            return False
+
+        send_sms(user.phone_number, message)
+        logger.info(f"Verification SMS sent to {user.phone_number}")
         return True
     except Exception as e:
-        # Log the error but don't crash
-        logger.error(f"Failed to send verification email to {user.email}: {str(e)}")
+        logger.error(f"Failed to send verification SMS to {user.phone_number}: {str(e)}")
         return False
 
 
-def send_reset_email(user, reset_token):
+def send_reset_sms(user, reset_token):
     """
-    Send password reset email with unique token
+    Send password reset SMS with unique token
     """
     try:
-        # Create reset link
         reset_link = f"{settings.SITE_URL}/reset-password/{reset_token}"
-        
+        message = f"Reset your password here: {reset_link} (expires in 1 hour)"
+
         # Store token and timestamp
         user.password_reset_token = reset_token
         user.password_reset_token_created_at = timezone.now()
         user.save()
-        
-        # Email context
-        context = {
-            'user': user,
-            'reset_link': reset_link,
-            'site_name': settings.SITE_NAME,
-            'expiration_minutes': 60  # Token expires in 1 hour
-        }
-        
-        # Render email templates
-        subject = f'Password Reset for {settings.SITE_NAME}'
-        html_message = render_to_string('accounts/password_reset_email.html', context)
-        plain_message = render_to_string('accounts/password_reset_email.txt', context)
-        
-        # Send email
-        send_mail(
-            subject,
-            plain_message,
-            settings.DEFAULT_FROM_EMAIL,
-            [user.email],
-            html_message=html_message,
-            fail_silently=True,  # Changed to True to prevent crashing
-        )
-        
-        logger.info(f"Password reset email sent to {user.email}")
+
+        if not user.phone_number:
+            logger.warning(f"No phone number found for user {user.username}. Cannot send SMS.")
+            return False
+
+        send_sms(user.phone_number, message)
+        logger.info(f"Password reset SMS sent to {user.phone_number}")
         return True
     except Exception as e:
-        # Log the error
-        logger.error(f"Error sending reset email to {user.email}: {e}")
+        logger.error(f"Error sending reset SMS to {user.phone_number}: {e}")
         return False

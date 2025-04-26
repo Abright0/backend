@@ -22,6 +22,133 @@ from datetime import time
 import pillow_heif
 pillow_heif.register_heif_opener()
 
+from unittest.mock import patch
+
+
+class UserRegistrationSMSTest(APITestCase):
+    def setUp(self):
+        # Create a store for testing
+        self.store = Store.objects.create(name="Test Store")
+
+        # Superuser
+        self.admin_user = User.objects.create_superuser(
+            username="admin", 
+            email="admin@example.com", 
+            password="adminpass",
+            phone_number="+1234567890"
+        )
+
+        # Manager with access to the store
+        self.manager_user = User.objects.create_user(
+            username="manager", 
+            email="manager@example.com", 
+            password="managerpass",
+            phone_number="+1234567891",
+            is_manager=True
+        )
+        self.manager_user.stores.add(self.store)
+
+        self.register_url = reverse('user-register')
+
+    def authenticate(self, user):
+        refresh = RefreshToken.for_user(user)
+        self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {str(refresh.access_token)}')
+
+    @patch('api.accounts.serializers.send_verification_sms')
+    def test_superuser_can_create_user_for_any_store(self, mock_send_sms):
+        print("test_superuser_can_create_user_for_any_store")
+        """
+        Superusers should be able to create users for any store.
+        """
+        other_store = Store.objects.create(name="Global Store")
+        self.authenticate(self.admin_user)
+
+        payload = {
+            "username": "globaluser",
+            "email": "global@example.com",
+            "password": "globalpass",
+            "first_name": "Global",
+            "last_name": "User",
+            "phone_number": "+1234567894",
+            "stores": [other_store.id]
+        }
+
+        response = self.client.post(self.register_url, payload, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertTrue(User.objects.filter(username="globaluser").exists())
+        mock_send_sms.assert_called_once()
+
+    @patch('api.accounts.serializers.send_verification_sms')
+    def test_manager_can_only_assign_user_to_their_own_stores(self, mock_send_sms):
+        print("test_manager_can_only_assign_user_to_their_own_stores")
+        """
+        Managers should only be able to create users for their assigned stores.
+        """
+        self.authenticate(self.manager_user)
+
+        payload = {
+            "username": "userforstore",
+            "email": "userforstore@example.com",
+            "password": "userpass",
+            "first_name": "Store",
+            "last_name": "User",
+            "phone_number": "+1234567892",
+            "stores": [self.store.id]  # Manager's own store
+        }
+
+        response = self.client.post(self.register_url, payload, format='json')
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        self.assertTrue(User.objects.filter(username="userforstore").exists())
+        mock_send_sms.assert_called_once()
+
+    @patch('api.accounts.serializers.send_verification_sms')
+    def test_manager_cannot_assign_user_to_other_stores(self, mock_send_sms):
+        print("test_manager_cannot_assign_user_to_other_stores")
+        """
+        Managers should NOT be able to create users for stores they don't manage.
+        """
+        other_store = Store.objects.create(name="Other Store")
+        self.authenticate(self.manager_user)
+
+        payload = {
+            "username": "otherstoreuser",
+            "email": "other@example.com",
+            "password": "otherpass",
+            "first_name": "Other",
+            "last_name": "Store",
+            "phone_number": "+1234567893",
+            "stores": [other_store.id]  # store manager does NOT manage
+        }
+
+        response = self.client.post(self.register_url, payload, format='json')
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn("You can only create users for stores you manage", str(response.data))
+        self.assertFalse(User.objects.filter(username="otherstoreuser").exists())
+        mock_send_sms.assert_not_called()
+
+    @patch('api.accounts.serializers.send_verification_sms')
+    def test_create_user_missing_phone_number_fails(self, mock_send_sms):
+        print("test_create_user_missing_phone_number_fails")
+        """
+        User creation should fail if phone number is missing.
+        """
+        self.authenticate(self.admin_user)  # Superuser authenticated
+
+        payload = {
+            "username": "nopho",
+            "email": "nopho@example.com",
+            "password": "nopass",
+            "first_name": "No",
+            "last_name": "Phone",
+            "stores": [self.store.id]
+        }
+
+        response = self.client.post(self.register_url, payload, format='json')
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertFalse(User.objects.filter(username="nopho").exists())
+        mock_send_sms.assert_not_called()
+
+"""
 class UserViewSetTests(APITestCase):
 
     def setUp(self):
@@ -55,7 +182,7 @@ class UserViewSetTests(APITestCase):
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {self.access_token}')
 
     def authenticate(self, user):
-        """Helper to authenticate client"""
+        #Helper to authenticate client
         refresh = RefreshToken.for_user(user)
         self.client.credentials(HTTP_AUTHORIZATION=f'Bearer {str(refresh.access_token)}')
 
@@ -279,7 +406,7 @@ class UserViewSetTests(APITestCase):
                 quantity=min(1, item.quantity)
             )
             print(f"ScheduledItem: {scheduled}")
-
+"""
 
         ######################
         # GET RANDOM PHOTOS

@@ -19,6 +19,11 @@ from api.views import LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
 
+
+user_list = UserViewSet.as_view({
+    'get': 'verify_sms',
+})
+
 # Base router
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -56,9 +61,12 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
 
     path('receive-email/', ReceiveEmailView.as_view(), name='receive-email'),
-    path('products/', ProductListCreate.as_view(), name='product-list-create'),
-    path('import-products/', ProductImportView.as_view(), name="import-products"),
-    path('search-product/', SearchProductView.as_view(), name="search-product"),
+
+    #path('products/', ProductListCreate.as_view(), name='product-list-create'),
+    #path('import-products/', ProductImportView.as_view(), name="import-products"),
+    #path('search-product/', SearchProductView.as_view(), name="search-product"),
+
+    path('verify_phone/', user_list, name='verify-phone'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

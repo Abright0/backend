@@ -5868,3 +5868,255 @@ INFO 2025-04-24 13:31:58,530 autoreload 119336 140689253392384 /home/abright/Wor
 INFO 2025-04-24 13:31:59,385 autoreload 120241 140294793703424 Watching for file changes with StatReloader
 INFO 2025-04-24 13:32:03,835 autoreload 120241 140294793703424 /home/abright/Work/FarmFreight/backend/manage.py changed, reloading.
 INFO 2025-04-24 13:32:04,792 autoreload 120275 139901291798528 Watching for file changes with StatReloader
+INFO 2025-04-26 00:54:26,202 utils 26538 139764249600000 Verification SMS sent to +1234567893
+INFO 2025-04-26 00:54:26,205 utils 26538 139764249600000 Verification SMS sent to +1234567893
+WARNING 2025-04-26 00:54:27,646 utils 26538 139764249600000 No phone number found for user nopho. Cannot send SMS.
+WARNING 2025-04-26 00:54:27,647 utils 26538 139764249600000 No phone number found for user nopho. Cannot send SMS.
+INFO 2025-04-26 00:54:29,067 utils 26538 139764249600000 Verification SMS sent to +1234567892
+INFO 2025-04-26 00:54:29,067 utils 26538 139764249600000 Verification SMS sent to +1234567892
+INFO 2025-04-26 00:54:30,474 utils 26538 139764249600000 Verification SMS sent to +1234567894
+INFO 2025-04-26 00:54:30,474 utils 26538 139764249600000 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:00:32,636 utils 26784 140220998819840 Verification SMS sent to +1234567893
+INFO 2025-04-26 01:00:32,637 utils 26784 140220998819840 Verification SMS sent to +1234567893
+WARNING 2025-04-26 01:00:33,971 utils 26784 140220998819840 No phone number found for user nopho. Cannot send SMS.
+WARNING 2025-04-26 01:00:33,972 utils 26784 140220998819840 No phone number found for user nopho. Cannot send SMS.
+INFO 2025-04-26 01:00:35,270 utils 26784 140220998819840 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:00:35,271 utils 26784 140220998819840 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:00:36,591 utils 26784 140220998819840 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:00:36,592 utils 26784 140220998819840 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:03:36,441 utils 27010 140394872958976 Verification SMS sent to +1234567893
+INFO 2025-04-26 01:03:36,442 utils 27010 140394872958976 Verification SMS sent to +1234567893
+WARNING 2025-04-26 01:03:37,775 utils 27010 140394872958976 No phone number found for user nopho. Cannot send SMS.
+WARNING 2025-04-26 01:03:37,776 utils 27010 140394872958976 No phone number found for user nopho. Cannot send SMS.
+INFO 2025-04-26 01:03:39,069 utils 27010 140394872958976 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:03:39,070 utils 27010 140394872958976 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:03:40,355 utils 27010 140394872958976 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:03:40,356 utils 27010 140394872958976 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:05:44,774 utils 27159 139671143112704 Verification SMS sent to +1234567893
+INFO 2025-04-26 01:05:44,775 utils 27159 139671143112704 Verification SMS sent to +1234567893
+WARNING 2025-04-26 01:05:46,085 utils 27159 139671143112704 No phone number found for user nopho. Cannot send SMS.
+WARNING 2025-04-26 01:05:46,086 utils 27159 139671143112704 No phone number found for user nopho. Cannot send SMS.
+INFO 2025-04-26 01:05:47,369 utils 27159 139671143112704 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:05:47,370 utils 27159 139671143112704 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:05:48,667 utils 27159 139671143112704 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:05:48,668 utils 27159 139671143112704 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:06:11,434 utils 27251 140036119908352 Verification SMS sent to +1234567893
+INFO 2025-04-26 01:06:11,435 utils 27251 140036119908352 Verification SMS sent to +1234567893
+WARNING 2025-04-26 01:06:12,713 utils 27251 140036119908352 No phone number found for user nopho. Cannot send SMS.
+WARNING 2025-04-26 01:06:12,714 utils 27251 140036119908352 No phone number found for user nopho. Cannot send SMS.
+INFO 2025-04-26 01:06:14,019 utils 27251 140036119908352 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:06:14,020 utils 27251 140036119908352 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:06:15,398 utils 27251 140036119908352 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:06:15,399 utils 27251 140036119908352 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:06:35,082 utils 27327 140648722399232 Verification SMS sent to +1234567893
+INFO 2025-04-26 01:06:35,083 utils 27327 140648722399232 Verification SMS sent to +1234567893
+WARNING 2025-04-26 01:06:36,384 utils 27327 140648722399232 No phone number found for user nopho. Cannot send SMS.
+WARNING 2025-04-26 01:06:36,385 utils 27327 140648722399232 No phone number found for user nopho. Cannot send SMS.
+INFO 2025-04-26 01:06:37,675 utils 27327 140648722399232 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:06:37,676 utils 27327 140648722399232 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:06:38,963 utils 27327 140648722399232 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:06:38,964 utils 27327 140648722399232 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:07:59,643 utils 27393 140331918462976 Verification SMS sent to +1234567893
+INFO 2025-04-26 01:07:59,644 utils 27393 140331918462976 Verification SMS sent to +1234567893
+WARNING 2025-04-26 01:08:00,924 utils 27393 140331918462976 No phone number found for user nopho. Cannot send SMS.
+WARNING 2025-04-26 01:08:00,925 utils 27393 140331918462976 No phone number found for user nopho. Cannot send SMS.
+INFO 2025-04-26 01:08:02,209 utils 27393 140331918462976 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:08:02,210 utils 27393 140331918462976 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:08:03,485 utils 27393 140331918462976 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:08:03,486 utils 27393 140331918462976 Verification SMS sent to +1234567894
+WARNING 2025-04-26 01:10:33,545 log 27563 140605910790144 Bad Request: /api/users/register/
+ERROR 2025-04-26 01:10:34,439 log 27563 140605910790144 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 121, in register
+    user = serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 55, in create
+    elif requesting_user.is_manager:
+AttributeError: 'AnonymousUser' object has no attribute 'is_manager'
+ERROR 2025-04-26 01:10:35,312 log 27563 140605910790144 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 121, in register
+    user = serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 55, in create
+    elif requesting_user.is_manager:
+AttributeError: 'AnonymousUser' object has no attribute 'is_manager'
+INFO 2025-04-26 01:10:36,598 utils 27563 140605910790144 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:10:36,599 utils 27563 140605910790144 Verification SMS sent to +1234567894
+WARNING 2025-04-26 01:12:31,230 utils 27633 140460931239936 No phone number found for user nopho. Cannot send SMS.
+WARNING 2025-04-26 01:12:31,231 utils 27633 140460931239936 No phone number found for user nopho. Cannot send SMS.
+INFO 2025-04-26 01:12:32,557 utils 27633 140460931239936 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:12:32,558 utils 27633 140460931239936 Verification SMS sent to +1234567892
+WARNING 2025-04-26 01:12:33,442 log 27633 140460931239936 Bad Request: /api/users/register/
+INFO 2025-04-26 01:12:34,765 utils 27633 140460931239936 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:12:34,766 utils 27633 140460931239936 Verification SMS sent to +1234567894
+WARNING 2025-04-26 01:16:46,887 log 28070 140382463893504 Bad Request: /api/users/register/
+INFO 2025-04-26 01:16:48,174 utils 28070 140382463893504 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:16:48,175 utils 28070 140382463893504 Verification SMS sent to +1234567892
+WARNING 2025-04-26 01:16:49,040 log 28070 140382463893504 Bad Request: /api/users/register/
+INFO 2025-04-26 01:16:50,340 utils 28070 140382463893504 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:16:50,341 utils 28070 140382463893504 Verification SMS sent to +1234567894
+WARNING 2025-04-26 01:28:57,097 log 28645 139802267746304 Bad Request: /api/users/register/
+INFO 2025-04-26 01:28:58,390 utils 28645 139802267746304 Verification SMS sent to +1234567892
+INFO 2025-04-26 01:28:58,391 utils 28645 139802267746304 Verification SMS sent to +1234567892
+WARNING 2025-04-26 01:28:59,251 log 28645 139802267746304 Bad Request: /api/users/register/
+INFO 2025-04-26 01:29:00,538 utils 28645 139802267746304 Verification SMS sent to +1234567894
+INFO 2025-04-26 01:29:00,539 utils 28645 139802267746304 Verification SMS sent to +1234567894
+WARNING 2025-04-26 14:53:17,060 log 31639 140311839121408 Bad Request: /api/users/register/
+INFO 2025-04-26 14:53:18,322 utils 31639 140311839121408 Verification SMS sent to +1234567892
+INFO 2025-04-26 14:53:18,323 utils 31639 140311839121408 Verification SMS sent to +1234567892
+WARNING 2025-04-26 14:53:25,918 log 31642 140586465329152 Bad Request: /api/users/register/
+INFO 2025-04-26 14:53:27,183 utils 31642 140586465329152 Verification SMS sent to +1234567892
+INFO 2025-04-26 14:53:27,183 utils 31642 140586465329152 Verification SMS sent to +1234567892
+WARNING 2025-04-26 14:53:28,021 log 31642 140586465329152 Bad Request: /api/users/register/
+INFO 2025-04-26 14:53:29,289 utils 31642 140586465329152 Verification SMS sent to +1234567894
+INFO 2025-04-26 14:53:29,290 utils 31642 140586465329152 Verification SMS sent to +1234567894
+WARNING 2025-04-26 15:00:24,407 log 31843 140666348257280 Bad Request: /api/users/register/
+INFO 2025-04-26 15:00:25,656 utils 31843 140666348257280 Verification SMS sent to +1234567892
+INFO 2025-04-26 15:00:25,657 utils 31843 140666348257280 Verification SMS sent to +1234567892
+WARNING 2025-04-26 15:00:26,496 log 31843 140666348257280 Bad Request: /api/users/register/
+INFO 2025-04-26 15:00:27,746 utils 31843 140666348257280 Verification SMS sent to +1234567894
+INFO 2025-04-26 15:00:27,747 utils 31843 140666348257280 Verification SMS sent to +1234567894
+WARNING 2025-04-26 15:02:38,371 log 31914 139667694858240 Bad Request: /api/users/register/
+ERROR 2025-04-26 15:02:39,209 log 31914 139667694858240 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 121, in register
+    user = serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 74, in create
+    assert not requested_stores.issubset(manager_stores), "This should trigger error"
+AssertionError: This should trigger error
+WARNING 2025-04-26 15:02:40,048 log 31914 139667694858240 Bad Request: /api/users/register/
+INFO 2025-04-26 15:02:41,303 utils 31914 139667694858240 Verification SMS sent to +1234567894
+INFO 2025-04-26 15:02:41,304 utils 31914 139667694858240 Verification SMS sent to +1234567894
+WARNING 2025-04-26 15:05:37,648 log 32006 140290296066048 Bad Request: /api/users/register/
+ERROR 2025-04-26 15:05:38,485 log 32006 140290296066048 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 121, in register
+    user = serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 75, in create
+    assert not requested_stores.issubset(manager_stores), "This should trigger error"
+AssertionError: This should trigger error
+WARNING 2025-04-26 15:05:39,325 log 32006 140290296066048 Bad Request: /api/users/register/
+INFO 2025-04-26 15:05:40,586 utils 32006 140290296066048 Verification SMS sent to +1234567894
+INFO 2025-04-26 15:05:40,587 utils 32006 140290296066048 Verification SMS sent to +1234567894
+WARNING 2025-04-26 15:06:21,916 log 32052 140524491984896 Bad Request: /api/users/register/
+INFO 2025-04-26 15:06:23,170 utils 32052 140524491984896 Verification SMS sent to +1234567892
+INFO 2025-04-26 15:06:23,171 utils 32052 140524491984896 Verification SMS sent to +1234567892
+WARNING 2025-04-26 15:06:24,013 log 32052 140524491984896 Bad Request: /api/users/register/
+INFO 2025-04-26 15:06:25,269 utils 32052 140524491984896 Verification SMS sent to +1234567894
+INFO 2025-04-26 15:06:25,269 utils 32052 140524491984896 Verification SMS sent to +1234567894
+WARNING 2025-04-26 15:07:48,340 log 32167 140057946923008 Bad Request: /api/users/register/
+INFO 2025-04-26 15:07:49,603 utils 32167 140057946923008 Verification SMS sent to +1234567892
+INFO 2025-04-26 15:07:49,604 utils 32167 140057946923008 Verification SMS sent to +1234567892
+WARNING 2025-04-26 15:07:50,458 log 32167 140057946923008 Bad Request: /api/users/register/
+INFO 2025-04-26 15:07:51,724 utils 32167 140057946923008 Verification SMS sent to +1234567894
+INFO 2025-04-26 15:07:51,725 utils 32167 140057946923008 Verification SMS sent to +1234567894
+INFO 2025-04-26 15:09:09,044 utils 32264 140495674933248 Verification SMS sent to +1234567892
+ERROR 2025-04-26 15:09:09,046 log 32264 140495674933248 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 121, in register
+    user = serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 209, in save
+    assert self.instance is not None, (
+AssertionError: `create()` did not return an object instance.
+INFO 2025-04-26 15:10:39,821 utils 32368 140195184828416 Verification SMS sent to +1234567892
+INFO 2025-04-26 15:10:39,822 utils 32368 140195184828416 Verification SMS sent to +1234567892
+INFO 2025-04-26 15:16:04,361 utils 32580 140685181177856 Verification SMS sent to +1234567892
+WARNING 2025-04-26 15:16:15,910 log 32583 139662484070400 Bad Request: /api/users/register/
+INFO 2025-04-26 15:16:17,172 utils 32583 139662484070400 Verification SMS sent to +1234567892
+WARNING 2025-04-26 15:16:18,007 log 32583 139662484070400 Bad Request: /api/users/register/
+INFO 2025-04-26 15:16:19,264 utils 32583 139662484070400 Verification SMS sent to +1234567894
+INFO 2025-04-26 15:39:18,156 autoreload 34664 140081480790016 Watching for file changes with StatReloader
+WARNING 2025-04-26 15:39:28,161 log 34664 140081297880640 Not Found: /
+WARNING 2025-04-26 15:39:28,162 basehttp 34664 140081297880640 "GET / HTTP/1.1" 404 2474
+WARNING 2025-04-26 15:39:28,196 log 34664 140081297880640 Not Found: /favicon.ico
+WARNING 2025-04-26 15:39:28,197 basehttp 34664 140081297880640 "GET /favicon.ico HTTP/1.1" 404 2525
+INFO 2025-04-26 15:39:35,445 basehttp 34664 140081297880640 "GET /api HTTP/1.1" 301 0
+WARNING 2025-04-26 15:39:35,702 log 34664 140081297880640 Unauthorized: /api/
+WARNING 2025-04-26 15:39:35,703 basehttp 34664 140081297880640 "GET /api/ HTTP/1.1" 401 14040

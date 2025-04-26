@@ -1,3 +1,4 @@
+# accounts/models.py
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.hashers import make_password
@@ -17,8 +18,7 @@ class User(AbstractUser):
 
     password = models.CharField(
         ('password'),
-        max_length=128,
-        default=make_password('defaultpassword')  # Sets a hashed default password
+        max_length=128
     )
     
     username = models.CharField(
@@ -41,8 +41,8 @@ class User(AbstractUser):
     is_manager = models.BooleanField(default=False)
 
     # Verification
-    is_email_verified = models.BooleanField(default=False)
-    email_verification_token = models.CharField(max_length=82, null=True)
+    is_phone_verified = models.BooleanField(default=False)
+    phone_verification_token = models.CharField(max_length=82, null=True)
     password_reset_token = models.CharField(max_length=255, null=True, blank=True)
     password_reset_token_created_at = models.DateTimeField(null=True, blank=True)
 
@@ -57,7 +57,7 @@ class User(AbstractUser):
 
     def generate_verification_token(self):
         """Generate a new verification token for user"""
-        self.email_verification_token = str(uuid.uuid4())
+        self.phone_verification_token = str(uuid.uuid4())
         self.save()
-        print(f"Generated token for user {self.username}: {self.email_verification_token}")
-        return self.email_verification_token
+        print(f"Generated token for user {self.username}: {self.phone_verification_token}")
+        return self.phone_verification_token
