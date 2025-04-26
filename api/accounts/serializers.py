@@ -40,28 +40,29 @@ class UserSerializer(serializers.ModelSerializer):
         request = self.context.get('request')
         requesting_user = request.user if request else None
 
-        if not data.get('phone_number'):
+        # Only require phone_number on CREATE (not update / partial update)
+        if self.instance is None and not data.get('phone_number'):
             raise serializers.ValidationError({"phone_number": "Phone number is required."})
 
-        if not requesting_user:
+        # Safely check authentication before any role-based logic
+        if not requesting_user or not getattr(requesting_user, 'is_authenticated', False):
             raise serializers.ValidationError("Authentication required.")
 
-        # Check store access if not a superuser
-        if not requesting_user.is_superuser and requesting_user.is_manager:
-            requested_stores = set(store.id for store in data.get('stores', []))
-            manager_stores = set(requesting_user.stores.values_list('id', flat=True))
-            print("DEBUG (validate):", requested_stores, manager_stores, requested_stores.issubset(manager_stores))
+        # Permission logic applies only on CREATE (not update)
+        if self.instance is None and not requesting_user.is_superuser:
+            if requesting_user.is_manager:
+                requested_stores = set(store.id for store in data.get('stores', []))
+                manager_stores = set(requesting_user.stores.values_list('id', flat=True))
+                print("DEBUG (validate):", requested_stores, manager_stores, requested_stores.issubset(manager_stores))
 
-            if not requested_stores.issubset(manager_stores):
-                raise serializers.ValidationError(
-                    "You can only create users for stores you manage."
-                )
-
-        elif not requesting_user.is_superuser:
-            raise serializers.ValidationError("You don't have permission to create users.")
+                if not requested_stores.issubset(manager_stores):
+                    raise serializers.ValidationError(
+                        "You can only create users for stores you manage."
+                    )
+            else:
+                raise serializers.ValidationError("You don't have permission to create users.")
 
         return data
-
 
     def create(self, validated_data):
         print("INSIDE CREATE METHOD")

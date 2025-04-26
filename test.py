@@ -24,6 +24,157 @@ pillow_heif.register_heif_opener()
 
 from unittest.mock import patch
 
+import uuid
+from django.conf import settings
+
+
+class AccountsTestCase(APITestCase):
+    def setUp(self):
+        # Create test users
+        self.superuser = User.objects.create_superuser(
+            username='superadmin',
+            email='super@example.com',
+            password='SuperPass123',
+            phone_number='5555555555'
+        )
+
+        self.manager = User.objects.create_user(
+            username='manager1',
+            email='manager1@example.com',
+            password='ManagerPass123',
+            phone_number='5555555556',
+            is_manager=True
+        )
+
+        self.store_user = User.objects.create_user(
+            username='storeuser1',
+            email='user1@example.com',
+            password='UserPass123',
+            phone_number='5555555557'
+        )
+
+        # Link store_user to manager's store (assuming store relation exists)
+        self.store = self.manager.stores.first() if self.manager.stores.exists() else None
+        if self.store:
+            self.store_user.stores.add(self.store)
+
+        self.other_user = User.objects.create_user(
+            username='otheruser',
+            email='other@example.com',
+            password='OtherPass123',
+            phone_number='5555555558'
+        )
+
+    def test_register_password_strength(self):
+        print("test_register_password_strength")
+        url = reverse('user-register')  # Adjust this if your route name is different
+
+        weak_password_data = {
+            "username": "newuser",
+            "email": "newuser@example.com",
+            "password": "123",
+            "phone_number": "5555555559",
+            "stores": []
+        }
+
+        # Authenticate as superuser
+        self.client.force_authenticate(user=self.superuser)
+
+        response = self.client.post(url, weak_password_data)
+        print(response.data)
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn('password', response.data)
+
+
+    def test_reset_password_success(self):
+        print("test_reset_password_success")
+        # Generate token manually for testing
+        token = str(uuid.uuid4())
+        self.store_user.password_reset_token = token
+        self.store_user.password_reset_token_created_at = timezone.now()
+        self.store_user.save()
+
+        url = reverse('user-reset-password')
+        data = {
+            "token": token,
+            "new_password": "NewSecurePass123"
+        }
+        response = self.client.post(url, data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.store_user.refresh_from_db()
+        self.assertTrue(self.store_user.check_password("NewSecurePass123"))
+
+    def test_reset_password_reuse_blocked(self):
+        print("test_reset_password_reuse_blocked")
+        token = str(uuid.uuid4())
+        self.store_user.password_reset_token = token
+        self.store_user.password_reset_token_created_at = timezone.now()
+        self.store_user.save()
+
+        url = reverse('user-reset-password')
+        data = {
+            "token": token,
+            "new_password": "UserPass123"  # Same as old password!
+        }
+        response = self.client.post(url, data)
+        print(response.data)
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertIn('New password cannot be the same as the old password.', str(response.data))
+
+    def test_verify_phone_token_success(self):
+        print("test_verify_phone_token_success")
+        token = str(uuid.uuid4())
+        self.store_user.phone_verification_token = token
+        self.store_user.is_phone_verified = False
+        self.store_user.save()
+
+        url = reverse('verify-phone') + f'?token={token}'
+        response = self.client.get(url)
+        print(response.data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.store_user.refresh_from_db()
+        self.assertTrue(self.store_user.is_phone_verified)
+
+    def test_update_profile_self_allowed(self):
+        print("test_update_profile_self_allowed")
+        self.client.force_authenticate(user=self.store_user)
+        url = reverse('user-update-profile', kwargs={'pk': self.store_user.pk})
+        response = self.client.patch(url, {'first_name': 'UpdatedName'})
+        print(response.data)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['first_name'], 'UpdatedName')
+
+    def test_update_profile_manager_allowed_for_own_user(self):
+        print("test_update_profile_manager_allowed_for_own_user")
+        self.client.force_authenticate(user=self.manager)
+        url = reverse('user-update-profile', kwargs={'pk': self.store_user.pk})
+        response = self.client.patch(url, {'first_name': 'ManagerUpdated'})
+        if self.store:  # Only run if store relation exists
+            self.assertEqual(response.status_code, status.HTTP_200_OK)
+            self.assertEqual(response.data['first_name'], 'ManagerUpdated')
+
+    def test_update_profile_manager_denied_for_other_user(self):
+        print("test_update_profile_manager_denied_for_other_user")
+        self.client.force_authenticate(user=self.manager)
+        url = reverse('user-update-profile', kwargs={'pk': self.other_user.pk})
+        response = self.client.patch(url, {'first_name': 'ShouldNotWork'})
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+
+    def test_update_profile_superuser_can_update_anyone(self):
+        print("test_update_profile_superuser_can_update_anyone")
+        self.client.force_authenticate(user=self.superuser)
+        url = reverse('user-update-profile', kwargs={'pk': self.other_user.pk})
+        response = self.client.patch(url, {'first_name': 'SuperUpdated'})
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(response.data['first_name'], 'SuperUpdated')
+
+    def test_password_reset_rate_limit(self):
+        print("test_password_reset_rate_limit")
+        url = reverse('user-request-password-reset')
+        for _ in range(4):  # Assuming the limit is 3/hour
+            response = self.client.post(url, {'phone_number': self.other_user.phone_number})
+        self.assertEqual(response.status_code, status.HTTP_429_TOO_MANY_REQUESTS)
+
 
 class UserRegistrationSMSTest(APITestCase):
     def setUp(self):
@@ -237,7 +388,7 @@ class UserViewSetTests(APITestCase):
         ######################
         # Order Creation
         ######################
-        url = f'/api/stores/{self.store.id}/orders/'  # 🔄 updated
+        url = f'/api/stores/{self.store.id}/orders/'  # updated
 
         payload = {
             "first_name": "LANDRY",

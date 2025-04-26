@@ -4,6 +4,8 @@ from django.contrib.auth.tokens import default_token_generator
 from django.utils import timezone
 
 import uuid
+from django.conf import settings
+import re
 
 from rest_framework import viewsets, status
 from rest_framework.permissions import IsAuthenticated, AllowAny
@@ -15,6 +17,9 @@ from .serializers import UserSerializer
 from api.stores.serializers import StoreSerializer
 from api.accounts.utils import send_reset_sms, send_verification_sms
 from api.accounts.throttles import PasswordResetRateThrottle, VerificationResendRateThrottle
+
+from rest_framework.views import APIView
+
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.order_by('id')
@@ -212,3 +217,25 @@ class UserViewSet(viewsets.ModelViewSet):
             "user_id": user.id,
             "phone_number": user.phone_number
         })
+
+
+class VerifyPhoneView(APIView):
+    permission_classes = [AllowAny]
+
+    def get(self, request):
+        token = request.query_params.get('token')
+        if not token:
+            return Response({"detail": "Verification token is required."},
+                            status=status.HTTP_400_BAD_REQUEST)
+        try:
+            user = User.objects.get(phone_verification_token=token)
+            if not user.is_phone_verified:
+                user.is_phone_verified = True
+                user.save()
+                return Response({"detail": "Phone successfully verified via SMS"})
+            return Response({"detail": "Phone already verified"})
+        except User.DoesNotExist:
+            return Response(
+                {"detail": "Invalid verification token"},
+                status=status.HTTP_400_BAD_REQUEST
+            )

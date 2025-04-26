@@ -6120,3 +6120,364 @@ WARNING 2025-04-26 15:39:28,197 basehttp 34664 140081297880640 "GET /favicon.ico
 INFO 2025-04-26 15:39:35,445 basehttp 34664 140081297880640 "GET /api HTTP/1.1" 301 0
 WARNING 2025-04-26 15:39:35,702 log 34664 140081297880640 Unauthorized: /api/
 WARNING 2025-04-26 15:39:35,703 basehttp 34664 140081297880640 "GET /api/ HTTP/1.1" 401 14040
+INFO 2025-04-26 15:54:58,898 utils 35879 139831494922240 Password reset SMS sent to 5555555558
+ERROR 2025-04-26 15:54:58,900 log 35879 139831494922240 Internal Server Error: /api/users/request_password_reset/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 96, in request_password_reset
+    if settings.DEBUG:
+NameError: name 'settings' is not defined
+ERROR 2025-04-26 15:55:00,646 log 35879 139831494922240 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 173, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 50, in validate
+    if not requesting_user.is_superuser and requesting_user.is_manager:
+AttributeError: 'AnonymousUser' object has no attribute 'is_manager'
+WARNING 2025-04-26 15:55:05,812 log 35879 139831494922240 Forbidden: /api/users/3/update_profile/
+WARNING 2025-04-26 15:55:07,467 log 35879 139831494922240 Forbidden: /api/users/4/update_profile/
+WARNING 2025-04-26 15:55:09,117 log 35879 139831494922240 Bad Request: /api/users/3/update_profile/
+WARNING 2025-04-26 15:55:10,758 log 35879 139831494922240 Bad Request: /api/users/4/update_profile/
+INFO 2025-04-26 15:58:56,761 utils 36155 139643021168640 Password reset SMS sent to 5555555558
+INFO 2025-04-26 15:58:56,763 utils 36155 139643021168640 Password reset SMS sent to 5555555558
+INFO 2025-04-26 15:58:56,765 utils 36155 139643021168640 Password reset SMS sent to 5555555558
+WARNING 2025-04-26 15:58:56,766 log 36155 139643021168640 Too Many Requests: /api/users/request_password_reset/
+WARNING 2025-04-26 15:58:58,425 log 36155 139643021168640 Too Many Requests: /api/users/register/
+ERROR 2025-04-26 15:59:00,077 log 36155 139643021168640 Internal Server Error: /api/users/reset_password/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 124, in reset_password
+    if not re.search(r'[A-Za-z]', new_password):
+NameError: name 're' is not defined
+ERROR 2025-04-26 15:59:01,734 log 36155 139643021168640 Internal Server Error: /api/users/reset_password/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 124, in reset_password
+    if not re.search(r'[A-Za-z]', new_password):
+NameError: name 're' is not defined
+WARNING 2025-04-26 15:59:03,396 log 36155 139643021168640 Forbidden: /api/users/3/update_profile/
+WARNING 2025-04-26 15:59:05,058 log 36155 139643021168640 Forbidden: /api/users/4/update_profile/
+WARNING 2025-04-26 15:59:06,718 log 36155 139643021168640 Bad Request: /api/users/3/update_profile/
+WARNING 2025-04-26 15:59:08,482 log 36155 139643021168640 Bad Request: /api/users/4/update_profile/
+WARNING 2025-04-26 15:59:10,273 log 36155 139643021168640 Unauthorized: /api/verify_phone/
+INFO 2025-04-26 15:59:25,634 utils 36221 140538550153216 Password reset SMS sent to 5555555558
+INFO 2025-04-26 15:59:25,636 utils 36221 140538550153216 Password reset SMS sent to 5555555558
+INFO 2025-04-26 15:59:25,637 utils 36221 140538550153216 Password reset SMS sent to 5555555558
+WARNING 2025-04-26 15:59:25,638 log 36221 140538550153216 Too Many Requests: /api/users/request_password_reset/
+WARNING 2025-04-26 15:59:27,314 log 36221 140538550153216 Too Many Requests: /api/users/register/
+WARNING 2025-04-26 15:59:29,391 log 36221 140538550153216 Bad Request: /api/users/reset_password/
+WARNING 2025-04-26 15:59:33,961 log 36221 140538550153216 Forbidden: /api/users/3/update_profile/
+WARNING 2025-04-26 15:59:35,636 log 36221 140538550153216 Forbidden: /api/users/4/update_profile/
+WARNING 2025-04-26 15:59:37,306 log 36221 140538550153216 Bad Request: /api/users/3/update_profile/
+WARNING 2025-04-26 15:59:38,965 log 36221 140538550153216 Bad Request: /api/users/4/update_profile/
+WARNING 2025-04-26 15:59:40,622 log 36221 140538550153216 Unauthorized: /api/verify_phone/
+INFO 2025-04-26 16:00:13,452 utils 36274 139703309017088 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:00:13,453 utils 36274 139703309017088 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:00:13,455 utils 36274 139703309017088 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:00:13,457 utils 36274 139703309017088 Password reset SMS sent to 5555555558
+ERROR 2025-04-26 16:00:15,122 log 36274 139703309017088 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 175, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 50, in validate
+    if not requesting_user.is_superuser and requesting_user.is_manager:
+AttributeError: 'AnonymousUser' object has no attribute 'is_manager'
+WARNING 2025-04-26 16:00:17,198 log 36274 139703309017088 Bad Request: /api/users/reset_password/
+WARNING 2025-04-26 16:00:21,796 log 36274 139703309017088 Forbidden: /api/users/3/update_profile/
+WARNING 2025-04-26 16:00:23,476 log 36274 139703309017088 Forbidden: /api/users/4/update_profile/
+WARNING 2025-04-26 16:00:25,166 log 36274 139703309017088 Bad Request: /api/users/3/update_profile/
+WARNING 2025-04-26 16:00:26,854 log 36274 139703309017088 Bad Request: /api/users/4/update_profile/
+WARNING 2025-04-26 16:00:28,545 log 36274 139703309017088 Unauthorized: /api/verify_phone/
+INFO 2025-04-26 16:02:08,883 utils 36547 139933863149568 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:02:08,885 utils 36547 139933863149568 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:02:08,887 utils 36547 139933863149568 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:02:08,889 utils 36547 139933863149568 Password reset SMS sent to 5555555558
+ERROR 2025-04-26 16:02:10,550 log 36547 139933863149568 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 175, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 50, in validate
+    if not requesting_user.is_superuser and requesting_user.is_manager:
+AttributeError: 'AnonymousUser' object has no attribute 'is_manager'
+WARNING 2025-04-26 16:02:12,619 log 36547 139933863149568 Bad Request: /api/users/reset_password/
+WARNING 2025-04-26 16:02:17,211 log 36547 139933863149568 Forbidden: /api/users/3/update_profile/
+WARNING 2025-04-26 16:02:18,878 log 36547 139933863149568 Forbidden: /api/users/4/update_profile/
+WARNING 2025-04-26 16:02:20,564 log 36547 139933863149568 Bad Request: /api/users/3/update_profile/
+WARNING 2025-04-26 16:02:22,238 log 36547 139933863149568 Bad Request: /api/users/4/update_profile/
+WARNING 2025-04-26 16:02:24,029 log 36547 139933863149568 Unauthorized: /api/verify_phone/
+INFO 2025-04-26 16:42:51,506 utils 37886 140707900956672 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:42:51,508 utils 37886 140707900956672 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:42:51,510 utils 37886 140707900956672 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:42:51,511 utils 37886 140707900956672 Password reset SMS sent to 5555555558
+WARNING 2025-04-26 16:42:55,254 log 37886 140707900956672 Bad Request: /api/users/reset_password/
+WARNING 2025-04-26 16:42:59,868 log 37886 140707900956672 Forbidden: /api/users/3/update_profile/
+WARNING 2025-04-26 16:43:01,528 log 37886 140707900956672 Forbidden: /api/users/4/update_profile/
+WARNING 2025-04-26 16:43:03,198 log 37886 140707900956672 Bad Request: /api/users/3/update_profile/
+WARNING 2025-04-26 16:43:04,855 log 37886 140707900956672 Bad Request: /api/users/4/update_profile/
+WARNING 2025-04-26 16:43:06,518 log 37886 140707900956672 Unauthorized: /api/verify_phone/
+INFO 2025-04-26 16:43:46,094 utils 37923 140340147658752 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:43:46,096 utils 37923 140340147658752 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:43:46,098 utils 37923 140340147658752 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:43:46,100 utils 37923 140340147658752 Password reset SMS sent to 5555555558
+WARNING 2025-04-26 16:43:49,851 log 37923 140340147658752 Bad Request: /api/users/reset_password/
+WARNING 2025-04-26 16:43:54,433 log 37923 140340147658752 Forbidden: /api/users/3/update_profile/
+WARNING 2025-04-26 16:43:56,089 log 37923 140340147658752 Forbidden: /api/users/4/update_profile/
+WARNING 2025-04-26 16:43:57,758 log 37923 140340147658752 Bad Request: /api/users/3/update_profile/
+WARNING 2025-04-26 16:43:59,429 log 37923 140340147658752 Bad Request: /api/users/4/update_profile/
+WARNING 2025-04-26 16:44:01,104 log 37923 140340147658752 Unauthorized: /api/verify_phone/
+ERROR 2025-04-26 16:44:48,681 log 37970 140455857573888 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 175, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 50, in validate
+    if not requesting_user.is_superuser and requesting_user.is_manager:
+AttributeError: 'AnonymousUser' object has no attribute 'is_manager'
+ERROR 2025-04-26 16:47:10,823 log 38073 140546757033984 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/views.py", line 175, in register
+    if serializer.is_valid():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 50, in validate
+    if not requesting_user.is_superuser and requesting_user.is_manager:
+AttributeError: 'AnonymousUser' object has no attribute 'is_manager'
+WARNING 2025-04-26 16:48:07,029 log 38147 140402273599488 Bad Request: /api/users/register/
+WARNING 2025-04-26 16:49:56,224 log 38208 139792090972160 Bad Request: /api/users/register/
+WARNING 2025-04-26 16:50:56,984 log 38319 139900787306496 Bad Request: /api/users/register/
+WARNING 2025-04-26 16:51:07,455 log 38342 140513265152000 Bad Request: /api/users/register/
+WARNING 2025-04-26 16:51:16,576 log 38368 140390740746240 Bad Request: /api/users/register/
+WARNING 2025-04-26 16:51:27,829 log 38391 140159462338560 Bad Request: /api/users/register/
+WARNING 2025-04-26 16:53:02,165 log 38445 140665364434944 Bad Request: /api/users/reset_password/
+WARNING 2025-04-26 16:53:25,290 log 38514 139787767218176 Bad Request: /api/users/reset_password/
+INFO 2025-04-26 16:53:34,309 utils 38515 140148524752896 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:53:34,311 utils 38515 140148524752896 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:53:34,312 utils 38515 140148524752896 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:53:34,314 utils 38515 140148524752896 Password reset SMS sent to 5555555558
+WARNING 2025-04-26 16:53:35,989 log 38515 140148524752896 Bad Request: /api/users/register/
+WARNING 2025-04-26 16:53:38,080 log 38515 140148524752896 Bad Request: /api/users/reset_password/
+WARNING 2025-04-26 16:53:42,662 log 38515 140148524752896 Forbidden: /api/users/3/update_profile/
+WARNING 2025-04-26 16:53:44,317 log 38515 140148524752896 Forbidden: /api/users/4/update_profile/
+WARNING 2025-04-26 16:53:45,978 log 38515 140148524752896 Bad Request: /api/users/3/update_profile/
+WARNING 2025-04-26 16:53:47,638 log 38515 140148524752896 Bad Request: /api/users/4/update_profile/
+WARNING 2025-04-26 16:53:49,293 log 38515 140148524752896 Unauthorized: /api/verify_phone/
+INFO 2025-04-26 16:54:32,805 utils 38556 140419488059392 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:54:32,807 utils 38556 140419488059392 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:54:32,809 utils 38556 140419488059392 Password reset SMS sent to 5555555558
+INFO 2025-04-26 16:54:32,811 utils 38556 140419488059392 Password reset SMS sent to 5555555558
+WARNING 2025-04-26 16:54:34,476 log 38556 140419488059392 Bad Request: /api/users/register/
+WARNING 2025-04-26 16:54:36,562 log 38556 140419488059392 Bad Request: /api/users/reset_password/
+WARNING 2025-04-26 16:54:41,134 log 38556 140419488059392 Forbidden: /api/users/3/update_profile/
+WARNING 2025-04-26 16:54:42,782 log 38556 140419488059392 Forbidden: /api/users/4/update_profile/
+WARNING 2025-04-26 16:54:44,441 log 38556 140419488059392 Bad Request: /api/users/3/update_profile/
+WARNING 2025-04-26 16:54:46,107 log 38556 140419488059392 Bad Request: /api/users/4/update_profile/
+WARNING 2025-04-26 16:54:47,767 log 38556 140419488059392 Unauthorized: /api/verify_phone/
+WARNING 2025-04-26 16:56:13,548 log 38629 140665788686336 Bad Request: /api/users/3/update_profile/
+INFO 2025-04-26 17:01:09,146 utils 38904 139638853169152 Password reset SMS sent to 5555555558
+INFO 2025-04-26 17:01:09,148 utils 38904 139638853169152 Password reset SMS sent to 5555555558
+INFO 2025-04-26 17:01:09,150 utils 38904 139638853169152 Password reset SMS sent to 5555555558
+INFO 2025-04-26 17:01:09,152 utils 38904 139638853169152 Password reset SMS sent to 5555555558
+WARNING 2025-04-26 17:01:10,811 log 38904 139638853169152 Bad Request: /api/users/register/
+WARNING 2025-04-26 17:01:12,895 log 38904 139638853169152 Bad Request: /api/users/reset_password/
+WARNING 2025-04-26 17:01:17,485 log 38904 139638853169152 Forbidden: /api/users/3/update_profile/
+WARNING 2025-04-26 17:01:19,142 log 38904 139638853169152 Forbidden: /api/users/4/update_profile/
+WARNING 2025-04-26 17:01:24,146 log 38904 139638853169152 Unauthorized: /api/verify_phone/
+WARNING 2025-04-26 17:07:02,254 log 39031 140136432795648 Unauthorized: /api/verify_phone/
+INFO 2025-04-26 17:08:58,173 autoreload 39063 139862206517248 Watching for file changes with StatReloader
+WARNING 2025-04-26 17:09:01,637 log 39063 139862030112320 Not Found: /
+WARNING 2025-04-26 17:09:01,638 basehttp 39063 139862030112320 "GET / HTTP/1.1" 404 2474
+WARNING 2025-04-26 17:09:01,680 log 39063 139862030112320 Not Found: /favicon.ico
+WARNING 2025-04-26 17:09:01,680 basehttp 39063 139862030112320 "GET /favicon.ico HTTP/1.1" 404 2525
+WARNING 2025-04-26 17:09:10,546 log 39063 139862030112320 Not Found: /api/verify-phone
+WARNING 2025-04-26 17:09:10,546 basehttp 39063 139862030112320 "GET /api/verify-phone HTTP/1.1" 404 28812
+INFO 2025-04-26 17:09:55,373 autoreload 39063 139862206517248 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:09:55,828 autoreload 39232 139686616756224 Watching for file changes with StatReloader
+INFO 2025-04-26 17:09:56,234 basehttp 39232 139686508021312 "GET /api/verify-phone HTTP/1.1" 301 0
+WARNING 2025-04-26 17:09:56,490 log 39232 139686508021312 Unauthorized: /api/verify-phone/
+WARNING 2025-04-26 17:09:56,490 basehttp 39232 139686508021312 "GET /api/verify-phone/ HTTP/1.1" 401 14178
+WARNING 2025-04-26 17:10:04,745 log 39238 139870062645248 Unauthorized: /api/verify-phone/
+INFO 2025-04-26 17:10:46,848 autoreload 39232 139686616756224 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:10:47,342 autoreload 39296 140585798451200 Watching for file changes with StatReloader
+INFO 2025-04-26 17:12:05,076 autoreload 39296 140585798451200 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:12:05,543 autoreload 39338 140477495255040 Watching for file changes with StatReloader
+INFO 2025-04-26 17:12:12,966 autoreload 39338 140477495255040 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:12:13,472 autoreload 39363 140348355325952 Watching for file changes with StatReloader
+INFO 2025-04-26 17:12:38,357 autoreload 39363 140348355325952 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:12:38,775 autoreload 39432 140614305079296 Watching for file changes with StatReloader
+INFO 2025-04-26 17:12:51,276 autoreload 39432 140614305079296 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:12:51,730 autoreload 39498 140065522937856 Watching for file changes with StatReloader
+INFO 2025-04-26 17:12:53,097 autoreload 39498 140065522937856 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:12:53,596 autoreload 39519 140620932530176 Watching for file changes with StatReloader
+INFO 2025-04-26 17:13:09,202 autoreload 39519 140620932530176 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:13:09,683 autoreload 39548 140653708591104 Watching for file changes with StatReloader
+WARNING 2025-04-26 17:13:13,405 log 39550 139734056710144 Unauthorized: /api/verify-phone/
+INFO 2025-04-26 17:13:32,462 autoreload 39548 140653708591104 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:13:32,950 autoreload 39569 140100591448064 Watching for file changes with StatReloader
+INFO 2025-04-26 17:13:57,996 autoreload 39569 140100591448064 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-26 17:13:58,423 autoreload 39602 139945931812864 Watching for file changes with StatReloader
+INFO 2025-04-26 17:13:59,783 autoreload 39602 139945931812864 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-26 17:14:00,202 autoreload 39606 139747787849728 Watching for file changes with StatReloader
+INFO 2025-04-26 17:14:16,965 autoreload 39606 139747787849728 /home/abright/Work/FarmFreight/backend/api/accounts/utils.py changed, reloading.
+INFO 2025-04-26 17:14:17,406 autoreload 39631 140220437278720 Watching for file changes with StatReloader
+INFO 2025-04-26 17:15:06,152 autoreload 39631 140220437278720 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:15:06,615 autoreload 39685 140041455702016 Watching for file changes with StatReloader
+INFO 2025-04-26 17:15:33,472 autoreload 39685 140041455702016 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-26 17:15:33,896 autoreload 39707 140484875444224 Watching for file changes with StatReloader
+INFO 2025-04-26 17:16:06,802 autoreload 39707 140484875444224 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:16:07,244 autoreload 39733 139863253872640 Watching for file changes with StatReloader
+INFO 2025-04-26 17:16:35,555 autoreload 39733 139863253872640 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-26 17:16:35,981 autoreload 39772 139686277804032 Watching for file changes with StatReloader
+INFO 2025-04-26 17:16:44,375 autoreload 39772 139686277804032 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-26 17:16:44,809 autoreload 39812 140120190083072 Watching for file changes with StatReloader
+INFO 2025-04-26 17:17:22,804 autoreload 39812 140120190083072 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-26 17:17:23,294 autoreload 39934 140577203093504 Watching for file changes with StatReloader
+INFO 2025-04-26 17:17:26,712 autoreload 39934 140577203093504 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-04-26 17:17:27,225 autoreload 39951 140074902614016 Watching for file changes with StatReloader
+INFO 2025-04-26 17:17:43,026 autoreload 39951 140074902614016 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:17:43,501 autoreload 39978 140654632226816 Watching for file changes with StatReloader
+INFO 2025-04-26 17:17:49,021 autoreload 39978 140654632226816 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-04-26 17:17:49,505 autoreload 39998 140163560435712 Watching for file changes with StatReloader
+WARNING 2025-04-26 17:18:04,011 log 39998 140163452814912 Bad Request: /api/verify-phone/
+WARNING 2025-04-26 17:18:04,011 basehttp 39998 140163452814912 "GET /api/verify-phone/ HTTP/1.1" 400 14394

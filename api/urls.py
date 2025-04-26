@@ -19,10 +19,7 @@ from api.views import LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
 
-
-user_list = UserViewSet.as_view({
-    'get': 'verify_sms',
-})
+from api.accounts.views import VerifyPhoneView
 
 # Base router
 router = DefaultRouter()
@@ -30,19 +27,19 @@ router.register(r'users', UserViewSet)
 router.register(r'stores', StoreViewSet)
 router.register(r'messaging/templates', MessageTemplateViewSet, basename='message-template')
 
-# ✅ Nested: /stores/{store_id}/orders/
+# Nested: /stores/{store_id}/orders/
 stores_router = NestedDefaultRouter(router, r'stores', lookup='store')
 stores_router.register(r'orders', OrderViewSet, basename='store-orders')
 
-# ✅ Nested: /stores/{store_id}/orders/{order_id}/delivery-attempts/
+# Nested: /stores/{store_id}/orders/{order_id}/delivery-attempts/
 store_orders_router = NestedDefaultRouter(stores_router, r'orders', lookup='order')
 store_orders_router.register(r'delivery-attempts', DeliveryAttemptViewSet, basename='store-order-delivery-attempts')
 
-# ✅ Nested: /stores/{store_id}/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/scheduled-items/
+# Nested: /stores/{store_id}/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/scheduled-items/
 attempts_router = NestedDefaultRouter(store_orders_router, r'delivery-attempts', lookup='delivery_attempt')
 attempts_router.register(r'scheduled-items', ScheduledItemViewSet, basename='scheduleditem')
 
-# ✅ Nested: /stores/{store_id}/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/photos/
+# Nested: /stores/{store_id}/orders/{order_id}/delivery-attempts/{delivery_attempt_id}/photos/
 photos_router = NestedDefaultRouter(store_orders_router, r'delivery-attempts', lookup='delivery_attempt')
 photos_router.register(r'photos', DeliveryPhotoViewSet, basename='deliveryattempt-photos')
 
@@ -66,7 +63,7 @@ urlpatterns = [
     #path('import-products/', ProductImportView.as_view(), name="import-products"),
     #path('search-product/', SearchProductView.as_view(), name="search-product"),
 
-    path('verify_phone/', user_list, name='verify-phone'),
+    path('verify-phone/', VerifyPhoneView.as_view(), name='verify-phone'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

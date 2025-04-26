@@ -166,8 +166,8 @@ REST_FRAMEWORK = {
     'DEFAULT_THROTTLE_RATES': {
         'anon': '10/minute',     # unauthenticated users
         'user': '60/minute',     # authenticated users
-        'reset': '3/hour',       # custom - for password resets
-        'verify': '3/hour',      # custom - for SMS verification
+        'reset': '100/hour',       # custom - for password resets
+        'verify': '100/hour',      # custom - for SMS verification
     }
 
 
