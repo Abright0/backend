@@ -14,7 +14,7 @@ from api.assignments.views import (
     DeliveryPhotoViewSet,
 )
 from api.messaging.views import MessageTemplateViewSet, template_variable_info
-from api.views import LogoutView
+from api.views import LogoutView, LoginView
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -53,7 +53,7 @@ urlpatterns = [
 
     path('messaging/template-vars/', template_variable_info, name="template_variable_info"),
 
-    path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('login/', LoginView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name="token_refresh"),
     path('logout/', LogoutView.as_view(), name='logout'),
 
