@@ -78,9 +78,11 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
     def update(self, instance, validated_data):
         previous_status = instance.status
         new_status = validated_data.get('status', previous_status)
+        previous_delivery_date = instance.delivery_date
+        new_delivery_date = validated_data.get('delivery_date', previous_delivery_date)
+
         print(f"Status changed: {previous_status} -> {new_status}")
 
-        # Block invalid transitions
         if new_status == 'complete' and not instance.has_required_photos():
             raise serializers.ValidationError("Cannot mark as complete: delivery photos are required.")
         if new_status == 'en_route' and (
@@ -89,20 +91,16 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
         ):
             raise serializers.ValidationError("Cannot mark as en route: arrival time and distance must be provided.")
 
-        # Separate M2M field
         drivers = validated_data.pop('drivers', None)
 
-        # Update normal fields
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
 
         instance.save()
-        print(instance.status)
-        
+
         if drivers is not None:
             instance.drivers.set(drivers)
 
-        # Messaging on status change
         if previous_status != instance.status:
             status_event_map = {
                 'order_placed': 'order_placed',
@@ -126,7 +124,12 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
                 if should_send:
                     self.send_status_sms(instance, event_type)
 
+        # Send 'order_placed' message when delivery_date is set for the first time
+        if previous_delivery_date != new_delivery_date and new_delivery_date:
+            self.send_status_sms(instance, 'order_placed')
+
         return instance
+
 
     def build_context_for_event(self, attempt, event_type):
         order = attempt.order
@@ -135,6 +138,10 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
             "order_id": order.invoice_num,
             "phone_number": order.phone_num,
         }
+
+        # Add delivery_date if present
+        if attempt.delivery_date:
+            context["delivery_date"] = attempt.delivery_date.strftime('%Y-%m-%d')  # Format as needed
 
         if event_type == 'driver_en_route':
             if attempt.mins_to_arrival:
@@ -147,7 +154,6 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
             if photo_qs.exists():
                 links = []
                 print("DEBUG setting is:", settings.DEBUG)
-                # Use production domain if not in debug (prod), otherwise localhost
                 if settings.DEBUG:
                     domain = "https://localhost:8000"
                 else:
@@ -158,7 +164,7 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
 
                 for photo in photo_qs:
                     if not photo.signed_url or not photo.signed_url_expiry or photo.signed_url_expiry < timezone.now():
-                        photo.create_signed_url(expiration_minutes=2880)  # 48 hours
+                        photo.create_signed_url(expiration_minutes=2880)
 
                     short_link = f"{domain}/p/{photo.id}"
                     links.append(short_link)
@@ -170,6 +176,7 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
                 context["photo_links"] = "No delivery photos available."
 
         return context
+
             
     def send_status_sms(self, attempt, event_type):
         print("send status sms")
