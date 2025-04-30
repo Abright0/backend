@@ -3,51 +3,77 @@ from messaging.services.sms_service import send_sms
 from django.conf import settings
 from django.utils import timezone
 import logging
+from twilio.rest import Client
 
 logger = logging.getLogger(__name__)
 
 def send_verification_sms(user):
-    """
-    Send verification SMS with improved error handling
-    """
     try:
-        token = user.generate_verification_token()
-        verification_link = f"{settings.SITE_URL}/verify_phone/{token}"
-
-        message = f"Hi {user.first_name}, verify your account here: {verification_link}"
-
         if not user.phone_number:
-            logger.warning(f"No phone number found for user {user.username}. Cannot send SMS.")
+            logger.warning(f"No phone number found for user {user.username}. Cannot send verification.")
             return False
 
-        send_sms(user.phone_number, message)
-        logger.info(f"Verification SMS sent to {user.phone_number}")
+        client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+        verification = client.verify.v2.services(settings.TWILIO_VERIFY_SERVICE_SID).verifications.create(
+            to=user.phone_number,
+            channel="sms"
+        )
+
+        logger.info(f"Twilio verification initiated for {user.phone_number}. Status: {verification.status}")
         return True
     except Exception as e:
-        logger.error(f"Failed to send verification SMS to {user.phone_number}: {str(e)}")
+        logger.error(f"Failed to start Twilio verification for {user.phone_number}: {str(e)}")
+        return False
+
+def check_verification_code(user, code):
+    try:
+        client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+        verification_check = client.verify.v2.services(settings.TWILIO_VERIFY_SERVICE_SID).verification_checks.create(
+            to=user.phone_number,
+            code=code
+        )
+
+        return verification_check.status == "approved"
+    except Exception as e:
+        logger.error(f"Verification code check failed for {user.phone_number}: {e}")
         return False
 
 
-def send_reset_sms(user, reset_token):
+def send_reset_sms(user):
     """
-    Send password reset SMS with unique token
+    Send password reset verification code via Twilio Verify
     """
     try:
-        reset_link = f"{settings.SITE_URL}/reset-password/{reset_token}"
-        message = f"Reset your password here: {reset_link} (expires in 1 hour)"
-
-        # Store token and timestamp
-        user.password_reset_token = reset_token
-        user.password_reset_token_created_at = timezone.now()
-        user.save()
-
         if not user.phone_number:
             logger.warning(f"No phone number found for user {user.username}. Cannot send SMS.")
             return False
 
-        send_sms(user.phone_number, message)
-        logger.info(f"Password reset SMS sent to {user.phone_number}")
+        client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+        verification = client.verify.v2.services(settings.TWILIO_VERIFY_SERVICE_SID).verifications.create(
+            to=user.phone_number,
+            channel="sms"
+        )
+
+        logger.info(f"Password reset verification code sent to {user.phone_number}. Status: {verification.status}")
         return True
     except Exception as e:
-        logger.error(f"Error sending reset SMS to {user.phone_number}: {e}")
+        logger.error(f"Error sending Twilio verification code to {user.phone_number}: {e}")
+        return False
+
+
+
+def check_reset_code(user, code):
+    """
+    Check if the user-provided password reset code is valid
+    """
+    try:
+        client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+        verification_check = client.verify.v2.services(settings.TWILIO_VERIFY_SERVICE_SID).verification_checks.create(
+            to=user.phone_number,
+            code=code
+        )
+
+        return verification_check.status == "approved"
+    except Exception as e:
+        logger.error(f"Error verifying reset code for {user.phone_number}: {e}")
         return False

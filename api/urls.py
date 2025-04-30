@@ -1,7 +1,10 @@
+# /backend/api/urls.py
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework_nested.routers import NestedDefaultRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
+from api.accounts.views import PasswordResetCodeRequestView, PasswordResetCodeConfirmView
 
 from api.email_processor.views import ReceiveEmailView
 from api.accounts.views import UserViewSet
@@ -64,6 +67,9 @@ urlpatterns = [
     #path('search-product/', SearchProductView.as_view(), name="search-product"),
 
     path('verify-phone/', VerifyPhoneView.as_view(), name='verify-phone'),
+    path('password-reset/code/', PasswordResetCodeRequestView.as_view(), name='password_reset_code_request'),
+    path('password-reset/confirm/', PasswordResetCodeConfirmView.as_view(), name='password_reset_code_confirm'),
+    
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

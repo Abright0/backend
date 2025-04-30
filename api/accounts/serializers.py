@@ -10,6 +10,9 @@ from django.core.exceptions import ValidationError
 
 import re
 
+from .utils import check_reset_code
+from .utils import send_reset_sms
+
 class UserSerializer(serializers.ModelSerializer):
     stores = serializers.PrimaryKeyRelatedField(
         many=True,
@@ -144,3 +147,53 @@ class UserSerializer(serializers.ModelSerializer):
                     )
             else:
                 raise serializers.ValidationError("You don't have permission to create users.")
+
+class ResetPasswordRequestSerializer(serializers.Serializer):
+    phone_number = serializers.CharField()
+
+    def validate_phone_number(self, value):
+        try:
+            user = User.objects.get(phone_number=value)
+        except User.DoesNotExist:
+            raise serializers.ValidationError("User with this phone number does not exist.")
+        return value
+
+    def save(self):
+        phone_number = self.validated_data['phone_number']
+        user = User.objects.get(phone_number=phone_number)
+        success = send_reset_sms(user)
+        if not success:
+            raise serializers.ValidationError("Failed to send reset code.")
+        return True
+
+
+        from .utils import check_reset_code
+
+class ResetPasswordConfirmSerializer(serializers.Serializer):
+    phone_number = serializers.CharField()
+    code = serializers.CharField()
+    new_password = serializers.CharField(write_only=True)
+
+    def validate(self, data):
+        try:
+            user = User.objects.get(phone_number=data['phone_number'])
+        except User.DoesNotExist:
+            raise serializers.ValidationError("Invalid phone number.")
+
+        if not check_reset_code(user, data['code']):
+            raise serializers.ValidationError("Invalid or expired code.")
+
+        try:
+            validate_password(data['new_password'], user)
+        except ValidationError as e:
+            raise serializers.ValidationError({"new_password": e.messages})
+
+        data['user'] = user
+        return data
+
+    def save(self):
+        user = self.validated_data['user']
+        new_password = self.validated_data['new_password']
+        user.set_password(new_password)
+        user.save()
+        return user

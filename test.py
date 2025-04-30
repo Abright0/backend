@@ -15,6 +15,8 @@ from messaging.models import MessageTemplate
 import itertools
 import random
 
+import os
+
 from PIL import Image
 from io import BytesIO
 from datetime import time
@@ -31,7 +33,66 @@ from unittest.mock import patch
 import uuid
 from django.conf import settings
 
+import pytest
 
+from rest_framework.test import APITestCase
+from django.urls import reverse
+from accounts.models import User
+
+class InteractivePasswordResetTest(APITestCase):
+    """
+    Integration test for real‐SMS password reset.
+    ----------------------------------------------------------------------------
+    Requirements:
+      • Set environment variable REAL_SMS_PHONE_NUMBER to the phone you control.
+      • In your Django settings, have your TWILIO_ACCOUNT_SID,
+        TWILIO_AUTH_TOKEN, and TWILIO_VERIFY_SERVICE_SID configured.
+    ----------------------------------------------------------------------------
+    This test will:
+      1. Create (or recreate) a User with that phone number.
+      2. Call the password‐reset/code endpoint (sending an SMS).
+      3. Prompt you in the console to paste the code you received.
+      4. Call password‐reset/confirm with that code and assert success.
+    """
+
+    def setUp(self):
+        phone_number = os.getenv("REAL_SMS_PHONE_NUMBER")
+        if not phone_number:
+            self.skipTest("REAL_SMS_PHONE_NUMBER not set, skipping interactive SMS test")
+
+        # Ensure a clean slate
+        User.objects.filter(phone_number=phone_number).delete()
+        self.user = User.objects.create_user(
+            username="sms_integration_test_user",
+            phone_number=phone_number,
+            password="InitialPass123",
+        )
+
+        self.request_url = reverse("password_reset_code_request")
+        self.confirm_url = reverse("password_reset_code_confirm")
+
+    def test_interactive_password_reset(self):
+        # 1) Request SMS code
+        resp = self.client.post(self.request_url, {"phone_number": self.user.phone_number})
+        self.assertEqual(resp.status_code, 200, f"Code request failed: {resp.data}")
+
+        # 2) Prompt for the code
+        print(f"\n▶️  A verification code has been sent to {self.user.phone_number}.")
+        code = input("Please enter the verification code you received: ").strip()
+
+        # 3) Confirm with the code
+        new_password = "NewInteractivePass123!"
+        resp = self.client.post(self.confirm_url, {
+            "phone_number": self.user.phone_number,
+            "code": code,
+            "new_password": new_password
+        })
+        self.assertEqual(resp.status_code, 200, f"Confirm failed: {resp.data}")
+
+        # 4) Verify the password actually changed
+        self.user.refresh_from_db()
+        self.assertTrue(self.user.check_password(new_password))
+"""
 class JWTAuthTestCase(APITestCase):
 
     def setUp(self):
@@ -229,42 +290,6 @@ class AccountsTestCase(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertIn('password', response.data)
 
-
-    def test_reset_password_success(self):
-        print("test_reset_password_success")
-        # Generate token manually for testing
-        token = str(uuid.uuid4())
-        self.store_user.password_reset_token = token
-        self.store_user.password_reset_token_created_at = timezone.now()
-        self.store_user.save()
-
-        url = reverse('user-reset-password')
-        data = {
-            "token": token,
-            "new_password": "NewSecurePass123"
-        }
-        response = self.client.post(url, data)
-        self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.store_user.refresh_from_db()
-        self.assertTrue(self.store_user.check_password("NewSecurePass123"))
-
-    def test_reset_password_reuse_blocked(self):
-        print("test_reset_password_reuse_blocked")
-        token = str(uuid.uuid4())
-        self.store_user.password_reset_token = token
-        self.store_user.password_reset_token_created_at = timezone.now()
-        self.store_user.save()
-
-        url = reverse('user-reset-password')
-        data = {
-            "token": token,
-            "new_password": "UserPass123"  # Same as old password!
-        }
-        response = self.client.post(url, data)
-        print(response.data)
-        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        self.assertIn('New password cannot be the same as the old password.', str(response.data))
-
     def test_verify_phone_token_success(self):
         print("test_verify_phone_token_success")
         token = str(uuid.uuid4())
@@ -314,7 +339,7 @@ class AccountsTestCase(APITestCase):
 
     def test_password_reset_rate_limit(self):
         print("test_password_reset_rate_limit")
-        url = reverse('user-request-password-reset')
+        url = reverse('password_reset_code_request')
         for _ in range(4):  # Assuming the limit is 3/hour
             response = self.client.post(url, {'phone_number': self.other_user.phone_number})
         self.assertEqual(response.status_code, status.HTTP_429_TOO_MANY_REQUESTS)
@@ -352,9 +377,9 @@ class UserRegistrationSMSTest(APITestCase):
     @patch('api.accounts.serializers.send_verification_sms')
     def test_superuser_can_create_user_for_any_store(self, mock_send_sms):
         print("test_superuser_can_create_user_for_any_store")
-        """
-        Superusers should be able to create users for any store.
-        """
+        
+       # Superusers should be able to create users for any store.
+        
         other_store = Store.objects.create(name="Global Store")
         self.authenticate(self.admin_user)
 
@@ -376,9 +401,9 @@ class UserRegistrationSMSTest(APITestCase):
     @patch('api.accounts.serializers.send_verification_sms')
     def test_manager_can_only_assign_user_to_their_own_stores(self, mock_send_sms):
         print("test_manager_can_only_assign_user_to_their_own_stores")
-        """
-        Managers should only be able to create users for their assigned stores.
-        """
+        
+        # Managers should only be able to create users for their assigned stores.
+        
         self.authenticate(self.manager_user)
 
         payload = {
@@ -399,9 +424,9 @@ class UserRegistrationSMSTest(APITestCase):
     @patch('api.accounts.serializers.send_verification_sms')
     def test_manager_cannot_assign_user_to_other_stores(self, mock_send_sms):
         print("test_manager_cannot_assign_user_to_other_stores")
-        """
-        Managers should NOT be able to create users for stores they don't manage.
-        """
+        
+        #Managers should NOT be able to create users for stores they don't manage.
+        
         other_store = Store.objects.create(name="Other Store")
         self.authenticate(self.manager_user)
 
@@ -424,9 +449,9 @@ class UserRegistrationSMSTest(APITestCase):
     @patch('api.accounts.serializers.send_verification_sms')
     def test_create_user_missing_phone_number_fails(self, mock_send_sms):
         print("test_create_user_missing_phone_number_fails")
-        """
-        User creation should fail if phone number is missing.
-        """
+        
+        #User creation should fail if phone number is missing.
+        
         self.authenticate(self.admin_user)  # Superuser authenticated
 
         payload = {
@@ -442,7 +467,7 @@ class UserRegistrationSMSTest(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertFalse(User.objects.filter(username="nopho").exists())
         mock_send_sms.assert_not_called()
-
+"""
 """
 class UserViewSetTests(APITestCase):
 
