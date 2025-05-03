@@ -57,7 +57,6 @@ APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
 APSCHEDULER_RUN_NOW_TIMEOUT = 25
 
 
-
 # Core Twilio credentials
 TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
 TWILIO_AUTH_TOKEN  = os.getenv("TWILIO_AUTH_TOKEN")
@@ -173,18 +172,18 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle',
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '10/minute',     # unauthenticated users
-        'user': '60/minute',     # authenticated users
-        'reset': '100/hour',       # custom - for password resets
-        'verify': '100/hour',      # custom - for SMS verification
+        'anon': '5/minute',     # unauthenticated users
+        'user': '140/minute',     # authenticated users
+        'reset': '3/hour',       # custom - for password resets
+        'verify': '3/hour',      # custom - for SMS verification
     }
 
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=1),       # 1 hour sessions
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),       # 15 minute sessions
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),          # Refresh token valid for 1 day
-    'ROTATE_REFRESH_TOKENS': False,                       # Optional rotation logic (off here)
+    'ROTATE_REFRESH_TOKENS': True,                       # Optional rotation logic (off here)
     'BLACKLIST_AFTER_ROTATION': True,                     # Refresh token gets blacklisted if rotation happens
 }
 

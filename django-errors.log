@@ -7277,3 +7277,465 @@ WARNING 2025-04-30 18:43:12,645 log 99507 140246897815552 Not Found: /api/orders
 WARNING 2025-04-30 18:43:13,910 log 99507 140246897815552 Not Found: /api/orders/
 INFO 2025-04-30 18:43:14,721 utils 99507 140246897815552 Password reset verification code sent to +14692478210. Status: pending
 INFO 2025-04-30 18:44:35,181 utils 99576 140475211776000 Password reset verification code sent to +14692478210. Status: pending
+INFO 2025-05-01 23:53:16,197 autoreload 127295 139677587361792 Watching for file changes with StatReloader
+WARNING 2025-05-01 23:53:20,762 log 127295 139677410575936 Not Found: /
+WARNING 2025-05-01 23:53:20,762 basehttp 127295 139677410575936 "GET / HTTP/1.1" 404 2474
+WARNING 2025-05-01 23:53:31,023 log 127295 139677410575936 Unauthorized: /api/
+WARNING 2025-05-01 23:53:31,023 basehttp 127295 139677410575936 "GET /api/ HTTP/1.1" 401 14040
+INFO 2025-05-01 23:53:33,949 basehttp 127295 139677410575936 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-05-01 23:53:34,125 basehttp 127295 139677410575936 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 9906
+INFO 2025-05-01 23:53:38,211 basehttp 127295 139677410575936 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 10067
+INFO 2025-05-01 23:54:02,906 autoreload 127385 139648926441472 Watching for file changes with StatReloader
+INFO 2025-05-01 23:54:06,438 basehttp 127385 139648746702400 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-05-01 23:54:06,634 basehttp 127385 139648746702400 "GET /admin/ HTTP/1.1" 200 19316
+INFO 2025-05-01 23:54:10,584 basehttp 127385 139648746702400 "GET /admin/assignments/deliveryattempt/ HTTP/1.1" 200 34778
+INFO 2025-05-01 23:54:10,609 basehttp 127385 139648746702400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-01 23:54:16,027 basehttp 127385 139648746702400 "GET /admin/ HTTP/1.1" 200 19316
+INFO 2025-05-01 23:54:22,354 basehttp 127385 139648746702400 "GET /admin/auth/group/ HTTP/1.1" 200 27387
+INFO 2025-05-01 23:54:22,379 basehttp 127385 139648746702400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-01 23:54:24,602 basehttp 127385 139648746702400 "GET /admin/ HTTP/1.1" 200 19316
+INFO 2025-05-01 23:54:26,764 basehttp 127385 139648746702400 "GET /admin/stores/store/ HTTP/1.1" 200 30661
+INFO 2025-05-01 23:54:26,790 basehttp 127385 139648746702400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-01 23:54:27,591 basehttp 127385 139648746702400 "GET /admin/ HTTP/1.1" 200 19316
+INFO 2025-05-01 23:54:28,990 basehttp 127385 139648746702400 "GET /admin/orders/order/ HTTP/1.1" 200 31305
+INFO 2025-05-01 23:54:29,018 basehttp 127385 139648746702400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-01 23:54:31,567 basehttp 127385 139648746702400 "GET /admin/orders/order/6/change/ HTTP/1.1" 200 39670
+INFO 2025-05-01 23:54:31,593 basehttp 127385 139648746702400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-01 23:54:46,224 basehttp 127385 139648746702400 "GET /admin/orders/ HTTP/1.1" 200 10946
+INFO 2025-05-01 23:54:46,958 basehttp 127385 139648746702400 "GET /admin/ HTTP/1.1" 200 19316
+INFO 2025-05-01 23:54:49,019 basehttp 127385 139648746702400 "GET /admin/messaging/messagetemplate/ HTTP/1.1" 200 33482
+INFO 2025-05-01 23:54:49,049 basehttp 127385 139648746702400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-01 23:54:55,541 basehttp 127385 139648746702400 "GET /admin/messaging/messagetemplate/8/change/ HTTP/1.1" 200 34040
+INFO 2025-05-01 23:54:55,572 basehttp 127385 139648746702400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-01 23:55:00,808 basehttp 127385 139648746702400 "GET /admin/messaging/messagetemplate/ HTTP/1.1" 200 33482
+INFO 2025-05-01 23:55:08,981 basehttp 127385 139648746702400 "GET /admin/messaging/messagetemplate/add/ HTTP/1.1" 200 33696
+INFO 2025-05-01 23:55:09,009 basehttp 127385 139648746702400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-01 23:55:25,974 basehttp 127385 139648746702400 "GET /admin/messaging/messagetemplate/ HTTP/1.1" 200 33482
+INFO 2025-05-01 23:55:29,743 basehttp 127385 139648746702400 "GET /admin/ HTTP/1.1" 200 19316
+INFO 2025-05-01 23:55:37,783 autoreload 127442 140114858545152 Watching for file changes with StatReloader
+INFO 2025-05-01 23:58:25,747 basehttp 127442 140114679350848 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-01 23:58:26,247 basehttp 127442 140114679350848 "POST /api/login/ HTTP/1.1" 200 663
+INFO 2025-05-01 23:58:26,297 basehttp 127442 140114679350848 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-01 23:58:26,352 basehttp 127442 140114679350848 "GET /api/users/me/ HTTP/1.1" 200 311
+INFO 2025-05-01 23:58:26,401 basehttp 127442 140114679350848 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-01 23:58:26,460 basehttp 127442 140114679350848 "GET /api/users/1/stores/ HTTP/1.1" 200 2
+INFO 2025-05-01 23:58:31,302 basehttp 127442 140114670958144 "OPTIONS /api/users/ HTTP/1.1" 200 0
+INFO 2025-05-01 23:58:31,306 basehttp 127442 140114679350848 "GET /api/users/1/stores/ HTTP/1.1" 200 2
+INFO 2025-05-01 23:58:31,311 basehttp 127442 140114662565440 "GET /api/users/ HTTP/1.1" 200 649
+INFO 2025-05-01 23:58:31,315 basehttp 127442 140114679350848 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+WARNING 2025-05-01 23:58:31,363 log 127442 140114662565440 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-01 23:58:31,363 basehttp 127442 140114662565440 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-01 23:58:40,302 basehttp 127442 140114679350848 "GET /api/users/1/stores/ HTTP/1.1" 200 2
+INFO 2025-05-01 23:58:40,303 basehttp 127442 140114662565440 "GET /api/users/ HTTP/1.1" 200 649
+WARNING 2025-05-01 23:58:40,311 log 127442 140114662565440 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-01 23:58:40,311 basehttp 127442 140114662565440 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-01 23:58:42,064 basehttp 127442 140114679350848 "GET /api/users/1/stores/ HTTP/1.1" 200 2
+INFO 2025-05-01 23:58:42,069 basehttp 127442 140114662565440 "GET /api/users/ HTTP/1.1" 200 649
+WARNING 2025-05-01 23:58:42,076 log 127442 140114662565440 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-01 23:58:42,076 basehttp 127442 140114662565440 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-01 23:58:50,574 basehttp 127442 140114679350848 "GET /api/users/1/stores/ HTTP/1.1" 200 2
+INFO 2025-05-01 23:58:50,576 basehttp 127442 140114662565440 "GET /api/users/ HTTP/1.1" 200 649
+WARNING 2025-05-01 23:58:50,583 log 127442 140114662565440 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-01 23:58:50,583 basehttp 127442 140114662565440 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-01 23:59:04,360 basehttp 127442 140114679350848 "GET /api/users/1/stores/ HTTP/1.1" 200 2
+INFO 2025-05-01 23:59:04,360 basehttp 127442 140114662565440 "GET /api/users/ HTTP/1.1" 200 649
+WARNING 2025-05-01 23:59:04,367 log 127442 140114662565440 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-01 23:59:04,367 basehttp 127442 140114662565440 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+WARNING 2025-05-02 00:00:07,953 log 127442 140114449659456 Not Found: /api/store
+WARNING 2025-05-02 00:00:07,953 basehttp 127442 140114449659456 "GET /api/store HTTP/1.1" 404 27798
+INFO 2025-05-02 00:00:09,342 basehttp 127442 140114449659456 "GET /api/stores HTTP/1.1" 301 0
+INFO 2025-05-02 00:00:09,610 basehttp 127442 140114449659456 "GET /api/stores/ HTTP/1.1" 200 22276
+INFO 2025-05-02 00:00:11,703 basehttp 127442 140114449659456 "GET /api/stores/orders HTTP/1.1" 301 0
+WARNING 2025-05-02 00:00:11,946 log 127442 140114449659456 Not Found: /api/stores/orders/
+WARNING 2025-05-02 00:00:11,946 basehttp 127442 140114449659456 "GET /api/stores/orders/ HTTP/1.1" 404 20466
+WARNING 2025-05-02 00:00:16,057 log 127442 140114449659456 Not Found: /api/stores/order/
+WARNING 2025-05-02 00:00:16,057 basehttp 127442 140114449659456 "GET /api/stores/order/ HTTP/1.1" 404 20456
+WARNING 2025-05-02 00:00:18,791 log 127442 140114449659456 Not Found: /api/stores/orders/
+WARNING 2025-05-02 00:00:18,791 basehttp 127442 140114449659456 "GET /api/stores/orders/ HTTP/1.1" 404 20466
+WARNING 2025-05-02 00:00:26,838 log 127442 140114449659456 Not Found: /api/1/orders/
+WARNING 2025-05-02 00:00:26,839 basehttp 127442 140114449659456 "GET /api/1/orders/ HTTP/1.1" 404 27810
+WARNING 2025-05-02 00:00:30,436 log 127442 140114449659456 Not Found: /api/2/orders/
+WARNING 2025-05-02 00:00:30,437 basehttp 127442 140114449659456 "GET /api/2/orders/ HTTP/1.1" 404 27810
+WARNING 2025-05-02 00:00:34,693 log 127442 140114449659456 Not Found: /api/0/orders/
+WARNING 2025-05-02 00:00:34,693 basehttp 127442 140114449659456 "GET /api/0/orders/ HTTP/1.1" 404 27810
+ERROR 2025-05-02 00:00:41,133 log 127442 140114449659456 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 727, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 705, in get_context
+    'filter_form': self.get_filter_form(data, view, request),
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 637, in get_filter_form
+    html = backend().to_html(request, queryset, view)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 79, in to_html
+    template = loader.get_template(self.template)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: django_filters/rest_framework/form.html
+ERROR 2025-05-02 00:00:41,134 basehttp 127442 140114449659456 "GET /api/stores/1/orders/ HTTP/1.1" 500 128849
+ERROR 2025-05-02 00:00:45,772 log 127442 140114449659456 Internal Server Error: /api/stores/0/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 727, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 705, in get_context
+    'filter_form': self.get_filter_form(data, view, request),
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/renderers.py", line 637, in get_filter_form
+    html = backend().to_html(request, queryset, view)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django_filters/rest_framework/backends.py", line 79, in to_html
+    template = loader.get_template(self.template)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: django_filters/rest_framework/form.html
+ERROR 2025-05-02 00:00:45,773 basehttp 127442 140114449659456 "GET /api/stores/0/orders/ HTTP/1.1" 500 108942
+INFO 2025-05-02 00:00:59,360 basehttp 127442 140114449659456 "GET /api/stores/0/orders/1/delivery-attempts HTTP/1.1" 301 0
+INFO 2025-05-02 00:00:59,608 basehttp 127442 140114449659456 "GET /api/stores/0/orders/1/delivery-attempts/ HTTP/1.1" 200 28266
+INFO 2025-05-02 00:06:40,065 basehttp 127442 140114679350848 "GET /api/users/me/stores/ HTTP/1.1" 200 20309
+INFO 2025-05-02 00:06:48,798 basehttp 127442 140114679350848 "GET /api/users/me/stores/ HTTP/1.1" 200 20309
+INFO 2025-05-02 00:07:05,549 basehttp 127442 140114679350848 "GET /api/users/me/ HTTP/1.1" 200 16048
+INFO 2025-05-02 00:07:32,098 basehttp 127442 140114679350848 "GET /api/users/ HTTP/1.1" 200 29000
+INFO 2025-05-02 00:08:02,167 basehttp 127442 140114679350848 "GET /api/users/create HTTP/1.1" 301 0
+WARNING 2025-05-02 00:08:02,415 log 127442 140114679350848 Not Found: /api/users/create/
+WARNING 2025-05-02 00:08:02,415 basehttp 127442 140114679350848 "GET /api/users/create/ HTTP/1.1" 404 24069
+INFO 2025-05-02 00:08:29,876 autoreload 127442 140114858545152 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-05-02 00:08:30,317 autoreload 129031 140260380000256 Watching for file changes with StatReloader
+INFO 2025-05-02 00:55:18,841 basehttp 129031 140260203779648 "OPTIONS /api/users/1/ HTTP/1.1" 200 0
+WARNING 2025-05-02 00:55:18,849 log 129031 140260195386944 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 00:55:18,850 log 129031 140260203779648 Unauthorized: /api/users/1/
+WARNING 2025-05-02 00:55:18,850 basehttp 129031 140260203779648 "GET /api/users/1/ HTTP/1.1" 401 172
+WARNING 2025-05-02 00:55:18,850 basehttp 129031 140260195386944 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 00:55:23,173 log 129031 140260203779648 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 00:55:23,175 log 129031 140260186994240 Unauthorized: /api/users/
+WARNING 2025-05-02 00:55:23,176 basehttp 129031 140260203779648 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 00:55:23,176 basehttp 129031 140260186994240 "GET /api/users/ HTTP/1.1" 401 172
+INFO 2025-05-02 00:55:23,180 basehttp 129031 140260203779648 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-02 00:55:23,247 basehttp 129031 140260203779648 "POST /api/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-05-02 00:55:23,324 basehttp 129031 140260186994240 "GET /api/users/ HTTP/1.1" 200 649
+WARNING 2025-05-02 00:55:23,342 log 129031 140260186994240 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 00:55:23,343 basehttp 129031 140260186994240 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 01:02:07,596 basehttp 129031 140260186994240 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-02 01:02:07,612 log 129031 140260186994240 Bad Request: /api/logout/
+WARNING 2025-05-02 01:02:07,613 basehttp 129031 140260186994240 "POST /api/logout/ HTTP/1.1" 400 32
+WARNING 2025-05-02 01:02:12,789 log 129031 140260186994240 Unauthorized: /api/login/
+WARNING 2025-05-02 01:02:12,790 basehttp 129031 140260186994240 "POST /api/login/ HTTP/1.1" 401 63
+INFO 2025-05-02 01:02:20,688 basehttp 129031 140260186994240 "POST /api/login/ HTTP/1.1" 200 663
+INFO 2025-05-02 01:02:20,701 basehttp 129031 140260186994240 "GET /api/users/me/ HTTP/1.1" 200 311
+INFO 2025-05-02 01:02:20,753 basehttp 129031 140260186994240 "GET /api/users/1/stores/ HTTP/1.1" 200 2
+INFO 2025-05-02 01:02:24,125 basehttp 129031 140260186994240 "GET /api/users/1/stores/ HTTP/1.1" 200 2
+INFO 2025-05-02 01:02:24,127 basehttp 129031 140260203779648 "GET /api/users/ HTTP/1.1" 200 649
+WARNING 2025-05-02 01:02:24,134 log 129031 140260203779648 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 01:02:24,134 basehttp 129031 140260203779648 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 01:02:30,767 basehttp 129031 140260195386944 "GET /api/users HTTP/1.1" 301 0
+INFO 2025-05-02 01:02:31,056 basehttp 129031 140260195386944 "GET /api/users/ HTTP/1.1" 200 29000
+INFO 2025-05-02 01:02:44,808 basehttp 129031 140260186994240 "POST /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-02 01:02:51,389 log 129031 140260186994240 Unauthorized: /api/login/
+WARNING 2025-05-02 01:02:51,389 basehttp 129031 140260186994240 "POST /api/login/ HTTP/1.1" 401 63
+INFO 2025-05-02 01:02:56,105 basehttp 129031 140260195386944 "GET /admin/ HTTP/1.1" 200 19316
+INFO 2025-05-02 01:03:01,248 basehttp 129031 140260195386944 "GET /admin/accounts/user/ HTTP/1.1" 200 39900
+INFO 2025-05-02 01:03:01,272 basehttp 129031 140260195386944 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-02 01:03:03,236 basehttp 129031 140260195386944 "GET /admin/accounts/user/2/change/ HTTP/1.1" 200 53896
+INFO 2025-05-02 01:03:03,268 basehttp 129031 140260195386944 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-02 01:03:47,208 basehttp 129031 140260195386944 "POST /admin/accounts/user/2/change/ HTTP/1.1" 302 0
+INFO 2025-05-02 01:03:47,731 basehttp 129031 140260195386944 "GET /admin/accounts/user/ HTTP/1.1" 200 40133
+INFO 2025-05-02 01:03:47,807 basehttp 129031 140260195386944 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2025-05-02 01:03:51,561 log 129031 140260186994240 Unauthorized: /api/login/
+WARNING 2025-05-02 01:03:51,562 basehttp 129031 140260186994240 "POST /api/login/ HTTP/1.1" 401 63
+INFO 2025-05-02 01:03:55,283 basehttp 129031 140260195386944 "GET /admin/accounts/user/2/change/ HTTP/1.1" 200 53996
+INFO 2025-05-02 01:03:55,316 basehttp 129031 140260195386944 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-02 01:03:58,718 basehttp 129031 140260195386944 "GET /admin/accounts/user/2/password/ HTTP/1.1" 200 21968
+INFO 2025-05-02 01:04:10,467 basehttp 129031 140260195386944 "POST /admin/accounts/user/2/password/ HTTP/1.1" 200 22124
+INFO 2025-05-02 01:04:20,445 basehttp 129031 140260195386944 "POST /admin/accounts/user/2/password/ HTTP/1.1" 302 0
+INFO 2025-05-02 01:04:20,937 basehttp 129031 140260195386944 "GET /admin/accounts/user/2/change/ HTTP/1.1" 200 54132
+INFO 2025-05-02 01:04:21,013 basehttp 129031 140260195386944 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-02 01:04:27,497 basehttp 129031 140260186994240 "POST /api/login/ HTTP/1.1" 200 684
+INFO 2025-05-02 01:04:27,514 basehttp 129031 140260186994240 "GET /api/users/me/ HTTP/1.1" 200 333
+INFO 2025-05-02 01:04:27,571 basehttp 129031 140260186994240 "OPTIONS /api/users/2/stores/ HTTP/1.1" 200 0
+INFO 2025-05-02 01:04:27,638 basehttp 129031 140260186994240 "GET /api/users/2/stores/ HTTP/1.1" 200 130
+INFO 2025-05-02 01:04:35,094 basehttp 129031 140260186994240 "OPTIONS /api/users/2/ HTTP/1.1" 200 0
+INFO 2025-05-02 01:04:35,102 basehttp 129031 140260186994240 "GET /api/users/2/ HTTP/1.1" 200 333
+INFO 2025-05-02 01:04:40,017 basehttp 129031 140260195386944 "GET /admin/accounts/user/ HTTP/1.1" 200 39934
+INFO 2025-05-02 01:04:40,048 basehttp 129031 140260195386944 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-02 01:04:41,697 basehttp 129031 140260195386944 "GET /admin/accounts/user/1/change/ HTTP/1.1" 200 53967
+INFO 2025-05-02 01:04:41,728 basehttp 129031 140260195386944 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-02 01:04:49,910 basehttp 129031 140260195386944 "POST /admin/accounts/user/1/change/ HTTP/1.1" 302 0
+INFO 2025-05-02 01:04:50,468 basehttp 129031 140260195386944 "GET /admin/accounts/user/ HTTP/1.1" 200 40131
+INFO 2025-05-02 01:04:50,534 basehttp 129031 140260195386944 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-02 01:04:51,864 basehttp 129031 140260186994240 "POST /api/logout/ HTTP/1.1" 200 0
+INFO 2025-05-02 01:04:56,166 basehttp 129031 140260186994240 "POST /api/login/ HTTP/1.1" 200 663
+INFO 2025-05-02 01:04:56,179 basehttp 129031 140260186994240 "GET /api/users/me/ HTTP/1.1" 200 311
+INFO 2025-05-02 01:04:56,230 basehttp 129031 140260186994240 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-02 01:05:01,321 basehttp 129031 140260195386944 "GET /admin/accounts/user/2/change/ HTTP/1.1" 200 53996
+INFO 2025-05-02 01:05:01,352 basehttp 129031 140260195386944 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-02 01:05:02,655 basehttp 129031 140260195386944 "GET /admin/accounts/user/2/password/ HTTP/1.1" 200 21968
+INFO 2025-05-02 01:05:07,222 basehttp 129031 140260195386944 "GET /admin/ HTTP/1.1" 200 20391
+INFO 2025-05-02 01:06:01,493 basehttp 129031 140260186994240 "GET /api/users/1/ HTTP/1.1" 200 311
+INFO 2025-05-02 01:06:01,498 basehttp 129031 140260171257408 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-02 01:06:02,919 basehttp 129031 140260203779648 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-02 01:06:02,927 log 129031 140260203779648 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 01:06:02,927 basehttp 129031 140260203779648 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 01:06:06,288 basehttp 129031 140260171257408 "GET /api/users/1/ HTTP/1.1" 200 311
+INFO 2025-05-02 01:06:06,292 basehttp 129031 140260186994240 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-02 01:06:06,316 basehttp 129031 140260203779648 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-02 01:06:06,326 log 129031 140260203779648 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 01:06:06,326 basehttp 129031 140260203779648 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 01:06:07,451 basehttp 129031 140260186994240 "GET /api/users/1/ HTTP/1.1" 200 311
+INFO 2025-05-02 01:06:07,456 basehttp 129031 140260171257408 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-02 01:06:07,476 basehttp 129031 140260203779648 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-02 01:06:07,486 log 129031 140260203779648 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 01:06:07,486 basehttp 129031 140260203779648 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 01:06:08,388 basehttp 129031 140260171257408 "GET /api/users/1/ HTTP/1.1" 200 311
+INFO 2025-05-02 01:06:08,390 basehttp 129031 140260186994240 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-02 01:06:08,412 basehttp 129031 140260203779648 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-02 01:06:08,420 log 129031 140260203779648 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 01:06:08,421 basehttp 129031 140260203779648 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 01:06:09,714 basehttp 129031 140260186994240 "GET /api/users/1/ HTTP/1.1" 200 311
+INFO 2025-05-02 01:06:09,720 basehttp 129031 140260171257408 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-02 01:06:09,738 basehttp 129031 140260203779648 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-02 01:06:09,748 log 129031 140260203779648 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 01:06:09,749 basehttp 129031 140260203779648 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 01:06:25,331 basehttp 129031 140260195386944 "GET /api/users/me/stores/ HTTP/1.1" 200 21612
+INFO 2025-05-02 01:06:28,182 basehttp 129031 140260195386944 "GET /api/users/ HTTP/1.1" 200 29242
+INFO 2025-05-02 01:14:04,634 basehttp 129031 140260195386944 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-02 01:14:04,641 log 129031 140260195386944 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 01:14:04,641 basehttp 129031 140260195386944 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 01:14:06,360 basehttp 129031 140260171257408 "GET /api/users/1/ HTTP/1.1" 200 311
+INFO 2025-05-02 01:14:06,361 basehttp 129031 140260186994240 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-02 01:14:06,383 basehttp 129031 140260195386944 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-02 01:14:06,394 log 129031 140260195386944 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 01:14:06,395 basehttp 129031 140260195386944 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 03:19:17,963 basehttp 129031 140260171257408 "OPTIONS /api/users/1/ HTTP/1.1" 200 0
+INFO 2025-05-02 03:19:17,963 basehttp 129031 140260195386944 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-05-02 03:19:17,967 log 129031 140260171257408 Unauthorized: /api/users/1/
+WARNING 2025-05-02 03:19:17,968 log 129031 140260195386944 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 03:19:17,968 basehttp 129031 140260171257408 "GET /api/users/1/ HTTP/1.1" 401 172
+WARNING 2025-05-02 03:19:17,968 basehttp 129031 140260195386944 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+INFO 2025-05-02 03:19:18,016 basehttp 129031 140260186994240 "OPTIONS /api/users/ HTTP/1.1" 200 0
+WARNING 2025-05-02 03:19:18,023 log 129031 140260186994240 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 03:19:18,023 basehttp 129031 140260186994240 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 03:19:18,028 log 129031 140260162864704 Unauthorized: /api/users/
+WARNING 2025-05-02 03:19:18,029 basehttp 129031 140260162864704 "GET /api/users/ HTTP/1.1" 401 172
+INFO 2025-05-02 03:19:18,033 basehttp 129031 140260171257408 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-02 03:19:18,089 basehttp 129031 140260171257408 "POST /api/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-05-02 03:19:18,098 basehttp 129031 140260171257408 "GET /api/users/ HTTP/1.1" 200 697
+INFO 2025-05-02 03:19:18,103 basehttp 129031 140260186994240 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+WARNING 2025-05-02 03:19:18,106 log 129031 140260171257408 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 03:19:18,106 basehttp 129031 140260171257408 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 14:45:52,374 basehttp 129031 140260186994240 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-02 14:45:52,374 basehttp 129031 140260171257408 "OPTIONS /api/users/1/ HTTP/1.1" 200 0
+WARNING 2025-05-02 14:45:52,377 log 129031 140260171257408 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 14:45:52,378 log 129031 140260186994240 Unauthorized: /api/users/1/
+WARNING 2025-05-02 14:45:52,379 basehttp 129031 140260171257408 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 14:45:52,379 basehttp 129031 140260186994240 "GET /api/users/1/ HTTP/1.1" 401 172
+INFO 2025-05-02 14:45:52,405 basehttp 129031 140260203779648 "OPTIONS /api/users/ HTTP/1.1" 200 0
+WARNING 2025-05-02 14:45:52,407 log 129031 140260195386944 Unauthorized: /api/users/
+WARNING 2025-05-02 14:45:52,407 basehttp 129031 140260195386944 "GET /api/users/ HTTP/1.1" 401 172
+INFO 2025-05-02 14:45:52,411 basehttp 129031 140260203779648 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-02 14:45:52,423 log 129031 140260186994240 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 14:45:52,424 basehttp 129031 140260186994240 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 14:45:52,457 log 129031 140260203779648 Unauthorized: /api/token/refresh/
+WARNING 2025-05-02 14:45:52,458 basehttp 129031 140260203779648 "POST /api/token/refresh/ HTTP/1.1" 401 58
+INFO 2025-05-02 14:45:52,511 basehttp 129031 140260203779648 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+WARNING 2025-05-02 14:45:52,514 log 129031 140260186994240 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-02 14:45:52,514 basehttp 129031 140260186994240 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-02 14:45:52,520 log 129031 140260203779648 Unauthorized: /api/token/refresh/
+WARNING 2025-05-02 14:45:52,520 basehttp 129031 140260203779648 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-02 18:43:37,252 log 129031 140260203779648 Unauthorized: /api/users/1/
+WARNING 2025-05-02 18:43:37,253 log 129031 140260186994240 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 18:43:37,253 basehttp 129031 140260203779648 "GET /api/users/1/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:37,254 basehttp 129031 140260186994240 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:37,287 log 129031 140260186994240 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 18:43:37,289 log 129031 140260195386944 Unauthorized: /api/users/
+WARNING 2025-05-02 18:43:37,290 basehttp 129031 140260186994240 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:37,290 basehttp 129031 140260195386944 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:37,295 log 129031 140260203779648 Unauthorized: /api/token/refresh/
+WARNING 2025-05-02 18:43:37,295 basehttp 129031 140260203779648 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-02 18:43:37,299 log 129031 140260195386944 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-02 18:43:37,300 basehttp 129031 140260195386944 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:37,346 log 129031 140260186994240 Unauthorized: /api/token/refresh/
+WARNING 2025-05-02 18:43:37,347 basehttp 129031 140260186994240 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-02 18:43:38,070 log 129031 140260186994240 Unauthorized: /api/users/1/
+WARNING 2025-05-02 18:43:38,071 log 129031 140260203779648 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 18:43:38,072 basehttp 129031 140260186994240 "GET /api/users/1/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:38,072 basehttp 129031 140260203779648 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:38,101 log 129031 140260203779648 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 18:43:38,103 log 129031 140260195386944 Unauthorized: /api/users/
+WARNING 2025-05-02 18:43:38,103 basehttp 129031 140260203779648 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:38,104 basehttp 129031 140260195386944 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:38,118 log 129031 140260186994240 Unauthorized: /api/token/refresh/
+WARNING 2025-05-02 18:43:38,118 basehttp 129031 140260186994240 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-02 18:43:38,123 log 129031 140260195386944 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-02 18:43:38,124 basehttp 129031 140260195386944 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:38,169 log 129031 140260203779648 Unauthorized: /api/token/refresh/
+WARNING 2025-05-02 18:43:38,170 basehttp 129031 140260203779648 "POST /api/token/refresh/ HTTP/1.1" 401 58
+INFO 2025-05-02 18:43:44,932 autoreload 145066 140521315635200 Watching for file changes with StatReloader
+WARNING 2025-05-02 18:43:45,700 log 145066 140521208071744 Unauthorized: /api/users/1/
+WARNING 2025-05-02 18:43:45,701 log 145066 140521129375296 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 18:43:45,701 basehttp 145066 140521208071744 "GET /api/users/1/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:45,701 basehttp 145066 140521129375296 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:45,719 log 145066 140521129375296 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 18:43:45,721 log 145066 140521120982592 Unauthorized: /api/users/
+WARNING 2025-05-02 18:43:45,722 basehttp 145066 140521129375296 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:45,722 basehttp 145066 140521120982592 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:45,739 log 145066 140521208071744 Unauthorized: /api/token/refresh/
+WARNING 2025-05-02 18:43:45,739 basehttp 145066 140521208071744 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-02 18:43:45,795 log 145066 140521120982592 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-02 18:43:45,796 basehttp 145066 140521120982592 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:45,818 log 145066 140521208071744 Unauthorized: /api/token/refresh/
+WARNING 2025-05-02 18:43:45,819 basehttp 145066 140521208071744 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-02 18:43:46,249 log 145066 140521120982592 Unauthorized: /api/users/
+WARNING 2025-05-02 18:43:46,249 basehttp 145066 140521120982592 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:46,255 log 145066 140521208071744 Unauthorized: /api/token/refresh/
+WARNING 2025-05-02 18:43:46,255 basehttp 145066 140521208071744 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-02 18:43:46,259 log 145066 140521120982592 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-02 18:43:46,259 basehttp 145066 140521120982592 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-02 18:43:46,305 log 145066 140521208071744 Unauthorized: /api/token/refresh/
+WARNING 2025-05-02 18:43:46,305 basehttp 145066 140521208071744 "POST /api/token/refresh/ HTTP/1.1" 401 58
+INFO 2025-05-02 18:43:47,216 basehttp 145066 140521208071744 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-02 18:43:47,225 log 145066 140521208071744 Unauthorized: /api/logout/
+WARNING 2025-05-02 18:43:47,226 basehttp 145066 140521208071744 "POST /api/logout/ HTTP/1.1" 401 172
+INFO 2025-05-02 18:43:53,285 basehttp 145066 140521208071744 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-02 18:43:53,765 basehttp 145066 140521208071744 "POST /api/login/ HTTP/1.1" 200 663
+INFO 2025-05-02 18:43:53,812 basehttp 145066 140521208071744 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-02 18:43:53,876 basehttp 145066 140521208071744 "GET /api/users/me/ HTTP/1.1" 200 311
+INFO 2025-05-02 18:43:53,933 basehttp 145066 140521208071744 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-02 18:43:56,401 basehttp 145066 140521208071744 "OPTIONS /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+WARNING 2025-05-02 18:43:56,410 log 145066 140521120982592 Not Found: /api/orders/
+WARNING 2025-05-02 18:43:56,410 basehttp 145066 140521120982592 "GET /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+INFO 2025-05-02 18:43:56,880 basehttp 145066 140521120982592 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-02 18:43:56,887 log 145066 140521120982592 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 18:43:56,887 basehttp 145066 140521120982592 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-02 23:43:08,622 basehttp 145066 140521208071744 "OPTIONS /api/users/1/ HTTP/1.1" 200 0
+INFO 2025-05-02 23:43:08,622 basehttp 145066 140521120982592 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-05-02 23:43:08,626 log 145066 140521120982592 Unauthorized: /api/users/1/
+WARNING 2025-05-02 23:43:08,627 log 145066 140521208071744 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 23:43:08,627 basehttp 145066 140521120982592 "GET /api/users/1/ HTTP/1.1" 401 172
+WARNING 2025-05-02 23:43:08,627 basehttp 145066 140521208071744 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+INFO 2025-05-02 23:43:08,653 basehttp 145066 140521129375296 "OPTIONS /api/users/ HTTP/1.1" 200 0
+WARNING 2025-05-02 23:43:08,655 log 145066 140521112589888 Unauthorized: /api/users/
+WARNING 2025-05-02 23:43:08,655 basehttp 145066 140521112589888 "GET /api/users/ HTTP/1.1" 401 172
+INFO 2025-05-02 23:43:08,658 basehttp 145066 140521129375296 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-02 23:43:08,674 log 145066 140521120982592 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-02 23:43:08,674 basehttp 145066 140521120982592 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+INFO 2025-05-02 23:43:08,714 basehttp 145066 140521129375296 "POST /api/token/refresh/ HTTP/1.1" 200 483
+INFO 2025-05-02 23:43:08,726 basehttp 145066 140521120982592 "GET /api/users/ HTTP/1.1" 200 697
+INFO 2025-05-02 23:43:08,731 basehttp 145066 140521120982592 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+WARNING 2025-05-02 23:43:08,735 log 145066 140521129375296 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-02 23:43:08,735 basehttp 145066 140521129375296 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+WARNING 2025-05-03 02:19:49,203 log 145066 140521129375296 Unauthorized: /api/users/1/
+WARNING 2025-05-03 02:19:49,205 log 145066 140521120982592 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-03 02:19:49,205 basehttp 145066 140521129375296 "GET /api/users/1/ HTTP/1.1" 401 172
+WARNING 2025-05-03 02:19:49,205 basehttp 145066 140521120982592 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-03 02:19:49,231 log 145066 140521208071744 Unauthorized: /api/users/
+WARNING 2025-05-03 02:19:49,232 log 145066 140521120982592 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-03 02:19:49,232 basehttp 145066 140521120982592 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-03 02:19:49,232 basehttp 145066 140521208071744 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-03 02:19:49,238 log 145066 140521129375296 Unauthorized: /api/token/refresh/
+WARNING 2025-05-03 02:19:49,238 basehttp 145066 140521129375296 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-03 02:19:49,283 log 145066 140521208071744 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-03 02:19:49,283 basehttp 145066 140521208071744 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-03 02:19:49,290 log 145066 140521129375296 Unauthorized: /api/token/refresh/
+WARNING 2025-05-03 02:19:49,290 basehttp 145066 140521129375296 "POST /api/token/refresh/ HTTP/1.1" 401 58
+INFO 2025-05-03 12:31:53,809 basehttp 145066 140521129375296 "OPTIONS /api/users/1/ HTTP/1.1" 200 0
+INFO 2025-05-03 12:31:53,809 basehttp 145066 140521208071744 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-05-03 12:31:53,812 log 145066 140521129375296 Unauthorized: /api/users/1/
+WARNING 2025-05-03 12:31:53,814 log 145066 140521208071744 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-03 12:31:53,814 basehttp 145066 140521208071744 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:31:53,814 basehttp 145066 140521129375296 "GET /api/users/1/ HTTP/1.1" 401 172
+INFO 2025-05-03 12:31:53,838 basehttp 145066 140521120982592 "OPTIONS /api/users/ HTTP/1.1" 200 0
+WARNING 2025-05-03 12:31:53,840 log 145066 140521112589888 Unauthorized: /api/users/
+WARNING 2025-05-03 12:31:53,840 basehttp 145066 140521112589888 "GET /api/users/ HTTP/1.1" 401 172
+INFO 2025-05-03 12:31:53,843 basehttp 145066 140521120982592 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-03 12:31:53,859 log 145066 140521104197184 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-03 12:31:53,859 basehttp 145066 140521104197184 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:31:53,888 log 145066 140521120982592 Unauthorized: /api/token/refresh/
+WARNING 2025-05-03 12:31:53,889 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 401 58
+INFO 2025-05-03 12:31:53,964 basehttp 145066 140521120982592 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+WARNING 2025-05-03 12:31:53,977 log 145066 140521104197184 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-03 12:31:53,978 basehttp 145066 140521104197184 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:31:53,989 log 145066 140521120982592 Unauthorized: /api/token/refresh/
+WARNING 2025-05-03 12:31:53,990 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-03 12:50:39,673 log 145066 140521120982592 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-03 12:50:39,676 log 145066 140521104197184 Unauthorized: /api/users/
+WARNING 2025-05-03 12:50:39,676 basehttp 145066 140521120982592 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:39,676 basehttp 145066 140521104197184 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:39,684 log 145066 140521120982592 Unauthorized: /api/token/refresh/
+WARNING 2025-05-03 12:50:39,684 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-03 12:50:39,741 log 145066 140521104197184 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-03 12:50:39,741 basehttp 145066 140521104197184 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:39,750 log 145066 140521120982592 Unauthorized: /api/token/refresh/
+WARNING 2025-05-03 12:50:39,751 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-03 12:50:40,401 log 145066 140521104197184 Unauthorized: /api/users/
+WARNING 2025-05-03 12:50:40,402 basehttp 145066 140521104197184 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:40,422 log 145066 140521120982592 Unauthorized: /api/token/refresh/
+WARNING 2025-05-03 12:50:40,423 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-03 12:50:40,438 log 145066 140521104197184 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-03 12:50:40,439 basehttp 145066 140521104197184 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:40,493 log 145066 140521120982592 Unauthorized: /api/token/refresh/
+WARNING 2025-05-03 12:50:40,494 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-03 12:50:40,853 log 145066 140521104197184 Unauthorized: /api/users/
+WARNING 2025-05-03 12:50:40,854 basehttp 145066 140521104197184 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:40,873 log 145066 140521120982592 Unauthorized: /api/token/refresh/
+WARNING 2025-05-03 12:50:40,874 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 401 58
+WARNING 2025-05-03 12:50:40,889 log 145066 140521104197184 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-03 12:50:40,890 basehttp 145066 140521104197184 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:40,944 log 145066 140521120982592 Too Many Requests: /api/token/refresh/
+WARNING 2025-05-03 12:50:40,944 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 429 69
+WARNING 2025-05-03 12:50:41,012 log 145066 140521104197184 Unauthorized: /api/users/
+WARNING 2025-05-03 12:50:41,014 basehttp 145066 140521104197184 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:41,028 log 145066 140521120982592 Too Many Requests: /api/token/refresh/
+WARNING 2025-05-03 12:50:41,029 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 429 69
+WARNING 2025-05-03 12:50:41,044 log 145066 140521104197184 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-03 12:50:41,045 basehttp 145066 140521104197184 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:41,090 log 145066 140521120982592 Too Many Requests: /api/token/refresh/
+WARNING 2025-05-03 12:50:41,090 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 429 69
+WARNING 2025-05-03 12:50:41,186 log 145066 140521104197184 Unauthorized: /api/users/
+WARNING 2025-05-03 12:50:41,187 basehttp 145066 140521104197184 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:41,203 log 145066 140521120982592 Too Many Requests: /api/token/refresh/
+WARNING 2025-05-03 12:50:41,204 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 429 69
+WARNING 2025-05-03 12:50:41,221 log 145066 140521104197184 Unauthorized: /api/users/email_verification_status/
+WARNING 2025-05-03 12:50:41,222 basehttp 145066 140521104197184 "GET /api/users/email_verification_status/ HTTP/1.1" 401 172
+WARNING 2025-05-03 12:50:41,277 log 145066 140521120982592 Too Many Requests: /api/token/refresh/
+WARNING 2025-05-03 12:50:41,278 basehttp 145066 140521120982592 "POST /api/token/refresh/ HTTP/1.1" 429 69
+INFO 2025-05-03 12:50:44,038 basehttp 145066 140521120982592 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-03 12:50:44,048 log 145066 140521120982592 Unauthorized: /api/logout/
+WARNING 2025-05-03 12:50:44,049 basehttp 145066 140521120982592 "POST /api/logout/ HTTP/1.1" 401 172
+INFO 2025-05-03 12:50:47,658 basehttp 145066 140521120982592 "OPTIONS /api/login/ HTTP/1.1" 200 0
+WARNING 2025-05-03 12:50:47,666 log 145066 140521120982592 Too Many Requests: /api/login/
+WARNING 2025-05-03 12:50:47,667 basehttp 145066 140521120982592 "POST /api/login/ HTTP/1.1" 429 69
+WARNING 2025-05-03 12:50:53,478 log 145066 140521120982592 Too Many Requests: /api/login/
+WARNING 2025-05-03 12:50:53,478 basehttp 145066 140521120982592 "POST /api/login/ HTTP/1.1" 429 69
+WARNING 2025-05-03 12:51:01,817 log 145066 140521120982592 Too Many Requests: /api/login/
+WARNING 2025-05-03 12:51:01,817 basehttp 145066 140521120982592 "POST /api/login/ HTTP/1.1" 429 69
+INFO 2025-05-03 12:58:14,893 basehttp 145066 140521112589888 "POST /api/login/ HTTP/1.1" 200 663
+INFO 2025-05-03 12:58:14,898 basehttp 145066 140521112589888 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-03 12:58:14,943 basehttp 145066 140521112589888 "GET /api/users/me/ HTTP/1.1" 200 311
+INFO 2025-05-03 12:58:15,021 basehttp 145066 140521112589888 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 12:58:18,943 basehttp 145066 140521104197184 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-03 12:58:18,949 log 145066 140521104197184 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-03 12:58:18,949 basehttp 145066 140521104197184 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-03 12:58:20,993 basehttp 145066 140521112589888 "GET /api/users/1/ HTTP/1.1" 200 311
+INFO 2025-05-03 12:58:20,995 basehttp 145066 140521120982592 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 12:58:21,013 basehttp 145066 140521104197184 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-03 12:58:21,024 log 145066 140521104197184 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-03 12:58:21,024 basehttp 145066 140521104197184 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-03 12:58:23,852 basehttp 145066 140521120982592 "GET /api/users/1/ HTTP/1.1" 200 311
+INFO 2025-05-03 12:58:23,855 basehttp 145066 140521112589888 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 12:58:23,879 basehttp 145066 140521112589888 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 12:58:23,879 basehttp 145066 140521104197184 "GET /api/users/ HTTP/1.1" 200 697
+WARNING 2025-05-03 12:58:23,884 log 145066 140521104197184 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-03 12:58:23,885 basehttp 145066 140521104197184 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-03 12:58:24,883 basehttp 145066 140521112589888 "POST /api/logout/ HTTP/1.1" 200 0
