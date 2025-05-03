@@ -43,6 +43,8 @@ def send_reset_sms(user):
     """
     Send password reset verification code via Twilio Verify
     """
+    print("send reset sms")
+    print(settings.TWILIO_VERIFY_SERVICE_SID)
     try:
         if not user.phone_number:
             logger.warning(f"No phone number found for user {user.username}. Cannot send SMS.")

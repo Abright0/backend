@@ -3,6 +3,10 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.contrib.auth.hashers import make_password
 import uuid
+import phonenumbers
+from django.core.exceptions import ValidationError
+from django.core.validators import RegexValidator
+
 
 class User(AbstractUser):
     # AbstractUser already includes:
@@ -28,7 +32,17 @@ class User(AbstractUser):
     )
 
     # info
-    phone_number = models.CharField(max_length=15, blank=True)
+    phone_number = models.CharField(
+        max_length=15,
+        blank=True,
+        unique=True,
+        validators=[
+            RegexValidator(
+                regex=r'^\+?1?\d{9,15}$',
+                message="Phone number must be in the format: '+999999999'. Up to 15 digits allowed."
+            )
+        ]
+    )
 
     # roles
     is_driver = models.BooleanField(default=False)
@@ -75,3 +89,17 @@ class User(AbstractUser):
         elif self.is_driver:
             roles.append('driver')
         return roles
+
+    def clean(self):
+        super().clean()
+        if self.phone_number:
+            try:
+                parsed = phonenumbers.parse(self.phone_number, 'US')  # Replace 'US' with your default region
+                if not phonenumbers.is_valid_number(parsed):
+                    raise ValidationError({'phone_number': 'Invalid phone number.'})
+                # Format to E.164
+                self.phone_number = phonenumbers.format_number(
+                    parsed, phonenumbers.PhoneNumberFormat.E164
+                )
+            except phonenumbers.NumberParseException:
+                raise ValidationError({'phone_number': 'Could not parse phone number.'})

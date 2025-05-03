@@ -19,6 +19,13 @@ from api.stores.serializers import StoreSerializer
 from api.accounts.utils import send_verification_sms
 from api.accounts.throttles import PasswordResetRateThrottle, VerificationResendRateThrottle
 
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+import logging
+
+
+logger = logging.getLogger(__name__)
+
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.order_by('id')
@@ -119,27 +126,39 @@ class UserViewSet(viewsets.ModelViewSet):
         serializer = StoreSerializer(stores, many=True)
         return Response(serializer.data)
 
-
+@method_decorator(csrf_exempt, name='dispatch')
 class PasswordResetCodeRequestView(APIView):
     permission_classes = [AllowAny]
     throttle_classes = [PasswordResetRateThrottle]
 
     def post(self, request):
+        print(">>> PasswordResetCodeRequestView hit")  # Debug
         serializer = ResetPasswordRequestSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response({"detail": "Verification code sent via SMS"})
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-
 class PasswordResetCodeConfirmView(APIView):
     permission_classes = [AllowAny]
 
     def post(self, request):
+        print("request data: ", request.data)
+        phone_number = request.data.get("phone_number", "[missing]")
+        code = request.data.get("code", "[missing]")
+        ip = request.META.get("REMOTE_ADDR")
+
+        masked_phone = f"***{phone_number[-4:]}" if len(phone_number) >= 4 else "[invalid]"
+
+        logger.info(f"Password reset confirm attempt from {ip} for {masked_phone} using code: {code}")
+
         serializer = ResetPasswordConfirmSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
+            logger.info(f"Password reset successful for {masked_phone} (IP: {ip})")
             return Response({"detail": "Password successfully reset"})
+
+        logger.warning(f"Password reset confirm failed for {masked_phone} (IP: {ip}): {serializer.errors}")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 

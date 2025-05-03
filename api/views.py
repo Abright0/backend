@@ -64,7 +64,6 @@ class LoginView(TokenObtainPairView):
 
         return response
 
-
 class LogoutView(APIView):
     permission_classes = [IsAuthenticated]
 

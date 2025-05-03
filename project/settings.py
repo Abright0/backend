@@ -1,6 +1,11 @@
 from datetime import timedelta
 import os
+from dotenv import load_dotenv
 import json
+
+load_dotenv(dotenv_path=os.path.join('/home/abright/Work/FarmFreight/backend', '.env'))
+
+
 print("🔥 GCS settings.py loaded")
 print("RAILWAY_ENVIRONMENT =", os.environ.get('RAILWAY_ENVIRONMENT'))
 
@@ -27,6 +32,8 @@ from google.oauth2 import service_account
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 GS_BUCKET_NAME = 'farm-freight'
+
+
 # Define the path to your service account key file
 
 # Check if using environment variable or file path
@@ -57,15 +64,13 @@ APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
 APSCHEDULER_RUN_NOW_TIMEOUT = 25
 
 
-# Core Twilio credentials
+
 TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
-TWILIO_AUTH_TOKEN  = os.getenv("TWILIO_AUTH_TOKEN")
-
-# Twilio Verify service (used by both send_reset_sms & check_reset_code)
+TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
 TWILIO_VERIFY_SERVICE_SID = os.getenv("TWILIO_VERIFY_SERVICE_SID")
+TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")  # optional
 
-# (Optional) if you also send outbound SMS from a phone number
-TWILIO_PHONE_NUMBER = os.getenv("TWILIO_PHONE_NUMBER")
+
 
 
 # Create credentials object
@@ -208,6 +213,7 @@ MIDDLEWARE = [
 CSRF_TRUSTED_ORIGINS = [
     "https://backend-production-5f3d.up.railway.app",   
     "https://frontend-production-953d.up.railway.app",
+    "http://localhost:3000"
 ]
 
 CORS_ALLOW_CREDENTIALS = True  # If you need to send cookies
@@ -307,6 +313,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 5, 
+        }
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',

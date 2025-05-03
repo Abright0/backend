@@ -147,18 +147,17 @@ class ResetPasswordRequestSerializer(serializers.Serializer):
 
     def validate_phone_number(self, value):
         try:
-            User.objects.get(phone_number=value)
+            self.user = User.objects.get(phone_number=value)
         except User.DoesNotExist:
             raise serializers.ValidationError("User with this phone number does not exist.")
         return value
 
     def save(self):
-        phone_number = self.validated_data['phone_number']
-        user = User.objects.get(phone_number=phone_number)
-        success = send_reset_sms(user)
+        success = send_reset_sms(self.user)
         if not success:
             raise serializers.ValidationError("Failed to send reset code.")
         return True
+
 
 class ResetPasswordConfirmSerializer(serializers.Serializer):
     phone_number = serializers.CharField()

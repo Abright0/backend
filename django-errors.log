@@ -8253,3 +8253,532 @@ INFO 2025-05-03 16:42:54,722 basehttp 9579 140161215153728 "POST /api/logout/ HT
 INFO 2025-05-03 16:48:00,974 basehttp 9579 140161215153728 "POST /api/login/ HTTP/1.1" 200 482
 INFO 2025-05-03 16:48:00,987 basehttp 9579 140161215153728 "GET /api/users/1/stores/ HTTP/1.1" 200 523
 INFO 2025-05-03 16:48:11,878 basehttp 9579 140161215153728 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-03 16:52:02,958 basehttp 9579 140161215153728 "OPTIONS /api/users/request_password_reset/ HTTP/1.1" 200 0
+WARNING 2025-05-03 16:52:02,961 log 9579 140161206761024 Unauthorized: /api/users/request_password_reset/
+WARNING 2025-05-03 16:52:02,961 basehttp 9579 140161206761024 "POST /api/users/request_password_reset/ HTTP/1.1" 401 58
+INFO 2025-05-03 16:52:02,965 basehttp 9579 140161215153728 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-03 16:52:03,016 log 9579 140161206761024 Bad Request: /api/token/refresh/
+WARNING 2025-05-03 16:52:03,017 basehttp 9579 140161206761024 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-03 16:55:42,500 autoreload 9579 140161391239168 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:55:42,969 autoreload 10151 140561698742272 Watching for file changes with StatReloader
+INFO 2025-05-03 18:04:05,704 basehttp 10151 140561522579008 "OPTIONS /api/password-reset/code/ HTTP/1.1" 200 0
+WARNING 2025-05-03 18:04:05,725 log 10151 140561514186304 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:04:05,726 basehttp 10151 140561514186304 "POST /api/password-reset/code/ HTTP/1.1" 400 64
+ERROR 2025-05-03 18:05:11,834 utils 10151 140561514186304 Error sending Twilio verification code to 4692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/None/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - No credentials provided[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+WARNING 2025-05-03 18:05:11,835 log 10151 140561514186304 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:05:11,835 basehttp 10151 140561514186304 "POST /api/password-reset/code/ HTTP/1.1" 400 30
+INFO 2025-05-03 18:06:12,700 autoreload 10151 140561698742272 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-05-03 18:06:13,180 autoreload 13776 140685018255360 Watching for file changes with StatReloader
+ERROR 2025-05-03 18:06:13,726 utils 13776 140684840453696 Error sending Twilio verification code to 4692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/None/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - No credentials provided[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+WARNING 2025-05-03 18:06:13,729 log 13776 140684840453696 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:06:13,730 basehttp 13776 140684840453696 "POST /api/password-reset/code/ HTTP/1.1" 400 30
+INFO 2025-05-03 18:09:30,900 autoreload 13776 140685018255360 /home/abright/Work/FarmFreight/backend/api/accounts/utils.py changed, reloading.
+INFO 2025-05-03 18:09:31,392 autoreload 13933 140023784017920 Watching for file changes with StatReloader
+ERROR 2025-05-03 18:09:36,303 utils 13933 140023606330944 Error sending Twilio verification code to 4692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/None/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - No credentials provided[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+WARNING 2025-05-03 18:09:36,305 log 13933 140023606330944 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:09:36,306 basehttp 13933 140023606330944 "POST /api/password-reset/code/ HTTP/1.1" 400 30
+INFO 2025-05-03 18:09:48,308 autoreload 13933 140023784017920 /home/abright/Work/FarmFreight/backend/api/accounts/utils.py changed, reloading.
+INFO 2025-05-03 18:09:48,767 autoreload 14002 140501229506560 Watching for file changes with StatReloader
+ERROR 2025-05-03 18:09:50,322 utils 14002 140501053298240 Error sending Twilio verification code to 4692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/None/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - No credentials provided[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+WARNING 2025-05-03 18:09:50,325 log 14002 140501053298240 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:09:50,326 basehttp 14002 140501053298240 "POST /api/password-reset/code/ HTTP/1.1" 400 30
+INFO 2025-05-03 18:11:42,709 autoreload 14002 140501229506560 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:11:43,215 autoreload 14094 139688257024000 Watching for file changes with StatReloader
+INFO 2025-05-03 18:12:24,503 autoreload 14094 139688257024000 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:12:24,943 autoreload 14120 139730357673984 Watching for file changes with StatReloader
+INFO 2025-05-03 18:12:32,281 autoreload 14120 139730357673984 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:12:32,769 autoreload 14138 139660624203776 Watching for file changes with StatReloader
+INFO 2025-05-03 18:13:00,702 autoreload 14168 139663496060928 Watching for file changes with StatReloader
+INFO 2025-05-03 18:13:52,269 autoreload 14168 139663496060928 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:13:52,716 autoreload 14225 140494896951296 Watching for file changes with StatReloader
+INFO 2025-05-03 18:14:10,346 autoreload 14225 140494896951296 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:14:10,826 autoreload 14259 140363811807232 Watching for file changes with StatReloader
+INFO 2025-05-03 18:14:54,049 autoreload 14259 140363811807232 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:14:54,495 autoreload 14305 140084821843968 Watching for file changes with StatReloader
+INFO 2025-05-03 18:15:21,603 autoreload 14305 140084821843968 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-05-03 18:15:22,104 autoreload 14342 140341188354048 Watching for file changes with StatReloader
+INFO 2025-05-03 18:15:29,673 autoreload 14342 140341188354048 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-05-03 18:15:30,132 autoreload 14363 140573563031552 Watching for file changes with StatReloader
+INFO 2025-05-03 18:15:36,591 basehttp 14363 140573385213504 "OPTIONS /api/password-reset/code/ HTTP/1.1" 200 0
+ERROR 2025-05-03 18:15:36,816 utils 14363 140573376820800 Error sending Twilio verification code to 4692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/None/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - No credentials provided[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+WARNING 2025-05-03 18:15:36,817 log 14363 140573376820800 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:15:36,817 basehttp 14363 140573376820800 "POST /api/password-reset/code/ HTTP/1.1" 400 30
+WARNING 2025-05-03 18:15:56,408 log 14363 140573376820800 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:15:56,409 basehttp 14363 140573376820800 "POST /api/password-reset/code/ HTTP/1.1" 400 64
+INFO 2025-05-03 18:16:04,837 autoreload 14391 140060403167232 Watching for file changes with StatReloader
+WARNING 2025-05-03 18:16:06,197 log 14391 140060225697344 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:16:06,198 basehttp 14391 140060225697344 "POST /api/password-reset/code/ HTTP/1.1" 400 64
+ERROR 2025-05-03 18:16:16,817 utils 14391 140060225697344 Error sending Twilio verification code to 4692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/None/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - No credentials provided[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+WARNING 2025-05-03 18:16:16,818 log 14391 140060225697344 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:16:16,818 basehttp 14391 140060225697344 "POST /api/password-reset/code/ HTTP/1.1" 400 30
+INFO 2025-05-03 18:16:40,509 autoreload 14391 140060403167232 /home/abright/Work/FarmFreight/backend/api/accounts/utils.py changed, reloading.
+INFO 2025-05-03 18:16:40,942 autoreload 14461 140119717539840 Watching for file changes with StatReloader
+INFO 2025-05-03 18:23:36,287 autoreload 15632 140424952807424 Watching for file changes with StatReloader
+INFO 2025-05-03 18:23:45,028 autoreload 15645 139770713292800 Watching for file changes with StatReloader
+WARNING 2025-05-03 18:23:51,919 log 15645 139770537756224 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:23:51,919 basehttp 15645 139770537756224 "POST /api/password-reset/code/ HTTP/1.1" 400 64
+ERROR 2025-05-03 18:24:11,807 utils 15645 139770537756224 Error sending Twilio verification code to 4692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/None/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - No credentials provided[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+WARNING 2025-05-03 18:24:11,808 log 15645 139770537756224 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:24:11,809 basehttp 15645 139770537756224 "POST /api/password-reset/code/ HTTP/1.1" 400 30
+INFO 2025-05-03 18:26:13,879 basehttp 15645 139770537756224 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 18:26:13,892 basehttp 15645 139770537756224 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 18:26:15,444 basehttp 15645 139770527266368 "OPTIONS /api/users/ HTTP/1.1" 200 0
+ERROR 2025-05-03 18:26:15,471 log 15645 139770537756224 Internal Server Error: /api/users/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 44, in get_roles
+    return obj.get_roles()
+  File "/home/abright/Work/FarmFreight/backend/accounts/models.py", line 67, in get_roles
+    if self.is_manager and self.is_customer_service and self.is_driver:
+AttributeError: 'User' object has no attribute 'is_manager'
+ERROR 2025-05-03 18:26:15,473 basehttp 15645 139770537756224 "GET /api/users/ HTTP/1.1" 500 23297
+INFO 2025-05-03 18:26:15,480 basehttp 15645 139770527266368 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+WARNING 2025-05-03 18:26:15,526 log 15645 139770537756224 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-03 18:26:15,526 basehttp 15645 139770537756224 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+ERROR 2025-05-03 18:26:16,442 log 15645 139770537756224 Internal Server Error: /api/users/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 44, in get_roles
+    return obj.get_roles()
+  File "/home/abright/Work/FarmFreight/backend/accounts/models.py", line 67, in get_roles
+    if self.is_manager and self.is_customer_service and self.is_driver:
+AttributeError: 'User' object has no attribute 'is_manager'
+ERROR 2025-05-03 18:26:16,443 basehttp 15645 139770537756224 "GET /api/users/ HTTP/1.1" 500 23319
+WARNING 2025-05-03 18:26:16,452 log 15645 139770537756224 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-03 18:26:16,453 basehttp 15645 139770537756224 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-03 18:26:26,997 basehttp 15645 139770537756224 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-03 18:26:35,956 basehttp 15645 139770449622592 "GET /admin HTTP/1.1" 301 0
+INFO 2025-05-03 18:26:35,997 basehttp 15645 139770449622592 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-05-03 18:26:36,169 basehttp 15645 139770449622592 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 9906
+WARNING 2025-05-03 18:26:36,489 log 15645 139770449622592 Not Found: /favicon.ico
+WARNING 2025-05-03 18:26:36,489 basehttp 15645 139770449622592 "GET /favicon.ico HTTP/1.1" 404 2525
+INFO 2025-05-03 18:26:40,065 basehttp 15645 139770449622592 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-05-03 18:26:40,226 basehttp 15645 139770449622592 "GET /admin/ HTTP/1.1" 200 20391
+INFO 2025-05-03 18:26:43,487 basehttp 15645 139770449622592 "GET /admin/accounts/user/ HTTP/1.1" 200 44647
+INFO 2025-05-03 18:26:43,519 basehttp 15645 139770449622592 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-03 18:26:45,991 basehttp 15645 139770449622592 "GET /admin/accounts/user/1/change/ HTTP/1.1" 200 55370
+INFO 2025-05-03 18:26:46,027 basehttp 15645 139770449622592 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-03 18:26:54,519 basehttp 15645 139770449622592 "GET /admin/accounts/user/ HTTP/1.1" 200 44647
+INFO 2025-05-03 18:26:56,269 basehttp 15645 139770449622592 "GET /admin/accounts/user/2/change/ HTTP/1.1" 200 55363
+INFO 2025-05-03 18:26:56,304 basehttp 15645 139770449622592 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-03 18:27:46,313 autoreload 15645 139770713292800 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-03 18:27:46,784 autoreload 15813 140569665966080 Watching for file changes with StatReloader
+INFO 2025-05-03 18:27:48,099 autoreload 15813 140569665966080 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-03 18:27:48,528 autoreload 15820 140264571637760 Watching for file changes with StatReloader
+INFO 2025-05-03 18:28:19,844 autoreload 15843 140101754036224 Watching for file changes with StatReloader
+INFO 2025-05-03 18:29:17,736 autoreload 15843 140101754036224 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-03 18:29:18,079 autoreload 15876 140596264521728 Watching for file changes with StatReloader
+INFO 2025-05-03 18:30:38,167 autoreload 15876 140596264521728 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-03 18:30:38,450 autoreload 15933 140683796029440 Watching for file changes with StatReloader
+INFO 2025-05-03 18:30:46,824 autoreload 15933 140683796029440 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-03 18:30:47,117 autoreload 15956 139675156926464 Watching for file changes with StatReloader
+INFO 2025-05-03 18:31:28,852 autoreload 15956 139675156926464 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-03 18:31:29,170 autoreload 15981 140567735386112 Watching for file changes with StatReloader
+INFO 2025-05-03 18:31:31,487 autoreload 15981 140567735386112 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-03 18:31:31,773 autoreload 15998 139725478731776 Watching for file changes with StatReloader
+INFO 2025-05-03 18:32:22,585 autoreload 15998 139725478731776 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-03 18:32:22,891 autoreload 16170 139659805151232 Watching for file changes with StatReloader
+INFO 2025-05-03 18:33:17,402 autoreload 16508 140593259270144 Watching for file changes with StatReloader
+INFO 2025-05-03 18:33:22,289 basehttp 16508 140593149822528 "GET /admin/accounts/user/2/change/ HTTP/1.1" 200 55363
+INFO 2025-05-03 18:33:22,328 basehttp 16508 140593149822528 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-03 18:33:29,218 basehttp 16508 140593149822528 "POST /admin/accounts/user/2/change/ HTTP/1.1" 302 0
+INFO 2025-05-03 18:33:29,822 basehttp 16508 140593149822528 "GET /admin/accounts/user/ HTTP/1.1" 200 44846
+INFO 2025-05-03 18:33:29,856 basehttp 16508 140593149822528 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-03 18:33:32,338 basehttp 16508 140593149822528 "GET /admin/accounts/user/2/change/ HTTP/1.1" 200 55365
+INFO 2025-05-03 18:33:32,370 basehttp 16508 140593149822528 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-05-03 18:33:36,513 basehttp 16508 140593070077504 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 18:33:36,526 basehttp 16508 140593070077504 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 18:33:38,308 basehttp 16508 140593070077504 "POST /api/logout/ HTTP/1.1" 200 31
+WARNING 2025-05-03 18:33:42,672 log 16508 140593070077504 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 18:33:42,673 basehttp 16508 140593070077504 "POST /api/password-reset/code/ HTTP/1.1" 403 108
+INFO 2025-05-03 18:34:35,483 autoreload 16508 140593259270144 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 18:36:44,460 autoreload 17037 139839559389184 Watching for file changes with StatReloader
+INFO 2025-05-03 18:36:46,509 basehttp 17037 139839450170944 "OPTIONS /api/password-reset/code/ HTTP/1.1" 200 0
+ERROR 2025-05-03 18:36:46,738 utils 17037 139839370425920 Error sending Twilio verification code to +14692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/None/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - No credentials provided[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+WARNING 2025-05-03 18:36:46,741 log 17037 139839370425920 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 18:36:46,742 basehttp 17037 139839370425920 "POST /api/password-reset/code/ HTTP/1.1" 400 30
+WARNING 2025-05-03 18:36:59,556 log 17037 139839450170944 Not Found: /
+WARNING 2025-05-03 18:36:59,557 basehttp 17037 139839450170944 "GET / HTTP/1.1" 404 2474
+WARNING 2025-05-03 18:36:59,617 log 17037 139839450170944 Not Found: /favicon.ico
+INFO 2025-05-03 18:37:08,187 basehttp 17037 139839450170944 "OPTIONS /api/password-reset/code/ HTTP/1.1" 200 0
+WARNING 2025-05-03 18:37:08,196 log 17037 139839370425920 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 18:37:08,196 basehttp 17037 139839370425920 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+WARNING 2025-05-03 18:37:16,881 log 17037 139839370425920 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 18:37:16,881 basehttp 17037 139839370425920 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 18:44:57,492 basehttp 17037 139839370425920 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-03 18:44:57,956 basehttp 17037 139839450170944 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 18:44:57,966 basehttp 17037 139839370425920 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-03 18:44:57,974 basehttp 17037 139839450170944 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 18:45:00,357 basehttp 17037 139839370425920 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+INFO 2025-05-03 18:45:00,378 basehttp 17037 139839450170944 "POST /api/logout/ HTTP/1.1" 200 31
+WARNING 2025-05-03 18:45:07,885 log 17037 139839450170944 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 18:45:07,886 basehttp 17037 139839450170944 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+WARNING 2025-05-03 18:45:14,647 log 17037 139839450170944 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 18:45:14,648 basehttp 17037 139839450170944 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 18:46:40,830 autoreload 17037 139839559389184 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 18:46:41,315 autoreload 17825 139682268749824 Watching for file changes with StatReloader
+INFO 2025-05-03 18:46:42,623 autoreload 17825 139682268749824 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 18:46:43,055 autoreload 17828 140189479350272 Watching for file changes with StatReloader
+INFO 2025-05-03 18:46:49,512 autoreload 17828 140189479350272 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 18:46:50,020 autoreload 17855 139995708366848 Watching for file changes with StatReloader
+INFO 2025-05-03 18:47:02,758 autoreload 17855 139995708366848 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 18:47:03,223 autoreload 17882 140067924025344 Watching for file changes with StatReloader
+INFO 2025-05-03 18:47:11,885 autoreload 17882 140067924025344 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 18:47:12,349 autoreload 17902 139649345622016 Watching for file changes with StatReloader
+INFO 2025-05-03 18:47:17,995 basehttp 17902 139649169184320 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 18:47:18,009 basehttp 17902 139649169184320 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 18:47:18,738 basehttp 17902 139649169184320 "POST /api/logout/ HTTP/1.1" 200 31
+WARNING 2025-05-03 18:47:22,427 log 17902 139649169184320 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 18:47:22,429 basehttp 17902 139649169184320 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 18:47:36,640 autoreload 17935 140545646419968 Watching for file changes with StatReloader
+WARNING 2025-05-03 18:47:38,925 log 17935 140545470064192 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 18:47:38,925 basehttp 17935 140545470064192 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 18:51:51,823 autoreload 17935 140545646419968 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:51:52,333 autoreload 18011 140135795482624 Watching for file changes with StatReloader
+INFO 2025-05-03 18:52:01,946 autoreload 18011 140135795482624 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:52:02,470 autoreload 18034 140450701246464 Watching for file changes with StatReloader
+WARNING 2025-05-03 18:52:11,437 log 18034 140450525660736 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 18:52:11,438 basehttp 18034 140450525660736 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 18:52:51,522 autoreload 18083 140168948137984 Watching for file changes with StatReloader
+INFO 2025-05-03 18:53:07,384 autoreload 18083 140168948137984 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:53:07,850 autoreload 18112 140536288194560 Watching for file changes with StatReloader
+INFO 2025-05-03 18:53:11,169 autoreload 18112 140536288194560 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:53:11,629 autoreload 18134 140022638469120 Watching for file changes with StatReloader
+INFO 2025-05-03 18:53:24,224 autoreload 18134 140022638469120 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:53:24,685 autoreload 18158 139834994941952 Watching for file changes with StatReloader
+INFO 2025-05-03 18:53:34,221 autoreload 18158 139834994941952 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:53:34,656 autoreload 18180 139848198471680 Watching for file changes with StatReloader
+INFO 2025-05-03 18:55:09,481 autoreload 18180 139848198471680 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 18:55:09,988 autoreload 18265 140149436813312 Watching for file changes with StatReloader
+WARNING 2025-05-03 18:55:15,026 log 18265 140149260244544 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 18:55:15,026 basehttp 18265 140149260244544 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 18:55:32,875 autoreload 18278 139800356499456 Watching for file changes with StatReloader
+WARNING 2025-05-03 18:55:42,423 log 18278 139800178849344 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 18:55:42,424 basehttp 18278 139800178849344 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+WARNING 2025-05-03 19:01:42,071 log 18278 139800178849344 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:01:42,072 basehttp 18278 139800178849344 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+WARNING 2025-05-03 19:04:08,345 log 18278 139800178849344 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:04:08,346 basehttp 18278 139800178849344 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+WARNING 2025-05-03 19:09:43,300 log 18278 139800178849344 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:09:43,300 basehttp 18278 139800178849344 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 19:09:53,369 autoreload 18852 139776693579776 Watching for file changes with StatReloader
+WARNING 2025-05-03 19:09:57,037 log 18278 139800178849344 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:09:57,038 basehttp 18278 139800178849344 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 19:11:07,756 autoreload 18278 139800356499456 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 19:11:08,276 autoreload 18939 140282794053632 Watching for file changes with StatReloader
+WARNING 2025-05-03 19:11:08,695 log 18939 140282618140224 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:11:08,695 basehttp 18939 140282618140224 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 19:11:15,709 autoreload 19023 139882057596928 Watching for file changes with StatReloader
+WARNING 2025-05-03 19:11:35,538 log 18939 140282618140224 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:11:35,538 basehttp 18939 140282618140224 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 19:12:06,575 autoreload 18939 140282794053632 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 19:12:07,090 autoreload 19091 140349744046080 Watching for file changes with StatReloader
+WARNING 2025-05-03 19:12:10,556 log 19091 140349564569152 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:12:10,556 basehttp 19091 140349564569152 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 19:12:27,282 autoreload 19180 140015675179008 Watching for file changes with StatReloader
+INFO 2025-05-03 19:12:29,241 autoreload 19186 140476350586880 Watching for file changes with StatReloader
+WARNING 2025-05-03 19:12:38,053 log 19186 140476243035712 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:12:38,053 basehttp 19186 140476243035712 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+ERROR 2025-05-03 19:13:01,039 utils 19186 140476166436416 Error sending Twilio verification code to +14692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/None/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - No credentials provided[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+WARNING 2025-05-03 19:13:01,040 log 19186 140476166436416 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 19:13:01,041 basehttp 19186 140476166436416 "POST /api/password-reset/code/ HTTP/1.1" 400 30
+WARNING 2025-05-03 19:13:19,776 log 19186 140476243035712 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:13:19,777 basehttp 19186 140476243035712 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 19:14:59,383 autoreload 19186 140476350586880 /home/abright/Work/FarmFreight/backend/api/accounts/utils.py changed, reloading.
+INFO 2025-05-03 19:14:59,866 autoreload 19588 140444656238592 Watching for file changes with StatReloader
+INFO 2025-05-03 19:15:03,283 autoreload 19588 140444656238592 /home/abright/Work/FarmFreight/backend/api/accounts/utils.py changed, reloading.
+INFO 2025-05-03 19:15:03,754 autoreload 19609 139633413492736 Watching for file changes with StatReloader
+WARNING 2025-05-03 19:15:10,842 log 19609 139633236166208 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:15:10,842 basehttp 19609 139633236166208 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 19:15:16,697 autoreload 19630 140095901401088 Watching for file changes with StatReloader
+INFO 2025-05-03 19:15:21,382 autoreload 19638 140356061913088 Watching for file changes with StatReloader
+WARNING 2025-05-03 19:15:22,690 log 19638 140355885385280 Forbidden: /api/password-reset/code/
+WARNING 2025-05-03 19:15:22,691 basehttp 19638 140355885385280 "POST /api/password-reset/code/ HTTP/1.1" 403 45
+INFO 2025-05-03 19:15:48,855 basehttp 19638 140355885385280 "OPTIONS /api/password-reset/code/ HTTP/1.1" 200 0
+ERROR 2025-05-03 19:15:49,117 utils 19638 140355875944000 Error sending Twilio verification code to +14692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/None/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Authentication Error - No credentials provided[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20003[0m
+
+
+WARNING 2025-05-03 19:15:49,117 log 19638 140355875944000 Bad Request: /api/password-reset/code/
+WARNING 2025-05-03 19:15:49,118 basehttp 19638 140355875944000 "POST /api/password-reset/code/ HTTP/1.1" 400 30
+INFO 2025-05-03 19:17:04,826 autoreload 19638 140356061913088 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 19:17:05,357 autoreload 19813 140043269386240 Watching for file changes with StatReloader
+INFO 2025-05-03 19:18:05,860 autoreload 19813 140043269386240 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 19:18:06,397 autoreload 20076 140115484770304 Watching for file changes with StatReloader
+INFO 2025-05-03 19:18:12,980 autoreload 20080 139731908218880 Watching for file changes with StatReloader
+INFO 2025-05-03 19:18:41,323 autoreload 20080 139731908218880 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 19:19:17,571 autoreload 20235 140217002266624 Watching for file changes with StatReloader
+INFO 2025-05-03 19:19:34,463 autoreload 20235 140217002266624 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 19:19:43,194 autoreload 20315 140256020692992 Watching for file changes with StatReloader
+INFO 2025-05-03 19:20:04,327 autoreload 20315 140256020692992 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 19:20:04,853 autoreload 20341 140550279860224 Watching for file changes with StatReloader
+INFO 2025-05-03 19:20:14,284 autoreload 20359 139630609739776 Watching for file changes with StatReloader
+INFO 2025-05-03 19:22:20,286 autoreload 20359 139630609739776 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 19:22:20,754 autoreload 20634 139859727982592 Watching for file changes with StatReloader
+INFO 2025-05-03 19:22:27,318 autoreload 20634 139859727982592 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 19:22:27,857 autoreload 20661 140643177619456 Watching for file changes with StatReloader
+INFO 2025-05-03 19:22:42,270 utils 20661 140642999072320 Password reset verification code sent to +14692478210. Status: pending
+INFO 2025-05-03 19:22:42,273 basehttp 20661 140642999072320 "POST /api/password-reset/code/ HTTP/1.1" 200 43
+INFO 2025-05-03 19:23:10,412 basehttp 20661 140642989631040 "OPTIONS /api/password-reset/confirm/ HTTP/1.1" 200 0
+INFO 2025-05-03 19:23:10,419 views 20661 140642999072320 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 016803
+WARNING 2025-05-03 19:23:10,740 views 20661 140642999072320 Password reset confirm failed for ***8210 (IP: 127.0.0.1): {'new_password': [ErrorDetail(string='This password is too common.', code='invalid')]}
+WARNING 2025-05-03 19:23:10,742 log 20661 140642999072320 Bad Request: /api/password-reset/confirm/
+WARNING 2025-05-03 19:23:10,742 basehttp 20661 140642999072320 "POST /api/password-reset/confirm/ HTTP/1.1" 400 49
+INFO 2025-05-03 19:25:42,570 autoreload 20661 140643177619456 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 19:25:43,076 autoreload 20880 140692306513920 Watching for file changes with StatReloader
+INFO 2025-05-03 19:25:45,717 views 20880 140692198311488 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 016803
+ERROR 2025-05-03 19:25:45,966 utils 20880 140692198311488 Error verifying reset code for +14692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/VA592981ff5895993460d99ec28fe4ca78/VerificationCheck[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The requested resource /Services/VA592981ff5895993460d99ec28fe4ca78/VerificationCheck was not found[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20404[0m
+
+
+WARNING 2025-05-03 19:25:45,967 views 20880 140692198311488 Password reset confirm failed for ***8210 (IP: 127.0.0.1): {'non_field_errors': [ErrorDetail(string='Invalid or expired code.', code='invalid')]}
+WARNING 2025-05-03 19:25:45,968 log 20880 140692198311488 Bad Request: /api/password-reset/confirm/
+WARNING 2025-05-03 19:25:45,969 basehttp 20880 140692198311488 "POST /api/password-reset/confirm/ HTTP/1.1" 400 49
+INFO 2025-05-03 19:26:57,408 autoreload 20974 140520020221952 Watching for file changes with StatReloader
+INFO 2025-05-03 19:29:26,343 utils 20974 140519843780160 Password reset verification code sent to +14692478210. Status: pending
+INFO 2025-05-03 19:29:26,348 basehttp 20974 140519843780160 "POST /api/password-reset/code/ HTTP/1.1" 200 43
+INFO 2025-05-03 19:29:43,342 views 20974 140519843780160 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 412133
+WARNING 2025-05-03 19:29:43,542 views 20974 140519843780160 Password reset confirm failed for ***8210 (IP: 127.0.0.1): {'new_password': [ErrorDetail(string='This password is too common.', code='invalid')]}
+WARNING 2025-05-03 19:29:43,543 log 20974 140519843780160 Bad Request: /api/password-reset/confirm/
+WARNING 2025-05-03 19:29:43,544 basehttp 20974 140519843780160 "POST /api/password-reset/confirm/ HTTP/1.1" 400 49
+INFO 2025-05-03 19:32:07,282 views 20974 140519843780160 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 412133
+ERROR 2025-05-03 19:32:07,517 utils 20974 140519843780160 Error verifying reset code for +14692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/VA592981ff5895993460d99ec28fe4ca78/VerificationCheck[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The requested resource /Services/VA592981ff5895993460d99ec28fe4ca78/VerificationCheck was not found[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20404[0m
+
+
+WARNING 2025-05-03 19:32:07,518 views 20974 140519843780160 Password reset confirm failed for ***8210 (IP: 127.0.0.1): {'non_field_errors': [ErrorDetail(string='Invalid or expired code.', code='invalid')]}
+WARNING 2025-05-03 19:32:07,520 log 20974 140519843780160 Bad Request: /api/password-reset/confirm/
+WARNING 2025-05-03 19:32:07,521 basehttp 20974 140519843780160 "POST /api/password-reset/confirm/ HTTP/1.1" 400 49
+INFO 2025-05-03 19:32:19,179 utils 20974 140519843780160 Password reset verification code sent to +14692478210. Status: pending
+INFO 2025-05-03 19:32:19,180 basehttp 20974 140519843780160 "POST /api/password-reset/code/ HTTP/1.1" 200 43
+INFO 2025-05-03 19:32:33,848 views 20974 140519843780160 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 722949
+WARNING 2025-05-03 19:32:34,009 views 20974 140519843780160 Password reset confirm failed for ***8210 (IP: 127.0.0.1): {'new_password': [ErrorDetail(string='This password is too common.', code='invalid')]}
+WARNING 2025-05-03 19:32:34,010 log 20974 140519843780160 Bad Request: /api/password-reset/confirm/
+WARNING 2025-05-03 19:32:34,010 basehttp 20974 140519843780160 "POST /api/password-reset/confirm/ HTTP/1.1" 400 49
+INFO 2025-05-03 19:32:47,867 utils 20974 140519843780160 Password reset verification code sent to +14692478210. Status: pending
+INFO 2025-05-03 19:32:47,867 basehttp 20974 140519843780160 "POST /api/password-reset/code/ HTTP/1.1" 200 43
+INFO 2025-05-03 19:33:08,201 views 20974 140519843780160 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 216646
+INFO 2025-05-03 19:33:08,903 views 20974 140519843780160 Password reset successful for ***8210 (IP: 127.0.0.1)
+INFO 2025-05-03 19:33:08,903 basehttp 20974 140519843780160 "POST /api/password-reset/confirm/ HTTP/1.1" 200 40
+INFO 2025-05-03 19:33:14,270 basehttp 20974 140519829612096 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-03 19:33:14,720 basehttp 20974 140519843780160 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-03 19:33:14,758 basehttp 20974 140519829612096 "OPTIONS /api/users/2/stores/ HTTP/1.1" 200 0
+INFO 2025-05-03 19:33:14,765 basehttp 20974 140519843780160 "GET /api/users/2/stores/ HTTP/1.1" 200 132
+INFO 2025-05-03 19:33:15,000 basehttp 20974 140519829612096 "OPTIONS /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+WARNING 2025-05-03 19:33:15,013 log 20974 140519843780160 Not Found: /api/orders/
+WARNING 2025-05-03 19:33:15,013 basehttp 20974 140519843780160 "GET /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+WARNING 2025-05-03 19:33:20,632 log 20974 140519843780160 Not Found: /api/orders/
+WARNING 2025-05-03 19:33:20,632 basehttp 20974 140519843780160 "GET /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+WARNING 2025-05-03 19:33:23,411 log 20974 140519843780160 Not Found: /api/orders/
+WARNING 2025-05-03 19:33:23,412 basehttp 20974 140519843780160 "GET /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+INFO 2025-05-03 19:33:37,618 basehttp 20974 140519829612096 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+INFO 2025-05-03 19:33:37,629 basehttp 20974 140519843780160 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-03 19:36:25,457 autoreload 20974 140520020221952 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 19:36:26,007 autoreload 21576 140445077630976 Watching for file changes with StatReloader
+INFO 2025-05-03 19:36:32,575 autoreload 21576 140445077630976 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 19:36:33,081 autoreload 21605 139704633303040 Watching for file changes with StatReloader
