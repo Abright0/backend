@@ -2,7 +2,6 @@ from django.shortcuts import get_object_or_404
 from django.utils import timezone
 from django.conf import settings
 import uuid
-import re
 
 from rest_framework import viewsets, status
 from rest_framework.permissions import IsAuthenticated, AllowAny
@@ -51,7 +50,7 @@ class UserViewSet(viewsets.ModelViewSet):
         user = self.get_object()
 
         if user != request.user and not request.user.is_superuser:
-            if request.user.is_manager:
+            if request.user.is_store_manager or request.user.is_warehouse_manager or request.user.is_inside_manager:
                 manager_store_ids = request.user.stores.values_list('id', flat=True)
                 target_store_ids = user.stores.values_list('id', flat=True)
                 if not set(target_store_ids).intersection(manager_store_ids):
@@ -86,7 +85,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['get'])
     def sms_verification_status(self, request):
-        if not (request.user.is_superuser or request.user.is_manager):
+        if not (request.user.is_superuser or request.user.is_store_manager or request.user.is_warehouse_manager or request.user.is_inside_manager):
             return Response({"detail": "You do not have permission to access this resource"},
                             status=status.HTTP_403_FORBIDDEN)
         users = User.objects.all()
@@ -95,7 +94,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['post'], throttle_classes=[VerificationResendRateThrottle])
     def resend_verification(self, request, pk=None):
-        if not (request.user.is_superuser or request.user.is_manager):
+        if not (request.user.is_superuser or request.user.is_store_manager or request.user.is_warehouse_manager or request.user.is_inside_manager):
             return Response({"detail": "You do not have permission to access this resource"},
                             status=status.HTTP_403_FORBIDDEN)
         user = self.get_object()

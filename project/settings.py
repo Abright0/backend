@@ -183,7 +183,7 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),       # 15 minute sessions
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),          # Refresh token valid for 1 day
-    'ROTATE_REFRESH_TOKENS': True,                       # Optional rotation logic (off here)
+    'ROTATE_REFRESH_TOKENS': False,                       # Optional rotation logic (off here)
     'BLACKLIST_AFTER_ROTATION': True,                     # Refresh token gets blacklisted if rotation happens
 }
 
@@ -375,6 +375,10 @@ LOGGING = {
             'filename': 'django-errors.log',
             'formatter': 'verbose',
         },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
     },
     'loggers': {
         'django': {

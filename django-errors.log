@@ -7739,3 +7739,517 @@ INFO 2025-05-03 12:58:23,879 basehttp 145066 140521104197184 "GET /api/users/ HT
 WARNING 2025-05-03 12:58:23,884 log 145066 140521104197184 Not Found: /api/users/email_verification_status/
 WARNING 2025-05-03 12:58:23,885 basehttp 145066 140521104197184 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
 INFO 2025-05-03 12:58:24,883 basehttp 145066 140521112589888 "POST /api/logout/ HTTP/1.1" 200 0
+INFO 2025-05-03 15:09:00,950 basehttp 145066 140521104197184 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-03 15:09:01,428 basehttp 145066 140521120982592 "POST /api/login/ HTTP/1.1" 200 663
+INFO 2025-05-03 15:11:00,148 autoreload 145066 140521315635200 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:11:00,638 autoreload 179331 140518865461248 Watching for file changes with StatReloader
+INFO 2025-05-03 15:11:01,981 autoreload 179331 140518865461248 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:11:02,441 autoreload 179336 140175275139072 Watching for file changes with StatReloader
+INFO 2025-05-03 15:11:43,718 basehttp 179336 140175098299968 "POST /api/login/ HTTP/1.1" 200 663
+INFO 2025-05-03 15:13:00,643 basehttp 179336 140175098299968 "POST /api/login/ HTTP/1.1" 200 663
+INFO 2025-05-03 15:13:03,828 basehttp 179336 140175098299968 "POST /api/login/ HTTP/1.1" 200 663
+INFO 2025-05-03 15:15:36,676 basehttp 179336 140175098299968 "POST /api/login/ HTTP/1.1" 200 663
+INFO 2025-05-03 15:18:45,545 autoreload 179336 140175275139072 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-03 15:18:45,987 autoreload 179641 140407200268288 Watching for file changes with StatReloader
+INFO 2025-05-03 15:20:48,719 autoreload 179641 140407200268288 /home/abright/Work/FarmFreight/backend/accounts/admin.py changed, reloading.
+INFO 2025-05-03 15:20:49,182 autoreload 179680 140274940301312 Watching for file changes with StatReloader
+INFO 2025-05-03 15:20:50,523 autoreload 179680 140274940301312 /home/abright/Work/FarmFreight/backend/accounts/admin.py changed, reloading.
+INFO 2025-05-03 15:20:51,020 autoreload 179697 140296876679168 Watching for file changes with StatReloader
+ERROR 2025-05-03 15:21:57,861 log 179697 140296699561536 Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework_simplejwt/views.py", line 44, in post
+    serializer.is_valid(raise_exception=True)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 445, in run_validation
+    value = self.validate(value)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 21, in validate
+    'is_manager': self.user.is_manager,
+AttributeError: 'User' object has no attribute 'is_manager'
+ERROR 2025-05-03 15:21:57,862 basehttp 179697 140296699561536 "POST /api/login/ HTTP/1.1" 500 22410
+INFO 2025-05-03 15:23:18,335 autoreload 179697 140296876679168 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:23:18,795 autoreload 179816 140063066644480 Watching for file changes with StatReloader
+INFO 2025-05-03 15:23:24,260 autoreload 179816 140063066644480 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:23:24,705 autoreload 179834 140342678646784 Watching for file changes with StatReloader
+INFO 2025-05-03 15:23:26,012 autoreload 179834 140342678646784 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:23:26,447 autoreload 179851 140469657198592 Watching for file changes with StatReloader
+INFO 2025-05-03 15:23:29,871 autoreload 179851 140469657198592 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:23:30,317 autoreload 179860 140243581984768 Watching for file changes with StatReloader
+INFO 2025-05-03 15:24:34,824 autoreload 179860 140243581984768 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 15:24:35,292 autoreload 179939 140473749663744 Watching for file changes with StatReloader
+INFO 2025-05-03 15:25:16,893 autoreload 179939 140473749663744 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-03 15:25:17,347 autoreload 179969 140337959673856 Watching for file changes with StatReloader
+INFO 2025-05-03 15:25:58,685 autoreload 179969 140337959673856 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-05-03 15:25:59,157 autoreload 180003 139814401945600 Watching for file changes with StatReloader
+INFO 2025-05-03 15:26:00,310 autoreload 180003 139814401945600 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-05-03 15:26:00,767 autoreload 180009 140293390659584 Watching for file changes with StatReloader
+INFO 2025-05-03 15:26:28,396 basehttp 180009 140293214094912 "POST /api/login/ HTTP/1.1" 200 724
+INFO 2025-05-03 15:26:28,401 basehttp 180009 140293205702208 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-03 15:26:28,411 basehttp 180009 140293214094912 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 15:26:31,597 basehttp 180009 140293205702208 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-03 15:26:31,615 basehttp 180009 140293197309504 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2025-05-03 15:26:31,615 basehttp 180009 140293214094912 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 15:26:34,247 basehttp 180009 140293205702208 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-03 15:26:34,253 log 180009 140293214094912 Bad Request: /api/logout/
+WARNING 2025-05-03 15:26:34,253 basehttp 180009 140293214094912 "POST /api/logout/ HTTP/1.1" 400 28
+INFO 2025-05-03 15:26:40,028 basehttp 180009 140293214094912 "POST /api/login/ HTTP/1.1" 200 724
+INFO 2025-05-03 15:26:40,038 basehttp 180009 140293214094912 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+WARNING 2025-05-03 15:26:47,577 log 180009 140293214094912 Unauthorized: /api/logout/
+WARNING 2025-05-03 15:26:47,578 basehttp 180009 140293214094912 "GET /api/logout/ HTTP/1.1" 401 12870
+WARNING 2025-05-03 15:26:57,912 log 180009 140293214094912 Bad Request: /api/logout/
+WARNING 2025-05-03 15:26:57,913 basehttp 180009 140293214094912 "POST /api/logout/ HTTP/1.1" 400 28
+INFO 2025-05-03 15:31:20,032 autoreload 180009 140293390659584 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:31:20,460 autoreload 180948 139702024605696 Watching for file changes with StatReloader
+INFO 2025-05-03 15:31:28,034 autoreload 180948 139702024605696 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:31:28,486 autoreload 180970 139813675302912 Watching for file changes with StatReloader
+INFO 2025-05-03 15:31:29,641 autoreload 180970 139813675302912 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:31:30,080 autoreload 180975 139787922755584 Watching for file changes with StatReloader
+INFO 2025-05-03 15:32:54,869 autoreload 180975 139787922755584 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:32:55,299 autoreload 181001 140402591944704 Watching for file changes with StatReloader
+INFO 2025-05-03 15:33:01,797 autoreload 181001 140402591944704 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:33:02,247 autoreload 181025 140045336113152 Watching for file changes with StatReloader
+INFO 2025-05-03 15:33:04,458 autoreload 181025 140045336113152 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:33:04,946 autoreload 181046 139906146897920 Watching for file changes with StatReloader
+INFO 2025-05-03 15:33:11,328 autoreload 181046 139906146897920 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:33:11,826 autoreload 181067 139864904773632 Watching for file changes with StatReloader
+INFO 2025-05-03 15:33:52,106 autoreload 181067 139864904773632 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:33:52,602 autoreload 181095 139743472181248 Watching for file changes with StatReloader
+INFO 2025-05-03 15:33:59,127 autoreload 181095 139743472181248 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:33:59,643 autoreload 181119 140259875799040 Watching for file changes with StatReloader
+INFO 2025-05-03 15:34:10,343 autoreload 181119 140259875799040 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:34:10,829 autoreload 181140 140555833360384 Watching for file changes with StatReloader
+INFO 2025-05-03 15:34:14,836 basehttp 181140 140555655890496 "POST /api/login/ HTTP/1.1" 200 724
+INFO 2025-05-03 15:34:14,849 basehttp 181140 140555655890496 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+WARNING 2025-05-03 15:34:17,618 log 181140 140555655890496 Bad Request: /api/logout/
+WARNING 2025-05-03 15:34:17,619 basehttp 181140 140555655890496 "POST /api/logout/ HTTP/1.1" 400 43
+INFO 2025-05-03 15:34:56,552 autoreload 181140 140555833360384 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:34:57,110 autoreload 181169 140439656378368 Watching for file changes with StatReloader
+INFO 2025-05-03 15:35:15,707 autoreload 181169 140439656378368 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:35:16,189 autoreload 181246 140196361109504 Watching for file changes with StatReloader
+INFO 2025-05-03 15:35:22,763 autoreload 181246 140196361109504 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:35:23,233 autoreload 181268 139661587537920 Watching for file changes with StatReloader
+INFO 2025-05-03 15:35:39,891 basehttp 181268 139661479560768 "OPTIONS /api/login/ HTTP/1.1" 200 0
+WARNING 2025-05-03 15:35:40,325 log 181268 139661397718592 Unauthorized: /api/login/
+WARNING 2025-05-03 15:35:40,326 basehttp 181268 139661397718592 "POST /api/login/ HTTP/1.1" 401 63
+INFO 2025-05-03 15:35:40,330 basehttp 181268 139661479560768 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-03 15:35:40,332 log 181268 139661397718592 Bad Request: /api/token/refresh/
+WARNING 2025-05-03 15:35:40,332 basehttp 181268 139661397718592 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-03 15:35:51,388 autoreload 181268 139661587537920 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:35:51,837 autoreload 181558 140590170546176 Watching for file changes with StatReloader
+INFO 2025-05-03 15:36:34,201 autoreload 181558 140590170546176 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:36:34,679 autoreload 181609 139989534846976 Watching for file changes with StatReloader
+WARNING 2025-05-03 15:36:38,298 log 181609 139989358736960 Unauthorized: /api/login/
+WARNING 2025-05-03 15:36:38,298 basehttp 181609 139989358736960 "POST /api/login/ HTTP/1.1" 401 63
+WARNING 2025-05-03 15:36:38,305 log 181609 139989358736960 Bad Request: /api/token/refresh/
+WARNING 2025-05-03 15:36:38,305 basehttp 181609 139989358736960 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-03 15:37:58,606 autoreload 181609 139989534846976 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:37:59,121 autoreload 181677 139694624256000 Watching for file changes with StatReloader
+INFO 2025-05-03 15:38:07,769 autoreload 181677 139694624256000 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 15:38:08,279 autoreload 181698 139705865633792 Watching for file changes with StatReloader
+WARNING 2025-05-03 15:38:12,324 log 181698 139705689568832 Bad Request: /api/login/
+WARNING 2025-05-03 15:38:12,325 basehttp 181698 139705689568832 "POST /api/login/ HTTP/1.1" 400 33
+WARNING 2025-05-03 15:38:13,904 log 181698 139705689568832 Bad Request: /api/login/
+WARNING 2025-05-03 15:38:13,905 basehttp 181698 139705689568832 "POST /api/login/ HTTP/1.1" 400 33
+INFO 2025-05-03 15:38:22,004 basehttp 181698 139705689568832 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-03 15:38:22,458 basehttp 181698 139705681176128 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 15:38:22,465 basehttp 181698 139705689568832 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-03 15:38:22,475 basehttp 181698 139705681176128 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 15:38:31,377 basehttp 181698 139705689568832 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-03 15:38:31,385 log 181698 139705681176128 Bad Request: /api/logout/
+WARNING 2025-05-03 15:38:31,386 basehttp 181698 139705681176128 "POST /api/logout/ HTTP/1.1" 400 43
+INFO 2025-05-03 16:07:56,847 autoreload 6025 140486164025344 Watching for file changes with StatReloader
+INFO 2025-05-03 16:08:09,828 autoreload 6308 139760304357376 Watching for file changes with StatReloader
+INFO 2025-05-03 16:08:25,211 basehttp 6025 140485986403904 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-03 16:08:25,667 basehttp 6025 140485978011200 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:08:25,674 basehttp 6025 140485986403904 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-03 16:08:25,684 basehttp 6025 140485978011200 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:08:45,689 basehttp 6025 140485986403904 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-03 16:08:45,696 log 6025 140485978011200 Bad Request: /api/logout/
+WARNING 2025-05-03 16:08:45,697 basehttp 6025 140485978011200 "POST /api/logout/ HTTP/1.1" 400 43
+INFO 2025-05-03 16:09:32,695 basehttp 6025 140485978011200 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:09:32,709 basehttp 6025 140485978011200 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+WARNING 2025-05-03 16:09:33,869 log 6025 140485978011200 Bad Request: /api/logout/
+WARNING 2025-05-03 16:09:33,869 basehttp 6025 140485978011200 "POST /api/logout/ HTTP/1.1" 400 43
+INFO 2025-05-03 16:09:55,826 basehttp 6025 140485978011200 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-03 16:09:56,309 basehttp 6025 140485986403904 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:09:56,314 basehttp 6025 140485978011200 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-03 16:09:56,321 basehttp 6025 140485986403904 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:10:05,213 basehttp 6025 140485978011200 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-03 16:10:05,221 log 6025 140485986403904 Bad Request: /api/logout/
+WARNING 2025-05-03 16:10:05,221 basehttp 6025 140485986403904 "POST /api/logout/ HTTP/1.1" 400 43
+INFO 2025-05-03 16:10:38,125 basehttp 6025 140485986403904 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:10:38,136 basehttp 6025 140485986403904 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+WARNING 2025-05-03 16:11:22,309 log 6025 140485986403904 Bad Request: /api/logout/
+WARNING 2025-05-03 16:11:22,310 basehttp 6025 140485986403904 "POST /api/logout/ HTTP/1.1" 400 43
+INFO 2025-05-03 16:11:23,845 basehttp 6025 140485986403904 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:11:23,855 basehttp 6025 140485986403904 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+WARNING 2025-05-03 16:11:34,470 log 6025 140485986403904 Bad Request: /api/logout/
+WARNING 2025-05-03 16:11:34,471 basehttp 6025 140485986403904 "POST /api/logout/ HTTP/1.1" 400 43
+INFO 2025-05-03 16:11:42,662 basehttp 6025 140485986403904 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:11:42,673 basehttp 6025 140485986403904 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:16:20,358 basehttp 6025 140485978011200 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-03 16:16:20,373 basehttp 6025 140485897221696 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2025-05-03 16:16:20,376 basehttp 6025 140485986403904 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:19:05,001 basehttp 6025 140485986403904 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2025-05-03 16:19:05,011 basehttp 6025 140485897221696 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:22:33,478 basehttp 6025 140485897221696 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2025-05-03 16:22:33,484 basehttp 6025 140485986403904 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:22:33,781 basehttp 6025 140485986403904 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2025-05-03 16:22:33,788 basehttp 6025 140485897221696 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+WARNING 2025-05-03 16:23:34,420 log 6025 140485897221696 Bad Request: /api/logout/
+WARNING 2025-05-03 16:23:34,421 basehttp 6025 140485897221696 "POST /api/logout/ HTTP/1.1" 400 43
+INFO 2025-05-03 16:23:39,769 basehttp 6025 140485897221696 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:23:39,779 basehttp 6025 140485897221696 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:24:01,602 basehttp 6025 140485897221696 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2025-05-03 16:24:01,610 basehttp 6025 140485986403904 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:24:03,503 basehttp 6025 140485986403904 "GET /api/users/me/ HTTP/1.1" 200 372
+INFO 2025-05-03 16:24:03,510 basehttp 6025 140485897221696 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+WARNING 2025-05-03 16:24:08,139 log 6025 140485897221696 Bad Request: /api/logout/
+WARNING 2025-05-03 16:24:08,139 basehttp 6025 140485897221696 "POST /api/logout/ HTTP/1.1" 400 43
+INFO 2025-05-03 16:26:59,665 autoreload 6025 140486164025344 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:27:00,185 autoreload 7888 139908514349056 Watching for file changes with StatReloader
+ERROR 2025-05-03 16:27:10,998 log 7888 139908336371264 Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 55, in post
+    secure=not settings.DEBUG,
+NameError: name 'settings' is not defined
+ERROR 2025-05-03 16:27:10,999 basehttp 7888 139908336371264 "POST /api/login/ HTTP/1.1" 500 21450
+INFO 2025-05-03 16:27:14,137 autoreload 7888 139908514349056 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:27:14,692 autoreload 7927 139889424830464 Watching for file changes with StatReloader
+ERROR 2025-05-03 16:27:15,874 log 7927 139889317299776 Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 55, in post
+    secure=not settings.DEBUG,
+NameError: name 'settings' is not defined
+ERROR 2025-05-03 16:27:15,875 basehttp 7927 139889317299776 "POST /api/login/ HTTP/1.1" 500 21450
+INFO 2025-05-03 16:27:55,627 autoreload 7927 139889424830464 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:27:56,086 autoreload 7994 140018529398784 Watching for file changes with StatReloader
+INFO 2025-05-03 16:28:39,665 autoreload 7994 140018529398784 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:28:40,189 autoreload 8085 140595217874944 Watching for file changes with StatReloader
+INFO 2025-05-03 16:28:44,598 basehttp 8085 140595042502208 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:28:44,635 basehttp 8085 140595042502208 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+ERROR 2025-05-03 16:29:33,684 log 8085 140595042502208 Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 81, in post
+    response.delete_cookie(
+TypeError: HttpResponseBase.delete_cookie() got an unexpected keyword argument 'secure'
+ERROR 2025-05-03 16:29:33,685 basehttp 8085 140595042502208 "POST /api/logout/ HTTP/1.1" 500 22058
+INFO 2025-05-03 16:30:30,756 basehttp 8085 140595042502208 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-03 16:30:31,218 basehttp 8085 140595033060928 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:30:31,358 basehttp 8085 140595042502208 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-03 16:30:31,367 basehttp 8085 140595033060928 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:31:34,036 basehttp 8085 140595033060928 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+ERROR 2025-05-03 16:31:34,054 log 8085 140595042502208 Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 81, in post
+    response.delete_cookie(
+TypeError: HttpResponseBase.delete_cookie() got an unexpected keyword argument 'secure'
+ERROR 2025-05-03 16:31:34,055 basehttp 8085 140595042502208 "POST /api/logout/ HTTP/1.1" 500 21899
+INFO 2025-05-03 16:32:54,114 autoreload 8085 140595217874944 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:32:54,608 autoreload 8930 140450825515008 Watching for file changes with StatReloader
+INFO 2025-05-03 16:33:03,222 autoreload 8930 140450825515008 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:33:03,693 autoreload 8952 139848290570240 Watching for file changes with StatReloader
+INFO 2025-05-03 16:33:06,067 autoreload 8952 139848290570240 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:33:06,562 autoreload 8970 139988281405440 Watching for file changes with StatReloader
+INFO 2025-05-03 16:33:12,368 basehttp 8970 139988105741888 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:33:12,382 basehttp 8970 139988105741888 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+ERROR 2025-05-03 16:33:14,276 log 8970 139988105741888 Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 88, in post
+    response.delete_cookie('refresh', samesite='Lax', secure=not settings.DEBUG, httponly=True)
+TypeError: HttpResponseBase.delete_cookie() got an unexpected keyword argument 'secure'
+ERROR 2025-05-03 16:33:14,277 basehttp 8970 139988105741888 "POST /api/logout/ HTTP/1.1" 500 21967
+INFO 2025-05-03 16:33:30,435 basehttp 8970 139988105741888 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:33:30,447 basehttp 8970 139988105741888 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+ERROR 2025-05-03 16:33:31,704 log 8970 139988105741888 Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 88, in post
+    response.delete_cookie('refresh', samesite='Lax', secure=not settings.DEBUG, httponly=True)
+TypeError: HttpResponseBase.delete_cookie() got an unexpected keyword argument 'secure'
+ERROR 2025-05-03 16:33:31,705 basehttp 8970 139988105741888 "POST /api/logout/ HTTP/1.1" 500 21967
+INFO 2025-05-03 16:35:22,134 autoreload 8970 139988281405440 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 16:35:22,592 autoreload 9073 139853955227648 Watching for file changes with StatReloader
+INFO 2025-05-03 16:35:24,943 autoreload 9073 139853955227648 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 16:35:25,419 autoreload 9090 139707195088896 Watching for file changes with StatReloader
+INFO 2025-05-03 16:35:27,018 basehttp 9090 139707018167872 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:35:27,035 basehttp 9090 139707018167872 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+ERROR 2025-05-03 16:35:28,437 log 9090 139707018167872 Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 88, in post
+    response.delete_cookie('refresh', samesite='Lax', secure=not settings.DEBUG, httponly=True)
+TypeError: HttpResponseBase.delete_cookie() got an unexpected keyword argument 'secure'
+ERROR 2025-05-03 16:35:28,438 basehttp 9090 139707018167872 "POST /api/logout/ HTTP/1.1" 500 21967
+INFO 2025-05-03 16:35:48,704 autoreload 9090 139707195088896 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:35:49,194 autoreload 9154 140627346219008 Watching for file changes with StatReloader
+INFO 2025-05-03 16:35:57,590 autoreload 9154 140627346219008 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:35:58,061 autoreload 9177 140715285663744 Watching for file changes with StatReloader
+INFO 2025-05-03 16:36:11,669 autoreload 9177 140715285663744 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:36:12,150 autoreload 9212 139892639739904 Watching for file changes with StatReloader
+INFO 2025-05-03 16:36:14,974 basehttp 9212 139892532233792 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-03 16:36:15,441 basehttp 9212 139892453537344 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:36:15,456 basehttp 9212 139892453537344 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+ERROR 2025-05-03 16:36:16,543 log 9212 139892453537344 Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2025-05-03 16:36:16,545 basehttp 9212 139892453537344 "POST /api/logout/ HTTP/1.1" 500 21625
+INFO 2025-05-03 16:36:46,380 basehttp 9212 139892532233792 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-03 16:36:46,855 basehttp 9212 139892453537344 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:36:46,868 basehttp 9212 139892532233792 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-03 16:36:46,876 basehttp 9212 139892453537344 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:36:49,215 basehttp 9212 139892532233792 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+ERROR 2025-05-03 16:36:49,232 log 9212 139892453537344 Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2025-05-03 16:36:49,232 basehttp 9212 139892453537344 "POST /api/logout/ HTTP/1.1" 500 21625
+INFO 2025-05-03 16:37:23,893 autoreload 9212 139892639739904 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:37:24,399 autoreload 9283 140694035558400 Watching for file changes with StatReloader
+INFO 2025-05-03 16:37:25,542 basehttp 9283 140693858207296 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:37:25,556 basehttp 9283 140693858207296 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:37:26,736 basehttp 9283 140693858207296 "POST /api/logout/ HTTP/1.1" 200 32
+INFO 2025-05-03 16:37:35,736 basehttp 9283 140693858207296 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:37:35,750 basehttp 9283 140693858207296 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:37:36,864 basehttp 9283 140693858207296 "POST /api/logout/ HTTP/1.1" 200 32
+INFO 2025-05-03 16:37:53,760 autoreload 9283 140694035558400 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:37:54,283 autoreload 9317 139769749553152 Watching for file changes with StatReloader
+INFO 2025-05-03 16:37:55,498 basehttp 9317 139769572017728 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:37:55,522 basehttp 9317 139769572017728 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+ERROR 2025-05-03 16:37:56,481 log 9317 139769572017728 Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 88, in post
+    response.delete_cookie(
+TypeError: HttpResponseBase.delete_cookie() got an unexpected keyword argument 'httponly'
+ERROR 2025-05-03 16:37:56,482 basehttp 9317 139769572017728 "POST /api/logout/ HTTP/1.1" 500 21903
+INFO 2025-05-03 16:38:32,080 autoreload 9317 139769749553152 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-03 16:38:32,566 autoreload 9363 139672569278464 Watching for file changes with StatReloader
+INFO 2025-05-03 16:38:36,006 basehttp 9363 139672393045568 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:38:36,025 basehttp 9363 139672393045568 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+ERROR 2025-05-03 16:38:37,460 log 9363 139672393045568 Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 88, in post
+    response.delete_cookie(
+TypeError: HttpResponseBase.delete_cookie() got an unexpected keyword argument 'httponly'
+ERROR 2025-05-03 16:38:37,461 basehttp 9363 139672393045568 "POST /api/logout/ HTTP/1.1" 500 21956
+INFO 2025-05-03 16:40:39,684 autoreload 9363 139672569278464 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:40:40,166 autoreload 9491 140122520690688 Watching for file changes with StatReloader
+INFO 2025-05-03 16:40:50,107 basehttp 9491 140122342344256 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:40:50,120 basehttp 9491 140122342344256 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+ERROR 2025-05-03 16:40:51,341 log 9491 140122342344256 Internal Server Error: /api/logout/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/views.py", line 88, in post
+    response.delete_cookie(
+TypeError: HttpResponseBase.delete_cookie() got an unexpected keyword argument 'secure'
+ERROR 2025-05-03 16:40:51,342 basehttp 9491 140122342344256 "POST /api/logout/ HTTP/1.1" 500 21952
+INFO 2025-05-03 16:42:35,749 autoreload 9491 140122520690688 /home/abright/Work/FarmFreight/backend/api/views.py changed, reloading.
+INFO 2025-05-03 16:42:36,243 autoreload 9579 140161391239168 Watching for file changes with StatReloader
+INFO 2025-05-03 16:42:41,321 basehttp 9579 140161215153728 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:42:41,334 basehttp 9579 140161215153728 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:42:45,152 basehttp 9579 140161215153728 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-03 16:42:48,971 basehttp 9579 140161215153728 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:42:48,985 basehttp 9579 140161215153728 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:42:50,049 basehttp 9579 140161215153728 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-03 16:42:52,837 basehttp 9579 140161215153728 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:42:52,849 basehttp 9579 140161215153728 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:42:54,722 basehttp 9579 140161215153728 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-03 16:48:00,974 basehttp 9579 140161215153728 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-03 16:48:00,987 basehttp 9579 140161215153728 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-03 16:48:11,878 basehttp 9579 140161215153728 "POST /api/logout/ HTTP/1.1" 200 31

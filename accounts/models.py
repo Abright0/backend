@@ -33,7 +33,9 @@ class User(AbstractUser):
     # roles
     is_driver = models.BooleanField(default=False)
     is_customer_service = models.BooleanField(default=False)
-    is_manager = models.BooleanField(default=False)
+    is_inside_manager = models.BooleanField(default=False)
+    is_warehouse_manager = models.BooleanField(default=False)
+    is_store_manager = models.BooleanField(default=False)
 
     # Verification
     is_phone_verified = models.BooleanField(default=False)

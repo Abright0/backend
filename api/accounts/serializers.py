@@ -1,17 +1,11 @@
-# api/accounts/serializers.py
 from rest_framework import serializers
-from accounts.models import User
 from django.contrib.auth import get_user_model
-from .utils import send_verification_sms
-from stores.models import Store
-
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
 
-import re
-
-from .utils import check_reset_code
-from .utils import send_reset_sms
+from accounts.models import User
+from stores.models import Store
+from .utils import send_verification_sms, send_reset_sms, check_reset_code
 
 class UserSerializer(serializers.ModelSerializer):
     stores = serializers.PrimaryKeyRelatedField(
@@ -32,7 +26,9 @@ class UserSerializer(serializers.ModelSerializer):
             'phone_number',
             'is_driver',
             'is_customer_service',
-            'is_manager',
+            'is_store_manager',
+            'is_warehouse_manager',
+            'is_inside_manager',
             'is_active',
             'is_superuser',
             'date_joined',
@@ -48,9 +44,6 @@ class UserSerializer(serializers.ModelSerializer):
         return obj.get_roles()
 
     def validate_password(self, value):
-        """
-        Use Django's built-in password validators for strength checks.
-        """
         try:
             validate_password(value)
         except ValidationError as e:
@@ -58,9 +51,6 @@ class UserSerializer(serializers.ModelSerializer):
         return value
 
     def validate(self, data):
-        """
-        Role and store permission validation logic.
-        """
         request = self.context.get('request')
         requesting_user = request.user if request else None
 
@@ -82,15 +72,12 @@ class UserSerializer(serializers.ModelSerializer):
         if not password:
             raise serializers.ValidationError({"password": "Password is required."})
 
-        # Validate password strength
         self.validate_password(password)
 
-        # Create user with hashed password
         user = get_user_model().objects.create(**validated_data)
         user.set_password(password)
         user.stores.set(stores)
 
-        # Send verification SMS (non-blocking)
         try:
             user.generate_verification_token()
             send_verification_sms(user)
@@ -116,16 +103,23 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
     def _validate_roles(self, data, requesting_user):
-        role_fields = ['is_manager', 'is_customer_service', 'is_driver', 'is_superuser']
+        role_fields = [
+            'is_store_manager', 
+            'is_warehouse_manager', 
+            'is_inside_manager', 
+            'is_driver', 
+            'is_customer_service',
+            'is_superuser'
+        ]
         incoming_roles = {field: data.get(field) for field in role_fields if field in data}
 
         if incoming_roles:
             if requesting_user.is_superuser:
-                return  # Superuser can assign any role
-            elif requesting_user.is_manager:
-                if incoming_roles.get('is_manager') or incoming_roles.get('is_superuser'):
+                return
+            elif requesting_user.is_store_manager or requesting_user.is_warehouse_manager or requesting_user.is_inside_manager:
+                if incoming_roles.get('is_superuser'):
                     raise serializers.ValidationError(
-                        {"roles": "Managers cannot assign 'manager' or 'superuser' roles."}
+                        {"roles": "Store-level managers cannot assign superuser roles."}
                     )
             else:
                 raise serializers.ValidationError(
@@ -138,7 +132,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     def _validate_store_permissions(self, data, requesting_user):
         if self.instance is None and not requesting_user.is_superuser:
-            if requesting_user.is_manager:
+            if requesting_user.is_store_manager or requesting_user.is_warehouse_manager or requesting_user.is_inside_manager:
                 requested_stores = set(store.id for store in data.get('stores', []))
                 manager_stores = set(requesting_user.stores.values_list('id', flat=True))
                 if not requested_stores.issubset(manager_stores):
@@ -153,7 +147,7 @@ class ResetPasswordRequestSerializer(serializers.Serializer):
 
     def validate_phone_number(self, value):
         try:
-            user = User.objects.get(phone_number=value)
+            User.objects.get(phone_number=value)
         except User.DoesNotExist:
             raise serializers.ValidationError("User with this phone number does not exist.")
         return value
@@ -165,9 +159,6 @@ class ResetPasswordRequestSerializer(serializers.Serializer):
         if not success:
             raise serializers.ValidationError("Failed to send reset code.")
         return True
-
-
-        from .utils import check_reset_code
 
 class ResetPasswordConfirmSerializer(serializers.Serializer):
     phone_number = serializers.CharField()

@@ -1,4 +1,3 @@
-# accounts/admin.py
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import UserChangeForm, UserCreationForm
@@ -19,29 +18,44 @@ class UserAdmin(BaseUserAdmin):
     
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
-        ('Personal info', {'fields': ('first_name', 'last_name', 'email')}),
+        ('Personal info', {'fields': ('first_name', 'last_name', 'email', 'phone_number')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser',
                                     'groups', 'user_permissions')}),
+        ('Roles', {
+            'fields': (
+                'is_store_manager', 
+                'is_warehouse_manager', 
+                'is_inside_manager', 
+                'is_driver', 
+                'is_customer_service',
+            )
+        }),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
-        ('Custom Fields', {'fields': ('phone_number', 'is_driver', 'is_customer_service', 'is_manager', 'stores')}),
+        ('Store Access', {'fields': ('stores',)}),
     )
 
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
-            'fields': ('username', 'email', 'password1', 'password2', 'phone_number', 
-                    'is_driver', 'is_customer_service', 'is_manager'),
+            'fields': (
+                'username', 'email', 'password1', 'password2', 'phone_number',
+                'is_store_manager', 'is_warehouse_manager', 'is_inside_manager',
+                'is_driver', 'is_customer_service'
+            ),
         }),
-)
-    
-    # Add custom fields to the list display
-    list_display = ('username', 'email', 'first_name', 'last_name', 'is_staff', 'is_driver', 'is_customer_service', 'is_manager')
-    
-    # Add filters
-    list_filter = BaseUserAdmin.list_filter + ('is_driver', 'is_customer_service', 'is_manager')
-    
-    # For ManyToMany fields like 'stores', you may need to use filter_horizontal
+    )
+
+    list_display = (
+        'username', 'email', 'first_name', 'last_name', 'is_staff',
+        'is_store_manager', 'is_warehouse_manager', 'is_inside_manager',
+        'is_driver', 'is_customer_service'
+    )
+
+    list_filter = BaseUserAdmin.list_filter + (
+        'is_store_manager', 'is_warehouse_manager',
+        'is_inside_manager', 'is_driver', 'is_customer_service'
+    )
+
     filter_horizontal = ('groups', 'user_permissions', 'stores')
 
-# Register the User model with the custom admin
 admin.site.register(User, UserAdmin)
