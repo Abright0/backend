@@ -8,7 +8,9 @@ __pycache__/
 local_settings.py
 media/
 staticfiles/
-migrations/
+# Ignore pyc but not migration .py files
+**/migrations/*.pyc
+**/migrations/__pycache__/
 
 # Other common exclusions
 *.log
