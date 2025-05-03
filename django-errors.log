@@ -8805,3 +8805,5 @@ INFO 2025-05-03 21:13:43,305 autoreload 29989 139634390859776 Watching for file 
 INFO 2025-05-03 21:13:56,768 autoreload 29989 139634390859776 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
 INFO 2025-05-03 21:13:57,272 autoreload 30019 139703583936512 Watching for file changes with StatReloader
 INFO 2025-05-03 21:14:15,095 autoreload 30034 140121780969472 Watching for file changes with StatReloader
+INFO 2025-05-03 21:19:45,709 autoreload 30034 140121780969472 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-03 21:19:46,191 autoreload 30346 139786108973056 Watching for file changes with StatReloader

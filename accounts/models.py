@@ -43,7 +43,7 @@ class User(AbstractUser):
                 message="Phone number must be in the format: '+999999999'. Up to 15 digits allowed."
             )
         ]
-    )
+    ) # checking
 
     # roles
     is_driver = models.BooleanField(default=False)
