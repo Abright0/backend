@@ -36,6 +36,7 @@ class User(AbstractUser):
         max_length=15,
         blank=True,
         unique=True,
+        null=True,
         validators=[
             RegexValidator(
                 regex=r'^\+?1?\d{9,15}$',
