@@ -77,19 +77,20 @@ class User(AbstractUser):
     def get_roles(self):
         if self.is_superuser:
             return ['superuser']
-        
+
         roles = []
-        if self.is_manager and self.is_customer_service and self.is_driver:
+        if self.is_store_manager:
             roles.append('store_manager')
-        elif self.is_manager and self.is_customer_service:
+        if self.is_inside_manager:
             roles.append('inside_manager')
-        elif self.is_manager and self.is_driver:
+        if self.is_warehouse_manager:
             roles.append('warehouse_manager')
-        elif self.is_customer_service:
+        if self.is_customer_service:
             roles.append('customer_service')
-        elif self.is_driver:
+        if self.is_driver:
             roles.append('driver')
         return roles
+
 
     def clean(self):
         super().clean()

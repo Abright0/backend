@@ -8807,3 +8807,93 @@ INFO 2025-05-03 21:13:57,272 autoreload 30019 139703583936512 Watching for file 
 INFO 2025-05-03 21:14:15,095 autoreload 30034 140121780969472 Watching for file changes with StatReloader
 INFO 2025-05-03 21:19:45,709 autoreload 30034 140121780969472 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
 INFO 2025-05-03 21:19:46,191 autoreload 30346 139786108973056 Watching for file changes with StatReloader
+INFO 2025-05-06 17:31:28,217 basehttp 30346 139785932854848 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-06 17:31:28,217 basehttp 30346 139785924462144 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-05-06 17:31:28,233 log 30346 139785916069440 Unauthorized: /api/users/me/
+WARNING 2025-05-06 17:31:28,233 log 30346 139785907676736 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-06 17:31:28,234 basehttp 30346 139785916069440 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-06 17:31:28,234 basehttp 30346 139785907676736 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+INFO 2025-05-06 17:31:28,287 basehttp 30346 139785932854848 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-06 17:31:28,287 basehttp 30346 139785924462144 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-06 17:31:28,291 log 30346 139785916069440 Bad Request: /api/token/refresh/
+WARNING 2025-05-06 17:31:28,293 log 30346 139785907676736 Bad Request: /api/token/refresh/
+WARNING 2025-05-06 17:31:28,293 basehttp 30346 139785907676736 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-06 17:31:28,293 basehttp 30346 139785916069440 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-06 23:37:25,948 basehttp 30346 139785932854848 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-06 23:37:25,951 log 30346 139785907676736 Unauthorized: /api/logout/
+WARNING 2025-05-06 23:37:25,951 basehttp 30346 139785907676736 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-06 23:37:25,958 log 30346 139785907676736 Bad Request: /api/token/refresh/
+WARNING 2025-05-06 23:37:25,959 basehttp 30346 139785907676736 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-06 23:37:38,808 basehttp 30346 139785932854848 "OPTIONS /api/password-reset/code/ HTTP/1.1" 200 0
+WARNING 2025-05-06 23:37:38,823 log 30346 139785907676736 Bad Request: /api/password-reset/code/
+WARNING 2025-05-06 23:37:38,824 basehttp 30346 139785907676736 "POST /api/password-reset/code/ HTTP/1.1" 400 64
+INFO 2025-05-06 23:37:41,756 utils 30346 139785907676736 Password reset verification code sent to +14692478210. Status: pending
+INFO 2025-05-06 23:37:41,759 basehttp 30346 139785907676736 "POST /api/password-reset/code/ HTTP/1.1" 200 43
+INFO 2025-05-06 23:38:06,152 basehttp 30346 139785932854848 "OPTIONS /api/password-reset/confirm/ HTTP/1.1" 200 0
+INFO 2025-05-06 23:38:06,195 views 30346 139785907676736 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 846398
+INFO 2025-05-06 23:38:06,856 views 30346 139785907676736 Password reset successful for ***8210 (IP: 127.0.0.1)
+INFO 2025-05-06 23:38:06,856 basehttp 30346 139785907676736 "POST /api/password-reset/confirm/ HTTP/1.1" 200 40
+INFO 2025-05-06 23:38:14,492 basehttp 30346 139785932854848 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-06 23:38:14,941 basehttp 30346 139785907676736 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-06 23:38:14,946 basehttp 30346 139785932854848 "OPTIONS /api/users/2/stores/ HTTP/1.1" 200 0
+INFO 2025-05-06 23:38:14,954 basehttp 30346 139785907676736 "GET /api/users/2/stores/ HTTP/1.1" 200 132
+INFO 2025-05-06 23:38:15,094 basehttp 30346 139785932854848 "OPTIONS /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+WARNING 2025-05-06 23:38:15,109 log 30346 139785907676736 Not Found: /api/orders/
+WARNING 2025-05-06 23:38:15,109 basehttp 30346 139785907676736 "GET /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+WARNING 2025-05-06 23:38:17,102 log 30346 139785907676736 Not Found: /api/orders/
+WARNING 2025-05-06 23:38:17,103 basehttp 30346 139785907676736 "GET /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+INFO 2025-05-06 23:38:18,129 basehttp 30346 139785907676736 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-06 23:38:27,197 basehttp 30346 139785907676736 "POST /api/login/ HTTP/1.1" 200 482
+INFO 2025-05-06 23:38:27,218 basehttp 30346 139785907676736 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-06 23:38:28,746 basehttp 30346 139785932854848 "OPTIONS /api/users/ HTTP/1.1" 200 0
+ERROR 2025-05-06 23:38:28,767 log 30346 139785907676736 Internal Server Error: /api/users/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 44, in get_roles
+    return obj.get_roles()
+  File "/home/abright/Work/FarmFreight/backend/accounts/models.py", line 82, in get_roles
+    if self.is_manager and self.is_customer_service and self.is_driver:
+AttributeError: 'User' object has no attribute 'is_manager'
+ERROR 2025-05-06 23:38:28,768 basehttp 30346 139785907676736 "GET /api/users/ HTTP/1.1" 500 23552
+INFO 2025-05-06 23:38:28,773 basehttp 30346 139785932854848 "OPTIONS /api/users/email_verification_status/ HTTP/1.1" 200 0
+WARNING 2025-05-06 23:38:28,822 log 30346 139785907676736 Not Found: /api/users/email_verification_status/
+WARNING 2025-05-06 23:38:28,822 basehttp 30346 139785907676736 "GET /api/users/email_verification_status/ HTTP/1.1" 404 23
+INFO 2025-05-06 23:46:13,555 autoreload 30346 139786108973056 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-06 23:46:14,041 autoreload 121630 140525885161472 Watching for file changes with StatReloader
+INFO 2025-05-06 23:46:15,304 autoreload 121630 140525885161472 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-06 23:46:15,728 autoreload 121634 140715171139584 Watching for file changes with StatReloader
+INFO 2025-05-06 23:46:37,516 autoreload 121634 140715171139584 /home/abright/Work/FarmFreight/backend/api/accounts/views.py changed, reloading.
+INFO 2025-05-06 23:46:37,990 autoreload 121684 140040205668352 Watching for file changes with StatReloader
+INFO 2025-05-06 23:49:36,837 autoreload 121684 140040205668352 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-06 23:49:37,269 autoreload 121804 139987470782464 Watching for file changes with StatReloader
+INFO 2025-05-06 23:49:43,606 autoreload 121804 139987470782464 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-06 23:49:44,101 autoreload 121823 140520815673344 Watching for file changes with StatReloader

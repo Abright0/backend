@@ -26,7 +26,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.order_by('id')
     serializer_class = UserSerializer
@@ -92,7 +91,12 @@ class UserViewSet(viewsets.ModelViewSet):
 
     @action(detail=False, methods=['get'])
     def sms_verification_status(self, request):
-        if not (request.user.is_superuser or request.user.is_store_manager or request.user.is_warehouse_manager or request.user.is_inside_manager):
+        if not (
+            request.user.is_superuser or
+            request.user.is_store_manager or
+            request.user.is_warehouse_manager or
+            request.user.is_inside_manager
+        ):
             return Response({"detail": "You do not have permission to access this resource"},
                             status=status.HTTP_403_FORBIDDEN)
         users = User.objects.all()
@@ -101,7 +105,12 @@ class UserViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['post'], throttle_classes=[VerificationResendRateThrottle])
     def resend_verification(self, request, pk=None):
-        if not (request.user.is_superuser or request.user.is_store_manager or request.user.is_warehouse_manager or request.user.is_inside_manager):
+        if not (
+            request.user.is_superuser or
+            request.user.is_store_manager or
+            request.user.is_warehouse_manager or
+            request.user.is_inside_manager
+        ):
             return Response({"detail": "You do not have permission to access this resource"},
                             status=status.HTTP_403_FORBIDDEN)
         user = self.get_object()
@@ -125,57 +134,3 @@ class UserViewSet(viewsets.ModelViewSet):
         stores = request.user.stores.all()
         serializer = StoreSerializer(stores, many=True)
         return Response(serializer.data)
-
-@method_decorator(csrf_exempt, name='dispatch')
-class PasswordResetCodeRequestView(APIView):
-    permission_classes = [AllowAny]
-    throttle_classes = [PasswordResetRateThrottle]
-
-    def post(self, request):
-        print(">>> PasswordResetCodeRequestView hit")  # Debug
-        serializer = ResetPasswordRequestSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response({"detail": "Verification code sent via SMS"})
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-class PasswordResetCodeConfirmView(APIView):
-    permission_classes = [AllowAny]
-
-    def post(self, request):
-        print("request data: ", request.data)
-        phone_number = request.data.get("phone_number", "[missing]")
-        code = request.data.get("code", "[missing]")
-        ip = request.META.get("REMOTE_ADDR")
-
-        masked_phone = f"***{phone_number[-4:]}" if len(phone_number) >= 4 else "[invalid]"
-
-        logger.info(f"Password reset confirm attempt from {ip} for {masked_phone} using code: {code}")
-
-        serializer = ResetPasswordConfirmSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            logger.info(f"Password reset successful for {masked_phone} (IP: {ip})")
-            return Response({"detail": "Password successfully reset"})
-
-        logger.warning(f"Password reset confirm failed for {masked_phone} (IP: {ip}): {serializer.errors}")
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-class VerifyPhoneView(APIView):
-    permission_classes = [AllowAny]
-
-    def get(self, request):
-        token = request.query_params.get('token')
-        if not token:
-            return Response({"detail": "Verification token is required."},
-                            status=status.HTTP_400_BAD_REQUEST)
-        try:
-            user = User.objects.get(phone_verification_token=token)
-            if not user.is_phone_verified:
-                user.is_phone_verified = True
-                user.save()
-                return Response({"detail": "Phone successfully verified via SMS"})
-            return Response({"detail": "Phone already verified"})
-        except User.DoesNotExist:
-            return Response({"detail": "Invalid verification token"}, status=status.HTTP_400_BAD_REQUEST)
