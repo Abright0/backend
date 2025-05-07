@@ -9109,3 +9109,5 @@ INFO 2025-05-07 00:17:17,302 basehttp 123468 140616074835520 "GET /api/users/ HT
 INFO 2025-05-07 00:17:26,657 basehttp 123468 140616083228224 "OPTIONS /api/users/2/ HTTP/1.1" 200 0
 INFO 2025-05-07 00:17:26,680 basehttp 123468 140616074835520 "PATCH /api/users/2/ HTTP/1.1" 200 414
 INFO 2025-05-07 00:17:27,864 basehttp 123468 140616074835520 "GET /api/users/ HTTP/1.1" 200 855
+INFO 2025-05-07 00:18:02,576 autoreload 123468 140616258043904 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-07 00:18:03,118 autoreload 124287 139810984280064 Watching for file changes with StatReloader
