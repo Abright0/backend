@@ -37,9 +37,9 @@ class UserSerializer(serializers.ModelSerializer):
             'roles',
         ]
         extra_kwargs = {
-            'password': {'write_only': True}
+            'password': {'write_only': True},
+            'email': {'required': False, 'allow_null': True, 'allow_blank': True},
         }
-
     def get_roles(self, obj):
         return obj.get_roles()
 

@@ -27,7 +27,6 @@ class User(AbstractUser):
     )
     
     email = models.EmailField(
-        unique=True,
         default='default@example.com'
     )
 

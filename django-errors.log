@@ -9111,3 +9111,171 @@ INFO 2025-05-07 00:17:26,680 basehttp 123468 140616074835520 "PATCH /api/users/2
 INFO 2025-05-07 00:17:27,864 basehttp 123468 140616074835520 "GET /api/users/ HTTP/1.1" 200 855
 INFO 2025-05-07 00:18:02,576 autoreload 123468 140616258043904 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
 INFO 2025-05-07 00:18:03,118 autoreload 124287 139810984280064 Watching for file changes with StatReloader
+INFO 2025-05-07 00:21:05,178 basehttp 124287 139810797827648 "GET /api/users/me/ HTTP/1.1" 200 388
+INFO 2025-05-07 00:21:05,183 basehttp 124287 139810806220352 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-07 00:21:10,621 basehttp 124287 139810806220352 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-07 00:21:10,621 basehttp 124287 139810797827648 "GET /api/users/ HTTP/1.1" 200 855
+INFO 2025-05-07 00:26:54,050 basehttp 124287 139810806220352 "GET /api/users/me/ HTTP/1.1" 200 388
+INFO 2025-05-07 00:26:54,056 basehttp 124287 139810797827648 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-07 00:26:59,345 basehttp 124287 139810797827648 "GET /api/users/ HTTP/1.1" 200 855
+WARNING 2025-05-07 00:27:13,516 log 124287 139810797827648 Bad Request: /api/users/1/
+WARNING 2025-05-07 00:27:13,517 basehttp 124287 139810797827648 "PATCH /api/users/1/ HTTP/1.1" 400 64
+INFO 2025-05-07 00:27:14,553 basehttp 124287 139810797827648 "GET /api/users/1/ HTTP/1.1" 200 388
+INFO 2025-05-07 00:27:23,203 basehttp 124287 139810797827648 "PATCH /api/users/1/ HTTP/1.1" 200 400
+INFO 2025-05-07 00:27:24,560 basehttp 124287 139810797827648 "GET /api/users/ HTTP/1.1" 200 867
+INFO 2025-05-07 00:29:20,183 basehttp 124287 139810806220352 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-07 00:29:21,097 basehttp 124287 139810806220352 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-07 00:29:21,540 basehttp 124287 139810806220352 "GET /api/users/ HTTP/1.1" 200 867
+WARNING 2025-05-07 00:31:32,643 log 124287 139810806220352 Bad Request: /api/users/
+WARNING 2025-05-07 00:31:32,643 basehttp 124287 139810806220352 "POST /api/users/ HTTP/1.1" 400 42
+INFO 2025-05-07 00:31:33,727 basehttp 124287 139810806220352 "GET /api/users/ HTTP/1.1" 200 867
+INFO 2025-05-07 00:34:47,221 autoreload 124287 139810984280064 /home/abright/Work/FarmFreight/backend/api/accounts/serializers.py changed, reloading.
+INFO 2025-05-07 00:34:47,761 autoreload 125243 140298107547648 Watching for file changes with StatReloader
+WARNING 2025-05-07 00:34:49,476 log 125243 140297925293632 Unauthorized: /api/users/me/
+WARNING 2025-05-07 00:34:49,478 log 125243 140297916900928 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-07 00:34:49,479 basehttp 125243 140297925293632 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-07 00:34:49,479 basehttp 125243 140297916900928 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-07 00:34:49,516 log 125243 140297925293632 Bad Request: /api/token/refresh/
+WARNING 2025-05-07 00:34:49,516 basehttp 125243 140297925293632 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-07 00:34:49,545 log 125243 140297916900928 Bad Request: /api/token/refresh/
+WARNING 2025-05-07 00:34:49,546 basehttp 125243 140297916900928 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-07 00:35:11,208 basehttp 125243 140297916900928 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-07 00:35:11,250 basehttp 125243 140297908508224 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-07 00:35:11,260 basehttp 125243 140297916900928 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-07 00:35:13,663 basehttp 125243 140297908508224 "OPTIONS /api/users/ HTTP/1.1" 200 0
+INFO 2025-05-07 00:35:13,673 basehttp 125243 140297916900928 "GET /api/users/ HTTP/1.1" 200 867
+WARNING 2025-05-07 00:35:46,559 log 125243 140297916900928 Bad Request: /api/users/
+WARNING 2025-05-07 00:35:46,560 basehttp 125243 140297916900928 "POST /api/users/ HTTP/1.1" 400 46
+INFO 2025-05-07 00:35:47,600 basehttp 125243 140297916900928 "GET /api/users/ HTTP/1.1" 200 867
+INFO 2025-05-07 00:37:36,179 basehttp 125243 140297916900928 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-07 00:37:36,196 basehttp 125243 140297916900928 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-07 00:38:33,459 basehttp 125243 140297916900928 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-07 00:38:33,464 basehttp 125243 140297908508224 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-07 00:38:34,197 basehttp 125243 140297916900928 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-07 00:38:34,199 basehttp 125243 140297908508224 "GET /api/users/ HTTP/1.1" 200 867
+INFO 2025-05-07 00:38:47,697 basehttp 125243 140297916900928 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-07 00:38:47,703 basehttp 125243 140297908508224 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-07 00:38:52,165 basehttp 125243 140297916900928 "GET /api/users/ HTTP/1.1" 200 867
+INFO 2025-05-07 00:40:38,892 basehttp 125243 140297908508224 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-07 00:40:38,918 basehttp 125243 140297916900928 "GET /api/users/1/stores/ HTTP/1.1" 200 523
+INFO 2025-05-07 00:40:44,225 basehttp 125243 140297908508224 "GET /api/users/ HTTP/1.1" 200 867
+WARNING 2025-05-07 00:41:29,153 log 125243 140297916900928 Bad Request: /api/users/
+WARNING 2025-05-07 00:41:29,153 basehttp 125243 140297916900928 "POST /api/users/ HTTP/1.1" 400 46
+INFO 2025-05-07 00:41:30,165 basehttp 125243 140297908508224 "GET /api/users/ HTTP/1.1" 200 867
+ERROR 2025-05-07 00:43:56,290 utils 125243 140297908508224 Failed to start Twilio verification for +12345678999: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/VA592981ff5895993460d99ec28fe4ca78/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The phone number is unverified. Trial accounts cannot send messages to unverified numbers; verify it at twilio.com/user/account/phone-numbers/verified[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/21608[0m
+
+
+INFO 2025-05-07 00:43:56,291 basehttp 125243 140297908508224 "POST /api/users/ HTTP/1.1" 201 402
+INFO 2025-05-07 00:43:58,776 basehttp 125243 140297908508224 "GET /api/users/ HTTP/1.1" 200 1270
+INFO 2025-05-07 00:44:26,877 basehttp 125243 140297908508224 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-07 00:44:26,884 basehttp 125243 140297916900928 "GET /api/users/1/stores/ HTTP/1.1" 200 531
+INFO 2025-05-07 00:44:32,163 basehttp 125243 140297908508224 "GET /api/users/ HTTP/1.1" 200 1270
+ERROR 2025-05-07 00:45:16,289 log 125243 140297908508224 Internal Server Error: /api/users/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: accounts_user.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/accounts/serializers.py", line 77, in create
+    user = get_user_model().objects.create(**validated_data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/contrib/auth/base_user.py", line 62, in save
+    super().save(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 892, in save
+    self.save_base(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 998, in save_base
+    updated = self._save_table(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1161, in _save_table
+    results = self._do_insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1202, in _do_insert
+    return manager._insert(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: accounts_user.email
+ERROR 2025-05-07 00:45:16,291 basehttp 125243 140297908508224 "POST /api/users/ HTTP/1.1" 500 26198
+INFO 2025-05-07 00:45:17,403 basehttp 125243 140297908508224 "GET /api/users/ HTTP/1.1" 200 1270
+INFO 2025-05-07 00:45:47,539 autoreload 125243 140298107547648 /home/abright/Work/FarmFreight/backend/accounts/models.py changed, reloading.
+INFO 2025-05-07 00:45:48,059 autoreload 125916 139800040939520 Watching for file changes with StatReloader
+INFO 2025-05-07 00:46:19,134 autoreload 125929 139662658301952 Watching for file changes with StatReloader
+INFO 2025-05-07 00:46:21,456 basehttp 125929 139662550156864 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-07 00:46:21,460 basehttp 125929 139662471460416 "GET /api/users/1/stores/ HTTP/1.1" 200 531
+INFO 2025-05-07 00:46:26,873 basehttp 125929 139662471460416 "GET /api/users/1/stores/ HTTP/1.1" 200 531
+INFO 2025-05-07 00:46:26,873 basehttp 125929 139662550156864 "GET /api/users/ HTTP/1.1" 200 1270
+INFO 2025-05-07 00:47:22,179 basehttp 125929 139662550156864 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-07 00:47:22,182 basehttp 125929 139662471460416 "GET /api/users/1/stores/ HTTP/1.1" 200 531
+INFO 2025-05-07 00:47:27,558 basehttp 125929 139662550156864 "GET /api/users/ HTTP/1.1" 200 1270
+ERROR 2025-05-07 00:47:51,107 utils 125929 139662550156864 Failed to start Twilio verification for +13333333333: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/VA592981ff5895993460d99ec28fe4ca78/Verifications[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: Invalid parameter `To`: +13333333333[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/60200[0m
+
+
+INFO 2025-05-07 00:47:51,113 basehttp 125929 139662550156864 "POST /api/users/ HTTP/1.1" 201 411
+INFO 2025-05-07 00:47:54,828 basehttp 125929 139662550156864 "GET /api/users/ HTTP/1.1" 200 1682
