@@ -111,6 +111,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*', '.up.railway.app']
 
+CORS_ALLOW_CREDENTIALS = True
+
 CORS_ALLOWED_ORIGINS = [
     "https://frontend-production-953d.up.railway.app",
     "https://backend-production-5f3d.up.railway.app",

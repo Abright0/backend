@@ -77,7 +77,6 @@ class User(AbstractUser):
     def get_roles(self):
         if self.is_superuser:
             return ['superuser']
-
         roles = []
         if self.is_store_manager:
             roles.append('store_manager')
