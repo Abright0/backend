@@ -23,7 +23,6 @@ from datetime import time
 
 from datetime import timedelta
 from rest_framework_simplejwt.tokens import RefreshToken
-import time
 
 import pillow_heif
 pillow_heif.register_heif_opener()
@@ -39,21 +38,44 @@ from rest_framework.test import APITestCase
 from django.urls import reverse
 from accounts.models import User
 
+from django.core.management import call_command
+from django.test import TestCase
+from io import StringIO
+
+
+"""
+class FetchEmailsIntegrationTest(TestCase):
+    def test_fetch_emails_command_runs(self):
+        #This test actually runs the fetch_emails management command.
+        #Make sure:
+        #  - GMAIL_CREDENTIALS, GMAIL_USER_EMAIL, SPECIFIC_SENDER or SPECIFIC_DOMAIN are set
+        #  - The Gmail credentials have access to the inbox
+        
+        out = StringIO()
+        try:
+            call_command("process_emails", stdout=out)
+        except Exception as e:
+            self.fail(f"process_emails raised an unexpected exception: {e}")
+        output = out.getvalue()
+        print(output)  # Optional: output to test logs
+        self.assertIn("Finished processing", output)
+"""
+"""
 class InteractivePasswordResetTest(APITestCase):
-    """
-    Integration test for real‐SMS password reset.
-    ----------------------------------------------------------------------------
-    Requirements:
-      • Set environment variable REAL_SMS_PHONE_NUMBER to the phone you control.
-      • In your Django settings, have your TWILIO_ACCOUNT_SID,
-        TWILIO_AUTH_TOKEN, and TWILIO_VERIFY_SERVICE_SID configured.
-    ----------------------------------------------------------------------------
-    This test will:
-      1. Create (or recreate) a User with that phone number.
-      2. Call the password‐reset/code endpoint (sending an SMS).
-      3. Prompt you in the console to paste the code you received.
-      4. Call password‐reset/confirm with that code and assert success.
-    """
+    
+    #Integration test for real‐SMS password reset.
+    #----------------------------------------------------------------------------
+    #Requirements:
+    #  • Set environment variable REAL_SMS_PHONE_NUMBER to the phone you control.
+    #  • In your Django settings, have your TWILIO_ACCOUNT_SID,
+    #    TWILIO_AUTH_TOKEN, and TWILIO_VERIFY_SERVICE_SID configured.
+    #----------------------------------------------------------------------------
+    #This test will:
+    #  1. Create (or recreate) a User with that phone number.
+    #  2. Call the password‐reset/code endpoint (sending an SMS).
+    #  3. Prompt you in the console to paste the code you received.
+    #  4. Call password‐reset/confirm with that code and assert success.
+    
 
     def setUp(self):
         phone_number = os.getenv("REAL_SMS_PHONE_NUMBER")
@@ -92,7 +114,6 @@ class InteractivePasswordResetTest(APITestCase):
         # 4) Verify the password actually changed
         self.user.refresh_from_db()
         self.assertTrue(self.user.check_password(new_password))
-"""
 class JWTAuthTestCase(APITestCase):
 
     def setUp(self):
@@ -230,9 +251,6 @@ class UserRegistrationViewTests(APITestCase):
         self.assertIn("You can only create users for stores you manage", str(response.data))
         self.assertFalse(User.objects.filter(username="otherstoreuser").exists())
         mock_send_sms.assert_not_called()
-
-
-
 class AccountsTestCase(APITestCase):
     def setUp(self):
         # Create test users
@@ -343,8 +361,6 @@ class AccountsTestCase(APITestCase):
         for _ in range(4):  # Assuming the limit is 3/hour
             response = self.client.post(url, {'phone_number': self.other_user.phone_number})
         self.assertEqual(response.status_code, status.HTTP_429_TOO_MANY_REQUESTS)
-
-
 class UserRegistrationSMSTest(APITestCase):
     def setUp(self):
         # Create a store for testing
@@ -466,8 +482,7 @@ class UserRegistrationSMSTest(APITestCase):
         response = self.client.post(self.register_url, payload, format='json')
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
         self.assertFalse(User.objects.filter(username="nopho").exists())
-        mock_send_sms.assert_not_called()
-"""
+        mock_send_sms.assert_not_called()orde
 """
 class UserViewSetTests(APITestCase):
 
@@ -476,7 +491,7 @@ class UserViewSetTests(APITestCase):
             username ="user",
             email="user@example.com",
             password="password123",
-            is_email_verified=True
+            #_verified=True
         )
         self.admin = User.objects.create_superuser(
             username ="user_1",
@@ -487,7 +502,7 @@ class UserViewSetTests(APITestCase):
             username ="driver_1",
             email="driver@example.com",
             password="adminpass",
-            is_email_verified=True,
+            #is_email_verified=True,
             is_driver=True
         )
 
@@ -714,7 +729,6 @@ class UserViewSetTests(APITestCase):
             self.assertEqual(response_inactive.status_code, status.HTTP_200_OK)
             self.assertEqual(response_inactive.data['status'], 'complete')
 
-
         # Step 4: Schedule order items
         order_items = OrderItem.objects.filter(order_id=order_id)
         self.assertTrue(order_items.exists(), "No order items found for this order")
@@ -726,12 +740,11 @@ class UserViewSetTests(APITestCase):
                 quantity=min(1, item.quantity)
             )
             print(f"ScheduledItem: {scheduled}")
-"""
 
+"""
         ######################
         # GET RANDOM PHOTOS
         ######################
-"""
         import random
         from assignments.models import DeliveryAttempt, DeliveryPhoto
 

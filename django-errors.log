@@ -9817,3 +9817,97 @@ WARNING 2025-05-10 16:53:07,838 basehttp 209716 140262424704576 "GET /api/orders
 WARNING 2025-05-10 16:53:09,115 log 209716 140262424704576 Not Found: /api/orders/
 WARNING 2025-05-10 16:53:09,115 basehttp 209716 140262424704576 "GET /api/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
 INFO 2025-05-10 16:53:09,410 basehttp 209716 140262424704576 "GET /api/users/ HTTP/1.1" 200 1682
+INFO 2025-05-10 17:14:18,265 autoreload 209716 140262612168704 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-10 17:14:18,735 autoreload 213745 140179858415616 Watching for file changes with StatReloader
+INFO 2025-05-10 17:14:26,343 autoreload 213745 140179858415616 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-10 17:14:26,869 autoreload 213767 140094244499456 Watching for file changes with StatReloader
+INFO 2025-05-10 17:21:37,494 autoreload 213767 140094244499456 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-10 17:21:37,984 autoreload 214183 140133092458496 Watching for file changes with StatReloader
+INFO 2025-05-10 17:28:34,860 autoreload 214183 140133092458496 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-10 17:28:35,297 autoreload 214558 140076358483968 Watching for file changes with StatReloader
+INFO 2025-05-10 17:28:38,666 autoreload 214558 140076358483968 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-10 17:28:39,092 autoreload 214579 139687157968896 Watching for file changes with StatReloader
+INFO 2025-05-10 18:17:25,590 basehttp 214579 139687050135104 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-10 18:17:25,590 basehttp 214579 139687041742400 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-05-10 18:17:25,607 log 214579 139686831978048 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-10 18:17:25,608 log 214579 139686823585344 Unauthorized: /api/users/me/
+WARNING 2025-05-10 18:17:25,609 basehttp 214579 139686831978048 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-10 18:17:25,609 basehttp 214579 139686823585344 "GET /api/users/me/ HTTP/1.1" 401 172
+INFO 2025-05-10 18:17:25,620 basehttp 214579 139687041742400 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-10 18:17:25,620 basehttp 214579 139687050135104 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-10 18:17:25,668 log 214579 139686823585344 Bad Request: /api/token/refresh/
+WARNING 2025-05-10 18:17:25,670 log 214579 139686831978048 Bad Request: /api/token/refresh/
+WARNING 2025-05-10 18:17:25,670 basehttp 214579 139686823585344 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-10 18:17:25,670 basehttp 214579 139686831978048 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-10 18:31:21,517 basehttp 214579 139686823585344 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-10 18:31:21,957 basehttp 214579 139687041742400 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-10 18:31:21,971 basehttp 214579 139687041742400 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-10 18:31:24,352 basehttp 214579 139687041742400 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-10 18:31:24,359 basehttp 214579 139687050135104 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-10 18:31:25,196 basehttp 214579 139687050135104 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-10 18:31:25,201 basehttp 214579 139687041742400 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-10 18:31:26,744 basehttp 214579 139687041742400 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-10 18:31:26,749 basehttp 214579 139687050135104 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-10 18:31:27,438 basehttp 214579 139687050135104 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-10 18:31:27,444 basehttp 214579 139687041742400 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-10 18:31:29,796 basehttp 214579 139686823585344 "OPTIONS /api/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+WARNING 2025-05-10 18:31:29,806 log 214579 139687041742400 Not Found: /api/orders/
+WARNING 2025-05-10 18:31:29,807 basehttp 214579 139687041742400 "GET /api/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+INFO 2025-05-10 18:31:30,717 basehttp 214579 139686823585344 "OPTIONS /api/users/ HTTP/1.1" 200 0
+INFO 2025-05-10 18:31:30,726 basehttp 214579 139687041742400 "GET /api/users/ HTTP/1.1" 200 1682
+WARNING 2025-05-10 18:31:31,494 log 214579 139687041742400 Not Found: /api/orders/
+WARNING 2025-05-10 18:31:31,495 basehttp 214579 139687041742400 "GET /api/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+INFO 2025-05-10 18:31:31,822 basehttp 214579 139687041742400 "GET /api/users/ HTTP/1.1" 200 1682
+WARNING 2025-05-10 18:55:19,890 log 214579 139687041742400 Unauthorized: /api/users/me/
+WARNING 2025-05-10 18:55:19,892 log 214579 139687050135104 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-10 18:55:19,892 basehttp 214579 139687041742400 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-10 18:55:19,893 basehttp 214579 139687050135104 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-10 18:55:19,902 log 214579 139687050135104 Bad Request: /api/token/refresh/
+WARNING 2025-05-10 18:55:19,904 log 214579 139687041742400 Bad Request: /api/token/refresh/
+WARNING 2025-05-10 18:55:19,904 basehttp 214579 139687050135104 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-10 18:55:19,905 basehttp 214579 139687041742400 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-10 18:55:22,336 basehttp 214579 139686823585344 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-10 18:55:22,344 log 214579 139687050135104 Unauthorized: /api/logout/
+WARNING 2025-05-10 18:55:22,345 basehttp 214579 139687050135104 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-10 18:55:22,370 log 214579 139687050135104 Bad Request: /api/token/refresh/
+WARNING 2025-05-10 18:55:22,370 basehttp 214579 139687050135104 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-10 19:39:48,773 log 214579 139686823585344 Bad Request: /api/login/
+WARNING 2025-05-10 19:39:48,773 basehttp 214579 139686823585344 "POST /api/login/ HTTP/1.1" 400 33
+INFO 2025-05-10 19:40:00,748 basehttp 214579 139686823585344 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-10 19:40:00,759 basehttp 214579 139686823585344 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-10 19:40:02,615 basehttp 214579 139686823585344 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-10 19:40:02,621 basehttp 214579 139687041742400 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-10 19:40:04,332 basehttp 214579 139687050135104 "OPTIONS /api/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+WARNING 2025-05-10 19:40:04,343 log 214579 139687041742400 Not Found: /api/orders/
+WARNING 2025-05-10 19:40:04,344 basehttp 214579 139687041742400 "GET /api/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+INFO 2025-05-10 19:40:05,207 basehttp 214579 139687041742400 "GET /api/users/ HTTP/1.1" 200 1682
+WARNING 2025-05-10 19:40:10,610 log 214579 139687041742400 Not Found: /api/orders/
+WARNING 2025-05-10 19:40:10,611 basehttp 214579 139687041742400 "GET /api/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+INFO 2025-05-10 19:40:12,429 basehttp 214579 139687041742400 "GET /api/users/ HTTP/1.1" 200 1682
+WARNING 2025-05-10 19:40:15,138 log 214579 139687041742400 Not Found: /api/orders/
+WARNING 2025-05-10 19:40:15,139 basehttp 214579 139687041742400 "GET /api/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+WARNING 2025-05-10 19:40:19,937 log 214579 139687041742400 Not Found: /api/orders/
+WARNING 2025-05-10 19:40:19,937 basehttp 214579 139687041742400 "GET /api/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+INFO 2025-05-10 19:40:20,473 basehttp 214579 139687041742400 "GET /api/users/ HTTP/1.1" 200 1682
+INFO 2025-05-10 19:40:31,535 basehttp 214579 139687041742400 "GET /api/users/ HTTP/1.1" 200 1682
+WARNING 2025-05-10 19:40:31,928 log 214579 139687041742400 Not Found: /api/orders/
+WARNING 2025-05-10 19:40:31,928 basehttp 214579 139687041742400 "GET /api/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 404 27871
+INFO 2025-05-10 22:39:05,385 basehttp 214579 139687050135104 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-10 22:39:05,385 basehttp 214579 139687041742400 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-05-10 22:39:05,389 log 214579 139686823585344 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-10 22:39:05,391 log 214579 139686831978048 Unauthorized: /api/users/me/
+WARNING 2025-05-10 22:39:05,392 basehttp 214579 139686823585344 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-10 22:39:05,392 basehttp 214579 139686831978048 "GET /api/users/me/ HTTP/1.1" 401 172
+INFO 2025-05-10 22:39:05,397 basehttp 214579 139687050135104 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-10 22:39:05,398 basehttp 214579 139687041742400 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-10 22:39:05,446 log 214579 139687050135104 Bad Request: /api/token/refresh/
+WARNING 2025-05-10 22:39:05,446 basehttp 214579 139687050135104 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-10 22:39:05,450 log 214579 139687050135104 Bad Request: /api/token/refresh/
+WARNING 2025-05-10 22:39:05,451 basehttp 214579 139687050135104 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-12 22:44:19,668 autoreload 214579 139687157968896 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-12 22:44:20,153 autoreload 252389 139989161775104 Watching for file changes with StatReloader
+INFO 2025-05-12 22:49:58,308 autoreload 252389 139989161775104 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-12 22:49:58,766 autoreload 252873 140694498177024 Watching for file changes with StatReloader
+INFO 2025-05-12 23:02:57,537 autoreload 252873 140694498177024 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-12 23:02:58,068 autoreload 253781 140140511174656 Watching for file changes with StatReloader
+INFO 2025-05-12 23:19:52,284 autoreload 255283 139652178284544 Watching for file changes with StatReloader

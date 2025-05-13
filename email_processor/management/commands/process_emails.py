@@ -1,19 +1,21 @@
 import base64
-import requests
+import re
+import requests  # still imported, in case you re-enable later
 from django.core.management.base import BaseCommand
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from django.conf import settings
 
+
 class Command(BaseCommand):
-    help = "Fetches emails from a specific sender and sends them to the API."
+    help = "Fetches emails from a specific sender and prints their data with optional invoice extraction."
 
     def handle(self, *args, **options):
         if not settings.GMAIL_CREDENTIALS:
             self.stdout.write(self.style.ERROR("Missing Gmail credentials."))
             return
 
-        if not all([settings.GMAIL_USER_EMAIL, settings.API_ENDPOINT, settings.SPECIFIC_SENDER]):
+        if not all([settings.GMAIL_USER_EMAIL, settings.SPECIFIC_DOMAIN]):
             self.stdout.write(self.style.ERROR("Missing one or more Gmail config values."))
             return
 
@@ -39,8 +41,24 @@ class Command(BaseCommand):
                     self.stdout.write(self.style.WARNING(f"    Warning: Could not decode main body - {decode_error}"))
             return ""
 
+        def extract_invoice_info(body):
+            invoice_data = {}
+            invoice_no_match = re.search(r'Invoice\s+#?:?\s*(\d+)', body, re.IGNORECASE)
+            if invoice_no_match:
+                invoice_data['invoice_number'] = invoice_no_match.group(1)
+
+            amount_match = re.search(r'Total\s+Amount:?\s*\$?([\d,]+\.\d{2})', body, re.IGNORECASE)
+            if amount_match:
+                invoice_data['amount'] = amount_match.group(1)
+
+            date_match = re.search(r'Due\s+Date:?\s*([A-Za-z]+\s+\d{1,2},?\s+\d{4})', body)
+            if date_match:
+                invoice_data['due_date'] = date_match.group(1)
+
+            return invoice_data
+
         try:
-            self.stdout.write(self.style.MIGRATE_HEADING(f"Checking emails for {settings.GMAIL_USER_EMAIL} from {settings.SPECIFIC_SENDER}..."))
+            self.stdout.write(self.style.MIGRATE_HEADING(f"Checking emails for {settings.GMAIL_USER_EMAIL} from {settings.SPECIFIC_DOMAIN}..."))
 
             page_token = None
             processed_count = 0
@@ -48,7 +66,7 @@ class Command(BaseCommand):
             while True:
                 results = gmail.users().messages().list(
                     userId=settings.GMAIL_USER_EMAIL,
-                    q=f'from:{settings.SPECIFIC_SENDER}',
+                    q=f'from:{settings.SPECIFIC_DOMAIN} is:unread',
                     maxResults=50,
                     pageToken=page_token
                 ).execute()
@@ -59,7 +77,7 @@ class Command(BaseCommand):
                         self.stdout.write(self.style.SUCCESS("No new emails found from the specified sender."))
                     break
 
-                self.stdout.write(self.style.NOTICE(f"Found {len(messages)} emails from {settings.SPECIFIC_SENDER} on this page..."))
+                self.stdout.write(self.style.NOTICE(f"Found {len(messages)} emails from {settings.SPECIFIC_DOMAIN} on this page..."))
 
                 for msg in messages:
                     message_id = msg['id']
@@ -71,35 +89,34 @@ class Command(BaseCommand):
                         subject = next((h['value'] for h in headers if h['name'].lower() == 'subject'), 'No Subject')
                         from_addr = next((h['value'] for h in headers if h['name'].lower() == 'from'), 'No Sender')
                         body = get_plain_text_body(email.get('payload', {}))
-
-                        self.stdout.write("-" * 50)
-                        self.stdout.write(f"Processing Message ID: {message_id}")
-                        self.stdout.write(f"From: {from_addr}")
-                        self.stdout.write(f"Subject: {subject}")
-                        self.stdout.write(f"Body Snippet: {email.get('snippet', '')}")
-                        self.stdout.write("-" * 50)
+                        invoice_fields = extract_invoice_info(body)
 
                         email_data = {
                             'sender': from_addr,
                             'subject': subject,
                             'body': body,
                             'message_id': message_id,
+                            **invoice_fields,
                         }
 
-                        try:
-                            response = requests.post(settings.API_ENDPOINT, json=email_data)
-                            response.raise_for_status()
-                            self.stdout.write(self.style.SUCCESS(f"Successfully sent data for message {message_id} to API."))
-                        except requests.exceptions.RequestException as e:
-                            self.stdout.write(self.style.ERROR(f"Error sending data for message {message_id}: {e}"))
-                            continue
+                        self.stdout.write("-" * 60)
+                        self.stdout.write(f"Email Data for Message ID: {message_id}")
+                        for key, value in email_data.items():
+                            self.stdout.write(f"{key}: {value}")
+                        self.stdout.write("-" * 60)
 
-                        gmail.users().messages().modify(
-                            userId=settings.GMAIL_USER_EMAIL,
-                            id=message_id,
-                            body={'removeLabelIds': ['UNREAD']}
-                        ).execute()
-                        self.stdout.write(self.style.SUCCESS(f"Marked message {message_id} as read."))
+                        # Commented out: API submission
+                        # response = requests.post(settings.API_ENDPOINT, json=email_data)
+                        # response.raise_for_status()
+                        # self.stdout.write(self.style.SUCCESS(f"Successfully sent data for message {message_id} to API."))
+
+                        # Optionally: skip marking as read
+                        # gmail.users().messages().modify(
+                        #     userId=settings.GMAIL_USER_EMAIL,
+                        #     id=message_id,
+                        #     body={'removeLabelIds': ['UNREAD']}
+                        # ).execute()
+
                         processed_count += 1
 
                     except HttpError as http_error:
