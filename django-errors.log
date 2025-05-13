@@ -9911,3 +9911,153 @@ INFO 2025-05-12 22:49:58,766 autoreload 252873 140694498177024 Watching for file
 INFO 2025-05-12 23:02:57,537 autoreload 252873 140694498177024 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
 INFO 2025-05-12 23:02:58,068 autoreload 253781 140140511174656 Watching for file changes with StatReloader
 INFO 2025-05-12 23:19:52,284 autoreload 255283 139652178284544 Watching for file changes with StatReloader
+INFO 2025-05-13 22:34:13,133 basehttp 253781 140140331714112 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-13 22:34:13,633 basehttp 253781 140140323321408 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-13 22:34:13,638 basehttp 253781 140140331714112 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-13 22:34:13,646 basehttp 253781 140140323321408 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:34:15,412 basehttp 253781 140140331714112 "OPTIONS /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-13 22:34:15,419 basehttp 253781 140140323321408 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 52
+INFO 2025-05-13 22:34:49,534 basehttp 253781 140140331714112 "OPTIONS /api/stores/2/orders/ HTTP/1.1" 200 0
+INFO 2025-05-13 22:34:49,561 basehttp 253781 140140323321408 "POST /api/stores/2/orders/ HTTP/1.1" 201 603
+INFO 2025-05-13 22:34:49,597 basehttp 253781 140140323321408 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 655
+INFO 2025-05-13 22:35:40,459 basehttp 253781 140140323321408 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 655
+INFO 2025-05-13 22:36:24,411 basehttp 253781 140140314928704 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-13 22:36:24,883 basehttp 253781 140140306536000 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-13 22:36:24,888 basehttp 253781 140140314928704 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-13 22:36:24,895 basehttp 253781 140140306536000 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:36:30,006 basehttp 253781 140140314928704 "OPTIONS /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-13 22:36:30,018 basehttp 253781 140140306536000 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:36:41,320 basehttp 253781 140140314928704 "OPTIONS /api/stores/1/orders/undefined/ HTTP/1.1" 200 0
+WARNING 2025-05-13 22:36:41,336 log 253781 140140306536000 Not Found: /api/stores/1/orders/undefined/
+WARNING 2025-05-13 22:36:41,338 basehttp 253781 140140306536000 "DELETE /api/stores/1/orders/undefined/ HTTP/1.1" 404 23
+INFO 2025-05-13 22:40:03,793 basehttp 253781 140140306536000 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:40:50,417 basehttp 253781 140140306536000 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:40:57,436 basehttp 253781 140140314928704 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-13 22:40:57,449 basehttp 253781 140140331714112 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:40:57,450 basehttp 253781 140140306536000 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:40:57,488 basehttp 253781 140140331714112 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:43:57,290 basehttp 253781 140140331714112 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:44:04,011 basehttp 253781 140140331714112 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:44:13,225 basehttp 253781 140140331714112 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:44:14,025 basehttp 253781 140140331714112 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:44:15,100 basehttp 253781 140140331714112 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:44:16,236 basehttp 253781 140140331714112 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:44:27,612 basehttp 253781 140140331714112 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:44:37,518 basehttp 253781 140140331714112 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:44:57,246 basehttp 253781 140140331714112 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:44:57,252 basehttp 253781 140140306536000 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:44:57,313 basehttp 253781 140140306536000 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:45:05,302 basehttp 253781 140140314928704 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+INFO 2025-05-13 22:45:05,321 basehttp 253781 140140306536000 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-13 22:45:08,184 basehttp 253781 140140306536000 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-13 22:45:08,195 basehttp 253781 140140306536000 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:45:13,208 basehttp 253781 140140306536000 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:45:24,380 basehttp 253781 140140314928704 "OPTIONS /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-13 22:45:24,471 basehttp 253781 140140331714112 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:45:24,477 basehttp 253781 140140306536000 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:45:24,504 basehttp 253781 140140306536000 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 655
+INFO 2025-05-13 22:45:25,994 basehttp 253781 140140314928704 "OPTIONS /api/stores/3/orders/?store_id=3&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-13 22:45:26,153 basehttp 253781 140140331714112 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:45:26,160 basehttp 253781 140140306536000 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:45:26,182 basehttp 253781 140140306536000 "GET /api/stores/3/orders/?store_id=3&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 52
+INFO 2025-05-13 22:45:27,238 basehttp 253781 140140314928704 "OPTIONS /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-13 22:45:27,251 basehttp 253781 140140306536000 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 52
+INFO 2025-05-13 22:45:27,331 basehttp 253781 140140306536000 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:45:27,336 basehttp 253781 140140331714112 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:45:27,361 basehttp 253781 140140331714112 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 52
+INFO 2025-05-13 22:45:28,212 basehttp 253781 140140306536000 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:45:28,218 basehttp 253781 140140331714112 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:45:28,246 basehttp 253781 140140331714112 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:45:39,521 basehttp 253781 140140331714112 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:45:39,524 basehttp 253781 140140306536000 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:45:39,571 basehttp 253781 140140306536000 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:46:59,807 autoreload 253781 140140511174656 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 22:47:00,423 autoreload 282702 139997064052736 Watching for file changes with StatReloader
+INFO 2025-05-13 22:47:04,874 autoreload 282702 139997064052736 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 22:47:05,357 autoreload 282722 140627814801408 Watching for file changes with StatReloader
+INFO 2025-05-13 22:47:06,720 autoreload 282722 140627814801408 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 22:47:07,204 autoreload 282726 139686527918080 Watching for file changes with StatReloader
+INFO 2025-05-13 22:48:24,553 basehttp 282726 139686348637760 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:48:24,559 basehttp 282726 139686340245056 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:48:24,614 basehttp 282726 139686340245056 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 655
+INFO 2025-05-13 22:49:24,935 basehttp 282726 139686340245056 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:49:24,943 basehttp 282726 139686348637760 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:49:25,007 basehttp 282726 139686348637760 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 655
+INFO 2025-05-13 22:49:34,274 basehttp 282726 139686340245056 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:49:34,283 basehttp 282726 139686348637760 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:49:34,341 basehttp 282726 139686348637760 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3651
+INFO 2025-05-13 22:50:24,890 basehttp 282726 139686331852352 "OPTIONS /api/stores/1/orders/ HTTP/1.1" 200 0
+INFO 2025-05-13 22:50:24,915 basehttp 282726 139686348637760 "POST /api/stores/1/orders/ HTTP/1.1" 201 611
+INFO 2025-05-13 22:50:24,938 basehttp 282726 139686348637760 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 4263
+INFO 2025-05-13 22:50:31,273 basehttp 282726 139686348637760 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:50:31,280 basehttp 282726 139686340245056 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:50:31,342 basehttp 282726 139686340245056 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 4263
+INFO 2025-05-13 22:51:01,659 basehttp 282726 139686340245056 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 52
+INFO 2025-05-13 22:51:01,746 basehttp 282726 139686340245056 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:51:01,751 basehttp 282726 139686348637760 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:51:01,779 basehttp 282726 139686348637760 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 52
+INFO 2025-05-13 22:51:46,437 basehttp 282726 139686331852352 "OPTIONS /api/stores/4/orders/ HTTP/1.1" 200 0
+INFO 2025-05-13 22:51:46,453 basehttp 282726 139686348637760 "POST /api/stores/4/orders/ HTTP/1.1" 201 610
+INFO 2025-05-13 22:51:46,469 basehttp 282726 139686348637760 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 662
+INFO 2025-05-13 22:51:48,027 basehttp 282726 139686348637760 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:51:48,033 basehttp 282726 139686340245056 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:51:48,066 basehttp 282726 139686340245056 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 662
+INFO 2025-05-13 22:51:51,963 basehttp 282726 139686331852352 "OPTIONS /api/stores/9/orders/undefined/photos/ HTTP/1.1" 200 0
+WARNING 2025-05-13 22:51:51,990 log 282726 139686340245056 Not Found: /api/stores/9/orders/undefined/photos/
+WARNING 2025-05-13 22:51:51,991 basehttp 282726 139686340245056 "GET /api/stores/9/orders/undefined/photos/ HTTP/1.1" 404 27882
+INFO 2025-05-13 22:52:17,532 basehttp 282726 139686340245056 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:52:17,538 basehttp 282726 139686348637760 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:52:17,566 basehttp 282726 139686348637760 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 662
+INFO 2025-05-13 22:52:19,106 basehttp 282726 139686340245056 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 22:52:19,113 basehttp 282726 139686348637760 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 22:52:19,141 basehttp 282726 139686348637760 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 4263
+INFO 2025-05-13 22:52:23,946 basehttp 282726 139686331852352 "OPTIONS /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=delivery_date HTTP/1.1" 200 0
+INFO 2025-05-13 22:52:23,969 basehttp 282726 139686348637760 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=delivery_date HTTP/1.1" 200 4263
+INFO 2025-05-13 22:52:26,538 basehttp 282726 139686348637760 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 4263
+INFO 2025-05-13 22:52:27,092 basehttp 282726 139686331852352 "OPTIONS /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=status HTTP/1.1" 200 0
+INFO 2025-05-13 22:52:27,120 basehttp 282726 139686348637760 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=status HTTP/1.1" 200 4263
+INFO 2025-05-13 22:52:28,849 basehttp 282726 139686348637760 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 4263
+WARNING 2025-05-13 23:07:20,840 log 282726 139686340245056 Unauthorized: /api/stores/1/orders/
+WARNING 2025-05-13 23:07:20,841 basehttp 282726 139686340245056 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 172
+INFO 2025-05-13 23:07:20,854 basehttp 282726 139686331852352 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-13 23:07:20,858 log 282726 139686340245056 Bad Request: /api/token/refresh/
+WARNING 2025-05-13 23:07:20,858 basehttp 282726 139686340245056 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-13 23:07:24,904 basehttp 282726 139686340245056 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-13 23:07:24,919 basehttp 282726 139686340245056 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 23:07:27,425 basehttp 282726 139686340245056 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 23:07:27,430 basehttp 282726 139686348637760 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 23:07:32,474 basehttp 282726 139686348637760 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 23:07:32,481 basehttp 282726 139686340245056 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 23:07:33,135 basehttp 282726 139686340245056 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 662
+INFO 2025-05-13 23:07:41,477 basehttp 282726 139686331852352 "OPTIONS /api/stores/4/orders/9/ HTTP/1.1" 200 0
+INFO 2025-05-13 23:07:41,510 basehttp 282726 139686340245056 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 618
+INFO 2025-05-13 23:07:41,524 basehttp 282726 139686340245056 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 670
+INFO 2025-05-13 23:08:41,524 basehttp 282726 139686340245056 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 670
+INFO 2025-05-13 23:17:34,209 basehttp 282726 139686340245056 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 670
+INFO 2025-05-13 23:17:35,042 basehttp 282726 139686331852352 "OPTIONS /api/users/ HTTP/1.1" 200 0
+INFO 2025-05-13 23:17:35,054 basehttp 282726 139686340245056 "GET /api/users/ HTTP/1.1" 200 1682
+INFO 2025-05-13 23:17:35,405 basehttp 282726 139686340245056 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 670
+WARNING 2025-05-13 23:23:03,011 log 282726 139686331852352 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-13 23:23:03,011 basehttp 282726 139686331852352 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 172
+WARNING 2025-05-13 23:23:03,019 log 282726 139686331852352 Bad Request: /api/token/refresh/
+WARNING 2025-05-13 23:23:03,020 basehttp 282726 139686331852352 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-13 23:28:28,313 basehttp 282726 139686331852352 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-13 23:28:28,800 basehttp 282726 139686340245056 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-13 23:28:28,805 basehttp 282726 139686331852352 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-13 23:28:28,811 basehttp 282726 139686340245056 "GET /api/users/1/stores/ HTTP/1.1" 200 533
+INFO 2025-05-13 23:28:30,896 basehttp 282726 139686331852352 "OPTIONS /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-13 23:28:30,908 basehttp 282726 139686340245056 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 670
+INFO 2025-05-13 23:30:26,282 basehttp 282726 139686340245056 "OPTIONS /api/users/ HTTP/1.1" 200 0
+INFO 2025-05-13 23:30:26,297 basehttp 282726 139686331852352 "GET /api/users/ HTTP/1.1" 200 1682
+INFO 2025-05-13 23:30:30,134 basehttp 282726 139686340245056 "OPTIONS /api/users/2/ HTTP/1.1" 200 0
+INFO 2025-05-13 23:30:30,150 basehttp 282726 139686331852352 "PATCH /api/users/2/ HTTP/1.1" 200 398
+INFO 2025-05-13 23:30:31,203 basehttp 282726 139686331852352 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-13 23:30:32,878 basehttp 282726 139686331852352 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 670
+INFO 2025-05-13 23:34:29,237 autoreload 282726 139686527918080 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 23:34:29,735 autoreload 284865 140707882192896 Watching for file changes with StatReloader
+INFO 2025-05-13 23:34:30,935 autoreload 284865 140707882192896 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 23:34:31,449 autoreload 284868 140371643658240 Watching for file changes with StatReloader
+INFO 2025-05-13 23:34:38,812 autoreload 284868 140371643658240 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 23:34:39,294 autoreload 284892 140277829857280 Watching for file changes with StatReloader
+INFO 2025-05-13 23:34:51,046 autoreload 284892 140277829857280 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 23:34:51,586 autoreload 284915 140216000475136 Watching for file changes with StatReloader

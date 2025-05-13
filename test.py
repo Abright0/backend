@@ -484,6 +484,7 @@ class UserRegistrationSMSTest(APITestCase):
         self.assertFalse(User.objects.filter(username="nopho").exists())
         mock_send_sms.assert_not_called()orde
 """
+
 class UserViewSetTests(APITestCase):
 
     def setUp(self):

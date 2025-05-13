@@ -181,14 +181,13 @@ class OrderViewSet(viewsets.ModelViewSet):
                 
                 # Use provided preferred time or default to noon
                 delivery_time = data.get("preferred_delivery_time") or time(12, 0)
-                '''
-                    DeliveryAttempt.objects.create(
+
+                DeliveryAttempt.objects.create(
                         order=order,
                         status='order_placed',
                         delivery_date=delivery_date,
                         delivery_time=delivery_time
                     )
-                '''
                 
                 # Return the serialized order with detail serializer
                 return Response(
