@@ -3,6 +3,9 @@ from rest_framework import serializers
 from orders.models import Order, OrderItem
 from stores.models import Store
 
+from api.assignments.serializers import DeliveryAttemptSerializer
+
+
 class OrderItemSerializer(serializers.ModelSerializer):
     """
     Serializer for OrderItem objects.
@@ -118,11 +121,14 @@ class OrderDetailSerializer(OrderSerializer):
     Detailed Order serializer for individual order views.
     Includes related order items and more details.
     """
+    delivery_attempts = DeliveryAttemptSerializer(many=True, read_only=True)
     store_details = StoreSerializer(source='store', read_only=True)
     
     class Meta:
         model = Order
         fields = OrderSerializer.Meta.fields + [
-            'store_details', 'customer_num',
-            'misdelivery_reason'
+            'store_details',
+            'customer_num',
+            'misdelivery_reason',
+            'delivery_attempts'
         ]

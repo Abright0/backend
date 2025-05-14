@@ -10061,3 +10061,510 @@ INFO 2025-05-13 23:34:38,812 autoreload 284868 140371643658240 /home/abright/Wor
 INFO 2025-05-13 23:34:39,294 autoreload 284892 140277829857280 Watching for file changes with StatReloader
 INFO 2025-05-13 23:34:51,046 autoreload 284892 140277829857280 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
 INFO 2025-05-13 23:34:51,586 autoreload 284915 140216000475136 Watching for file changes with StatReloader
+INFO 2025-05-13 23:43:40,271 autoreload 284915 140216000475136 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-13 23:43:40,758 autoreload 285493 139981890547712 Watching for file changes with StatReloader
+INFO 2025-05-13 23:44:09,166 autoreload 285493 139981890547712 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-13 23:44:09,640 autoreload 285524 140578873163776 Watching for file changes with StatReloader
+INFO 2025-05-13 23:44:27,519 autoreload 285524 140578873163776 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-13 23:44:28,009 autoreload 285556 139663753469952 Watching for file changes with StatReloader
+INFO 2025-05-13 23:44:35,575 autoreload 285556 139663753469952 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-13 23:44:36,110 autoreload 285575 139724241760256 Watching for file changes with StatReloader
+INFO 2025-05-13 23:45:00,387 autoreload 285575 139724241760256 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-13 23:45:00,888 autoreload 285799 140341346865152 Watching for file changes with StatReloader
+INFO 2025-05-13 23:46:32,529 autoreload 285799 140341346865152 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 23:46:33,030 autoreload 285834 139700358488064 Watching for file changes with StatReloader
+INFO 2025-05-13 23:46:38,512 autoreload 285834 139700358488064 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 23:46:39,000 autoreload 285858 140380311719936 Watching for file changes with StatReloader
+INFO 2025-05-13 23:46:51,739 autoreload 285858 140380311719936 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 23:46:52,231 autoreload 285889 140441955131392 Watching for file changes with StatReloader
+INFO 2025-05-13 23:46:54,603 autoreload 285889 140441955131392 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 23:46:55,079 autoreload 285908 140400176562176 Watching for file changes with StatReloader
+INFO 2025-05-13 23:47:01,578 autoreload 285908 140400176562176 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-13 23:47:02,088 autoreload 285927 139625851543552 Watching for file changes with StatReloader
+INFO 2025-05-13 23:51:00,463 autoreload 285927 139625851543552 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-05-13 23:51:00,987 autoreload 285993 139877430464512 Watching for file changes with StatReloader
+INFO 2025-05-13 23:53:05,871 basehttp 285993 139877249758784 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+WARNING 2025-05-13 23:53:05,881 log 285993 139877241366080 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-13 23:53:05,883 log 285993 139877232973376 Unauthorized: /api/users/me/
+WARNING 2025-05-13 23:53:05,883 basehttp 285993 139877241366080 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-13 23:53:05,883 basehttp 285993 139877232973376 "GET /api/users/me/ HTTP/1.1" 401 172
+INFO 2025-05-13 23:53:05,892 basehttp 285993 139877249758784 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-13 23:53:05,895 basehttp 285993 139877018498624 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-13 23:53:05,904 log 285993 139877232973376 Bad Request: /api/token/refresh/
+WARNING 2025-05-13 23:53:05,904 basehttp 285993 139877232973376 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-13 23:53:05,929 log 285993 139877241366080 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-13 23:53:05,929 basehttp 285993 139877241366080 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 172
+WARNING 2025-05-13 23:53:05,937 log 285993 139877241366080 Bad Request: /api/token/refresh/
+WARNING 2025-05-13 23:53:05,942 log 285993 139877010105920 Bad Request: /api/token/refresh/
+WARNING 2025-05-13 23:53:05,943 basehttp 285993 139877241366080 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-13 23:53:05,943 basehttp 285993 139877010105920 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-13 23:53:09,279 basehttp 285993 139877249758784 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-13 23:53:09,289 log 285993 139877241366080 Unauthorized: /api/logout/
+WARNING 2025-05-13 23:53:09,291 basehttp 285993 139877241366080 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-13 23:53:09,304 log 285993 139877241366080 Bad Request: /api/token/refresh/
+WARNING 2025-05-13 23:53:09,305 basehttp 285993 139877241366080 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-13 23:53:10,630 basehttp 285993 139877241366080 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-13 23:53:10,641 basehttp 285993 139877241366080 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-13 23:53:12,518 basehttp 285993 139877241366080 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-13 23:53:12,526 basehttp 285993 139877232973376 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-13 23:53:14,623 basehttp 285993 139877232973376 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:02:34,479 basehttp 285993 139877232973376 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:02:34,482 basehttp 285993 139877249758784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:02:34,530 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:07:42,833 basehttp 285993 139877249758784 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:07:42,842 basehttp 285993 139877232973376 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:07:42,881 basehttp 285993 139877232973376 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+WARNING 2025-05-14 00:08:24,532 log 285993 139877232973376 Unauthorized: /api/users/me/
+WARNING 2025-05-14 00:08:24,533 log 285993 139877249758784 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-14 00:08:24,534 basehttp 285993 139877232973376 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-14 00:08:24,534 basehttp 285993 139877249758784 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-14 00:08:24,539 log 285993 139877249758784 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:08:24,541 log 285993 139877232973376 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:08:24,542 basehttp 285993 139877232973376 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:08:24,542 basehttp 285993 139877249758784 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:08:24,571 log 285993 139877018498624 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-14 00:08:24,571 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 172
+WARNING 2025-05-14 00:08:24,578 log 285993 139877018498624 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:08:24,579 basehttp 285993 139877018498624 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:08:27,004 log 285993 139877018498624 Unauthorized: /api/logout/
+WARNING 2025-05-14 00:08:27,005 basehttp 285993 139877018498624 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-14 00:08:27,018 log 285993 139877018498624 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:08:27,018 basehttp 285993 139877018498624 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-14 00:08:28,620 basehttp 285993 139877018498624 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 00:08:28,629 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:08:30,530 basehttp 285993 139877018498624 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:08:30,536 basehttp 285993 139877249758784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:08:31,024 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:09:02,072 basehttp 285993 139877249758784 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:09:02,080 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:09:02,108 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:09:46,500 basehttp 285993 139877018498624 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:09:46,509 basehttp 285993 139877249758784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:09:46,541 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:13:29,798 basehttp 285993 139877249758784 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:13:29,809 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:13:29,869 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:14:50,701 basehttp 285993 139877018498624 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:14:50,707 basehttp 285993 139877249758784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:14:50,761 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:15:23,318 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:15:39,156 basehttp 285993 139877249758784 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:15:39,166 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:15:39,218 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:16:36,512 basehttp 285993 139877232973376 "OPTIONS /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-14 00:16:36,520 basehttp 285993 139877018498624 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:16:37,234 basehttp 285993 139877018498624 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:16:39,808 basehttp 285993 139877018498624 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:16:42,030 basehttp 285993 139877018498624 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:16:53,788 basehttp 285993 139877018498624 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:16:53,798 basehttp 285993 139877249758784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:16:53,861 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:16:57,735 basehttp 285993 139877249758784 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:18:07,062 basehttp 285993 139877249758784 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:18:07,066 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:18:51,810 basehttp 285993 139877018498624 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:18:51,814 basehttp 285993 139877249758784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:18:51,931 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:18:54,420 basehttp 285993 139877249758784 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:20:27,949 basehttp 285993 139877249758784 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:20:49,678 basehttp 285993 139877249758784 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:20:50,664 basehttp 285993 139877249758784 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:20:50,673 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:20:50,727 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:20:52,316 basehttp 285993 139877018498624 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:21:01,452 basehttp 285993 139877018498624 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:21:01,463 basehttp 285993 139877249758784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:21:01,515 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:21:03,757 basehttp 285993 139877249758784 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:21:48,501 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:22:07,614 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:22:38,100 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+WARNING 2025-05-14 00:23:49,474 log 285993 139877249758784 Unauthorized: /api/users/me/
+WARNING 2025-05-14 00:23:49,475 log 285993 139877018498624 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-14 00:23:49,476 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-14 00:23:49,476 basehttp 285993 139877249758784 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-14 00:23:49,488 log 285993 139877249758784 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:23:49,490 log 285993 139877018498624 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:23:49,491 basehttp 285993 139877018498624 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:23:49,491 basehttp 285993 139877249758784 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:23:49,561 log 285993 139877018498624 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-14 00:23:49,562 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 172
+WARNING 2025-05-14 00:23:49,608 log 285993 139877018498624 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:23:49,608 basehttp 285993 139877018498624 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:23:56,170 log 285993 139877018498624 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-14 00:23:56,171 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 58
+WARNING 2025-05-14 00:23:56,179 log 285993 139877018498624 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:23:56,179 basehttp 285993 139877018498624 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:23:58,166 log 285993 139877018498624 Unauthorized: /api/logout/
+WARNING 2025-05-14 00:23:58,167 basehttp 285993 139877018498624 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-14 00:23:58,192 log 285993 139877018498624 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:23:58,193 basehttp 285993 139877018498624 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:23:59,132 log 285993 139877018498624 Too Many Requests: /api/login/
+WARNING 2025-05-14 00:23:59,133 basehttp 285993 139877018498624 "POST /api/login/ HTTP/1.1" 429 69
+WARNING 2025-05-14 00:24:29,632 log 285993 139877018498624 Too Many Requests: /api/login/
+WARNING 2025-05-14 00:24:29,633 basehttp 285993 139877018498624 "POST /api/login/ HTTP/1.1" 429 69
+INFO 2025-05-14 00:25:35,524 basehttp 285993 139877018498624 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 00:25:35,534 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:25:36,686 basehttp 285993 139877232973376 "OPTIONS /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-14 00:25:36,711 basehttp 285993 139877018498624 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 6290
+INFO 2025-05-14 00:25:38,736 basehttp 285993 139877018498624 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:25:38,742 basehttp 285993 139877249758784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:25:38,779 basehttp 285993 139877249758784 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:25:46,515 basehttp 285993 139877249758784 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:28:04,157 basehttp 285993 139877232973376 "OPTIONS /api/stores/4/users/ HTTP/1.1" 200 0
+INFO 2025-05-14 00:28:04,170 basehttp 285993 139877249758784 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:28:04,184 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:28:04,185 basehttp 285993 139877241366080 "GET /api/stores/4/users/ HTTP/1.1" 200 1204
+INFO 2025-05-14 00:29:25,048 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:29:25,052 basehttp 285993 139877241366080 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:29:38,857 basehttp 285993 139877241366080 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:29:38,869 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:29:46,655 basehttp 285993 139877018498624 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:30:18,207 basehttp 285993 139877232973376 "OPTIONS /api/stores/4/orders/undefined/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-14 00:30:18,236 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:30:18,249 log 285993 139877241366080 Internal Server Error: /api/stores/4/orders/undefined/available-drivers/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: OrderViewSet.available_drivers() got an unexpected keyword argument 'store_pk'
+ERROR 2025-05-14 00:30:18,250 basehttp 285993 139877241366080 "GET /api/stores/4/orders/undefined/available-drivers/ HTTP/1.1" 500 22419
+INFO 2025-05-14 00:30:25,479 basehttp 285993 139877241366080 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:30:32,157 basehttp 285993 139877241366080 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:30:32,167 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-14 00:30:32,277 log 285993 139877018498624 Internal Server Error: /api/stores/4/orders/undefined/available-drivers/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: OrderViewSet.available_drivers() got an unexpected keyword argument 'store_pk'
+INFO 2025-05-14 00:30:32,282 basehttp 285993 139877241366080 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:30:32,282 basehttp 285993 139877018498624 "GET /api/stores/4/orders/undefined/available-drivers/ HTTP/1.1" 500 22419
+ERROR 2025-05-14 00:33:54,057 log 285993 139877018498624 Internal Server Error: /api/stores/4/orders/undefined/available-drivers/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: OrderViewSet.available_drivers() got an unexpected keyword argument 'store_pk'
+ERROR 2025-05-14 00:33:54,058 basehttp 285993 139877018498624 "GET /api/stores/4/orders/undefined/available-drivers/ HTTP/1.1" 500 22419
+INFO 2025-05-14 00:33:54,065 basehttp 285993 139877241366080 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:33:56,409 basehttp 285993 139877241366080 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:36:55,954 basehttp 285993 139877241366080 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:37:43,889 basehttp 285993 139877241366080 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-14 00:37:49,934 basehttp 285993 139877241366080 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:37:49,946 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-14 00:37:50,013 log 285993 139877018498624 Internal Server Error: /api/stores/4/orders/undefined/available-drivers/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: OrderViewSet.available_drivers() got an unexpected keyword argument 'store_pk'
+INFO 2025-05-14 00:37:50,016 basehttp 285993 139877241366080 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:37:50,016 basehttp 285993 139877018498624 "GET /api/stores/4/orders/undefined/available-drivers/ HTTP/1.1" 500 22419
+INFO 2025-05-14 00:38:25,219 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:38:27,982 basehttp 285993 139877232973376 "OPTIONS /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 0
+ERROR 2025-05-14 00:38:28,009 log 285993 139877018498624 Internal Server Error: /api/stores/4/orders/9/available-drivers/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: OrderViewSet.available_drivers() got an unexpected keyword argument 'store_pk'
+ERROR 2025-05-14 00:38:28,010 basehttp 285993 139877018498624 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 500 22387
+ERROR 2025-05-14 00:38:44,788 log 285993 139877018498624 Internal Server Error: /api/stores/4/orders/undefined/available-drivers/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: OrderViewSet.available_drivers() got an unexpected keyword argument 'store_pk'
+INFO 2025-05-14 00:38:44,792 basehttp 285993 139877241366080 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:38:44,792 basehttp 285993 139877018498624 "GET /api/stores/4/orders/undefined/available-drivers/ HTTP/1.1" 500 22419
+INFO 2025-05-14 00:38:46,944 basehttp 285993 139877018498624 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:38:46,946 basehttp 285993 139877241366080 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-14 00:38:47,049 log 285993 139877241366080 Internal Server Error: /api/stores/4/orders/undefined/available-drivers/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: OrderViewSet.available_drivers() got an unexpected keyword argument 'store_pk'
+INFO 2025-05-14 00:38:47,049 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:38:47,050 basehttp 285993 139877241366080 "GET /api/stores/4/orders/undefined/available-drivers/ HTTP/1.1" 500 22419
+INFO 2025-05-14 00:39:09,551 basehttp 285993 139877241366080 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 00:39:11,498 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:39:11,499 basehttp 285993 139877241366080 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:39:11,546 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:39:14,131 log 285993 139877018498624 Internal Server Error: /api/stores/4/orders/9/available-drivers/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: OrderViewSet.available_drivers() got an unexpected keyword argument 'store_pk'
+ERROR 2025-05-14 00:39:14,132 basehttp 285993 139877018498624 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 500 22387
+WARNING 2025-05-14 00:41:31,031 log 285993 139877018498624 Unauthorized: /api/stores/4/orders/9/available-drivers/
+WARNING 2025-05-14 00:41:31,033 log 285993 139877241366080 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-14 00:41:31,033 basehttp 285993 139877018498624 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 401 172
+WARNING 2025-05-14 00:41:31,033 basehttp 285993 139877241366080 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 172
+WARNING 2025-05-14 00:41:31,042 log 285993 139877241366080 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:41:31,044 log 285993 139877018498624 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:41:31,045 basehttp 285993 139877241366080 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:41:31,045 basehttp 285993 139877018498624 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:41:35,671 log 285993 139877241366080 Unauthorized: /api/stores/4/orders/9/available-drivers/
+WARNING 2025-05-14 00:41:35,672 log 285993 139877018498624 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-14 00:41:35,673 basehttp 285993 139877241366080 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 401 58
+WARNING 2025-05-14 00:41:35,673 basehttp 285993 139877018498624 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 58
+WARNING 2025-05-14 00:41:35,679 log 285993 139877241366080 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:41:35,679 basehttp 285993 139877241366080 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:41:35,681 log 285993 139877018498624 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:41:35,681 basehttp 285993 139877018498624 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:41:39,822 log 285993 139877018498624 Unauthorized: /api/logout/
+WARNING 2025-05-14 00:41:39,823 basehttp 285993 139877018498624 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-14 00:41:39,847 log 285993 139877018498624 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 00:41:39,848 basehttp 285993 139877018498624 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 00:41:41,171 log 285993 139877018498624 Too Many Requests: /api/login/
+WARNING 2025-05-14 00:41:41,172 basehttp 285993 139877018498624 "POST /api/login/ HTTP/1.1" 429 69
+WARNING 2025-05-14 00:41:45,985 log 285993 139877018498624 Too Many Requests: /api/login/
+WARNING 2025-05-14 00:41:45,986 basehttp 285993 139877018498624 "POST /api/login/ HTTP/1.1" 429 69
+INFO 2025-05-14 00:44:17,714 basehttp 285993 139877018498624 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 00:44:17,727 basehttp 285993 139877018498624 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:44:19,014 basehttp 285993 139877018498624 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 6290
+INFO 2025-05-14 00:44:21,645 basehttp 285993 139877018498624 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:44:21,651 basehttp 285993 139877241366080 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:44:21,656 basehttp 285993 139877232973376 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:44:24,343 log 285993 139877232973376 Internal Server Error: /api/stores/4/orders/9/available-drivers/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: OrderViewSet.available_drivers() got an unexpected keyword argument 'store_pk'
+ERROR 2025-05-14 00:44:24,343 basehttp 285993 139877232973376 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 500 22387
+INFO 2025-05-14 00:46:08,987 basehttp 285993 139877241366080 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:46:08,988 basehttp 285993 139877232973376 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:46:09,065 basehttp 285993 139877232973376 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:46:10,768 log 285993 139877232973376 Internal Server Error: /api/stores/4/orders/9/available-drivers/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: OrderViewSet.available_drivers() got an unexpected keyword argument 'store_pk'
+ERROR 2025-05-14 00:46:10,769 basehttp 285993 139877232973376 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 500 22387
+INFO 2025-05-14 00:48:18,218 autoreload 285993 139877430464512 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 00:48:18,723 autoreload 290632 139685689303040 Watching for file changes with StatReloader
+INFO 2025-05-14 00:48:24,182 autoreload 290632 139685689303040 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 00:48:24,681 autoreload 290653 140582421385216 Watching for file changes with StatReloader
+INFO 2025-05-14 00:48:28,111 autoreload 290653 140582421385216 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 00:48:28,612 autoreload 290670 140286447259648 Watching for file changes with StatReloader
+INFO 2025-05-14 00:49:14,462 autoreload 290670 140286447259648 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 00:49:14,972 autoreload 290703 139769352007680 Watching for file changes with StatReloader
+INFO 2025-05-14 00:49:21,101 basehttp 290703 139769173505600 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:49:21,107 basehttp 290703 139769165112896 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:49:21,154 basehttp 290703 139769165112896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:49:23,366 log 290703 139769165112896 Internal Server Error: /api/stores/4/orders/9/available-drivers/
+ERROR 2025-05-14 00:49:23,367 basehttp 290703 139769165112896 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 500 456
+INFO 2025-05-14 00:51:06,727 basehttp 290703 139769165112896 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:51:06,738 basehttp 290703 139769173505600 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:51:06,799 basehttp 290703 139769173505600 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:51:09,862 log 290703 139769173505600 Internal Server Error: /api/stores/4/orders/9/available-drivers/
+ERROR 2025-05-14 00:51:09,863 basehttp 290703 139769173505600 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 500 456
+ERROR 2025-05-14 00:52:09,937 log 290703 139769173505600 Internal Server Error: /api/stores/4/orders/9/available-drivers/
+ERROR 2025-05-14 00:52:09,938 basehttp 290703 139769173505600 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 500 456
+INFO 2025-05-14 00:52:55,784 autoreload 290703 139769352007680 /home/abright/Work/FarmFreight/backend/stores/models.py changed, reloading.
+INFO 2025-05-14 00:52:56,202 autoreload 290960 140338053894144 Watching for file changes with StatReloader
+INFO 2025-05-14 00:55:05,271 autoreload 290960 140338053894144 /home/abright/Work/FarmFreight/backend/stores/models.py changed, reloading.
+INFO 2025-05-14 00:55:05,623 autoreload 291143 140210262970368 Watching for file changes with StatReloader
+INFO 2025-05-14 00:55:40,380 autoreload 291143 140210262970368 /home/abright/Work/FarmFreight/backend/stores/models.py changed, reloading.
+INFO 2025-05-14 00:55:40,872 autoreload 291236 139783128092672 Watching for file changes with StatReloader
+INFO 2025-05-14 00:57:12,403 autoreload 291236 139783128092672 /home/abright/Work/FarmFreight/backend/stores/models.py changed, reloading.
+INFO 2025-05-14 00:57:12,906 autoreload 291273 140675984515072 Watching for file changes with StatReloader
+INFO 2025-05-14 00:57:26,747 basehttp 291273 140675805922880 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 00:57:26,764 basehttp 291273 140675805922880 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:57:28,415 basehttp 291273 140675805922880 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 6290
+INFO 2025-05-14 00:57:30,127 basehttp 291273 140675805922880 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:57:30,134 basehttp 291273 140675796481600 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:57:30,197 basehttp 291273 140675796481600 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:57:31,632 log 291273 140675796481600 Internal Server Error: /api/stores/4/orders/9/available-drivers/
+ERROR 2025-05-14 00:57:31,633 basehttp 291273 140675796481600 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 500 49
+INFO 2025-05-14 00:58:32,264 autoreload 291273 140675984515072 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 00:58:32,856 autoreload 291382 139912459337728 Watching for file changes with StatReloader
+INFO 2025-05-14 00:58:42,526 autoreload 291382 139912459337728 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 00:58:43,032 autoreload 291404 139654906761216 Watching for file changes with StatReloader
+INFO 2025-05-14 00:58:43,671 basehttp 291404 139654716761664 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 00:58:43,672 basehttp 291404 139654725154368 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 00:58:43,723 basehttp 291404 139654716761664 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:58:45,025 log 291404 139654716761664 Internal Server Error: /api/stores/4/orders/9/available-drivers/
+ERROR 2025-05-14 00:58:45,025 basehttp 291404 139654716761664 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 500 49
+INFO 2025-05-14 00:58:57,860 basehttp 291404 139654716761664 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-14 00:59:29,009 autoreload 291404 139654906761216 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 00:59:29,532 autoreload 291472 139982926233600 Watching for file changes with StatReloader
+INFO 2025-05-14 00:59:45,949 basehttp 291472 139982748038720 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+ERROR 2025-05-14 00:59:49,245 log 291472 139982748038720 Internal Server Error: /api/stores/4/orders/9/available-drivers/
+ERROR 2025-05-14 00:59:49,246 basehttp 291472 139982748038720 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 500 49
+INFO 2025-05-14 01:00:33,249 autoreload 291472 139982926233600 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 01:00:33,741 autoreload 291538 140498245197824 Watching for file changes with StatReloader
+INFO 2025-05-14 01:01:04,018 autoreload 291538 140498245197824 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 01:01:04,564 autoreload 291635 140230329585664 Watching for file changes with StatReloader
+INFO 2025-05-14 01:01:07,547 basehttp 291635 140230145340992 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 01:01:07,567 basehttp 291635 140230145340992 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 01:01:08,845 basehttp 291635 140230145340992 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 6290
+INFO 2025-05-14 01:01:11,962 basehttp 291635 140230145340992 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 01:01:11,970 basehttp 291635 140230136948288 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 01:01:11,993 basehttp 291635 140230136948288 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 01:01:13,391 basehttp 291635 140230136948288 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:02:54,044 basehttp 291635 140230136948288 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:02:56,924 basehttp 291635 140230136948288 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 01:02:56,933 basehttp 291635 140230145340992 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 01:02:56,993 basehttp 291635 140230145340992 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 01:02:59,462 basehttp 291635 140230145340992 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:05:06,024 basehttp 291635 140230145340992 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 01:05:06,031 basehttp 291635 140230136948288 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 01:05:06,098 basehttp 291635 140230136948288 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 01:05:07,964 basehttp 291635 140230136948288 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:05:21,337 basehttp 291635 140230136948288 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 01:05:21,343 basehttp 291635 140230145340992 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 01:05:21,396 basehttp 291635 140230145340992 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 01:05:22,562 basehttp 291635 140230145340992 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:05:47,623 basehttp 291635 140230145340992 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:05:53,701 basehttp 291635 140230145340992 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 01:05:53,709 basehttp 291635 140230136948288 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 01:05:53,758 basehttp 291635 140230136948288 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 01:05:58,216 basehttp 291635 140230136948288 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:06:57,002 basehttp 291635 140230136948288 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:06:58,150 basehttp 291635 140230136948288 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:07:01,710 basehttp 291635 140230136948288 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:07:17,409 basehttp 291635 140230136948288 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:07:24,676 basehttp 291635 140230136948288 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 01:07:24,684 basehttp 291635 140230145340992 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 01:07:24,728 basehttp 291635 140230145340992 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 01:07:26,115 basehttp 291635 140230145340992 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:08:06,599 basehttp 291635 140230145340992 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 01:08:41,941 basehttp 291635 140230145340992 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 01:08:41,948 basehttp 291635 140230136948288 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 01:08:42,016 basehttp 291635 140230136948288 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693

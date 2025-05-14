@@ -1,6 +1,7 @@
 from django.db import models
 from django.dispatch import receiver
 from django.db.models.signals import post_migrate
+from accounts.models import User
 
 class Store(models.Model):
     name = models.CharField(max_length=100)

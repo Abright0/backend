@@ -13,6 +13,7 @@ from products.models import Product
 from stores.models import Store
 from .serializers import OrderSerializer, OrderDetailSerializer
 from assignments.models import DeliveryAttempt
+from api.accounts.serializers import UserSerializer 
 
 class OrderViewSet(viewsets.ModelViewSet):
     """
@@ -249,3 +250,29 @@ class OrderViewSet(viewsets.ModelViewSet):
                 print(f"Error updating delivery attempt status: {e}")
 
         return super().update(request, *args, **kwargs)
+
+    from django.contrib.auth import get_user_model
+    User = get_user_model()
+
+    @action(detail=True, methods=['get'], url_path='available-drivers')
+    def available_drivers(self, request, store_pk=None, pk=None):
+        try:
+            store = Store.objects.get(pk=store_pk)
+            print('Store found:', store)
+
+            users = store.store_users.all()
+            print('All store users:', users)
+
+            drivers = users.filter(is_driver=True)
+            print('Drivers:', drivers)
+
+            serializer = UserSerializer(drivers, many=True)
+            return Response(serializer.data)
+
+        except Store.DoesNotExist:
+            return Response({'detail': 'Store not found'}, status=status.HTTP_404_NOT_FOUND)
+        except Exception as e:
+            # ✅ Log actual error
+            import traceback
+            print('Error in available_drivers:', traceback.format_exc())
+            return Response({'detail': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
