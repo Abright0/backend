@@ -11,14 +11,13 @@ class Order(models.Model):
     address = models.CharField(max_length=150)
     customer_email = models.EmailField(max_length=150)
     customer_num = models.CharField(max_length=20)
-    preferred_delivery_time = models.TextField(null=True, blank=True)
-    delivery_instructions = models.TextField(null=True, blank=True)
+    #preferred_delivery_time = models.TextField(null=True, blank=True)
+    #delivery_instructions = models.TextField(null=True, blank=True)
     notes = models.TextField(null=True, blank=True)
     misdelivery_reason = models.TextField(null=True, blank=True)
     delivery_date = models.TextField(null=True, blank=True)
 
     creation_date = models.DateTimeField(auto_now_add=True)
-    notes = models.TextField(null=True, blank=True)
     
     # one to many
     store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name='orders')

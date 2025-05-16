@@ -135,8 +135,6 @@ class OrderViewSet(viewsets.ModelViewSet):
                     address=data.get("address", ""),
                     customer_email=data.get("customer_email", ""),
                     customer_num=data.get("customer_num", ""),
-                    preferred_delivery_time=data.get("preferred_delivery_time"),
-                    delivery_instructions=data.get("delivery_instructions", ""),
                     notes=data.get("notes", ""),
                     misdelivery_reason=data.get("misdelivery_reason", ""),
                     store=store,  # Use the actual Store object, not the ID

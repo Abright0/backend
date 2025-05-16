@@ -10568,3 +10568,681 @@ INFO 2025-05-14 01:08:06,599 basehttp 291635 140230145340992 "GET /api/stores/4/
 INFO 2025-05-14 01:08:41,941 basehttp 291635 140230145340992 "GET /api/users/me/ HTTP/1.1" 200 400
 INFO 2025-05-14 01:08:41,948 basehttp 291635 140230136948288 "GET /api/users/1/stores/ HTTP/1.1" 200 535
 INFO 2025-05-14 01:08:42,016 basehttp 291635 140230136948288 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:32:20,095 autoreload 291635 140230329585664 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 12:32:20,609 autoreload 301391 140197635792896 Watching for file changes with StatReloader
+INFO 2025-05-14 12:40:19,213 autoreload 301391 140197635792896 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-14 12:40:19,735 autoreload 302030 140042004774912 Watching for file changes with StatReloader
+INFO 2025-05-14 12:42:01,550 basehttp 302030 140041825859136 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:42:01,550 basehttp 302030 140041817466432 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-05-14 12:42:01,570 log 302030 140041800681024 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-14 12:42:01,571 log 302030 140041809073728 Unauthorized: /api/users/me/
+WARNING 2025-05-14 12:42:01,571 basehttp 302030 140041800681024 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-14 12:42:01,571 basehttp 302030 140041809073728 "GET /api/users/me/ HTTP/1.1" 401 172
+INFO 2025-05-14 12:42:01,582 basehttp 302030 140041817466432 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:42:01,582 basehttp 302030 140041825859136 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-14 12:42:01,634 log 302030 140041800681024 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 12:42:01,637 log 302030 140041809073728 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 12:42:01,637 basehttp 302030 140041800681024 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 12:42:01,638 basehttp 302030 140041809073728 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 12:42:02,699 log 302030 140041809073728 Unauthorized: /api/stores/2/orders/
+WARNING 2025-05-14 12:42:02,700 basehttp 302030 140041809073728 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 58
+WARNING 2025-05-14 12:42:02,705 log 302030 140041809073728 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 12:42:02,705 basehttp 302030 140041809073728 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-14 12:42:07,726 basehttp 302030 140041817466432 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:42:08,206 basehttp 302030 140041809073728 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 12:42:08,221 basehttp 302030 140041809073728 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:42:09,519 basehttp 302030 140041817466432 "OPTIONS /api/users/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:42:09,530 basehttp 302030 140041809073728 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-14 12:42:13,424 basehttp 302030 140041817466432 "OPTIONS /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-14 12:42:13,436 basehttp 302030 140041809073728 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 678
+INFO 2025-05-14 12:42:15,144 basehttp 302030 140041809073728 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:42:15,153 basehttp 302030 140041800681024 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:42:15,181 basehttp 302030 140041817466432 "OPTIONS /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-14 12:42:15,199 basehttp 302030 140041800681024 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:42:18,036 basehttp 302030 140041800681024 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:42:18,041 basehttp 302030 140041809073728 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:42:18,072 basehttp 302030 140041809073728 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 678
+INFO 2025-05-14 12:42:19,781 basehttp 302030 140041809073728 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:42:19,788 basehttp 302030 140041800681024 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:42:19,827 basehttp 302030 140041800681024 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:42:21,157 basehttp 302030 140041817466432 "OPTIONS /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:42:21,167 basehttp 302030 140041800681024 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:43:30,129 basehttp 302030 140041800681024 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:43:38,669 basehttp 302030 140041800681024 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:43:38,678 basehttp 302030 140041809073728 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:43:38,725 basehttp 302030 140041809073728 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:43:40,016 basehttp 302030 140041809073728 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:44:55,714 basehttp 302030 140041800681024 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:44:55,720 basehttp 302030 140041817466432 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:44:55,790 basehttp 302030 140041817466432 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:44:57,685 basehttp 302030 140041817466432 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:45:06,166 basehttp 302030 140041817466432 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:45:06,175 basehttp 302030 140041800681024 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:45:06,263 basehttp 302030 140041800681024 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:45:07,465 basehttp 302030 140041800681024 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+WARNING 2025-05-14 12:45:15,724 log 302030 140041800681024 Unauthorized: /api/stores/4/orders/9/available-drivers/
+WARNING 2025-05-14 12:45:15,724 basehttp 302030 140041800681024 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 401 19597
+INFO 2025-05-14 12:49:06,475 basehttp 302030 140041800681024 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:49:06,486 basehttp 302030 140041817466432 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:49:06,617 basehttp 302030 140041817466432 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:49:24,624 basehttp 302030 140041817466432 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:49:24,630 basehttp 302030 140041800681024 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:49:24,759 basehttp 302030 140041800681024 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:49:40,741 basehttp 302030 140041800681024 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:49:40,757 basehttp 302030 140041817466432 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:49:44,799 basehttp 302030 140041817466432 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-14 12:49:46,848 basehttp 302030 140041817466432 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:49:46,861 basehttp 302030 140041800681024 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:49:46,919 basehttp 302030 140041800681024 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-14 12:49:55,843 basehttp 302030 140041800681024 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:49:55,852 basehttp 302030 140041817466432 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:49:55,899 basehttp 302030 140041817466432 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-14 12:50:46,228 basehttp 302030 140041817466432 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:50:46,246 basehttp 302030 140041800681024 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:50:46,322 basehttp 302030 140041800681024 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-14 12:51:16,060 basehttp 302030 140041800681024 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:51:17,658 basehttp 302030 140041800681024 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:51:44,073 basehttp 302030 140041800681024 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:53:51,691 basehttp 302030 140041809073728 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:53:51,692 basehttp 302030 140041825859136 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-05-14 12:53:51,703 log 302030 140041781798464 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-14 12:53:51,706 log 302030 140041790191168 Unauthorized: /api/users/me/
+WARNING 2025-05-14 12:53:51,706 basehttp 302030 140041790191168 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-14 12:53:51,707 basehttp 302030 140041781798464 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+INFO 2025-05-14 12:53:51,714 basehttp 302030 140041825859136 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:53:51,715 basehttp 302030 140041809073728 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-14 12:53:51,761 log 302030 140041781798464 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 12:53:51,763 log 302030 140041790191168 Bad Request: /api/token/refresh/
+INFO 2025-05-14 12:53:51,763 basehttp 302030 140041809073728 "OPTIONS /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+WARNING 2025-05-14 12:53:51,764 basehttp 302030 140041790191168 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 12:53:51,764 basehttp 302030 140041781798464 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 12:53:51,807 log 302030 140041790191168 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-14 12:53:51,808 basehttp 302030 140041790191168 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 172
+WARNING 2025-05-14 12:53:51,813 log 302030 140041790191168 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 12:53:51,813 basehttp 302030 140041790191168 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-14 12:53:54,161 basehttp 302030 140041809073728 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:53:54,640 basehttp 302030 140041790191168 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 12:53:54,650 basehttp 302030 140041790191168 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:54:00,494 basehttp 302030 140041790191168 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:54:00,496 basehttp 302030 140041781798464 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:54:09,184 basehttp 302030 140041809073728 "OPTIONS /api/users/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:54:09,196 basehttp 302030 140041781798464 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-14 12:54:09,856 basehttp 302030 140041781798464 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:54:12,100 basehttp 302030 140041809073728 "OPTIONS /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:54:12,112 basehttp 302030 140041781798464 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:54:51,585 basehttp 302030 140041790191168 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:54:58,703 basehttp 302030 140041790191168 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:54:58,711 basehttp 302030 140041825859136 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:54:58,779 basehttp 302030 140041825859136 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:55:00,412 basehttp 302030 140041825859136 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:57:38,782 basehttp 302030 140041825859136 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:57:47,981 basehttp 302030 140041825859136 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:57:47,985 basehttp 302030 140041790191168 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:57:48,075 basehttp 302030 140041790191168 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:57:49,309 basehttp 302030 140041790191168 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:58:00,292 basehttp 302030 140041790191168 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:58:00,299 basehttp 302030 140041825859136 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:58:00,359 basehttp 302030 140041825859136 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:58:01,917 basehttp 302030 140041800681024 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+INFO 2025-05-14 12:58:01,930 basehttp 302030 140041825859136 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-14 12:58:07,354 basehttp 302030 140041825859136 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 12:58:07,367 basehttp 302030 140041825859136 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:58:09,586 basehttp 302030 140041825859136 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:58:09,593 basehttp 302030 140041790191168 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:58:10,469 basehttp 302030 140041790191168 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:58:12,118 basehttp 302030 140041790191168 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:58:42,425 basehttp 302030 140041790191168 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:58:51,169 basehttp 302030 140041790191168 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 12:58:51,175 basehttp 302030 140041825859136 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 12:58:51,271 basehttp 302030 140041825859136 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 12:58:52,990 basehttp 302030 140041825859136 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 12:59:47,110 basehttp 302030 140041825859136 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:01:12,016 basehttp 302030 140041825859136 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:01:15,298 basehttp 302030 140041790191168 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:01:15,306 basehttp 302030 140041825859136 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:01:15,374 basehttp 302030 140041825859136 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 693
+INFO 2025-05-14 13:01:17,565 basehttp 302030 140041825859136 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:01:58,638 basehttp 302030 140041825859136 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:02:43,837 autoreload 302030 140042004774912 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-14 13:02:44,381 autoreload 303479 140086798581760 Watching for file changes with StatReloader
+INFO 2025-05-14 13:06:29,392 autoreload 303662 140716328910848 Watching for file changes with StatReloader
+INFO 2025-05-14 13:10:37,422 basehttp 303662 140716147734080 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:10:37,430 basehttp 303662 140716139341376 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-14 13:10:37,574 log 303662 140716139341376 Internal Server Error: /api/stores/4/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 98, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `preferred_delivery_time` is not valid for model `Order` in `api.orders.serializers.OrderDetailSerializer`.
+ERROR 2025-05-14 13:10:37,575 basehttp 303662 140716139341376 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 24704
+INFO 2025-05-14 13:10:40,513 basehttp 303662 140716139341376 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:10:40,519 basehttp 303662 140716147734080 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-14 13:10:40,613 log 303662 140716147734080 Internal Server Error: /api/stores/4/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 98, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `preferred_delivery_time` is not valid for model `Order` in `api.orders.serializers.OrderDetailSerializer`.
+ERROR 2025-05-14 13:10:40,613 basehttp 303662 140716147734080 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 24704
+INFO 2025-05-14 13:10:43,502 basehttp 303662 140716147734080 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-14 13:10:44,961 basehttp 303662 140716147734080 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 13:10:44,972 basehttp 303662 140716147734080 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:10:46,631 basehttp 303662 140716147734080 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:10:46,640 basehttp 303662 140716139341376 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:10:48,056 basehttp 303662 140716130948672 "OPTIONS /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+ERROR 2025-05-14 13:10:48,114 log 303662 140716139341376 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 98, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `preferred_delivery_time` is not valid for model `Order` in `api.orders.serializers.OrderDetailSerializer`.
+ERROR 2025-05-14 13:10:48,115 basehttp 303662 140716139341376 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 24704
+INFO 2025-05-14 13:10:51,238 basehttp 303662 140716139341376 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:10:51,251 basehttp 303662 140716147734080 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-14 13:10:51,374 log 303662 140716147734080 Internal Server Error: /api/stores/4/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 98, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `preferred_delivery_time` is not valid for model `Order` in `api.orders.serializers.OrderDetailSerializer`.
+ERROR 2025-05-14 13:10:51,375 basehttp 303662 140716147734080 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 24704
+INFO 2025-05-14 13:10:52,066 basehttp 303662 140716147734080 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:10:52,072 basehttp 303662 140716139341376 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-14 13:10:52,205 log 303662 140716139341376 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 98, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `preferred_delivery_time` is not valid for model `Order` in `api.orders.serializers.OrderDetailSerializer`.
+ERROR 2025-05-14 13:10:52,206 basehttp 303662 140716139341376 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 24704
+INFO 2025-05-14 13:11:22,491 autoreload 303662 140716328910848 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-14 13:11:22,999 autoreload 303969 140420356603904 Watching for file changes with StatReloader
+INFO 2025-05-14 13:11:31,475 autoreload 303969 140420356603904 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-14 13:11:32,003 autoreload 303992 140297997348864 Watching for file changes with StatReloader
+INFO 2025-05-14 13:11:34,437 autoreload 303992 140297997348864 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-14 13:11:34,964 autoreload 304011 140147126681600 Watching for file changes with StatReloader
+INFO 2025-05-14 13:11:38,332 autoreload 304011 140147126681600 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-14 13:11:38,862 autoreload 304029 140486552137728 Watching for file changes with StatReloader
+INFO 2025-05-14 13:12:09,780 autoreload 304029 140486552137728 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-14 13:12:10,284 autoreload 304070 140273571491840 Watching for file changes with StatReloader
+INFO 2025-05-14 13:12:13,669 autoreload 304070 140273571491840 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-05-14 13:12:14,164 autoreload 304098 140711950151680 Watching for file changes with StatReloader
+INFO 2025-05-14 13:12:26,920 autoreload 304105 140371963224064 Watching for file changes with StatReloader
+INFO 2025-05-14 13:12:29,287 basehttp 304105 140371783366208 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:12:29,295 basehttp 304105 140371774973504 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-14 13:12:29,419 log 304105 140371774973504 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 98, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `preferred_delivery_time` is not valid for model `Order` in `api.orders.serializers.OrderDetailSerializer`.
+ERROR 2025-05-14 13:12:29,422 basehttp 304105 140371774973504 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 24704
+INFO 2025-05-14 13:12:47,883 autoreload 304105 140371963224064 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-14 13:12:48,420 autoreload 304202 140443205787648 Watching for file changes with StatReloader
+INFO 2025-05-14 13:12:52,803 autoreload 304202 140443205787648 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-14 13:12:53,342 autoreload 304221 140313681408000 Watching for file changes with StatReloader
+INFO 2025-05-14 13:13:01,792 autoreload 304221 140313681408000 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-14 13:13:02,306 autoreload 304249 139810424885248 Watching for file changes with StatReloader
+INFO 2025-05-14 13:13:06,707 autoreload 304249 139810424885248 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-14 13:13:07,222 autoreload 304278 140359483883520 Watching for file changes with StatReloader
+INFO 2025-05-14 13:13:09,601 autoreload 304278 140359483883520 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-14 13:13:10,171 autoreload 304302 139725966561280 Watching for file changes with StatReloader
+INFO 2025-05-14 13:13:13,583 autoreload 304302 139725966561280 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-14 13:13:14,147 autoreload 304326 140219037167616 Watching for file changes with StatReloader
+INFO 2025-05-14 13:13:18,576 autoreload 304326 140219037167616 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-14 13:13:19,090 autoreload 304353 139762739904512 Watching for file changes with StatReloader
+INFO 2025-05-14 13:13:22,481 autoreload 304353 139762739904512 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-14 13:13:22,969 autoreload 304364 140575346466816 Watching for file changes with StatReloader
+INFO 2025-05-14 13:13:26,320 basehttp 304364 140575168312896 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:13:26,332 basehttp 304364 140575084901952 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:13:26,417 basehttp 304364 140575084901952 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 5624
+INFO 2025-05-14 13:13:32,293 basehttp 304364 140575084901952 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:13:32,299 basehttp 304364 140575168312896 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:13:32,365 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:13:34,499 basehttp 304364 140575168312896 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:13:58,592 basehttp 304364 140575168312896 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:13:58,599 basehttp 304364 140575084901952 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:13:58,683 basehttp 304364 140575084901952 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:17:03,806 basehttp 304364 140575076509248 "OPTIONS /api/stores/4/orders/ HTTP/1.1" 200 0
+WARNING 2025-05-14 13:17:03,810 log 304364 140575084901952 Bad Request: /api/stores/4/orders/
+WARNING 2025-05-14 13:17:03,810 basehttp 304364 140575084901952 "POST /api/stores/4/orders/ HTTP/1.1" 400 104
+INFO 2025-05-14 13:17:19,114 basehttp 304364 140575084901952 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-14 13:17:20,628 basehttp 304364 140575084901952 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 13:17:20,641 basehttp 304364 140575084901952 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:17:22,642 basehttp 304364 140575084901952 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 5624
+INFO 2025-05-14 13:17:25,607 basehttp 304364 140575168312896 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:17:25,608 basehttp 304364 140575084901952 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:17:25,672 basehttp 304364 140575084901952 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:17:29,744 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:18:11,599 basehttp 304364 140575084901952 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:18:11,602 basehttp 304364 140575168312896 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:18:11,669 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:18:12,848 basehttp 304364 140575168312896 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:18:23,840 basehttp 304364 140575168312896 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:18:23,847 basehttp 304364 140575084901952 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:18:23,922 basehttp 304364 140575084901952 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:18:25,717 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:18:52,268 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:20:13,249 autoreload 304796 140512301756416 Watching for file changes with StatReloader
+INFO 2025-05-14 13:20:13,946 basehttp 304364 140575084901952 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:20:13,955 basehttp 304364 140575168312896 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:20:14,178 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:20:15,173 basehttp 304364 140575168312896 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:20:15,178 basehttp 304364 140575084901952 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:20:15,250 basehttp 304364 140575084901952 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:20:16,780 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:22:06,261 basehttp 304364 140575084901952 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:22:06,273 basehttp 304364 140575168312896 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:22:06,345 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:23:48,014 basehttp 304364 140575168312896 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:23:48,030 basehttp 304364 140575084901952 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:23:48,120 basehttp 304364 140575084901952 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:23:49,304 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:27:25,029 basehttp 304364 140575168312896 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:27:25,030 basehttp 304364 140575084901952 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:27:25,109 basehttp 304364 140575084901952 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:27:27,238 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:29:05,929 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:30:04,461 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:30:04,484 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:30:49,035 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:31:11,325 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:31:16,051 basehttp 304364 140575084901952 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:31:16,057 basehttp 304364 140575168312896 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:31:16,134 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:31:17,863 basehttp 304364 140575168312896 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+WARNING 2025-05-14 13:33:36,218 log 304364 140575168312896 Unauthorized: /api/stores/4/orders/9/available-drivers/
+WARNING 2025-05-14 13:33:36,218 basehttp 304364 140575168312896 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 401 172
+WARNING 2025-05-14 13:33:36,229 log 304364 140575168312896 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 13:33:36,230 basehttp 304364 140575168312896 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 13:34:25,627 log 304364 140575168312896 Unauthorized: /api/stores/4/orders/9/available-drivers/
+WARNING 2025-05-14 13:34:25,627 basehttp 304364 140575168312896 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 401 58
+WARNING 2025-05-14 13:34:25,653 log 304364 140575168312896 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 13:34:25,654 basehttp 304364 140575168312896 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 13:34:57,964 log 304364 140575168312896 Unauthorized: /api/stores/4/orders/9/available-drivers/
+WARNING 2025-05-14 13:34:57,965 basehttp 304364 140575168312896 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 401 58
+WARNING 2025-05-14 13:34:57,971 log 304364 140575168312896 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 13:34:57,971 basehttp 304364 140575168312896 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 13:35:05,768 log 304364 140575168312896 Unauthorized: /api/logout/
+WARNING 2025-05-14 13:35:05,768 basehttp 304364 140575168312896 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-14 13:35:05,786 log 304364 140575168312896 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 13:35:05,786 basehttp 304364 140575168312896 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-14 13:35:07,177 basehttp 304364 140575168312896 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-14 13:35:07,193 basehttp 304364 140575168312896 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:35:08,821 basehttp 304364 140575168312896 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 5624
+INFO 2025-05-14 13:35:10,161 basehttp 304364 140575168312896 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:35:10,162 basehttp 304364 140575084901952 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:35:10,228 basehttp 304364 140575084901952 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:35:13,867 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:36:57,667 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:36:57,673 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:36:59,927 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:19,587 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:37:19,593 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:19,602 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:23,167 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:37:23,169 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:23,180 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:27,289 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:37:27,292 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:27,302 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:28,912 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:42,269 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:37:42,275 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:42,285 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:42,338 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:37:43,797 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:17,250 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:17,265 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:17,319 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:17,373 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:24,126 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 571
+INFO 2025-05-14 13:39:24,132 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:24,140 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:24,189 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:24,240 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:25,864 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:28,282 basehttp 304364 140575076509248 "OPTIONS /api/stores/4/orders/9/ HTTP/1.1" 200 0
+WARNING 2025-05-14 13:39:28,299 log 304364 140575084901952 Bad Request: /api/stores/4/orders/9/
+WARNING 2025-05-14 13:39:28,300 basehttp 304364 140575084901952 "PUT /api/stores/4/orders/9/ HTTP/1.1" 400 44
+INFO 2025-05-14 13:39:41,705 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:41,714 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:41,765 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:41,818 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:41,869 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:39:45,265 basehttp 304364 140575084901952 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 524
+INFO 2025-05-14 13:39:45,291 basehttp 304364 140575084901952 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 524
+INFO 2025-05-14 13:39:45,348 basehttp 304364 140575084901952 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 576
+INFO 2025-05-14 13:45:02,048 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:45:05,669 basehttp 304364 140575084901952 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-14 13:45:09,979 basehttp 304364 140575084901952 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 524
+INFO 2025-05-14 13:45:09,999 basehttp 304364 140575084901952 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 524
+INFO 2025-05-14 13:45:10,062 basehttp 304364 140575084901952 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 576
+INFO 2025-05-14 13:45:12,138 basehttp 304364 140575084901952 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-14 13:45:12,144 basehttp 304364 140575168312896 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-14 13:45:12,226 basehttp 304364 140575168312896 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 576
+INFO 2025-05-14 13:49:43,586 basehttp 304364 140575168312896 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-14 22:45:29,391 basehttp 304364 140575084901952 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-14 22:45:29,391 basehttp 304364 140575168312896 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-05-14 22:45:29,397 log 304364 140575076509248 Unauthorized: /api/users/me/
+WARNING 2025-05-14 22:45:29,398 basehttp 304364 140575076509248 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-14 22:45:29,400 log 304364 140575068116544 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-14 22:45:29,401 basehttp 304364 140575068116544 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+INFO 2025-05-14 22:45:29,411 basehttp 304364 140575168312896 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-14 22:45:29,413 basehttp 304364 140575084901952 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-14 22:45:29,457 log 304364 140575068116544 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 22:45:29,458 basehttp 304364 140575068116544 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 22:45:29,461 log 304364 140575076509248 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 22:45:29,462 basehttp 304364 140575076509248 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 22:45:29,512 log 304364 140575076509248 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-14 22:45:29,515 basehttp 304364 140575076509248 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+INFO 2025-05-14 22:45:29,515 basehttp 304364 140575084901952 "OPTIONS /api/users/ HTTP/1.1" 200 0
+WARNING 2025-05-14 22:45:29,520 log 304364 140575068116544 Unauthorized: /api/users/
+WARNING 2025-05-14 22:45:29,521 basehttp 304364 140575068116544 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-14 22:45:29,541 log 304364 140575068116544 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 22:45:29,542 log 304364 140575076509248 Bad Request: /api/token/refresh/
+WARNING 2025-05-14 22:45:29,543 basehttp 304364 140575068116544 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-14 22:45:29,543 basehttp 304364 140575076509248 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-16 00:50:20,737 autoreload 304364 140575346466816 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-16 00:50:21,213 autoreload 345386 140386253463552 Watching for file changes with StatReloader
+INFO 2025-05-16 01:19:26,106 autoreload 4884 140413708836864 Watching for file changes with StatReloader
+INFO 2025-05-16 01:19:45,057 basehttp 4884 140413520881216 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-16 01:19:45,057 basehttp 4884 140413529273920 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+WARNING 2025-05-16 01:19:45,073 log 4884 140413512488512 Unauthorized: /api/users/me/
+WARNING 2025-05-16 01:19:45,074 log 4884 140413504095808 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-16 01:19:45,074 basehttp 4884 140413512488512 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-16 01:19:45,074 basehttp 4884 140413504095808 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+INFO 2025-05-16 01:19:45,080 basehttp 4884 140413520881216 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-16 01:19:45,081 basehttp 4884 140413529273920 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-16 01:19:45,130 log 4884 140413504095808 Bad Request: /api/token/refresh/
+WARNING 2025-05-16 01:19:45,131 log 4884 140413512488512 Bad Request: /api/token/refresh/
+WARNING 2025-05-16 01:19:45,132 basehttp 4884 140413504095808 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-16 01:19:45,132 basehttp 4884 140413512488512 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-16 01:19:46,882 basehttp 4884 140413520881216 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-16 01:19:46,891 log 4884 140413512488512 Unauthorized: /api/logout/
+WARNING 2025-05-16 01:19:46,892 basehttp 4884 140413512488512 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-16 01:19:46,911 log 4884 140413512488512 Bad Request: /api/token/refresh/
+WARNING 2025-05-16 01:19:46,912 basehttp 4884 140413512488512 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-16 01:19:50,137 basehttp 4884 140413520881216 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-16 01:19:50,614 basehttp 4884 140413512488512 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-16 01:19:50,625 basehttp 4884 140413512488512 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-16 01:19:52,648 basehttp 4884 140413512488512 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-16 01:19:52,654 basehttp 4884 140413504095808 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-16 01:19:57,197 basehttp 4884 140413504095808 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-16 01:19:57,200 basehttp 4884 140413512488512 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-16 01:20:00,081 basehttp 4884 140413520881216 "OPTIONS /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-16 01:20:00,092 basehttp 4884 140413512488512 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 576
+INFO 2025-05-16 01:20:03,273 basehttp 4884 140413520881216 "OPTIONS /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-16 01:20:03,297 basehttp 4884 140413512488512 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-16 01:20:06,495 basehttp 4884 140413520881216 "OPTIONS /api/stores/4/orders/9/ HTTP/1.1" 200 0
+INFO 2025-05-16 01:20:06,536 basehttp 4884 140413512488512 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 525
+INFO 2025-05-16 01:20:06,557 basehttp 4884 140413512488512 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 525
+INFO 2025-05-16 01:20:06,611 basehttp 4884 140413512488512 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 577
+INFO 2025-05-16 01:24:12,460 basehttp 4884 140413512488512 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-16 01:24:12,465 basehttp 4884 140413504095808 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-16 01:24:12,516 basehttp 4884 140413504095808 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 577
+INFO 2025-05-16 01:27:31,062 basehttp 4884 140413504095808 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-16 01:27:31,066 basehttp 4884 140413512488512 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-16 01:27:31,126 basehttp 4884 140413512488512 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 577
+INFO 2025-05-16 01:31:30,827 basehttp 4884 140413520881216 "OPTIONS /api/stores/4/orders/ HTTP/1.1" 200 0
+WARNING 2025-05-16 01:31:30,833 log 4884 140413512488512 Bad Request: /api/stores/4/orders/
+WARNING 2025-05-16 01:31:30,833 basehttp 4884 140413512488512 "POST /api/stores/4/orders/ HTTP/1.1" 400 104
+INFO 2025-05-16 01:32:29,381 basehttp 4884 140413529273920 "OPTIONS /api/login/ HTTP/1.1" 200 0
+WARNING 2025-05-16 01:32:29,818 log 4884 140413285430848 Bad Request: /api/login/
+WARNING 2025-05-16 01:32:29,819 basehttp 4884 140413285430848 "POST /api/login/ HTTP/1.1" 400 33
+INFO 2025-05-16 01:32:32,869 basehttp 4884 140413285430848 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-16 01:32:32,909 basehttp 4884 140413529273920 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-16 01:32:32,916 basehttp 4884 140413285430848 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-16 01:32:39,368 basehttp 4884 140413529273920 "OPTIONS /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-16 01:32:39,383 basehttp 4884 140413285430848 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 577
+INFO 2025-05-16 01:33:14,576 basehttp 4884 140413529273920 "OPTIONS /api/stores/4/orders/ HTTP/1.1" 200 0
+WARNING 2025-05-16 01:33:14,580 log 4884 140413285430848 Bad Request: /api/stores/4/orders/
+WARNING 2025-05-16 01:33:14,580 basehttp 4884 140413285430848 "POST /api/stores/4/orders/ HTTP/1.1" 400 104
+INFO 2025-05-16 01:34:19,114 autoreload 4884 140413708836864 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-16 01:34:19,668 autoreload 7181 140000963035136 Watching for file changes with StatReloader
+INFO 2025-05-16 01:34:21,826 basehttp 7181 140000785643072 "POST /api/stores/4/orders/ HTTP/1.1" 201 837
+INFO 2025-05-16 01:34:21,862 basehttp 7181 140000785643072 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1415
+INFO 2025-05-16 01:34:27,812 basehttp 7181 140000776201792 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-16 01:34:27,813 basehttp 7181 140000785643072 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-16 01:34:27,820 basehttp 7181 140000785643072 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-16 01:34:27,910 basehttp 7181 140000785643072 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1415
+INFO 2025-05-16 01:36:50,877 basehttp 7181 140000785643072 "OPTIONS /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-16 01:36:50,891 basehttp 7181 140000776201792 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-16 01:36:52,457 basehttp 7181 140000785643072 "OPTIONS /api/stores/9/orders/undefined/photos/ HTTP/1.1" 200 0
+WARNING 2025-05-16 01:36:52,481 log 7181 140000776201792 Not Found: /api/stores/9/orders/undefined/photos/
+WARNING 2025-05-16 01:36:52,481 basehttp 7181 140000776201792 "GET /api/stores/9/orders/undefined/photos/ HTTP/1.1" 404 28808
+INFO 2025-05-16 01:36:57,419 basehttp 7181 140000776201792 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-16 01:37:54,705 basehttp 7181 140000776201792 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-16 01:37:54,711 basehttp 7181 140000700134976 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-16 01:37:54,794 basehttp 7181 140000776201792 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1415
+INFO 2025-05-16 01:37:56,530 basehttp 7181 140000776201792 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-16 01:38:03,326 basehttp 7181 140000785643072 "OPTIONS /api/stores/4/orders/9/ HTTP/1.1" 200 0
+INFO 2025-05-16 01:38:03,352 basehttp 7181 140000776201792 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 525
+INFO 2025-05-16 01:38:03,403 basehttp 7181 140000776201792 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 525
+INFO 2025-05-16 01:38:03,421 basehttp 7181 140000776201792 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1415
+INFO 2025-05-16 01:38:09,985 basehttp 7181 140000785643072 "OPTIONS /api/stores/4/orders/10/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-16 01:38:09,998 basehttp 7181 140000776201792 "GET /api/stores/4/orders/10/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-16 01:39:00,552 autoreload 7181 140000963035136 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-16 01:39:01,067 autoreload 7537 140054771941376 Watching for file changes with StatReloader

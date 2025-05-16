@@ -49,9 +49,8 @@ class OrderSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'invoice_num', 'first_name', 'last_name', 
             'phone_num', 'address', 'customer_email', 
-            'preferred_delivery_time', 'delivery_instructions',
-            'notes', 'creation_date', 'delivery_date', 
-            'store', 'store_name', 'status', 'driver', 'items'
+            'notes', 'creation_date', 
+            'store', 'store_name', 'driver', 'items'
         ]
     
     def get_status(self, obj):

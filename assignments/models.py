@@ -41,6 +41,9 @@ class DeliveryAttempt(models.Model):
     delivery_time = models.TimeField()
     result = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    notes = models.TextField(null=True, blank=True)
+
+
 
     #def mark_item_issue(self, order_item, issue):
     #    attempted = self.attempted_items.filter(order_item=order_item).first()
