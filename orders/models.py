@@ -15,13 +15,33 @@ class Order(models.Model):
     #delivery_instructions = models.TextField(null=True, blank=True)
     notes = models.TextField(null=True, blank=True)
     misdelivery_reason = models.TextField(null=True, blank=True)
-    delivery_date = models.TextField(null=True, blank=True)
-
-    creation_date = models.DateTimeField(auto_now_add=True)
-    
+    #delivery_date = models.TextField(null=True, blank=True)
+    creation_date = models.DateTimeField(auto_now_add=True)    
     # one to many
     store = models.ForeignKey(Store, on_delete=models.CASCADE, related_name='orders')
+    status_fallback = models.CharField(
+        max_length=30, null=True, blank=True, default='order_placed'
+    )
+    delivery_date_fallback = models.TextField(null=True, blank=True)
 
+    @property
+    def status(self):
+        attempt = self.delivery_attempts.order_by('-id').first()
+        return attempt.status if attempt and attempt.status else self.status_fallback
+
+    @status.setter
+    def status(self, value):
+        self.status_fallback = value
+
+    @property
+    def delivery_date(self):
+        attempt = self.delivery_attempts.order_by('-id').first()
+        return attempt.delivery_date if attempt and attempt.delivery_date else self.delivery_date_fallback
+
+    @delivery_date.setter
+    def delivery_date(self, value):
+        self.delivery_date_fallback = value
+        
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
     # Remove product foreign key - items are always custom

@@ -31,7 +31,7 @@ class DeliveryAttempt(models.Model):
  
     status_changed_at = models.DateTimeField(auto_now=True)
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='delivery_attempts')
-    drivers = models.ManyToManyField(User, related_name='drivers')
+    drivers = models.ManyToManyField(User, related_name='drivers', blank=True)
 
     mins_to_arrival = models.TextField(blank=True, null=True)
     miles_to_arrival = models.TextField(blank=True, null=True)
@@ -42,7 +42,6 @@ class DeliveryAttempt(models.Model):
     result = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     notes = models.TextField(null=True, blank=True)
-
 
 
     #def mark_item_issue(self, order_item, issue):

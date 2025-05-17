@@ -35,10 +35,9 @@ class OrderViewSet(viewsets.ModelViewSet):
         """
         Return different serializers for list vs detail views.
         """
-        if self.action == 'list' and self.request.query_params.get('view') == 'list':
-            return OrderSerializer
-        else:
+        if self.action in ['retrieve', 'update', 'partial_update']:
             return OrderDetailSerializer
+        return OrderSerializer
 
     def get_queryset(self):
         user = self.request.user
@@ -179,15 +178,14 @@ class OrderViewSet(viewsets.ModelViewSet):
                 delivery_date = data.get("delivery_date") or datetime.now().date()
                 
                 # Use provided preferred time or default to noon
-                delivery_time = data.get("preferred_delivery_time") or time(12, 0)
+                delivery_time = data.get("delivery_time") or time(12, 0)
 
                 DeliveryAttempt.objects.create(
                         order=order,
                         status='order_placed',
                         delivery_date=delivery_date,
                         delivery_time=delivery_time
-                    )
-                
+                    )               
                 # Return the serialized order with detail serializer
                 return Response(
                     OrderDetailSerializer(order).data, 

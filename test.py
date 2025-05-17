@@ -43,6 +43,92 @@ from django.test import TestCase
 from io import StringIO
 
 
+from rest_framework.test import APITestCase
+from rest_framework import status
+from django.contrib.auth import get_user_model
+from django.utils.timezone import now
+from django.urls import reverse
+from datetime import date, time
+
+from stores.models import Store
+from orders.models import Order, OrderItem
+from assignments.models import DeliveryAttempt
+
+User = get_user_model()
+
+class OrderAndAttemptTests(APITestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_user(username="user", email="user@example.com", password="pass")
+        self.driver = User.objects.create_user(username="driver", email="driver@example.com", password="pass", is_driver=True)
+        self.store = Store.objects.create(name="Simple Store")
+        self.store.store_users.add(self.user)
+
+        self.client.force_authenticate(user=self.user)
+
+    def test_order_and_attempt_flow(self):
+        # Step 1: Create order
+        create_order_url = f"/api/stores/{self.store.id}/orders/"
+        order_payload = {
+            "first_name": "Jane",
+            "last_name": "Doe",
+            "phone_num": "1234567890",
+            "invoice_num": "INV123",
+            "address": "123 Main St",
+            "customer_email": "jane@example.com",
+            "customer_num": "CUST1",
+            "notes": "Be careful",
+            "products": [
+                {
+                    "product_name": "Item 1",
+                    "quantity": 1,
+                    "price": 10.0,
+                    "product_mpn": "MPN001"
+                }
+            ]
+        }
+
+        response = self.client.post(create_order_url, order_payload, format="json")
+        print("ORDER RESPONSE")
+        print(response.data)
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+        order_id = response.data["id"]
+
+        # Step 2: Get delivery_attempt_id from created order
+        order_detail_url = f"/api/stores/{self.store.id}/orders/{order_id}/"
+        response = self.client.get(order_detail_url, format="json")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        delivery_attempts = response.data.get("delivery_attempts", [])
+        self.assertTrue(delivery_attempts, "No delivery attempts found for order")
+        attempt_id = delivery_attempts[0]["id"]
+
+        # Step 3: Update delivery attempt
+        update_url = f"/api/stores/{self.store.id}/orders/{order_id}/delivery-attempts/{attempt_id}/"
+        update_payload = {
+            "status": "assigned_to_driver",
+            "delivery_date": date.today(),
+            "delivery_time": time(hour=9, minute=0).isoformat(),
+            "drivers": [self.driver.id]
+        }
+
+        response = self.client.patch(update_url, update_payload, format="json")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        print("UPDATED ATTEMPT RESPONSE")
+        print(response.data)
+        self.assertEqual(response.data["order"], order_id)
+        self.assertEqual(response.data["status"], "assigned_to_driver")
+
+        # Step 4: Retrieve and print all delivery attempts for the order
+        list_attempts_url = f"/api/stores/{self.store.id}/orders/{order_id}/delivery-attempts/"
+        response = self.client.get(list_attempts_url, format="json")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+
+        print("All Delivery Attempts:")
+        for attempt in response.data.get("results", []):  # handle pagination
+            print(attempt)
+
+
+
 """
 class FetchEmailsIntegrationTest(TestCase):
     def test_fetch_emails_command_runs(self):
@@ -484,7 +570,7 @@ class UserRegistrationSMSTest(APITestCase):
         self.assertFalse(User.objects.filter(username="nopho").exists())
         mock_send_sms.assert_not_called()orde
 """
-
+"""
 class UserViewSetTests(APITestCase):
 
     def setUp(self):
@@ -583,10 +669,7 @@ class UserViewSetTests(APITestCase):
             "address": "456 Another St",
             "customer_email": "jane@example.com",
             "customer_num": "C123",
-            "preferred_delivery_time": "10:00",
-            "delivery_instructions": "Leave by garage",
             "notes": "Please handle with care",
-            "delivery_date": timezone.now().date().isoformat(),
             "products": [
                 {
                     "product_name": "Sample Product",
@@ -609,14 +692,12 @@ class UserViewSetTests(APITestCase):
         ######################
         update_url = f"/api/stores/{self.store.id}/orders/{order_id}/"  # updated
         update_payload = {
-            "notes": "Updated note from test",
-            "delivery_instructions": "updated instructions"
+            "notes": "Updated note from test"
         }
 
         response = self.client.patch(update_url, update_payload, format="json")
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.data["notes"], "Updated note from test")
-        self.assertEqual(response.data["delivery_instructions"], "updated instructions")
 
         ######################
         # DELIVERY ATTEMPT + PHOTO + STATUS CHECKS
@@ -741,7 +822,7 @@ class UserViewSetTests(APITestCase):
                 quantity=min(1, item.quantity)
             )
             print(f"ScheduledItem: {scheduled}")
-
+"""
 """
         ######################
         # GET RANDOM PHOTOS

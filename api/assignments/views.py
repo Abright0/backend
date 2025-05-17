@@ -22,6 +22,10 @@ class DeliveryAttemptViewSet(viewsets.ModelViewSet):
             context["order"] = Order.objects.get(id=order_id)
         return context
 
+    def perform_create(self, serializer):
+        order = self.get_serializer_context().get("order")
+        serializer.save(order=order)
+
 class ScheduledItemViewSet(viewsets.ModelViewSet):
     queryset = ScheduledItem.objects.all()
     serializer_class = ScheduledItemSerializer

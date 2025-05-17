@@ -8,6 +8,7 @@ from messaging.helpers import trigger_message
 from django.utils import timezone
 from django.conf import settings
 from datetime import datetime
+from accounts.models import User
 
 class ScheduledItemSerializer(serializers.ModelSerializer):
     
@@ -16,6 +17,11 @@ class ScheduledItemSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class DeliveryAttemptSerializer(serializers.ModelSerializer):
+    drivers = serializers.PrimaryKeyRelatedField(
+        many=True,
+        queryset=User.objects.all(),
+        required=False
+        )
     scheduled_items = ScheduledItemSerializer(many=True, required=False)
 
     class Meta:
@@ -49,9 +55,10 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
 
         if is_first_attempt:
             validated_data.setdefault('delivery_date', order.delivery_date)
-            validated_data.setdefault('delivery_time', order.preferred_delivery_time)
+            validated_data.setdefault('delivery_time', order.delivery_time)
             if not drivers_data and order.drivers.exists():
                 drivers_data = list(order.drivers.all())
+                print(drivers_data)
         else:
             missing = []
             for field in ['delivery_date', 'delivery_time']:
@@ -99,7 +106,17 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
         instance.save()
 
         if drivers is not None:
-            instance.drivers.set(drivers)
+            pk_list = []
+            for d in drivers:
+                if isinstance(d, int):
+                    pk_list.append(d)
+                elif hasattr(d, 'id'):
+                    pk_list.append(d.id)
+                else:
+                    raise serializers.ValidationError({
+                        'drivers': 'Expected list of primary keys or User objects.'
+                    })
+            instance.drivers.set(pk_list)
 
         if previous_status != instance.status:
             status_event_map = {
