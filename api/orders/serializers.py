@@ -2,9 +2,16 @@
 from rest_framework import serializers
 from orders.models import Order, OrderItem
 from stores.models import Store
+from assignments.models import DeliveryAttempt
 
 from api.assignments.serializers import DeliveryAttemptSerializer
 
+
+
+class DeliveryAttemptWriteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DeliveryAttempt
+        exclude = ['created_at', 'status_changed_at']  # exclude read-only fields
 
 class OrderItemSerializer(serializers.ModelSerializer):
     """
@@ -98,7 +105,7 @@ class OrderSerializer(serializers.ModelSerializer):
         return None
 
 class OrderDetailSerializer(OrderSerializer):
-    delivery_attempts = DeliveryAttemptSerializer(many=True, required=False)
+    delivery_attempts = DeliveryAttemptWriteSerializer(many=True, required=False)
     store_details = StoreSerializer(source='store', read_only=True)
 
     class Meta:
