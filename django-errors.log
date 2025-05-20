@@ -12643,3 +12643,1658 @@ INFO 2025-05-19 22:31:07,702 basehttp 105541 139704184383040 "PUT /api/stores/4/
 INFO 2025-05-19 22:31:07,708 basehttp 105541 139704174941760 "OPTIONS /api/stores/4/orders/11/delivery-attempts/14/ HTTP/1.1" 200 0
 INFO 2025-05-19 22:31:07,722 basehttp 105541 139704184383040 "PUT /api/stores/4/orders/11/delivery-attempts/14/ HTTP/1.1" 200 334
 INFO 2025-05-19 22:31:07,785 basehttp 105541 139704184383040 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1461
+INFO 2025-05-19 22:32:08,312 basehttp 105541 139704184383040 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:32:08,322 basehttp 105541 139704192775744 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:32:08,410 basehttp 105541 139704192775744 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1461
+INFO 2025-05-19 22:34:33,579 basehttp 105541 139704192775744 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1461
+INFO 2025-05-19 22:34:53,226 basehttp 105541 139704192775744 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1461
+INFO 2025-05-19 22:36:40,578 basehttp 105541 139704192775744 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:36:40,587 basehttp 105541 139704184383040 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:36:40,695 basehttp 105541 139704184383040 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1461
+INFO 2025-05-19 22:37:04,926 basehttp 105541 139704184383040 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:37:04,929 basehttp 105541 139704192775744 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:37:04,993 basehttp 105541 139704192775744 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1461
+INFO 2025-05-19 22:37:41,824 autoreload 105541 139704371638272 /home/abright/Work/FarmFreight/backend/api/assignments/views.py changed, reloading.
+INFO 2025-05-19 22:37:42,363 autoreload 106449 139652504395776 Watching for file changes with StatReloader
+INFO 2025-05-19 22:39:47,009 autoreload 106449 139652504395776 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:39:47,501 autoreload 106600 140571408969728 Watching for file changes with StatReloader
+INFO 2025-05-19 22:39:57,172 autoreload 106600 140571408969728 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:39:57,661 autoreload 106628 140040819027968 Watching for file changes with StatReloader
+INFO 2025-05-19 22:40:12,341 autoreload 106628 140040819027968 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:40:12,821 autoreload 107447 139919590801408 Watching for file changes with StatReloader
+INFO 2025-05-19 22:40:14,198 autoreload 107447 139919590801408 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:40:14,735 autoreload 107453 140585276133376 Watching for file changes with StatReloader
+WARNING 2025-05-19 22:40:21,486 log 107453 140585165436480 Unauthorized: /api/users/me/
+WARNING 2025-05-19 22:40:21,488 log 107453 140585084122688 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-19 22:40:21,489 basehttp 107453 140585165436480 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-19 22:40:21,489 basehttp 107453 140585084122688 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-19 22:40:21,504 log 107453 140585165436480 Bad Request: /api/token/refresh/
+WARNING 2025-05-19 22:40:21,505 log 107453 140585084122688 Bad Request: /api/token/refresh/
+WARNING 2025-05-19 22:40:21,505 basehttp 107453 140585165436480 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-19 22:40:21,506 basehttp 107453 140585084122688 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-19 22:40:21,589 log 107453 140585084122688 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-19 22:40:21,589 basehttp 107453 140585084122688 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 58
+WARNING 2025-05-19 22:40:21,636 log 107453 140585084122688 Bad Request: /api/token/refresh/
+WARNING 2025-05-19 22:40:21,636 basehttp 107453 140585084122688 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-19 22:40:26,942 basehttp 107453 140585084122688 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-19 22:40:26,955 basehttp 107453 140585084122688 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:40:32,409 basehttp 107453 140585075729984 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:40:32,428 basehttp 107453 140585084122688 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-19 22:40:35,333 basehttp 107453 140585084122688 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-19 22:40:35,346 basehttp 107453 140585084122688 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:40:38,239 basehttp 107453 140585075729984 "OPTIONS /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-19 22:40:38,289 basehttp 107453 140585084122688 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3599
+INFO 2025-05-19 22:40:40,163 basehttp 107453 140585084122688 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:40:40,163 basehttp 107453 140585165436480 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:40:40,227 basehttp 107453 140585165436480 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1576
+INFO 2025-05-19 22:40:46,678 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/10/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:40:46,704 basehttp 107453 140585165436480 "GET /api/stores/4/orders/10/delivery-attempts/ HTTP/1.1" 200 2334
+INFO 2025-05-19 22:40:46,714 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/10/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:40:46,767 basehttp 107453 140585165436480 "GET /api/stores/4/orders/10/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:40:56,955 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:40:56,972 basehttp 107453 140585165436480 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 22:40:56,980 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:40:57,058 basehttp 107453 140585165436480 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:40:59,699 basehttp 107453 140585165436480 "GET /api/stores/4/orders/10/delivery-attempts/ HTTP/1.1" 200 2334
+INFO 2025-05-19 22:40:59,716 basehttp 107453 140585165436480 "GET /api/stores/4/orders/10/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:41:02,100 basehttp 107453 140585165436480 "GET /api/stores/4/orders/11/delivery-attempts/ HTTP/1.1" 200 386
+INFO 2025-05-19 22:41:02,121 basehttp 107453 140585165436480 "GET /api/stores/4/orders/11/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:41:04,836 basehttp 107453 140585165436480 "GET /api/stores/4/orders/10/delivery-attempts/ HTTP/1.1" 200 2334
+INFO 2025-05-19 22:41:04,856 basehttp 107453 140585165436480 "GET /api/stores/4/orders/10/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:41:21,510 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/10/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:41:21,564 basehttp 107453 140585165436480 "PUT /api/stores/4/orders/10/ HTTP/1.1" 200 2087
+INFO 2025-05-19 22:41:21,569 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/10/delivery-attempts/7/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:41:21,579 basehttp 107453 140585165436480 "PUT /api/stores/4/orders/10/delivery-attempts/7/ HTTP/1.1" 200 326
+INFO 2025-05-19 22:41:21,636 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/10/delivery-attempts/8/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:41:21,658 basehttp 107453 140585165436480 "PUT /api/stores/4/orders/10/delivery-attempts/8/ HTTP/1.1" 200 326
+INFO 2025-05-19 22:41:21,708 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/10/delivery-attempts/9/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:41:21,717 basehttp 107453 140585165436480 "PUT /api/stores/4/orders/10/delivery-attempts/9/ HTTP/1.1" 200 326
+INFO 2025-05-19 22:41:21,762 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/10/delivery-attempts/10/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:41:21,773 basehttp 107453 140585165436480 "PUT /api/stores/4/orders/10/delivery-attempts/10/ HTTP/1.1" 200 327
+INFO 2025-05-19 22:41:21,826 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/10/delivery-attempts/11/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:41:21,856 basehttp 107453 140585165436480 "PUT /api/stores/4/orders/10/delivery-attempts/11/ HTTP/1.1" 200 327
+INFO 2025-05-19 22:41:21,903 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/10/delivery-attempts/12/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:41:21,915 basehttp 107453 140585165436480 "PUT /api/stores/4/orders/10/delivery-attempts/12/ HTTP/1.1" 200 327
+INFO 2025-05-19 22:41:21,970 basehttp 107453 140585075729984 "OPTIONS /api/stores/4/orders/10/delivery-attempts/13/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:41:22,014 basehttp 107453 140585165436480 "PUT /api/stores/4/orders/10/delivery-attempts/13/ HTTP/1.1" 200 336
+INFO 2025-05-19 22:41:22,089 basehttp 107453 140585165436480 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1600
+INFO 2025-05-19 22:41:50,629 autoreload 107453 140585276133376 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:41:51,177 autoreload 107554 140602610880512 Watching for file changes with StatReloader
+INFO 2025-05-19 22:41:55,769 basehttp 107554 140602432337472 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:41:55,784 basehttp 107554 140602423944768 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-19 22:41:55,871 log 107554 140602423944768 Internal Server Error: /api/stores/4/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 97, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1869, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'OrderSerializer' object has no attribute 'get_driver'
+ERROR 2025-05-19 22:41:55,873 basehttp 107554 140602423944768 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 23781
+INFO 2025-05-19 22:41:57,317 basehttp 107554 140602423944768 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-19 22:41:58,777 basehttp 107554 140602423944768 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-19 22:41:58,787 basehttp 107554 140602423944768 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:42:11,116 basehttp 107554 140602423944768 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:42:11,565 basehttp 107554 140602432337472 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-19 22:42:11,570 basehttp 107554 140602423944768 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:42:11,577 basehttp 107554 140602432337472 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:42:12,653 basehttp 107554 140602423944768 "OPTIONS /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+ERROR 2025-05-19 22:42:12,680 log 107554 140602432337472 Internal Server Error: /api/stores/4/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 97, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1869, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'OrderSerializer' object has no attribute 'get_driver'
+ERROR 2025-05-19 22:42:12,680 basehttp 107554 140602432337472 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 23672
+INFO 2025-05-19 22:43:50,745 autoreload 107554 140602610880512 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:43:51,240 autoreload 107968 139720712728576 Watching for file changes with StatReloader
+INFO 2025-05-19 22:43:51,776 basehttp 107968 139720602990144 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:43:51,801 basehttp 107968 139720512235072 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:43:51,806 basehttp 107968 139720520627776 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-19 22:43:51,920 log 107968 139720520627776 Internal Server Error: /api/stores/4/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 97, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'drivers' was declared on serializer OrderSerializer, but has not been included in the 'fields' option.
+ERROR 2025-05-19 22:43:51,921 basehttp 107968 139720520627776 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 24493
+INFO 2025-05-19 22:43:53,645 autoreload 107968 139720712728576 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:43:54,204 autoreload 108007 139869347368960 Watching for file changes with StatReloader
+INFO 2025-05-19 22:46:17,007 autoreload 108007 139869347368960 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:46:17,534 autoreload 108071 140240456458240 Watching for file changes with StatReloader
+INFO 2025-05-19 22:46:18,509 basehttp 108071 140240278779456 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:46:18,520 basehttp 108071 140240270386752 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-19 22:46:18,597 log 108071 140240270386752 Internal Server Error: /api/stores/4/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 97, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1869, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'OrderSerializer' object has no attribute 'get_driver'
+ERROR 2025-05-19 22:46:18,599 basehttp 108071 140240270386752 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 23672
+INFO 2025-05-19 22:46:23,317 basehttp 108071 140240259896896 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:46:23,345 basehttp 108071 140240270386752 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-19 22:46:24,692 basehttp 108071 140240270386752 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-19 22:46:24,703 basehttp 108071 140240270386752 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:46:25,395 basehttp 108071 140240270386752 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:46:25,405 basehttp 108071 140240278779456 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:46:26,064 basehttp 108071 140240259896896 "OPTIONS /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+ERROR 2025-05-19 22:46:26,093 log 108071 140240278779456 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 97, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1869, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'OrderSerializer' object has no attribute 'get_driver'
+ERROR 2025-05-19 22:46:26,094 basehttp 108071 140240278779456 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 23672
+INFO 2025-05-19 22:46:48,020 autoreload 108071 140240456458240 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:46:48,520 autoreload 108135 140515397263360 Watching for file changes with StatReloader
+INFO 2025-05-19 22:47:02,353 autoreload 108135 140515397263360 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:47:02,855 autoreload 108157 140314280275968 Watching for file changes with StatReloader
+INFO 2025-05-19 22:47:03,559 basehttp 108157 140314098529856 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:47:03,566 basehttp 108157 140314090137152 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-19 22:47:03,653 log 108157 140314090137152 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 97, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1869, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'OrderSerializer' object has no attribute 'get_latest_delivery_date'
+ERROR 2025-05-19 22:47:03,655 basehttp 108157 140314090137152 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 23700
+INFO 2025-05-19 22:47:16,759 autoreload 108157 140314280275968 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:47:17,244 autoreload 108200 140427640086528 Watching for file changes with StatReloader
+INFO 2025-05-19 22:47:23,821 autoreload 108200 140427640086528 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:47:24,314 autoreload 108217 140158352072704 Watching for file changes with StatReloader
+ERROR 2025-05-19 22:47:24,681 log 108217 140158171657792 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 97, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1869, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'OrderSerializer' object has no attribute 'get_latest_delivery_date'
+ERROR 2025-05-19 22:47:24,685 basehttp 108217 140158171657792 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 23700
+ERROR 2025-05-19 22:48:02,732 log 108217 140158171657792 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 97, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1869, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'OrderSerializer' object has no attribute 'get_latest_delivery_date'
+ERROR 2025-05-19 22:48:02,734 basehttp 108217 140158171657792 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 23700
+INFO 2025-05-19 22:48:17,784 autoreload 108217 140158352072704 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:48:18,293 autoreload 108344 140000722583552 Watching for file changes with StatReloader
+INFO 2025-05-19 22:48:19,739 basehttp 108344 140000543950400 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:48:19,746 basehttp 108344 140000535557696 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:48:19,812 basehttp 108344 140000535557696 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3599
+INFO 2025-05-19 22:48:27,655 basehttp 108344 140000526116416 "OPTIONS /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:48:27,667 basehttp 108344 140000535557696 "GET /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 22:48:27,683 basehttp 108344 140000526116416 "OPTIONS /api/stores/1/orders/8/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:48:27,764 basehttp 108344 140000535557696 "GET /api/stores/1/orders/8/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:48:39,796 basehttp 108344 140000526116416 "OPTIONS /api/stores/1/orders/8/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:48:39,840 basehttp 108344 140000535557696 "PUT /api/stores/1/orders/8/ HTTP/1.1" 200 593
+INFO 2025-05-19 22:48:39,877 basehttp 108344 140000535557696 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3599
+INFO 2025-05-19 22:48:43,319 basehttp 108344 140000535557696 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:48:43,325 basehttp 108344 140000543950400 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:48:43,400 basehttp 108344 140000543950400 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3599
+INFO 2025-05-19 22:49:11,870 autoreload 108344 140000722583552 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:49:12,372 autoreload 108433 140340481470464 Watching for file changes with StatReloader
+INFO 2025-05-19 22:49:13,651 basehttp 108433 140340300920384 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:49:13,661 basehttp 108433 140340292527680 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-19 22:49:13,724 log 108433 140340292527680 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 97, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1869, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'OrderSerializer' object has no attribute 'get_latest_delivery_date'
+ERROR 2025-05-19 22:49:13,727 basehttp 108433 140340292527680 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 23700
+INFO 2025-05-19 22:50:00,503 autoreload 108433 140340481470464 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:50:00,991 autoreload 108494 140357571158016 Watching for file changes with StatReloader
+INFO 2025-05-19 22:50:02,326 basehttp 108494 140357461915200 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:50:02,336 basehttp 108494 140357383747136 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-19 22:50:02,416 log 108494 140357383747136 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 97, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1869, in to_representation
+    method = getattr(self.parent, self.method_name)
+AttributeError: 'OrderSerializer' object has no attribute 'get_latest_delivery_date'
+ERROR 2025-05-19 22:50:02,419 basehttp 108494 140357383747136 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 23700
+INFO 2025-05-19 22:50:23,354 autoreload 108494 140357571158016 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:50:23,871 autoreload 108551 140548096626688 Watching for file changes with StatReloader
+INFO 2025-05-19 22:50:29,410 autoreload 108551 140548096626688 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:50:29,903 autoreload 108576 139711035215872 Watching for file changes with StatReloader
+INFO 2025-05-19 22:50:34,350 autoreload 108576 139711035215872 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:50:35,011 autoreload 108600 140522397478912 Watching for file changes with StatReloader
+WARNING 2025-05-19 22:50:44,676 log 108600 140522219419200 Unauthorized: /api/stores/1/orders/
+WARNING 2025-05-19 22:50:44,677 basehttp 108600 140522219419200 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 19501
+WARNING 2025-05-19 22:50:45,025 log 108600 140522219419200 Not Found: /favicon.ico
+WARNING 2025-05-19 22:50:45,025 basehttp 108600 140522219419200 "GET /favicon.ico HTTP/1.1" 404 2525
+INFO 2025-05-19 22:51:01,456 basehttp 108600 140522219419200 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-19 22:51:02,891 basehttp 108600 140522219419200 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-19 22:51:02,904 basehttp 108600 140522219419200 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:51:04,145 basehttp 108600 140522219419200 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3609
+INFO 2025-05-19 22:51:06,372 basehttp 108600 140522219419200 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:51:06,381 basehttp 108600 140522136008256 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:51:06,455 basehttp 108600 140522136008256 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3609
+INFO 2025-05-19 22:51:16,154 autoreload 108600 140522397478912 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:51:16,660 autoreload 108644 140457888460800 Watching for file changes with StatReloader
+INFO 2025-05-19 22:51:18,004 autoreload 108644 140457888460800 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:51:18,549 autoreload 108650 140261562638336 Watching for file changes with StatReloader
+INFO 2025-05-19 22:51:20,988 autoreload 108650 140261562638336 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:51:21,609 autoreload 108670 140281328791552 Watching for file changes with StatReloader
+INFO 2025-05-19 22:51:22,264 basehttp 108670 140281148077632 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:51:22,274 basehttp 108670 140281139684928 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:51:22,329 basehttp 108670 140281139684928 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3609
+INFO 2025-05-19 22:51:49,784 autoreload 108670 140281328791552 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:51:50,298 autoreload 108698 139638241984512 Watching for file changes with StatReloader
+INFO 2025-05-19 22:51:50,662 basehttp 108698 139638063281728 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:51:50,670 basehttp 108698 139638054889024 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:51:50,737 basehttp 108698 139638054889024 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3549
+INFO 2025-05-19 22:52:29,946 autoreload 108698 139638241984512 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:52:30,439 autoreload 108725 140332412243968 Watching for file changes with StatReloader
+INFO 2025-05-19 22:52:41,147 autoreload 108725 140332412243968 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:52:41,650 autoreload 108747 140713208475648 Watching for file changes with StatReloader
+INFO 2025-05-19 22:52:49,243 autoreload 108747 140713208475648 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-19 22:52:49,751 autoreload 108787 140633694384128 Watching for file changes with StatReloader
+INFO 2025-05-19 22:52:50,150 basehttp 108787 140633514755648 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3700
+INFO 2025-05-19 22:53:35,223 basehttp 108787 140633514755648 "GET /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 22:53:35,238 basehttp 108787 140633514755648 "GET /api/stores/1/orders/8/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:53:44,989 basehttp 108787 140633514755648 "PUT /api/stores/1/orders/8/ HTTP/1.1" 200 604
+INFO 2025-05-19 22:53:45,028 basehttp 108787 140633514755648 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3700
+INFO 2025-05-19 22:53:47,619 basehttp 108787 140633514755648 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 22:53:47,628 basehttp 108787 140633506362944 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 22:53:47,712 basehttp 108787 140633506362944 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3700
+INFO 2025-05-19 22:53:51,791 basehttp 108787 140633506362944 "GET /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 22:53:51,816 basehttp 108787 140633506362944 "GET /api/stores/1/orders/8/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:53:59,791 basehttp 108787 140633506362944 "GET /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 22:53:59,812 basehttp 108787 140633506362944 "GET /api/stores/1/orders/8/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:54:07,168 basehttp 108787 140633506362944 "PUT /api/stores/1/orders/8/ HTTP/1.1" 200 604
+INFO 2025-05-19 22:54:07,205 basehttp 108787 140633506362944 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3700
+INFO 2025-05-19 22:54:11,735 basehttp 108787 140633506362944 "GET /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 22:54:11,756 basehttp 108787 140633506362944 "GET /api/stores/1/orders/8/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:56:23,981 basehttp 108787 140633506362944 "PUT /api/stores/1/orders/8/ HTTP/1.1" 200 604
+INFO 2025-05-19 22:56:24,030 basehttp 108787 140633506362944 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3700
+INFO 2025-05-19 22:56:45,165 basehttp 108787 140633497970240 "OPTIONS /api/stores/1/orders/6/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:56:45,186 basehttp 108787 140633506362944 "GET /api/stores/1/orders/6/delivery-attempts/ HTTP/1.1" 200 376
+INFO 2025-05-19 22:56:45,196 basehttp 108787 140633497970240 "OPTIONS /api/stores/1/orders/6/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 22:56:45,275 basehttp 108787 140633506362944 "GET /api/stores/1/orders/6/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 22:56:47,497 basehttp 108787 140633497970240 "OPTIONS /api/stores/6/orders/undefined/ HTTP/1.1" 200 0
+WARNING 2025-05-19 22:56:47,507 log 108787 140633506362944 Not Found: /api/stores/6/orders/undefined/
+WARNING 2025-05-19 22:56:47,507 basehttp 108787 140633506362944 "DELETE /api/stores/6/orders/undefined/ HTTP/1.1" 404 23
+WARNING 2025-05-19 23:14:22,667 log 108787 140633506362944 Unauthorized: /api/stores/1/orders/8/delivery-attempts/
+WARNING 2025-05-19 23:14:22,668 basehttp 108787 140633506362944 "GET /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 401 172
+INFO 2025-05-19 23:14:22,677 basehttp 108787 140633497970240 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-19 23:14:22,684 log 108787 140633506362944 Bad Request: /api/token/refresh/
+WARNING 2025-05-19 23:14:22,684 basehttp 108787 140633506362944 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-19 23:14:28,598 basehttp 108787 140633506362944 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-19 23:14:28,611 basehttp 108787 140633506362944 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:14:30,968 basehttp 108787 140633506362944 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:14:30,981 basehttp 108787 140633514755648 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:14:32,356 basehttp 108787 140633514755648 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1653
+INFO 2025-05-19 23:14:35,634 basehttp 108787 140633514755648 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:14:35,641 basehttp 108787 140633506362944 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:14:35,697 basehttp 108787 140633506362944 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1653
+INFO 2025-05-19 23:14:37,771 basehttp 108787 140633506362944 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:14:37,778 basehttp 108787 140633514755648 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:14:37,845 basehttp 108787 140633514755648 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3700
+INFO 2025-05-19 23:14:41,050 basehttp 108787 140633514755648 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:14:41,057 basehttp 108787 140633506362944 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:14:41,115 basehttp 108787 140633506362944 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1653
+INFO 2025-05-19 23:14:44,857 basehttp 108787 140633497970240 "OPTIONS /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:14:44,876 basehttp 108787 140633506362944 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 23:14:44,883 basehttp 108787 140633497970240 "OPTIONS /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:14:44,955 basehttp 108787 140633506362944 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:15:03,114 basehttp 108787 140633497970240 "OPTIONS /api/stores/4/orders/9/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:15:03,154 basehttp 108787 140633506362944 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 609
+INFO 2025-05-19 23:15:03,179 basehttp 108787 140633506362944 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1653
+INFO 2025-05-19 23:15:05,838 basehttp 108787 140633506362944 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:15:05,845 basehttp 108787 140633514755648 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:15:05,909 basehttp 108787 140633514755648 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1653
+INFO 2025-05-19 23:15:08,900 basehttp 108787 140633514755648 "GET /api/stores/4/orders/9/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 23:15:08,920 basehttp 108787 140633514755648 "GET /api/stores/4/orders/9/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:15:31,604 basehttp 108787 140633514755648 "PUT /api/stores/4/orders/9/ HTTP/1.1" 200 609
+INFO 2025-05-19 23:15:31,632 basehttp 108787 140633514755648 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1653
+INFO 2025-05-19 23:16:18,870 basehttp 108787 140633514755648 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:16:18,879 basehttp 108787 140633506362944 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:16:18,974 basehttp 108787 140633506362944 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3700
+INFO 2025-05-19 23:16:21,930 basehttp 108787 140633497970240 "OPTIONS /api/stores/1/orders/2/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:16:21,945 basehttp 108787 140633506362944 "GET /api/stores/1/orders/2/delivery-attempts/ HTTP/1.1" 200 376
+INFO 2025-05-19 23:16:21,952 basehttp 108787 140633497970240 "OPTIONS /api/stores/1/orders/2/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:16:22,009 basehttp 108787 140633506362944 "GET /api/stores/1/orders/2/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:16:25,425 basehttp 108787 140633497970240 "OPTIONS /api/stores/2/orders/undefined/ HTTP/1.1" 200 0
+WARNING 2025-05-19 23:16:25,439 log 108787 140633506362944 Not Found: /api/stores/2/orders/undefined/
+WARNING 2025-05-19 23:16:25,439 basehttp 108787 140633506362944 "DELETE /api/stores/2/orders/undefined/ HTTP/1.1" 404 23
+INFO 2025-05-19 23:19:56,185 autoreload 108787 140633694384128 /home/abright/Work/FarmFreight/backend/api/urls.py changed, reloading.
+INFO 2025-05-19 23:19:56,731 autoreload 109826 140349480321024 Watching for file changes with StatReloader
+INFO 2025-05-19 23:20:03,666 basehttp 109826 140349301896768 "GET /api/stores/1/orders/2/delivery-attempts/ HTTP/1.1" 200 376
+INFO 2025-05-19 23:20:03,689 basehttp 109826 140349301896768 "GET /api/stores/1/orders/2/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:20:07,562 basehttp 109826 140349301896768 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:20:07,574 basehttp 109826 140349292455488 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:20:07,677 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 3700
+INFO 2025-05-19 23:20:09,565 basehttp 109826 140349292455488 "GET /api/stores/1/orders/2/delivery-attempts/ HTTP/1.1" 200 376
+INFO 2025-05-19 23:20:09,611 basehttp 109826 140349292455488 "GET /api/stores/1/orders/2/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:20:12,626 basehttp 109826 140349284062784 "OPTIONS /api/stores/1/orders/2/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:20:12,646 basehttp 109826 140349292455488 "DELETE /api/stores/1/orders/2/ HTTP/1.1" 204 0
+WARNING 2025-05-19 23:20:13,806 log 109826 140349292455488 Not Found: /api/stores/2/orders/undefined/
+WARNING 2025-05-19 23:20:13,807 basehttp 109826 140349292455488 "DELETE /api/stores/2/orders/undefined/ HTTP/1.1" 404 23
+INFO 2025-05-19 23:21:32,301 basehttp 109826 140349284062784 "OPTIONS /api/stores/1/orders/1/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:21:32,312 basehttp 109826 140349292455488 "GET /api/stores/1/orders/1/delivery-attempts/ HTTP/1.1" 200 376
+INFO 2025-05-19 23:21:32,321 basehttp 109826 140349284062784 "OPTIONS /api/stores/1/orders/1/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:21:32,371 basehttp 109826 140349292455488 "GET /api/stores/1/orders/1/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:21:34,643 basehttp 109826 140349284062784 "OPTIONS /api/stores/1/orders/1/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:21:34,668 basehttp 109826 140349292455488 "DELETE /api/stores/1/orders/1/ HTTP/1.1" 204 0
+INFO 2025-05-19 23:21:36,880 basehttp 109826 140349284062784 "OPTIONS /api/stores/1/orders/undefined/ HTTP/1.1" 200 0
+WARNING 2025-05-19 23:21:36,898 log 109826 140349292455488 Not Found: /api/stores/1/orders/undefined/
+WARNING 2025-05-19 23:21:36,899 basehttp 109826 140349292455488 "DELETE /api/stores/1/orders/undefined/ HTTP/1.1" 404 23
+INFO 2025-05-19 23:27:19,336 basehttp 109826 140349284062784 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 2650
+INFO 2025-05-19 23:27:20,700 basehttp 109826 140349284062784 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 2650
+INFO 2025-05-19 23:27:21,809 basehttp 109826 140349284062784 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:27:21,813 basehttp 109826 140349292455488 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:27:21,882 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 2650
+INFO 2025-05-19 23:27:43,869 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 2650
+INFO 2025-05-19 23:28:50,889 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 2650
+INFO 2025-05-19 23:29:16,282 basehttp 109826 140349292455488 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:29:16,291 basehttp 109826 140349284062784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:29:23,756 basehttp 109826 140349284062784 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 2650
+INFO 2025-05-19 23:29:25,394 basehttp 109826 140349284062784 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:29:25,403 basehttp 109826 140349292455488 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:29:25,467 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 2650
+INFO 2025-05-19 23:29:27,358 basehttp 109826 140349292455488 "GET /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 23:29:27,381 basehttp 109826 140349292455488 "GET /api/stores/1/orders/8/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:29:30,994 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/3/delivery-attempts/ HTTP/1.1" 200 0
+WARNING 2025-05-19 23:29:30,998 log 109826 140349292455488 Unauthorized: /api/stores/1/orders/3/delivery-attempts/
+WARNING 2025-05-19 23:29:30,999 basehttp 109826 140349292455488 "GET /api/stores/1/orders/3/delivery-attempts/ HTTP/1.1" 401 172
+WARNING 2025-05-19 23:29:31,009 log 109826 140349292455488 Bad Request: /api/token/refresh/
+WARNING 2025-05-19 23:29:31,010 basehttp 109826 140349292455488 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-19 23:29:39,445 log 109826 140349292455488 Unauthorized: /api/logout/
+WARNING 2025-05-19 23:29:39,446 basehttp 109826 140349292455488 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-19 23:29:39,476 log 109826 140349292455488 Bad Request: /api/token/refresh/
+WARNING 2025-05-19 23:29:39,477 basehttp 109826 140349292455488 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-19 23:29:40,780 basehttp 109826 140349292455488 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-19 23:29:40,791 basehttp 109826 140349292455488 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:29:44,770 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 2650
+INFO 2025-05-19 23:29:46,823 basehttp 109826 140349292455488 "GET /api/stores/1/orders/3/delivery-attempts/ HTTP/1.1" 200 376
+INFO 2025-05-19 23:29:46,833 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/3/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:29:46,846 basehttp 109826 140349292455488 "GET /api/stores/1/orders/3/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:34:07,978 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 2650
+INFO 2025-05-19 23:34:25,015 basehttp 109826 140349292455488 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:34:25,020 basehttp 109826 140349284062784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:34:25,152 basehttp 109826 140349284062784 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 2650
+INFO 2025-05-19 23:34:27,360 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/4/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:34:27,377 basehttp 109826 140349284062784 "GET /api/stores/1/orders/4/delivery-attempts/ HTTP/1.1" 200 376
+INFO 2025-05-19 23:34:27,386 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/4/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:34:27,437 basehttp 109826 140349284062784 "GET /api/stores/1/orders/4/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:34:29,327 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/4/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:34:29,344 basehttp 109826 140349284062784 "DELETE /api/stores/1/orders/4/ HTTP/1.1" 204 0
+INFO 2025-05-19 23:34:30,933 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/5/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:34:30,950 basehttp 109826 140349284062784 "GET /api/stores/1/orders/5/delivery-attempts/ HTTP/1.1" 200 376
+INFO 2025-05-19 23:34:30,959 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/5/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:34:31,008 basehttp 109826 140349284062784 "GET /api/stores/1/orders/5/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:34:34,102 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/5/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:34:34,136 basehttp 109826 140349284062784 "DELETE /api/stores/1/orders/5/ HTTP/1.1" 204 0
+INFO 2025-05-19 23:34:35,270 basehttp 109826 140349284062784 "GET /api/stores/1/orders/6/delivery-attempts/ HTTP/1.1" 200 376
+INFO 2025-05-19 23:34:35,296 basehttp 109826 140349284062784 "GET /api/stores/1/orders/6/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:34:37,834 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/6/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:34:37,867 basehttp 109826 140349284062784 "DELETE /api/stores/1/orders/6/ HTTP/1.1" 204 0
+INFO 2025-05-19 23:34:40,259 basehttp 109826 140349284062784 "GET /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 23:34:40,279 basehttp 109826 140349284062784 "GET /api/stores/1/orders/8/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:34:54,132 basehttp 109826 140349284062784 "PUT /api/stores/1/orders/8/ HTTP/1.1" 200 604
+INFO 2025-05-19 23:34:54,152 basehttp 109826 140349284062784 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1075
+INFO 2025-05-19 23:34:56,993 basehttp 109826 140349284062784 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:34:57,003 basehttp 109826 140349292455488 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:34:57,058 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1075
+INFO 2025-05-19 23:34:58,817 basehttp 109826 140349292455488 "GET /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 23:34:58,838 basehttp 109826 140349292455488 "GET /api/stores/1/orders/8/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:35:08,524 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/8/ HTTP/1.1" 200 604
+INFO 2025-05-19 23:35:08,545 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1075
+INFO 2025-05-19 23:35:41,716 basehttp 109826 140349292455488 "GET /api/stores/1/orders/8/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-19 23:35:41,733 basehttp 109826 140349292455488 "GET /api/stores/1/orders/8/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:35:43,920 basehttp 109826 140349292455488 "DELETE /api/stores/1/orders/8/ HTTP/1.1" 204 0
+INFO 2025-05-19 23:36:07,997 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:36:08,020 basehttp 109826 140349292455488 "POST /api/stores/1/orders/ HTTP/1.1" 201 812
+INFO 2025-05-19 23:36:08,044 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1068
+INFO 2025-05-19 23:36:11,144 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:36:11,162 basehttp 109826 140349292455488 "GET /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 381
+INFO 2025-05-19 23:36:11,172 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:36:11,225 basehttp 109826 140349292455488 "GET /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:36:20,834 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/12/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:36:20,887 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/ HTTP/1.1" 200 812
+INFO 2025-05-19 23:36:20,893 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:36:20,912 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 200 336
+INFO 2025-05-19 23:36:20,978 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1108
+INFO 2025-05-19 23:36:30,295 basehttp 109826 140349292455488 "GET /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 388
+INFO 2025-05-19 23:36:30,316 basehttp 109826 140349292455488 "GET /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:36:33,444 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/ HTTP/1.1" 200 859
+INFO 2025-05-19 23:36:33,461 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 200 336
+INFO 2025-05-19 23:36:33,522 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1108
+INFO 2025-05-19 23:36:35,509 basehttp 109826 140349292455488 "GET /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 388
+INFO 2025-05-19 23:36:35,531 basehttp 109826 140349292455488 "GET /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:36:39,037 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/ HTTP/1.1" 200 859
+WARNING 2025-05-19 23:36:39,050 log 109826 140349292455488 Bad Request: /api/stores/1/orders/12/delivery-attempts/15/
+WARNING 2025-05-19 23:36:39,050 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 400 72
+INFO 2025-05-19 23:36:43,662 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/ HTTP/1.1" 200 859
+INFO 2025-05-19 23:36:43,678 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 200 326
+INFO 2025-05-19 23:36:43,745 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1095
+INFO 2025-05-19 23:36:46,101 basehttp 109826 140349292455488 "GET /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 378
+INFO 2025-05-19 23:36:46,122 basehttp 109826 140349292455488 "GET /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:36:49,292 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/ HTTP/1.1" 200 836
+WARNING 2025-05-19 23:36:49,302 log 109826 140349292455488 Bad Request: /api/stores/1/orders/12/delivery-attempts/15/
+WARNING 2025-05-19 23:36:49,302 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 400 58
+INFO 2025-05-19 23:37:18,997 basehttp 109826 140349292455488 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:37:19,003 basehttp 109826 140349284062784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:37:19,077 basehttp 109826 140349284062784 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1095
+INFO 2025-05-19 23:37:21,726 basehttp 109826 140349284062784 "GET /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 378
+INFO 2025-05-19 23:37:21,748 basehttp 109826 140349284062784 "GET /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:37:27,793 basehttp 109826 140349284062784 "PUT /api/stores/1/orders/12/ HTTP/1.1" 200 836
+WARNING 2025-05-19 23:37:27,804 log 109826 140349284062784 Bad Request: /api/stores/1/orders/12/delivery-attempts/15/
+WARNING 2025-05-19 23:37:27,804 basehttp 109826 140349284062784 "PUT /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 400 58
+INFO 2025-05-19 23:38:06,179 basehttp 109826 140349284062784 "GET /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 378
+INFO 2025-05-19 23:38:06,200 basehttp 109826 140349284062784 "GET /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:38:13,239 basehttp 109826 140349284062784 "PUT /api/stores/1/orders/12/ HTTP/1.1" 200 836
+WARNING 2025-05-19 23:38:13,254 log 109826 140349284062784 Bad Request: /api/stores/1/orders/12/delivery-attempts/15/
+WARNING 2025-05-19 23:38:13,255 basehttp 109826 140349284062784 "PUT /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 400 58
+INFO 2025-05-19 23:38:23,195 basehttp 109826 140349284062784 "GET /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 378
+INFO 2025-05-19 23:38:23,219 basehttp 109826 140349284062784 "GET /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:38:26,262 basehttp 109826 140349284062784 "GET /api/stores/1/orders/3/delivery-attempts/ HTTP/1.1" 200 376
+INFO 2025-05-19 23:38:26,286 basehttp 109826 140349284062784 "GET /api/stores/1/orders/3/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:38:31,724 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/3/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:38:31,765 basehttp 109826 140349284062784 "PUT /api/stores/1/orders/3/ HTTP/1.1" 200 842
+INFO 2025-05-19 23:38:31,771 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/3/delivery-attempts/3/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:38:31,782 basehttp 109826 140349284062784 "PUT /api/stores/1/orders/3/delivery-attempts/3/ HTTP/1.1" 200 321
+INFO 2025-05-19 23:38:31,858 basehttp 109826 140349284062784 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1095
+INFO 2025-05-19 23:38:33,421 basehttp 109826 140349284062784 "GET /api/stores/1/orders/3/delivery-attempts/ HTTP/1.1" 200 373
+INFO 2025-05-19 23:38:33,441 basehttp 109826 140349284062784 "GET /api/stores/1/orders/3/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:38:36,988 basehttp 109826 140349284062784 "PUT /api/stores/1/orders/3/ HTTP/1.1" 200 839
+WARNING 2025-05-19 23:38:37,006 log 109826 140349284062784 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/
+WARNING 2025-05-19 23:38:37,006 basehttp 109826 140349284062784 "PUT /api/stores/1/orders/3/delivery-attempts/3/ HTTP/1.1" 400 58
+INFO 2025-05-19 23:43:39,231 basehttp 109826 140349284062784 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:43:39,689 basehttp 109826 140349292455488 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-19 23:43:39,732 basehttp 109826 140349284062784 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:43:39,763 basehttp 109826 140349292455488 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:44:04,965 basehttp 109826 140349284062784 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:44:04,975 basehttp 109826 140349301896768 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:44:04,981 basehttp 109826 140349292455488 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:44:58,118 basehttp 109826 140349284062784 "OPTIONS /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-19 23:44:58,132 basehttp 109826 140349292455488 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1095
+INFO 2025-05-19 23:45:02,125 basehttp 109826 140349284062784 "OPTIONS /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:45:02,140 basehttp 109826 140349292455488 "GET /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 378
+INFO 2025-05-19 23:45:02,171 basehttp 109826 140349284062784 "OPTIONS /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:45:02,180 basehttp 109826 140349292455488 "GET /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:45:06,181 basehttp 109826 140349284062784 "OPTIONS /api/stores/1/orders/12/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:45:06,219 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/ HTTP/1.1" 200 836
+INFO 2025-05-19 23:45:06,224 basehttp 109826 140349284062784 "OPTIONS /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 200 0
+WARNING 2025-05-19 23:45:06,231 log 109826 140349292455488 Bad Request: /api/stores/1/orders/12/delivery-attempts/15/
+WARNING 2025-05-19 23:45:06,231 basehttp 109826 140349292455488 "PUT /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 400 58
+INFO 2025-05-19 23:45:24,747 basehttp 109826 140349301896768 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:45:24,747 basehttp 109826 140349292455488 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:45:24,757 basehttp 109826 140349284062784 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:45:24,763 basehttp 109826 140349273572928 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:45:25,748 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-19 23:45:25,763 basehttp 109826 140349273572928 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1095
+INFO 2025-05-19 23:45:27,617 basehttp 109826 140349292455488 "OPTIONS /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:45:27,633 basehttp 109826 140349273572928 "GET /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 378
+INFO 2025-05-19 23:45:27,675 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:45:27,683 basehttp 109826 140349273572928 "GET /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:45:30,917 basehttp 109826 140349292455488 "OPTIONS /api/stores/1/orders/12/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:45:30,943 basehttp 109826 140349273572928 "PUT /api/stores/1/orders/12/ HTTP/1.1" 200 836
+INFO 2025-05-19 23:45:30,948 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 200 0
+WARNING 2025-05-19 23:45:30,955 log 109826 140349273572928 Bad Request: /api/stores/1/orders/12/delivery-attempts/15/
+WARNING 2025-05-19 23:45:30,955 basehttp 109826 140349273572928 "PUT /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 400 58
+INFO 2025-05-19 23:47:09,767 basehttp 109826 140349273572928 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-19 23:47:09,771 basehttp 109826 140349284062784 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-19 23:47:09,915 basehttp 109826 140349273572928 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1095
+INFO 2025-05-19 23:47:13,769 basehttp 109826 140349292455488 "OPTIONS /api/stores/1/orders/3/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:47:13,780 basehttp 109826 140349273572928 "GET /api/stores/1/orders/3/delivery-attempts/ HTTP/1.1" 200 373
+INFO 2025-05-19 23:47:13,797 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/3/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:47:13,806 basehttp 109826 140349273572928 "GET /api/stores/1/orders/3/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-19 23:47:16,684 basehttp 109826 140349292455488 "OPTIONS /api/stores/1/orders/3/ HTTP/1.1" 200 0
+INFO 2025-05-19 23:47:16,722 basehttp 109826 140349273572928 "PUT /api/stores/1/orders/3/ HTTP/1.1" 200 839
+INFO 2025-05-19 23:47:16,747 basehttp 109826 140349301896768 "OPTIONS /api/stores/1/orders/3/delivery-attempts/3/ HTTP/1.1" 200 0
+WARNING 2025-05-19 23:47:16,758 log 109826 140349273572928 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/
+WARNING 2025-05-19 23:47:16,758 basehttp 109826 140349273572928 "PUT /api/stores/1/orders/3/delivery-attempts/3/ HTTP/1.1" 400 58
+WARNING 2025-05-20 00:10:14,814 log 109826 140349273572928 Unauthorized: /api/users/me/
+WARNING 2025-05-20 00:10:14,816 log 109826 140349301896768 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-20 00:10:14,816 basehttp 109826 140349273572928 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-20 00:10:14,816 basehttp 109826 140349301896768 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-20 00:10:14,945 log 109826 140349273572928 Unauthorized: /api/stores/1/orders/
+INFO 2025-05-20 00:10:14,946 basehttp 109826 140349292455488 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-20 00:10:14,946 basehttp 109826 140349284062784 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-20 00:10:14,946 basehttp 109826 140349273572928 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 172
+WARNING 2025-05-20 00:10:14,949 log 109826 140349301896768 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 00:10:14,950 log 109826 140349273572928 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 00:10:14,951 basehttp 109826 140349273572928 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 00:10:14,951 basehttp 109826 140349301896768 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 00:10:14,963 log 109826 140349301896768 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 00:10:14,963 basehttp 109826 140349301896768 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-20 00:10:18,545 basehttp 109826 140349292455488 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-20 00:10:19,016 basehttp 109826 140349273572928 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-20 00:10:19,030 basehttp 109826 140349273572928 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:10:21,600 basehttp 109826 140349273572928 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-20 00:10:21,604 basehttp 109826 140349301896768 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:10:25,034 basehttp 109826 140349284062784 "OPTIONS /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-20 00:10:25,052 basehttp 109826 140349273572928 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1653
+INFO 2025-05-20 00:10:43,225 basehttp 109826 140349292455488 "OPTIONS /api/stores/4/orders/11/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-20 00:10:43,236 basehttp 109826 140349273572928 "GET /api/stores/4/orders/11/delivery-attempts/ HTTP/1.1" 200 386
+INFO 2025-05-20 00:10:43,261 basehttp 109826 140349284062784 "OPTIONS /api/stores/4/orders/11/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-20 00:10:43,270 basehttp 109826 140349273572928 "GET /api/stores/4/orders/11/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-20 00:12:56,690 autoreload 109826 140349480321024 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:12:57,167 autoreload 111818 140003804942336 Watching for file changes with StatReloader
+INFO 2025-05-20 00:13:22,513 autoreload 111818 140003804942336 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:13:23,007 autoreload 112087 139905066758144 Watching for file changes with StatReloader
+INFO 2025-05-20 00:13:24,377 autoreload 112087 139905066758144 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:13:24,841 autoreload 112097 140094993608704 Watching for file changes with StatReloader
+INFO 2025-05-20 00:13:54,274 autoreload 112097 140094993608704 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:13:54,748 autoreload 112193 140682035941376 Watching for file changes with StatReloader
+INFO 2025-05-20 00:14:34,455 autoreload 112193 140682035941376 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-20 00:14:34,954 autoreload 112312 140623316127744 Watching for file changes with StatReloader
+INFO 2025-05-20 00:14:38,344 autoreload 112312 140623316127744 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-20 00:14:38,840 autoreload 112329 140154566385664 Watching for file changes with StatReloader
+INFO 2025-05-20 00:14:53,583 autoreload 112329 140154566385664 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-20 00:14:54,086 autoreload 112357 139946694586368 Watching for file changes with StatReloader
+INFO 2025-05-20 00:23:39,030 autoreload 112357 139946694586368 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:23:39,561 autoreload 112932 139928450428928 Watching for file changes with StatReloader
+INFO 2025-05-20 00:24:40,416 autoreload 112932 139928450428928 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-05-20 00:24:40,900 autoreload 112980 140136503758848 Watching for file changes with StatReloader
+INFO 2025-05-20 00:24:47,483 autoreload 112980 140136503758848 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-05-20 00:24:47,950 autoreload 112997 139794249887744 Watching for file changes with StatReloader
+INFO 2025-05-20 00:25:22,432 autoreload 112997 139794249887744 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:25:22,927 autoreload 113040 139921578258432 Watching for file changes with StatReloader
+INFO 2025-05-20 00:25:53,283 autoreload 113040 139921578258432 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:25:53,795 autoreload 113183 140701013061632 Watching for file changes with StatReloader
+INFO 2025-05-20 00:26:05,471 autoreload 113183 140701013061632 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:26:05,830 autoreload 113256 140101403963392 Watching for file changes with StatReloader
+INFO 2025-05-20 00:26:10,180 autoreload 113256 140101403963392 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:26:10,670 autoreload 113279 139979149897728 Watching for file changes with StatReloader
+INFO 2025-05-20 00:26:22,434 autoreload 113279 139979149897728 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:26:22,926 autoreload 113307 140428128194560 Watching for file changes with StatReloader
+INFO 2025-05-20 00:26:25,306 autoreload 113307 140428128194560 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:26:25,782 autoreload 113324 139839276273664 Watching for file changes with StatReloader
+INFO 2025-05-20 00:26:40,633 autoreload 113324 139839276273664 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:26:41,106 autoreload 113349 140715516399616 Watching for file changes with StatReloader
+INFO 2025-05-20 00:26:43,492 autoreload 113349 140715516399616 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:26:44,004 autoreload 113366 140454236229632 Watching for file changes with StatReloader
+INFO 2025-05-20 00:28:06,419 autoreload 113366 140454236229632 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:28:06,895 autoreload 113444 139904813133824 Watching for file changes with StatReloader
+WARNING 2025-05-20 00:31:03,206 log 113649 139749166788608 Bad Request: /api/stores/5/orders/
+INFO 2025-05-20 00:32:40,118 autoreload 113444 139904813133824 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-20 00:32:40,624 autoreload 113743 139822443556864 Watching for file changes with StatReloader
+INFO 2025-05-20 00:32:54,498 autoreload 113743 139822443556864 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-20 00:32:55,022 autoreload 113795 140570760245248 Watching for file changes with StatReloader
+WARNING 2025-05-20 00:33:01,874 log 113812 140622319263744 Bad Request: /api/stores/5/orders/
+INFO 2025-05-20 00:33:11,850 autoreload 113795 140570760245248 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-20 00:33:12,346 autoreload 113843 140402714804224 Watching for file changes with StatReloader
+INFO 2025-05-20 00:34:04,282 autoreload 113843 140402714804224 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-20 00:34:04,825 autoreload 113937 140202594246656 Watching for file changes with StatReloader
+INFO 2025-05-20 00:35:33,501 autoreload 113937 140202594246656 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:35:34,026 autoreload 114042 140593108291584 Watching for file changes with StatReloader
+INFO 2025-05-20 00:35:47,751 autoreload 114042 140593108291584 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:35:48,202 autoreload 114081 139733562912768 Watching for file changes with StatReloader
+INFO 2025-05-20 00:35:58,565 autoreload 114081 139733562912768 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:35:59,054 autoreload 114107 139624863387648 Watching for file changes with StatReloader
+INFO 2025-05-20 00:36:15,844 autoreload 114107 139624863387648 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:36:16,369 autoreload 114135 140253267124224 Watching for file changes with StatReloader
+INFO 2025-05-20 00:37:07,727 basehttp 114135 140253088757312 "OPTIONS /api/users/ HTTP/1.1" 200 0
+WARNING 2025-05-20 00:37:07,734 log 114135 140253080364608 Unauthorized: /api/users/
+WARNING 2025-05-20 00:37:07,735 basehttp 114135 140253080364608 "GET /api/users/ HTTP/1.1" 401 172
+WARNING 2025-05-20 00:37:07,757 log 114135 140253080364608 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 00:37:07,757 basehttp 114135 140253080364608 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 00:37:08,671 log 114135 140253080364608 Unauthorized: /api/users/
+WARNING 2025-05-20 00:37:08,671 basehttp 114135 140253080364608 "GET /api/users/ HTTP/1.1" 401 58
+WARNING 2025-05-20 00:37:08,679 log 114135 140253080364608 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 00:37:08,679 basehttp 114135 140253080364608 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-20 00:37:10,069 basehttp 114135 140253088757312 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-20 00:37:10,072 log 114135 140253080364608 Unauthorized: /api/logout/
+WARNING 2025-05-20 00:37:10,072 basehttp 114135 140253080364608 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-20 00:37:10,090 log 114135 140253080364608 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 00:37:10,090 basehttp 114135 140253080364608 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-20 00:37:12,316 basehttp 114135 140253080364608 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-20 00:37:12,330 basehttp 114135 140253080364608 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:37:13,042 basehttp 114135 140253080364608 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-20 00:37:14,721 basehttp 114135 140253071971904 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-20 00:37:14,726 basehttp 114135 140253080364608 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:37:14,800 basehttp 114135 140253080364608 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-20 00:37:17,442 basehttp 114135 140253080364608 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-20 00:37:17,446 basehttp 114135 140253071971904 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:37:17,512 basehttp 114135 140253071971904 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-20 00:37:17,515 basehttp 114135 140253080364608 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:37:20,083 basehttp 114135 140253071971904 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-20 00:37:20,087 basehttp 114135 140253080364608 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:37:20,160 basehttp 114135 140253071971904 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-20 00:37:28,011 basehttp 114135 140253080364608 "POST /api/logout/ HTTP/1.1" 200 31
+WARNING 2025-05-20 00:37:32,687 log 114135 140253071971904 Bad Request: /api/login/
+WARNING 2025-05-20 00:37:32,688 basehttp 114135 140253071971904 "POST /api/login/ HTTP/1.1" 400 33
+WARNING 2025-05-20 00:37:36,557 log 114135 140253080364608 Too Many Requests: /api/login/
+WARNING 2025-05-20 00:37:36,558 basehttp 114135 140253080364608 "POST /api/login/ HTTP/1.1" 429 69
+WARNING 2025-05-20 00:37:40,822 log 114135 140253071971904 Too Many Requests: /api/login/
+WARNING 2025-05-20 00:37:40,823 basehttp 114135 140253071971904 "POST /api/login/ HTTP/1.1" 429 69
+WARNING 2025-05-20 00:37:43,357 log 114135 140253080364608 Too Many Requests: /api/login/
+WARNING 2025-05-20 00:37:43,358 basehttp 114135 140253080364608 "POST /api/login/ HTTP/1.1" 429 69
+INFO 2025-05-20 00:38:22,845 basehttp 114135 140253071971904 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-20 00:38:22,865 basehttp 114135 140253080364608 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:38:25,226 basehttp 114135 140253071971904 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-20 00:38:34,892 basehttp 114135 140253088757312 "OPTIONS /api/users/2/ HTTP/1.1" 200 0
+WARNING 2025-05-20 00:38:34,912 log 114135 140253080364608 Bad Request: /api/users/2/
+WARNING 2025-05-20 00:38:34,912 basehttp 114135 140253080364608 "PATCH /api/users/2/ HTTP/1.1" 400 45
+INFO 2025-05-20 00:38:35,955 basehttp 114135 140253071971904 "GET /api/users/2/ HTTP/1.1" 200 398
+WARNING 2025-05-20 00:39:02,247 log 114135 140253080364608 Bad Request: /api/users/2/
+WARNING 2025-05-20 00:39:02,248 basehttp 114135 140253080364608 "PATCH /api/users/2/ HTTP/1.1" 400 45
+INFO 2025-05-20 00:39:03,308 basehttp 114135 140253071971904 "GET /api/users/2/ HTTP/1.1" 200 398
+INFO 2025-05-20 00:39:05,752 basehttp 114135 140253080364608 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-20 00:39:16,581 basehttp 114135 140253088757312 "OPTIONS /api/password-reset/code/ HTTP/1.1" 200 0
+INFO 2025-05-20 00:39:17,294 utils 114135 140253071971904 Password reset verification code sent to +14692478210. Status: pending
+INFO 2025-05-20 00:39:17,296 basehttp 114135 140253071971904 "POST /api/password-reset/code/ HTTP/1.1" 200 43
+INFO 2025-05-20 00:39:32,549 basehttp 114135 140253088757312 "OPTIONS /api/password-reset/confirm/ HTTP/1.1" 200 0
+INFO 2025-05-20 00:39:32,551 views 114135 140253080364608 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 689773
+WARNING 2025-05-20 00:39:32,845 views 114135 140253080364608 Password reset confirm failed for ***8210 (IP: 127.0.0.1): {'new_password': [ErrorDetail(string='This password is too common.', code='invalid')]}
+WARNING 2025-05-20 00:39:32,846 log 114135 140253080364608 Bad Request: /api/password-reset/confirm/
+WARNING 2025-05-20 00:39:32,847 basehttp 114135 140253080364608 "POST /api/password-reset/confirm/ HTTP/1.1" 400 49
+INFO 2025-05-20 00:39:37,835 views 114135 140253071971904 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 689773
+ERROR 2025-05-20 00:39:38,009 utils 114135 140253071971904 Error verifying reset code for +14692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/VA592981ff5895993460d99ec28fe4ca78/VerificationCheck[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The requested resource /Services/VA592981ff5895993460d99ec28fe4ca78/VerificationCheck was not found[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20404[0m
+
+
+WARNING 2025-05-20 00:39:38,009 views 114135 140253071971904 Password reset confirm failed for ***8210 (IP: 127.0.0.1): {'non_field_errors': [ErrorDetail(string='Invalid or expired code.', code='invalid')]}
+WARNING 2025-05-20 00:39:38,011 log 114135 140253071971904 Bad Request: /api/password-reset/confirm/
+WARNING 2025-05-20 00:39:38,012 basehttp 114135 140253071971904 "POST /api/password-reset/confirm/ HTTP/1.1" 400 49
+INFO 2025-05-20 00:39:50,034 utils 114135 140253080364608 Password reset verification code sent to +14692478210. Status: pending
+INFO 2025-05-20 00:39:50,037 basehttp 114135 140253080364608 "POST /api/password-reset/code/ HTTP/1.1" 200 43
+INFO 2025-05-20 00:40:05,220 views 114135 140253071971904 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 819408
+WARNING 2025-05-20 00:40:06,605 views 114135 140253071971904 Password reset confirm failed for ***8210 (IP: 127.0.0.1): {'new_password': [ErrorDetail(string='This password is too common.', code='invalid')]}
+WARNING 2025-05-20 00:40:06,605 log 114135 140253071971904 Bad Request: /api/password-reset/confirm/
+WARNING 2025-05-20 00:40:06,606 basehttp 114135 140253071971904 "POST /api/password-reset/confirm/ HTTP/1.1" 400 49
+INFO 2025-05-20 00:40:12,235 views 114135 140253080364608 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 819408
+ERROR 2025-05-20 00:40:13,211 utils 114135 140253080364608 Error verifying reset code for +14692478210: 
+[31m[49mHTTP Error[0m [37m[49mYour request was:[0m
+
+[36m[49mPOST /Services/VA592981ff5895993460d99ec28fe4ca78/VerificationCheck[0m
+
+[37m[49mTwilio returned the following information:[0m
+
+[34m[49mUnable to create record: The requested resource /Services/VA592981ff5895993460d99ec28fe4ca78/VerificationCheck was not found[0m
+
+[37m[49mMore information may be available here:[0m
+
+[34m[49mhttps://www.twilio.com/docs/errors/20404[0m
+
+
+WARNING 2025-05-20 00:40:13,211 views 114135 140253080364608 Password reset confirm failed for ***8210 (IP: 127.0.0.1): {'non_field_errors': [ErrorDetail(string='Invalid or expired code.', code='invalid')]}
+WARNING 2025-05-20 00:40:13,211 log 114135 140253080364608 Bad Request: /api/password-reset/confirm/
+WARNING 2025-05-20 00:40:13,212 basehttp 114135 140253080364608 "POST /api/password-reset/confirm/ HTTP/1.1" 400 49
+INFO 2025-05-20 00:40:19,737 utils 114135 140253071971904 Password reset verification code sent to +14692478210. Status: pending
+INFO 2025-05-20 00:40:19,738 basehttp 114135 140253071971904 "POST /api/password-reset/code/ HTTP/1.1" 200 43
+INFO 2025-05-20 00:40:39,678 views 114135 140253080364608 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 820791
+INFO 2025-05-20 00:40:40,304 views 114135 140253080364608 Password reset successful for ***8210 (IP: 127.0.0.1)
+INFO 2025-05-20 00:40:40,305 basehttp 114135 140253080364608 "POST /api/password-reset/confirm/ HTTP/1.1" 200 40
+INFO 2025-05-20 00:40:47,355 basehttp 114135 140253071971904 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-20 00:40:47,393 basehttp 114135 140253088757312 "OPTIONS /api/users/2/stores/ HTTP/1.1" 200 0
+INFO 2025-05-20 00:40:47,399 basehttp 114135 140253080364608 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+ERROR 2025-05-20 00:40:47,456 log 114135 140253071971904 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: orders_order.invoice_pdf
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 94, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 211, in paginate_queryset
+    self.page = paginator.page(page_number)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 89, in page
+    number = self.validate_number(number)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 70, in validate_number
+    if number > self.num_pages:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 116, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: orders_order.invoice_pdf
+ERROR 2025-05-20 00:40:47,459 basehttp 114135 140253071971904 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 26398
+INFO 2025-05-20 00:40:50,150 basehttp 114135 140253071971904 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-20 00:40:50,153 basehttp 114135 140253080364608 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+ERROR 2025-05-20 00:40:50,201 log 114135 140253071971904 Internal Server Error: /api/stores/4/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: orders_order.invoice_pdf
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 94, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 211, in paginate_queryset
+    self.page = paginator.page(page_number)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 89, in page
+    number = self.validate_number(number)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 70, in validate_number
+    if number > self.num_pages:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 116, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: orders_order.invoice_pdf
+ERROR 2025-05-20 00:40:50,202 basehttp 114135 140253071971904 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 26398
+INFO 2025-05-20 00:40:54,734 basehttp 114135 140253071971904 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-20 00:40:54,736 basehttp 114135 140253080364608 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+ERROR 2025-05-20 00:40:54,782 log 114135 140253071971904 Internal Server Error: /api/stores/4/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: orders_order.invoice_pdf
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 94, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 211, in paginate_queryset
+    self.page = paginator.page(page_number)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 89, in page
+    number = self.validate_number(number)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 70, in validate_number
+    if number > self.num_pages:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 116, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 620, in count
+    return self.query.get_count(using=self.db)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 630, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 616, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: orders_order.invoice_pdf
+ERROR 2025-05-20 00:40:54,783 basehttp 114135 140253071971904 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 26398
+INFO 2025-05-20 00:40:56,500 basehttp 114135 140253071971904 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-20 00:40:58,813 basehttp 114135 140253071971904 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-20 00:40:58,822 basehttp 114135 140253071971904 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-20 00:40:59,788 log 114135 140253071971904 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: orders_order.invoice_pdf
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 94, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 222, in paginate_queryset
+    return list(self.page)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 191, in __len__
+    return len(self.object_list)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: orders_order.invoice_pdf
+ERROR 2025-05-20 00:40:59,789 basehttp 114135 140253071971904 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 25454
+INFO 2025-05-20 00:41:01,364 basehttp 114135 140253071971904 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-20 00:41:01,369 basehttp 114135 140253080364608 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-20 00:41:01,409 log 114135 140253071971904 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: orders_order.invoice_pdf
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 94, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 222, in paginate_queryset
+    return list(self.page)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 191, in __len__
+    return len(self.object_list)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: orders_order.invoice_pdf
+ERROR 2025-05-20 00:41:01,410 basehttp 114135 140253071971904 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 25432
+INFO 2025-05-20 00:41:02,601 basehttp 114135 140253071971904 "GET /api/users/ HTTP/1.1" 200 1666
+ERROR 2025-05-20 00:41:02,967 log 114135 140253071971904 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: orders_order.invoice_pdf
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 94, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 222, in paginate_queryset
+    return list(self.page)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 191, in __len__
+    return len(self.object_list)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: orders_order.invoice_pdf
+ERROR 2025-05-20 00:41:02,968 basehttp 114135 140253071971904 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 25454
+INFO 2025-05-20 00:41:03,810 basehttp 114135 140253071971904 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-20 00:41:03,815 basehttp 114135 140253080364608 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:41:03,850 basehttp 114135 140253088757312 "OPTIONS /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+ERROR 2025-05-20 00:41:03,874 log 114135 140253071971904 Internal Server Error: /api/stores/2/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: orders_order.invoice_pdf
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 94, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 222, in paginate_queryset
+    return list(self.page)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 191, in __len__
+    return len(self.object_list)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: orders_order.invoice_pdf
+ERROR 2025-05-20 00:41:03,874 basehttp 114135 140253071971904 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 25432
+INFO 2025-05-20 00:41:04,982 basehttp 114135 140253071971904 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-20 00:41:04,986 basehttp 114135 140253080364608 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:41:05,020 basehttp 114135 140253088757312 "OPTIONS /api/stores/3/orders/?store_id=3&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-20 00:41:05,028 basehttp 114135 140253071971904 "GET /api/stores/3/orders/?store_id=3&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 52
+INFO 2025-05-20 00:41:08,790 basehttp 114135 140253071971904 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-20 00:41:12,983 basehttp 114135 140253071971904 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-20 00:41:12,998 basehttp 114135 140253071971904 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-20 00:41:14,452 log 114135 140253071971904 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: orders_order.invoice_pdf
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 94, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 222, in paginate_queryset
+    return list(self.page)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 191, in __len__
+    return len(self.object_list)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: orders_order.invoice_pdf
+ERROR 2025-05-20 00:41:14,453 basehttp 114135 140253071971904 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 25454
+INFO 2025-05-20 00:42:31,143 autoreload 114135 140253267124224 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:42:31,627 autoreload 115460 140191970234368 Watching for file changes with StatReloader
+INFO 2025-05-20 00:42:42,307 autoreload 115460 140191970234368 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:42:42,807 autoreload 115498 139931508924416 Watching for file changes with StatReloader
+INFO 2025-05-20 00:42:44,169 autoreload 115498 139931508924416 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:42:44,622 autoreload 115502 139998785306624 Watching for file changes with StatReloader
+INFO 2025-05-20 00:43:04,643 autoreload 115502 139998785306624 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-20 00:43:05,112 autoreload 115528 139719695921152 Watching for file changes with StatReloader
+INFO 2025-05-20 00:44:02,335 autoreload 115528 139719695921152 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:44:02,833 autoreload 115624 140011193413632 Watching for file changes with StatReloader
+INFO 2025-05-20 00:44:09,375 autoreload 115624 140011193413632 /home/abright/Work/FarmFreight/backend/orders/models.py changed, reloading.
+INFO 2025-05-20 00:44:09,882 autoreload 115646 140225698803712 Watching for file changes with StatReloader
+INFO 2025-05-20 00:44:36,219 autoreload 115646 140225698803712 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-20 00:44:36,713 autoreload 115677 139888616243200 Watching for file changes with StatReloader
+INFO 2025-05-20 00:44:44,098 basehttp 115677 139888505173568 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-20 00:44:44,100 basehttp 115677 139888427005504 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-20 00:44:44,195 log 115677 139888427005504 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: orders_order.invoice_pdf
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 94, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 222, in paginate_queryset
+    return list(self.page)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 191, in __len__
+    return len(self.object_list)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: orders_order.invoice_pdf
+ERROR 2025-05-20 00:44:44,197 basehttp 115677 139888427005504 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 25432
+INFO 2025-05-20 00:44:47,506 basehttp 115677 139888427005504 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-20 00:44:50,057 basehttp 115677 139888427005504 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-20 00:44:50,069 basehttp 115677 139888427005504 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+ERROR 2025-05-20 00:44:51,496 log 115677 139888427005504 Internal Server Error: /api/stores/1/orders/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+sqlite3.OperationalError: no such column: orders_order.invoice_pdf
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/api/orders/views.py", line 94, in list
+    page = self.paginate_queryset(queryset)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/generics.py", line 175, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/pagination.py", line 222, in paginate_queryset
+    return list(self.page)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/paginator.py", line 191, in __len__
+    return len(self.object_list)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 382, in __len__
+    self._fetch_all()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 354, in execute
+    return super().execute(query, params)
+django.db.utils.OperationalError: no such column: orders_order.invoice_pdf
+ERROR 2025-05-20 00:44:51,496 basehttp 115677 139888427005504 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 500 25454
+INFO 2025-05-20 00:45:35,902 autoreload 115733 140483662884864 Watching for file changes with StatReloader
+INFO 2025-05-20 00:45:54,078 autoreload 115743 140219880337408 Watching for file changes with StatReloader
+INFO 2025-05-20 00:45:57,132 basehttp 115743 140219702097472 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-20 00:45:57,140 basehttp 115743 140219693704768 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:45:57,227 basehttp 115743 140219693704768 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-20 00:46:01,254 basehttp 115743 140219693704768 "GET /api/stores/1/orders/12/delivery-attempts/ HTTP/1.1" 200 378
+INFO 2025-05-20 00:46:01,279 basehttp 115743 140219693704768 "GET /api/stores/1/orders/12/available-drivers/ HTTP/1.1" 200 803
+INFO 2025-05-20 00:46:17,018 basehttp 115743 140219609249344 "OPTIONS /api/stores/12/orders/undefined/photos/ HTTP/1.1" 200 0
+WARNING 2025-05-20 00:46:17,031 log 115743 140219693704768 Not Found: /api/stores/12/orders/undefined/photos/
+WARNING 2025-05-20 00:46:17,031 basehttp 115743 140219693704768 "GET /api/stores/12/orders/undefined/photos/ HTTP/1.1" 404 28811
+INFO 2025-05-20 00:46:33,593 basehttp 115743 140219693704768 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-20 00:46:33,598 basehttp 115743 140219702097472 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 00:46:33,694 basehttp 115743 140219693704768 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+WARNING 2025-05-20 01:44:07,828 log 115743 140219702097472 Unauthorized: /api/users/me/
+WARNING 2025-05-20 01:44:07,828 basehttp 115743 140219702097472 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-20 01:44:07,829 log 115743 140219693704768 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-20 01:44:07,830 basehttp 115743 140219693704768 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-20 01:44:07,881 log 115743 140219702097472 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 01:44:07,882 log 115743 140219693704768 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 01:44:07,882 basehttp 115743 140219702097472 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 01:44:07,882 basehttp 115743 140219693704768 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 01:44:07,948 log 115743 140219693704768 Unauthorized: /api/stores/1/orders/
+WARNING 2025-05-20 01:44:07,948 basehttp 115743 140219693704768 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 58
+WARNING 2025-05-20 01:44:07,963 log 115743 140219702097472 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 01:44:07,963 basehttp 115743 140219702097472 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 03:02:08,619 log 115743 140219702097472 Bad Request: /api/login/
+WARNING 2025-05-20 03:02:08,619 basehttp 115743 140219702097472 "POST /api/login/ HTTP/1.1" 400 33
+INFO 2025-05-20 03:02:14,322 basehttp 115743 140219702097472 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-20 03:02:14,332 basehttp 115743 140219702097472 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-20 03:04:15,482 autoreload 115743 140219880337408 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
+INFO 2025-05-20 03:04:15,983 autoreload 120412 140326540226560 Watching for file changes with StatReloader

@@ -14,7 +14,6 @@ def delivery_photo_upload_path(instance, filename):
     timestamp = datetime.now().strftime('%Y%m%dT%H%M%S%f')
     return f"delivery_photos/photo_{timestamp}{ext}"
 
-
 class DeliveryAttempt(models.Model):
     STATUS_CHOICES = [
         ('order_placed', 'Order Placed'),

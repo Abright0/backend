@@ -6,8 +6,6 @@ from assignments.models import DeliveryAttempt
 
 from api.assignments.serializers import DeliveryAttemptSerializer
 
-
-
 class DeliveryAttemptWriteSerializer(serializers.ModelSerializer):
     class Meta:
         model = DeliveryAttempt
@@ -37,16 +35,13 @@ class OrderSerializer(serializers.ModelSerializer):
     Basic Order serializer for list views.
     Doesn't include related order items to reduce payload size.
     """
-    # Expose the store name in addition to the ID
     store_name = serializers.CharField(source='store.name', read_only=True)
-    
-    # Show order status from the latest assignment
     status = serializers.SerializerMethodField()
-    
-    # Driver information
-    driver = serializers.SerializerMethodField()
+    latest_driver_names = serializers.SerializerMethodField()
+    latest_delivery_date = serializers.SerializerMethodField()
+    invoice_pdf = serializers.FileField(required=False, allow_null=True)
+    invoice_pdf_signed_url = serializers.CharField(read_only=True)
 
-    # Include order items
     items = OrderItemSerializer(many=True, read_only=True)
     
     class Meta:
@@ -55,7 +50,8 @@ class OrderSerializer(serializers.ModelSerializer):
             'id', 'invoice_num', 'first_name', 'last_name', 
             'phone_num', 'address', 'customer_email', 
             'notes', 'creation_date', 'delivery_date',
-            'store', 'store_name', 'driver', 'items', 'status', 'customer_num'
+            'store', 'store_name', 'latest_driver_names', 'items', 'status',
+            'customer_num', 'latest_delivery_date','invoice_pdf','invoice_pdf_signed_url'
         ]
     
     def get_status(self, obj):
@@ -75,34 +71,29 @@ class OrderSerializer(serializers.ModelSerializer):
         }
 
         return status_mapping.get(latest_attempt.status, latest_attempt.status)
-
     
-    def get_driver(self, obj):
-        """
-        Get the driver name from the assignment.
-        """
-        # Check if prefetched assignments are available
-        assignments = getattr(obj, 'prefetched_assignments', None)
-        
-        if not assignments and hasattr(obj, 'assignments'):
-            try:
-                # Get the latest assignment if prefetch wasn't used
-                assignment = obj.assignments.latest('id')
-                drivers = assignment.drivers.all()
-                if drivers.exists():
-                    driver = drivers.first()
-                    return f"{driver.first_name} {driver.last_name}".strip() or driver.username
-            except:
-                return None
-        elif assignments and assignments:
-            # Use the prefetched assignment if available
-            latest_assignment = assignments[-1]
-            drivers = latest_assignment.drivers.all()
-            if drivers.exists():
-                driver = drivers.first()
-                return f"{driver.first_name} {driver.last_name}".strip() or driver.username
-        
-        return None
+    def get_latest_driver_names(self, obj):
+        latest_attempt = obj.delivery_attempts.order_by('-delivery_date', '-id').first()
+        if not latest_attempt:
+            return []
+        return [
+            f"{d.first_name} {d.last_name}".strip() or d.username
+            for d in latest_attempt.drivers.all()
+        ]
+
+
+    def get_latest_delivery_date(self, obj):
+        latest_attempt = obj.delivery_attempts.order_by('-delivery_date', '-id').first()
+        return latest_attempt.delivery_date if latest_attempt else None
+
+    def to_representation(self, instance):
+        try:
+            instance.get_invoice_signed_url()
+        except Exception as e:
+            # Optional: log or silence depending on your error strategy
+            print(f"Signed URL error: {e}")
+        return super().to_representation(instance)
+
 
 class OrderDetailSerializer(OrderSerializer):
     delivery_attempts = DeliveryAttemptWriteSerializer(many=True, required=False)

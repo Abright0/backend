@@ -53,6 +53,8 @@ from datetime import date, time
 from stores.models import Store
 from orders.models import Order, OrderItem
 from assignments.models import DeliveryAttempt
+from django.core.files.uploadedfile import SimpleUploadedFile
+
 
 User = get_user_model()
 
@@ -122,10 +124,27 @@ class OrderAndAttemptTests(APITestCase):
         list_attempts_url = f"/api/stores/{self.store.id}/orders/{order_id}/delivery-attempts/"
         response = self.client.get(list_attempts_url, format="json")
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-
         print("All Delivery Attempts:")
         for attempt in response.data.get("results", []):  # handle pagination
             print(attempt)
+
+        # Step 5: Upload invoice PDF
+        pdf_file = SimpleUploadedFile("invoice.pdf", b"%PDF-1.4 test content", content_type="application/pdf")
+        update_invoice_url = f"/api/stores/{self.store.id}/orders/{order_id}/"
+        response = self.client.patch(update_invoice_url, {"invoice_pdf": pdf_file}, format="multipart")
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertIn("invoice_pdf", response.data)
+
+        # Step 6: Generate signed URL
+        from orders.models import Order
+
+        order = Order.objects.get(id=order_id)
+        order.create_invoice_signed_url()
+
+        self.assertIsNotNone(order.invoice_pdf_signed_url)
+        self.assertIsNotNone(order.invoice_pdf_signed_url_expiry)
+
+        print("Signed URL:", order.invoice_pdf_signed_url)
 
 
 

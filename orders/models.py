@@ -2,6 +2,9 @@
 from django.db import models
 from stores.models import Store
 from products.models import Product
+from assignments.utils import generate_signed_url
+from django.utils import timezone
+from datetime import timedelta
 
 class Order(models.Model):
     invoice_num = models.CharField(max_length=30)
@@ -23,6 +26,14 @@ class Order(models.Model):
         max_length=30, null=True, blank=True, default='order_placed'
     )
     delivery_date_fallback = models.TextField(null=True, blank=True)
+    invoice_pdf = models.FileField(
+        upload_to='invoices/',
+        null=True,
+        blank=True,
+        help_text="PDF Invoice File"
+    )
+    invoice_pdf_signed_url = models.URLField(blank=True,null=True)
+    invoice_pdf_signed_url_expiry = models.DateTimeField(blank=True, null=True)
 
     @property
     def status(self):
@@ -41,6 +52,24 @@ class Order(models.Model):
     @delivery_date.setter
     def delivery_date(self, value):
         self.delivery_date_fallback = value
+
+
+    def create_invoice_signed_url(self, expiration_minutes=15):  # 48 hours
+        if self.invoice_pdf:
+            self.invoice_pdf_signed_url = generate_signed_url(self.invoice_pdf.name, expiration_minutes)
+            self.invoice_pdf_signed_url_expiry = timezone.now() + timedelta(minutes=expiration_minutes)
+            self.save()
+        else:
+            return None
+
+    def get_invoice_signed_url(self):
+        if not self.invoice_pdf:
+            return None
+
+        if not self.invoice_pdf_signed_url or timezone.now() > self.invoice_pdf_signed_url_expiry:
+            self.create_invoice_signed_url()
+
+        return self.invoice_pdf_signed_url
         
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='items')
