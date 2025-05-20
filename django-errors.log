@@ -14298,3 +14298,137 @@ INFO 2025-05-20 03:02:14,322 basehttp 115743 140219702097472 "POST /api/login/ H
 INFO 2025-05-20 03:02:14,332 basehttp 115743 140219702097472 "GET /api/users/1/stores/ HTTP/1.1" 200 535
 INFO 2025-05-20 03:04:15,482 autoreload 115743 140219880337408 /home/abright/Work/FarmFreight/backend/api/orders/serializers.py changed, reloading.
 INFO 2025-05-20 03:04:15,983 autoreload 120412 140326540226560 Watching for file changes with StatReloader
+WARNING 2025-05-20 03:22:36,624 log 120412 140326361679424 Unauthorized: /api/stores/1/orders/
+WARNING 2025-05-20 03:22:36,624 basehttp 120412 140326361679424 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 172
+WARNING 2025-05-20 03:22:36,668 log 120412 140326361679424 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 03:22:36,668 basehttp 120412 140326361679424 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-20 04:11:53,464 basehttp 120412 140326361679424 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-20 04:11:53,464 basehttp 120412 140326352238144 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+WARNING 2025-05-20 04:11:53,471 log 120412 140326343845440 Unauthorized: /api/users/me/
+WARNING 2025-05-20 04:11:53,473 log 120412 140326335452736 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-20 04:11:53,474 basehttp 120412 140326335452736 "GET /api/users/1/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-20 04:11:53,474 basehttp 120412 140326343845440 "GET /api/users/me/ HTTP/1.1" 401 172
+INFO 2025-05-20 04:11:53,485 basehttp 120412 140326361679424 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+INFO 2025-05-20 04:11:53,485 basehttp 120412 140326352238144 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-20 04:11:53,531 log 120412 140326343845440 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 04:11:53,533 log 120412 140326335452736 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 04:11:53,533 basehttp 120412 140326335452736 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 04:11:53,533 basehttp 120412 140326343845440 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 04:11:55,532 log 120412 140326343845440 Unauthorized: /api/users/1/stores/
+WARNING 2025-05-20 04:11:55,533 log 120412 140326335452736 Unauthorized: /api/users/
+WARNING 2025-05-20 04:11:55,534 basehttp 120412 140326343845440 "GET /api/users/1/stores/ HTTP/1.1" 401 58
+WARNING 2025-05-20 04:11:55,534 basehttp 120412 140326335452736 "GET /api/users/ HTTP/1.1" 401 58
+WARNING 2025-05-20 04:11:55,541 log 120412 140326343845440 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 04:11:55,542 log 120412 140326335452736 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 04:11:55,542 basehttp 120412 140326343845440 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 04:11:55,543 basehttp 120412 140326335452736 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 04:11:55,990 log 120412 140326335452736 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-20 04:11:55,991 basehttp 120412 140326335452736 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 58
+WARNING 2025-05-20 04:11:55,998 log 120412 140326335452736 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 04:11:55,998 basehttp 120412 140326335452736 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-20 04:11:57,097 basehttp 120412 140326352238144 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-20 04:11:57,109 log 120412 140326335452736 Unauthorized: /api/logout/
+WARNING 2025-05-20 04:11:57,111 basehttp 120412 140326335452736 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-20 04:11:57,141 log 120412 140326335452736 Too Many Requests: /api/token/refresh/
+WARNING 2025-05-20 04:11:57,142 basehttp 120412 140326335452736 "POST /api/token/refresh/ HTTP/1.1" 429 69
+INFO 2025-05-20 04:12:06,699 basehttp 120412 140326352238144 "OPTIONS /api/login/ HTTP/1.1" 200 0
+WARNING 2025-05-20 04:12:06,708 log 120412 140326335452736 Too Many Requests: /api/login/
+WARNING 2025-05-20 04:12:06,709 basehttp 120412 140326335452736 "POST /api/login/ HTTP/1.1" 429 69
+WARNING 2025-05-20 04:12:08,483 log 120412 140326335452736 Too Many Requests: /api/login/
+WARNING 2025-05-20 04:12:08,484 basehttp 120412 140326335452736 "POST /api/login/ HTTP/1.1" 429 69
+INFO 2025-05-20 04:12:13,895 basehttp 120412 140326352238144 "OPTIONS /api/password-reset/code/ HTTP/1.1" 200 0
+WARNING 2025-05-20 04:12:13,912 log 120412 140326335452736 Bad Request: /api/password-reset/code/
+WARNING 2025-05-20 04:12:13,914 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 400 64
+WARNING 2025-05-20 04:12:35,100 log 120412 140326335452736 Bad Request: /api/password-reset/code/
+WARNING 2025-05-20 04:12:35,102 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 400 64
+WARNING 2025-05-20 04:12:41,846 log 120412 140326335452736 Bad Request: /api/password-reset/code/
+WARNING 2025-05-20 04:12:41,847 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 400 64
+WARNING 2025-05-20 04:12:48,100 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:48,101 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:52,206 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:52,208 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:52,909 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:52,910 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:53,071 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:53,072 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:53,258 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:53,259 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:53,430 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:53,430 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:53,601 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:53,601 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:53,802 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:53,803 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:53,992 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:53,993 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:54,167 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:54,168 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:54,374 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:54,375 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:55,252 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:55,252 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:55,427 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:55,427 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:55,608 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:55,608 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:55,802 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:55,802 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:55,992 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:55,992 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:56,177 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:56,178 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:56,370 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:56,371 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:12:56,533 log 120412 140326335452736 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:12:56,534 basehttp 120412 140326335452736 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+WARNING 2025-05-20 04:15:44,523 log 120412 140326327060032 Too Many Requests: /api/password-reset/code/
+WARNING 2025-05-20 04:15:44,525 basehttp 120412 140326327060032 "POST /api/password-reset/code/ HTTP/1.1" 429 71
+INFO 2025-05-20 04:16:34,715 autoreload 120412 140326540226560 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-20 04:16:35,218 autoreload 124407 140650377023488 Watching for file changes with StatReloader
+INFO 2025-05-20 04:16:37,628 autoreload 124407 140650377023488 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-20 04:16:38,115 autoreload 124425 140457247281152 Watching for file changes with StatReloader
+INFO 2025-05-20 04:16:39,487 autoreload 124425 140457247281152 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-20 04:16:39,957 autoreload 124432 140458677485568 Watching for file changes with StatReloader
+INFO 2025-05-20 04:16:46,518 autoreload 124440 140661865058304 Watching for file changes with StatReloader
+INFO 2025-05-20 04:16:54,190 utils 124440 140661685270080 Password reset verification code sent to +14692478210. Status: pending
+INFO 2025-05-20 04:16:54,191 basehttp 124440 140661685270080 "POST /api/password-reset/code/ HTTP/1.1" 200 43
+INFO 2025-05-20 04:17:18,411 views 124440 140661685270080 Password reset confirm attempt from 127.0.0.1 for ***8210 using code: 492491
+INFO 2025-05-20 04:17:19,039 views 124440 140661685270080 Password reset successful for ***8210 (IP: 127.0.0.1)
+INFO 2025-05-20 04:17:19,039 basehttp 124440 140661685270080 "POST /api/password-reset/confirm/ HTTP/1.1" 200 40
+WARNING 2025-05-20 04:17:28,561 log 124440 140661685270080 Bad Request: /api/login/
+WARNING 2025-05-20 04:17:28,561 basehttp 124440 140661685270080 "POST /api/login/ HTTP/1.1" 400 33
+INFO 2025-05-20 04:17:32,176 basehttp 124440 140661685270080 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-20 04:17:32,186 basehttp 124440 140661685270080 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-20 04:17:32,407 basehttp 124440 140661685270080 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-20 04:17:38,045 basehttp 124440 140661685270080 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-20 04:17:38,048 basehttp 124440 140661671630400 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-20 04:17:38,096 basehttp 124440 140661685270080 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1800
+INFO 2025-05-20 04:17:40,757 basehttp 124440 140661685270080 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-20 04:17:40,760 basehttp 124440 140661671630400 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-20 04:17:40,808 basehttp 124440 140661685270080 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+WARNING 2025-05-20 12:34:09,844 log 124440 140661685270080 Unauthorized: /api/logout/
+WARNING 2025-05-20 12:34:09,845 basehttp 124440 140661685270080 "POST /api/logout/ HTTP/1.1" 401 172
+WARNING 2025-05-20 12:34:09,855 log 124440 140661685270080 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 12:34:09,855 basehttp 124440 140661685270080 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 12:34:12,814 log 124440 140661685270080 Bad Request: /api/login/
+WARNING 2025-05-20 12:34:12,815 basehttp 124440 140661685270080 "POST /api/login/ HTTP/1.1" 400 33
+INFO 2025-05-20 12:34:15,192 basehttp 124440 140661685270080 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-20 12:34:15,202 basehttp 124440 140661685270080 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-20 12:34:15,311 basehttp 124440 140661685270080 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-20 12:34:21,011 basehttp 124440 140661685270080 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-20 12:34:21,012 basehttp 124440 140661671630400 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-20 12:34:21,057 basehttp 124440 140661685270080 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+WARNING 2025-05-20 12:54:23,979 log 124440 140661685270080 Unauthorized: /api/users/me/
+WARNING 2025-05-20 12:54:23,981 log 124440 140661671630400 Unauthorized: /api/users/2/stores/
+WARNING 2025-05-20 12:54:23,981 basehttp 124440 140661685270080 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-20 12:54:23,982 basehttp 124440 140661671630400 "GET /api/users/2/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-20 12:54:24,001 log 124440 140661685270080 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 12:54:24,002 log 124440 140661671630400 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 12:54:24,003 basehttp 124440 140661685270080 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 12:54:24,003 basehttp 124440 140661671630400 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-20 12:54:24,015 log 124440 140661588227648 Unauthorized: /api/stores/1/orders/
+WARNING 2025-05-20 12:54:24,015 basehttp 124440 140661588227648 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 172
+WARNING 2025-05-20 12:54:24,021 log 124440 140661588227648 Bad Request: /api/token/refresh/
+WARNING 2025-05-20 12:54:24,021 basehttp 124440 140661588227648 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-20 12:56:38,387 autoreload 124440 140661865058304 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-20 12:56:38,889 autoreload 130749 140474802311168 Watching for file changes with StatReloader
