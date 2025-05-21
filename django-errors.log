@@ -15028,3 +15028,540 @@ INFO 2025-05-21 01:34:00,093 basehttp 157498 140044828980800 "GET /api/users/2/s
 INFO 2025-05-21 01:34:00,226 basehttp 157498 140044828980800 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
 INFO 2025-05-21 01:34:07,265 basehttp 157498 140044828980800 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
 INFO 2025-05-21 01:36:01,774 basehttp 157498 140044828980800 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 01:37:45,687 basehttp 157498 140044828980800 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 01:39:05,606 basehttp 157498 140044828980800 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 01:39:05,610 basehttp 157498 140044820588096 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 01:39:22,746 basehttp 157498 140044828980800 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 01:39:22,746 basehttp 157498 140044820588096 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 01:39:22,774 basehttp 157498 140044828980800 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 01:40:54,182 basehttp 157498 140044828980800 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 10:47:25,278 log 157498 140044828980800 Unauthorized: /api/users/me/
+WARNING 2025-05-21 10:47:25,279 log 157498 140044820588096 Unauthorized: /api/users/2/stores/
+WARNING 2025-05-21 10:47:25,279 basehttp 157498 140044828980800 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-21 10:47:25,279 basehttp 157498 140044820588096 "GET /api/users/2/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-21 10:47:25,285 log 157498 140044828980800 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 10:47:25,287 log 157498 140044820588096 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 10:47:25,287 basehttp 157498 140044820588096 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-21 10:47:25,287 basehttp 157498 140044828980800 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-21 10:47:25,310 log 157498 140044812195392 Unauthorized: /api/stores/4/orders/driver-deliveries/
+WARNING 2025-05-21 10:47:25,310 basehttp 157498 140044812195392 "GET /api/stores/4/orders/driver-deliveries/ HTTP/1.1" 401 172
+WARNING 2025-05-21 10:47:25,314 log 157498 140044812195392 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 10:47:25,314 basehttp 157498 140044812195392 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-21 10:47:26,547 log 157498 140044820588096 Unauthorized: /api/stores/4/orders/
+WARNING 2025-05-21 10:47:26,548 basehttp 157498 140044820588096 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 401 58
+WARNING 2025-05-21 10:47:26,553 log 157498 140044828980800 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 10:47:26,553 basehttp 157498 140044828980800 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-21 10:47:27,327 log 157498 140044812195392 Unauthorized: /api/stores/4/orders/driver-deliveries/
+WARNING 2025-05-21 10:47:27,327 basehttp 157498 140044812195392 "GET /api/stores/4/orders/driver-deliveries/ HTTP/1.1" 401 58
+WARNING 2025-05-21 10:47:27,332 log 157498 140044820588096 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 10:47:27,333 basehttp 157498 140044820588096 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-21 10:47:28,568 basehttp 157498 140044803802688 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-21 10:47:28,571 log 157498 140044828980800 Unauthorized: /api/logout/
+WARNING 2025-05-21 10:47:28,571 basehttp 157498 140044828980800 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-21 10:47:28,583 log 157498 140044812195392 Too Many Requests: /api/token/refresh/
+WARNING 2025-05-21 10:47:28,583 basehttp 157498 140044812195392 "POST /api/token/refresh/ HTTP/1.1" 429 69
+WARNING 2025-05-21 10:47:30,892 log 157498 140044820588096 Too Many Requests: /api/login/
+WARNING 2025-05-21 10:47:30,893 basehttp 157498 140044820588096 "POST /api/login/ HTTP/1.1" 429 69
+WARNING 2025-05-21 10:47:35,289 log 157498 140044828980800 Too Many Requests: /api/login/
+WARNING 2025-05-21 10:47:35,290 basehttp 157498 140044828980800 "POST /api/login/ HTTP/1.1" 429 69
+INFO 2025-05-21 10:48:32,200 basehttp 157498 140044812195392 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-21 10:48:32,210 basehttp 157498 140044812195392 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 10:48:32,298 basehttp 157498 140044812195392 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 10:54:49,568 autoreload 157498 140045010505728 /home/abright/Work/FarmFreight/backend/api/orders/views.py changed, reloading.
+INFO 2025-05-21 10:54:50,070 autoreload 163130 140364984000512 Watching for file changes with StatReloader
+INFO 2025-05-21 10:59:35,121 basehttp 163130 140364804044352 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 11:04:08,586 log 163130 140364804044352 Unauthorized: /api/stores/1/orders/driver-deliveries/
+WARNING 2025-05-21 11:04:08,587 basehttp 163130 140364804044352 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 401 172
+WARNING 2025-05-21 11:04:08,595 log 163130 140364804044352 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 11:04:08,595 basehttp 163130 140364804044352 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-21 11:04:20,123 basehttp 163130 140364804044352 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-21 11:04:20,138 basehttp 163130 140364804044352 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:04:20,225 basehttp 163130 140364804044352 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:04:36,910 basehttp 163130 140364804044352 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-21 11:04:39,187 basehttp 163130 140364804044352 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:06:39,358 basehttp 163130 140364804044352 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-21 11:06:39,358 basehttp 163130 140364795651648 "OPTIONS /api/users/2/stores/ HTTP/1.1" 200 0
+INFO 2025-05-21 11:06:39,370 basehttp 163130 140364787258944 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:06:39,374 basehttp 163130 140364778866240 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:06:39,394 basehttp 163130 140364804044352 "OPTIONS /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 0
+INFO 2025-05-21 11:06:39,458 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:06:50,461 basehttp 163130 140364795651648 "OPTIONS /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-21 11:06:50,494 basehttp 163130 140364787258944 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-21 11:07:11,132 basehttp 163130 140364787258944 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:07:11,136 basehttp 163130 140364778866240 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:07:11,236 basehttp 163130 140364787258944 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-21 11:07:19,282 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:07:22,323 basehttp 163130 140364787258944 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-21 11:08:23,530 basehttp 163130 140364787258944 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:08:23,536 basehttp 163130 140364778866240 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:08:23,627 basehttp 163130 140364787258944 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-21 11:08:27,146 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:08:51,112 basehttp 163130 140364787258944 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:08:51,116 basehttp 163130 140364778866240 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:08:51,163 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:09:36,637 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:09:38,722 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:09:43,488 basehttp 163130 140364787258944 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:09:43,498 basehttp 163130 140364787258944 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:09:43,566 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:10:25,978 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:10:50,293 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:10:52,559 basehttp 163130 140364778866240 "OPTIONS /api/stores/1/orders/3/delivery-attempts/3/ HTTP/1.1" 200 0
+WARNING 2025-05-21 11:10:52,567 log 163130 140364787258944 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/
+WARNING 2025-05-21 11:10:52,568 basehttp 163130 140364787258944 "PATCH /api/stores/1/orders/3/delivery-attempts/3/ HTTP/1.1" 400 58
+INFO 2025-05-21 11:11:06,947 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:11:08,389 basehttp 163130 140364778866240 "OPTIONS /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 200 0
+WARNING 2025-05-21 11:11:08,395 log 163130 140364787258944 Bad Request: /api/stores/1/orders/12/delivery-attempts/15/
+WARNING 2025-05-21 11:11:08,396 basehttp 163130 140364787258944 "PATCH /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 400 58
+INFO 2025-05-21 11:11:11,428 basehttp 163130 140364787258944 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:11:11,444 basehttp 163130 140364787258944 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:11:11,509 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 11:11:21,360 log 163130 140364787258944 Bad Request: /api/stores/1/orders/12/delivery-attempts/15/
+WARNING 2025-05-21 11:11:21,361 basehttp 163130 140364787258944 "PATCH /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 400 58
+INFO 2025-05-21 11:13:58,790 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:14:04,948 basehttp 163130 140364778866240 "OPTIONS /api/delivery-attempts/photos/ HTTP/1.1" 200 0
+WARNING 2025-05-21 11:14:04,962 log 163130 140364787258944 Not Found: /api/delivery-attempts/photos/
+WARNING 2025-05-21 11:14:04,962 basehttp 163130 140364787258944 "POST /api/delivery-attempts/photos/ HTTP/1.1" 404 29669
+INFO 2025-05-21 11:14:13,542 basehttp 163130 140364787258944 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:14:14,318 basehttp 163130 140364787258944 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:14:14,466 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 11:14:31,500 log 163130 140364787258944 Not Found: /api/delivery-attempts/photos/
+WARNING 2025-05-21 11:14:31,500 basehttp 163130 140364787258944 "POST /api/delivery-attempts/photos/ HTTP/1.1" 404 29669
+INFO 2025-05-21 11:15:29,781 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:15:34,689 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:15:54,577 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:15:58,315 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:16:06,176 basehttp 163130 140364787258944 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:16:06,178 basehttp 163130 140364778866240 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:16:10,512 basehttp 163130 140364787258944 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:16:17,997 basehttp 163130 140364795651648 "OPTIONS /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 200 0
+WARNING 2025-05-21 11:16:18,001 log 163130 140364787258944 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 11:16:18,001 basehttp 163130 140364787258944 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 11:17:45,427 autoreload 163130 140364984000512 /home/abright/Work/FarmFreight/backend/assignments/models.py changed, reloading.
+INFO 2025-05-21 11:17:45,921 autoreload 164586 140308474941440 Watching for file changes with StatReloader
+INFO 2025-05-21 11:18:37,568 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:18:40,603 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:19:05,688 basehttp 164586 140308294186560 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:19:05,693 basehttp 164586 140308285793856 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:19:11,123 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 11:19:17,671 log 164586 140308294186560 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 11:19:17,671 basehttp 164586 140308294186560 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+WARNING 2025-05-21 11:20:51,905 log 164586 140308294186560 Unauthorized: /api/stores/1/orders/driver-deliveries/
+WARNING 2025-05-21 11:20:51,906 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 401 172
+INFO 2025-05-21 11:20:51,939 basehttp 164586 140308277401152 "OPTIONS /api/token/refresh/ HTTP/1.1" 200 0
+WARNING 2025-05-21 11:20:51,973 log 164586 140308294186560 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 11:20:51,973 basehttp 164586 140308294186560 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-21 11:21:03,985 log 164586 140308294186560 Unauthorized: /api/stores/1/orders/driver-deliveries/
+WARNING 2025-05-21 11:21:03,986 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 401 58
+WARNING 2025-05-21 11:21:04,005 log 164586 140308294186560 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 11:21:04,005 basehttp 164586 140308294186560 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-21 11:21:14,091 basehttp 164586 140308277401152 "OPTIONS /api/login/ HTTP/1.1" 200 0
+INFO 2025-05-21 11:21:14,566 basehttp 164586 140308294186560 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-21 11:21:14,575 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:21:14,655 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:21:23,143 basehttp 164586 140308294186560 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:21:23,146 basehttp 164586 140308285793856 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:21:23,175 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:21:41,543 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:21:43,755 basehttp 164586 140308294186560 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:21:43,758 basehttp 164586 140308285793856 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:21:43,799 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:21:48,779 basehttp 164586 140308277401152 "OPTIONS /api/stores/1/orders/12/delivery-attempts/15/photos/ HTTP/1.1" 200 0
+WARNING 2025-05-21 11:21:48,782 log 164586 140308294186560 Bad Request: /api/stores/1/orders/12/delivery-attempts/15/photos/
+WARNING 2025-05-21 11:21:48,782 basehttp 164586 140308294186560 "POST /api/stores/1/orders/12/delivery-attempts/15/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 11:22:45,107 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:22:56,929 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:22:58,310 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:23:23,257 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:23:25,093 basehttp 164586 140308294186560 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:23:25,097 basehttp 164586 140308285793856 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:23:25,132 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:23:46,284 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:23:47,294 basehttp 164586 140308294186560 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:23:47,296 basehttp 164586 140308285793856 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:23:47,327 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 11:23:50,728 log 164586 140308294186560 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 11:23:50,728 basehttp 164586 140308294186560 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+WARNING 2025-05-21 11:24:33,999 log 164586 140308294186560 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 11:24:33,999 basehttp 164586 140308294186560 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 11:24:36,946 basehttp 164586 140308294186560 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:24:36,948 basehttp 164586 140308285793856 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:24:37,015 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:25:16,727 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:25:26,399 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:25:34,534 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 11:25:38,042 log 164586 140308294186560 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 11:25:38,043 basehttp 164586 140308294186560 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 11:27:03,506 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:27:08,003 basehttp 164586 140308294186560 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:27:08,005 basehttp 164586 140308285793856 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:27:08,054 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:28:20,753 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 11:28:45,017 basehttp 164586 140308294186560 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 11:28:45,020 basehttp 164586 140308285793856 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 11:28:45,067 basehttp 164586 140308294186560 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:42:05,609 log 164586 140308294186560 Unauthorized: /api/users/me/
+WARNING 2025-05-21 12:42:05,611 log 164586 140308285793856 Unauthorized: /api/users/2/stores/
+WARNING 2025-05-21 12:42:05,611 basehttp 164586 140308294186560 "GET /api/users/me/ HTTP/1.1" 401 172
+WARNING 2025-05-21 12:42:05,611 basehttp 164586 140308285793856 "GET /api/users/2/stores/ HTTP/1.1" 401 172
+WARNING 2025-05-21 12:42:05,640 log 164586 140308294186560 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 12:42:05,642 log 164586 140308285793856 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 12:42:05,642 basehttp 164586 140308294186560 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-21 12:42:05,642 basehttp 164586 140308285793856 "POST /api/token/refresh/ HTTP/1.1" 400 39
+WARNING 2025-05-21 12:42:05,670 log 164586 140308277401152 Unauthorized: /api/stores/1/orders/driver-deliveries/
+WARNING 2025-05-21 12:42:05,670 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 401 172
+WARNING 2025-05-21 12:42:05,677 log 164586 140308277401152 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 12:42:05,677 basehttp 164586 140308277401152 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-21 12:42:14,712 basehttp 164586 140308058732096 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+WARNING 2025-05-21 12:42:14,714 log 164586 140308294186560 Unauthorized: /api/logout/
+WARNING 2025-05-21 12:42:14,714 basehttp 164586 140308294186560 "POST /api/logout/ HTTP/1.1" 401 58
+WARNING 2025-05-21 12:42:14,721 log 164586 140308285793856 Bad Request: /api/token/refresh/
+WARNING 2025-05-21 12:42:14,722 basehttp 164586 140308285793856 "POST /api/token/refresh/ HTTP/1.1" 400 39
+INFO 2025-05-21 12:42:17,367 basehttp 164586 140308277401152 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-21 12:42:17,377 basehttp 164586 140308277401152 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:42:17,470 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:42:21,261 basehttp 164586 140308277401152 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:42:21,264 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:42:21,293 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:43:39,705 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:43:47,774 basehttp 164586 140308277401152 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:43:47,779 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:43:47,817 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:43:51,081 log 164586 140308277401152 Bad Request: /api/stores/1/orders/12/delivery-attempts/15/photos/
+WARNING 2025-05-21 12:43:51,082 basehttp 164586 140308277401152 "POST /api/stores/1/orders/12/delivery-attempts/15/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 12:44:41,057 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:44:42,807 basehttp 164586 140308277401152 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:44:42,811 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:44:42,850 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:44:46,040 log 164586 140308277401152 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 12:44:46,040 basehttp 164586 140308277401152 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 12:46:03,574 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:46:05,781 basehttp 164586 140308277401152 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:46:05,786 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:46:05,816 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:46:09,326 log 164586 140308277401152 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 12:46:09,327 basehttp 164586 140308277401152 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 12:47:09,915 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:47:12,614 basehttp 164586 140308277401152 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:47:12,619 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:47:12,671 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:47:16,047 log 164586 140308277401152 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 12:47:16,048 basehttp 164586 140308277401152 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 12:47:29,205 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:47:39,541 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:47:40,759 basehttp 164586 140308277401152 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:47:40,763 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:47:40,803 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:47:44,493 log 164586 140308277401152 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 12:47:44,493 basehttp 164586 140308277401152 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 12:49:42,748 basehttp 164586 140308277401152 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:49:42,751 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:49:42,790 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:49:45,887 log 164586 140308277401152 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 12:49:45,888 basehttp 164586 140308277401152 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 12:51:03,783 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:51:05,706 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:51:51,272 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:51:52,343 basehttp 164586 140308277401152 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:51:52,346 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:51:52,380 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:51:56,387 log 164586 140308277401152 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 12:51:56,388 basehttp 164586 140308277401152 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 12:52:18,923 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:52:21,287 basehttp 164586 140308277401152 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:52:21,289 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:52:21,326 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:52:25,130 log 164586 140308277401152 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 12:52:25,130 basehttp 164586 140308277401152 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 12:52:54,310 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:52:56,818 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:52:59,858 basehttp 164586 140308277401152 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:52:59,861 basehttp 164586 140308294186560 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:52:59,907 basehttp 164586 140308277401152 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 12:55:43,450 autoreload 164586 140308474941440 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-21 12:55:43,993 autoreload 167318 140589153808384 Watching for file changes with StatReloader
+INFO 2025-05-21 12:55:47,375 autoreload 167318 140589153808384 /home/abright/Work/FarmFreight/backend/project/settings.py changed, reloading.
+INFO 2025-05-21 12:55:47,917 autoreload 167337 139702731747328 Watching for file changes with StatReloader
+INFO 2025-05-21 12:55:50,652 autoreload 167341 140636774850560 Watching for file changes with StatReloader
+WARNING 2025-05-21 12:55:55,892 log 167341 140636594943552 Bad Request: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 12:55:55,893 basehttp 167341 140636594943552 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 400 46
+INFO 2025-05-21 12:57:20,546 autoreload 167341 140636774850560 /home/abright/Work/FarmFreight/backend/api/assignments/views.py changed, reloading.
+INFO 2025-05-21 12:57:21,020 autoreload 167426 140326122094592 Watching for file changes with StatReloader
+INFO 2025-05-21 12:57:55,405 autoreload 167426 140326122094592 /home/abright/Work/FarmFreight/backend/api/assignments/views.py changed, reloading.
+INFO 2025-05-21 12:57:55,894 autoreload 167687 139937648214016 Watching for file changes with StatReloader
+INFO 2025-05-21 12:58:00,535 basehttp 167687 139937470006848 "OPTIONS /api/login/ HTTP/1.1" 200 0
+WARNING 2025-05-21 12:58:00,982 log 167687 139937461614144 Bad Request: /api/login/
+WARNING 2025-05-21 12:58:00,983 basehttp 167687 139937461614144 "POST /api/login/ HTTP/1.1" 400 33
+INFO 2025-05-21 12:58:03,826 basehttp 167687 139937461614144 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-21 12:58:03,832 basehttp 167687 139937470006848 "OPTIONS /api/users/2/stores/ HTTP/1.1" 200 0
+INFO 2025-05-21 12:58:03,838 basehttp 167687 139937461614144 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:58:03,903 basehttp 167687 139937470006848 "OPTIONS /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 0
+INFO 2025-05-21 12:58:03,916 basehttp 167687 139937461614144 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:58:12,643 log 167687 139937461614144 Unsupported Media Type: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 12:58:12,643 basehttp 167687 139937461614144 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 415 68
+INFO 2025-05-21 12:58:43,231 basehttp 167687 139937461614144 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 12:58:43,237 basehttp 167687 139937470006848 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-21 12:58:43,257 basehttp 167687 139937461614144 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 12:58:47,422 basehttp 167687 139937461614144 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 12:59:00,869 log 167687 139937461614144 Unsupported Media Type: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 12:59:00,869 basehttp 167687 139937461614144 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 415 68
+INFO 2025-05-21 13:00:26,307 autoreload 168645 140240060985344 Watching for file changes with StatReloader
+WARNING 2025-05-21 13:00:29,616 log 168645 140239876126272 Unsupported Media Type: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 13:00:29,616 basehttp 168645 140239876126272 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 415 68
+INFO 2025-05-21 13:01:40,060 autoreload 168645 140240060985344 /home/abright/Work/FarmFreight/backend/api/assignments/views.py changed, reloading.
+INFO 2025-05-21 13:01:40,540 autoreload 168796 140318391058432 Watching for file changes with StatReloader
+INFO 2025-05-21 13:01:41,905 autoreload 168796 140318391058432 /home/abright/Work/FarmFreight/backend/api/assignments/views.py changed, reloading.
+INFO 2025-05-21 13:01:42,406 autoreload 168800 140627646763008 Watching for file changes with StatReloader
+INFO 2025-05-21 13:01:52,194 autoreload 168819 140631374016512 Watching for file changes with StatReloader
+INFO 2025-05-21 13:01:56,438 basehttp 168819 140631263983168 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 13:01:56,440 basehttp 168819 140631187912256 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:02:00,794 basehttp 168819 140631263983168 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+WARNING 2025-05-21 13:02:06,183 log 168819 140631263983168 Unsupported Media Type: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 13:02:06,183 basehttp 168819 140631263983168 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 415 68
+INFO 2025-05-21 13:05:11,010 basehttp 168819 140631263983168 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 13:05:11,017 basehttp 168819 140631187912256 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:05:11,102 basehttp 168819 140631263983168 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:05:16,406 basehttp 168819 140631263983168 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 13:05:16,410 basehttp 168819 140631187912256 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:05:16,470 basehttp 168819 140631263983168 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:05:21,886 basehttp 168819 140631187912256 "OPTIONS /api/users/2/stores/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:05:21,886 basehttp 168819 140631263983168 "OPTIONS /api/users/me/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:05:21,904 basehttp 168819 140631170078272 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 13:05:21,907 basehttp 168819 140631178470976 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:05:22,390 basehttp 168819 140631187912256 "OPTIONS /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:05:27,016 basehttp 168819 140631170078272 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:05:35,561 basehttp 168819 140631170078272 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 201 932
+INFO 2025-05-21 13:05:41,586 basehttp 168819 140631170078272 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 13:05:41,589 basehttp 168819 140631178470976 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:05:41,650 basehttp 168819 140631170078272 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:05:52,489 basehttp 168819 140631170078272 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 201 932
+WARNING 2025-05-21 13:06:26,171 log 168819 140631156454976 Unauthorized: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 13:06:26,172 basehttp 168819 140631156454976 "GET /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 401 19943
+WARNING 2025-05-21 13:06:27,979 log 168819 140631156454976 Not Found: /favicon.ico
+WARNING 2025-05-21 13:06:27,979 basehttp 168819 140631156454976 "GET /favicon.ico HTTP/1.1" 404 2525
+INFO 2025-05-21 13:07:04,155 basehttp 168819 140631170078272 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 13:07:04,157 basehttp 168819 140631178470976 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:07:09,413 basehttp 168819 140631170078272 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:07:09,438 basehttp 168819 140631263983168 "OPTIONS /api/logout/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:07:09,703 basehttp 168819 140631170078272 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-21 13:07:14,492 basehttp 168819 140631170078272 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-21 13:07:14,531 basehttp 168819 140631170078272 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:07:14,608 basehttp 168819 140631170078272 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:07:20,338 basehttp 168819 140631170078272 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 201 932
+INFO 2025-05-21 13:07:24,441 basehttp 168819 140631170078272 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 13:07:24,441 basehttp 168819 140631178470976 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:07:25,116 basehttp 168819 140631170078272 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:08:37,570 basehttp 168819 140631170078272 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 13:08:37,574 basehttp 168819 140631178470976 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:08:43,024 basehttp 168819 140631170078272 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:11:02,997 basehttp 168819 140631170078272 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:11:16,667 basehttp 168819 140631170078272 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:11:37,609 basehttp 168819 140631170078272 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:11:41,567 basehttp 168819 140631170078272 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:12:15,539 autoreload 169268 139822580576256 Watching for file changes with StatReloader
+INFO 2025-05-21 13:12:25,832 basehttp 169268 139822470051392 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-21 13:12:28,587 basehttp 169268 139822470051392 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-21 13:12:28,599 basehttp 169268 139822470051392 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:12:28,708 basehttp 169268 139822470051392 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:12:43,713 basehttp 169268 139822470051392 "POST /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 201 932
+INFO 2025-05-21 13:12:43,823 basehttp 169268 139822470051392 "PATCH /api/stores/1/orders/3/delivery-attempts/3/ HTTP/1.1" 200 321
+WARNING 2025-05-21 13:13:06,380 log 169268 139822387689024 Unauthorized: /api/stores/1/orders/3/delivery-attempts/3/photos/
+WARNING 2025-05-21 13:13:06,380 basehttp 169268 139822387689024 "GET /api/stores/1/orders/3/delivery-attempts/3/photos/ HTTP/1.1" 401 19943
+INFO 2025-05-21 13:13:58,026 basehttp 169268 139822470051392 "GET /api/users/me/ HTTP/1.1" 200 398
+INFO 2025-05-21 13:13:58,031 basehttp 169268 139822379296320 "GET /api/users/2/stores/ HTTP/1.1" 200 270
+INFO 2025-05-21 13:14:03,098 basehttp 169268 139822470051392 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:14:12,066 basehttp 169268 139822470051392 "POST /api/stores/1/orders/12/delivery-attempts/15/photos/ HTTP/1.1" 201 933
+ERROR 2025-05-21 13:14:12,102 log 169268 139822470051392 Internal Server Error: /api/stores/1/orders/12/delivery-attempts/15/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 203, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 142, in update
+    self.send_status_sms(instance, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 200, in send_status_sms
+    context = self.build_context_for_event(attempt, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 179, in build_context_for_event
+    print("BEFORE signed_url:", photo_qs[1].signed_url)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 452, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+ERROR 2025-05-21 13:14:12,104 basehttp 169268 139822470051392 "PATCH /api/stores/1/orders/12/delivery-attempts/15/ HTTP/1.1" 500 23718
+INFO 2025-05-21 13:14:22,594 basehttp 169268 139822470051392 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-21 13:14:25,323 basehttp 169268 139822470051392 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-21 13:14:27,657 basehttp 169268 139822470051392 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-21 13:14:27,665 basehttp 169268 139822369855040 "OPTIONS /api/users/1/stores/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:14:27,671 basehttp 169268 139822470051392 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-21 13:14:29,015 basehttp 169268 139822470051392 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-21 13:14:33,111 basehttp 169268 139822470051392 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:14:33,115 basehttp 169268 139822379296320 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-21 13:14:38,559 basehttp 169268 139822369855040 "OPTIONS /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-21 13:14:38,796 basehttp 169268 139822470051392 "GET /api/stores/4/orders/?store_id=4&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1800
+INFO 2025-05-21 13:14:46,376 basehttp 169268 139822470051392 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:14:46,382 basehttp 169268 139822379296320 "GET /api/users/1/stores/ HTTP/1.1" 200 535
+INFO 2025-05-21 13:14:51,859 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 0
+INFO 2025-05-21 13:14:52,013 basehttp 169268 139822470051392 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 595
+INFO 2025-05-21 13:14:56,161 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/7/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:14:56,192 basehttp 169268 139822470051392 "GET /api/stores/2/orders/7/delivery-attempts/ HTTP/1.1" 200 52
+INFO 2025-05-21 13:14:56,218 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/7/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:14:56,285 basehttp 169268 139822470051392 "GET /api/stores/2/orders/7/available-drivers/ HTTP/1.1" 200 404
+INFO 2025-05-21 13:14:59,506 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/7/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:14:59,521 basehttp 169268 139822470051392 "DELETE /api/stores/2/orders/7/ HTTP/1.1" 204 0
+INFO 2025-05-21 13:16:26,401 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:16:26,423 basehttp 169268 139822470051392 "POST /api/stores/2/orders/ HTTP/1.1" 201 911
+INFO 2025-05-21 13:16:26,447 basehttp 169268 139822470051392 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 641
+INFO 2025-05-21 13:16:29,723 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/13/delivery-attempts/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:16:29,733 basehttp 169268 139822470051392 "GET /api/stores/2/orders/13/delivery-attempts/ HTTP/1.1" 200 381
+INFO 2025-05-21 13:16:29,751 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/13/available-drivers/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:16:29,802 basehttp 169268 139822470051392 "GET /api/stores/2/orders/13/available-drivers/ HTTP/1.1" 200 404
+INFO 2025-05-21 13:16:39,582 basehttp 169268 139822369855040 "OPTIONS /api/users/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:16:39,590 basehttp 169268 139822470051392 "GET /api/users/ HTTP/1.1" 200 1666
+INFO 2025-05-21 13:16:44,829 basehttp 169268 139822369855040 "OPTIONS /api/users/2/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:16:44,846 basehttp 169268 139822470051392 "PATCH /api/users/2/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:16:46,082 basehttp 169268 139822470051392 "GET /api/users/ HTTP/1.1" 200 1668
+INFO 2025-05-21 13:16:47,820 basehttp 169268 139822470051392 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 641
+INFO 2025-05-21 13:16:48,966 basehttp 169268 139822470051392 "GET /api/stores/2/orders/13/delivery-attempts/ HTTP/1.1" 200 381
+INFO 2025-05-21 13:16:48,989 basehttp 169268 139822470051392 "GET /api/stores/2/orders/13/available-drivers/ HTTP/1.1" 200 805
+INFO 2025-05-21 13:16:55,714 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/13/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:16:55,743 basehttp 169268 139822470051392 "PUT /api/stores/2/orders/13/ HTTP/1.1" 200 911
+INFO 2025-05-21 13:16:55,756 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/13/delivery-attempts/16/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:16:55,793 basehttp 169268 139822470051392 "PUT /api/stores/2/orders/13/delivery-attempts/16/ HTTP/1.1" 200 334
+INFO 2025-05-21 13:16:55,864 basehttp 169268 139822470051392 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 669
+INFO 2025-05-21 13:16:58,349 basehttp 169268 139822470051392 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-21 13:17:01,541 basehttp 169268 139822470051392 "POST /api/login/ HTTP/1.1" 200 503
+INFO 2025-05-21 13:17:01,554 basehttp 169268 139822470051392 "GET /api/users/2/stores/ HTTP/1.1" 200 404
+INFO 2025-05-21 13:17:01,667 basehttp 169268 139822470051392 "GET /api/stores/1/orders/driver-deliveries/ HTTP/1.1" 200 1273
+INFO 2025-05-21 13:17:03,725 basehttp 169268 139822470051392 "GET /api/users/2/stores/ HTTP/1.1" 200 404
+INFO 2025-05-21 13:17:03,729 basehttp 169268 139822379296320 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:17:09,118 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:17:09,196 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:17:12,515 basehttp 169268 139822470051392 "PATCH /api/stores/2/orders/13/delivery-attempts/16/ HTTP/1.1" 200 334
+WARNING 2025-05-21 13:17:13,975 log 169268 139822470051392 Bad Request: /api/stores/2/orders/13/delivery-attempts/16/
+WARNING 2025-05-21 13:17:13,976 basehttp 169268 139822470051392 "PATCH /api/stores/2/orders/13/delivery-attempts/16/ HTTP/1.1" 400 72
+INFO 2025-05-21 13:19:16,779 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:19:19,475 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:19:48,797 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:20:28,038 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:20:30,114 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:20:45,680 basehttp 169268 139822470051392 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:20:45,684 basehttp 169268 139822387689024 "GET /api/users/2/stores/ HTTP/1.1" 200 404
+INFO 2025-05-21 13:20:45,743 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:21:24,726 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:21:29,228 basehttp 169268 139822470051392 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:21:29,233 basehttp 169268 139822387689024 "GET /api/users/2/stores/ HTTP/1.1" 200 404
+INFO 2025-05-21 13:21:29,293 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:23:01,353 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:23:42,353 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:23:46,485 basehttp 169268 139822470051392 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:23:46,492 basehttp 169268 139822387689024 "GET /api/users/2/stores/ HTTP/1.1" 200 404
+INFO 2025-05-21 13:23:46,544 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 714
+INFO 2025-05-21 13:24:05,457 basehttp 169268 139822470051392 "PATCH /api/stores/2/orders/13/delivery-attempts/16/ HTTP/1.1" 200 325
+INFO 2025-05-21 13:24:41,819 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 705
+INFO 2025-05-21 13:24:44,939 basehttp 169268 139822470051392 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:24:44,942 basehttp 169268 139822387689024 "GET /api/users/2/stores/ HTTP/1.1" 200 404
+INFO 2025-05-21 13:24:45,018 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 705
+INFO 2025-05-21 13:24:50,635 basehttp 169268 139822470051392 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 656
+INFO 2025-05-21 13:25:00,679 basehttp 169268 139822470051392 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:25:00,685 basehttp 169268 139822387689024 "GET /api/users/2/stores/ HTTP/1.1" 200 404
+INFO 2025-05-21 13:25:05,810 basehttp 169268 139822470051392 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 656
+INFO 2025-05-21 13:25:46,180 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 705
+INFO 2025-05-21 13:25:50,137 basehttp 169268 139822470051392 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 656
+INFO 2025-05-21 13:25:58,037 basehttp 169268 139822470051392 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 705
+INFO 2025-05-21 13:26:01,278 basehttp 169268 139822369855040 "OPTIONS /api/stores/2/orders/13/delivery-attempts/16/photos/ HTTP/1.1" 200 0
+INFO 2025-05-21 13:26:01,844 basehttp 169268 139822470051392 "POST /api/stores/2/orders/13/delivery-attempts/16/photos/ HTTP/1.1" 201 933
+ERROR 2025-05-21 13:26:01,904 log 169268 139822470051392 Internal Server Error: /api/stores/2/orders/13/delivery-attempts/16/
+Traceback (most recent call last):
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 82, in partial_update
+    return self.update(request, *args, **kwargs)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 68, in update
+    self.perform_update(serializer)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 78, in perform_update
+    serializer.save()
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 203, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 142, in update
+    self.send_status_sms(instance, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 200, in send_status_sms
+    context = self.build_context_for_event(attempt, event_type)
+  File "/home/abright/Work/FarmFreight/backend/api/assignments/serializers.py", line 179, in build_context_for_event
+    print("BEFORE signed_url:", photo_qs[1].signed_url)
+  File "/home/abright/Work/FarmFreight/backend/venv/lib/python3.10/site-packages/django/db/models/query.py", line 452, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+ERROR 2025-05-21 13:26:01,905 basehttp 169268 139822470051392 "PATCH /api/stores/2/orders/13/delivery-attempts/16/ HTTP/1.1" 500 23718
+INFO 2025-05-21 13:28:03,662 autoreload 169268 139822580576256 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-05-21 13:28:04,170 autoreload 169950 139763798560768 Watching for file changes with StatReloader
+INFO 2025-05-21 13:28:07,595 autoreload 169950 139763798560768 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-05-21 13:28:08,099 autoreload 169968 140539588571136 Watching for file changes with StatReloader
+INFO 2025-05-21 13:28:09,446 autoreload 169968 140539588571136 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-05-21 13:28:09,923 autoreload 169973 140580791828480 Watching for file changes with StatReloader
+INFO 2025-05-21 13:29:08,101 autoreload 169973 140580791828480 /home/abright/Work/FarmFreight/backend/api/assignments/serializers.py changed, reloading.
+INFO 2025-05-21 13:29:08,609 autoreload 170026 140490538799104 Watching for file changes with StatReloader
+INFO 2025-05-21 13:29:12,088 basehttp 170026 140490360534592 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:29:12,089 basehttp 170026 140490352141888 "GET /api/users/2/stores/ HTTP/1.1" 200 404
+INFO 2025-05-21 13:29:12,101 basehttp 170026 140490352141888 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 705
+INFO 2025-05-21 13:29:18,606 basehttp 170026 140490352141888 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 656
+INFO 2025-05-21 13:29:19,110 basehttp 170026 140490352141888 "GET /api/stores/2/orders/driver-deliveries/ HTTP/1.1" 200 705
+INFO 2025-05-21 13:31:06,827 basehttp 170026 140490352141888 "POST /api/logout/ HTTP/1.1" 200 31
+INFO 2025-05-21 13:31:17,521 basehttp 170026 140490352141888 "POST /api/login/ HTTP/1.1" 200 498
+INFO 2025-05-21 13:31:17,531 basehttp 170026 140490352141888 "GET /api/users/1/stores/ HTTP/1.1" 200 537
+INFO 2025-05-21 13:31:18,783 basehttp 170026 140490352141888 "GET /api/stores/1/orders/?store_id=1&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 1193
+INFO 2025-05-21 13:31:20,524 basehttp 170026 140490352141888 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:31:20,528 basehttp 170026 140490360534592 "GET /api/users/1/stores/ HTTP/1.1" 200 537
+INFO 2025-05-21 13:31:20,570 basehttp 170026 140490352141888 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 656
+INFO 2025-05-21 13:31:22,233 basehttp 170026 140490352141888 "GET /api/stores/2/orders/13/delivery-attempts/ HTTP/1.1" 200 377
+INFO 2025-05-21 13:31:22,258 basehttp 170026 140490352141888 "GET /api/stores/2/orders/13/available-drivers/ HTTP/1.1" 200 805
+INFO 2025-05-21 13:31:27,546 basehttp 170026 140490352141888 "PUT /api/stores/2/orders/13/ HTTP/1.1" 200 922
+INFO 2025-05-21 13:31:27,561 basehttp 170026 140490352141888 "PUT /api/stores/2/orders/13/delivery-attempts/16/ HTTP/1.1" 200 328
+INFO 2025-05-21 13:31:27,619 basehttp 170026 140490352141888 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 659
+INFO 2025-05-21 13:31:28,860 basehttp 170026 140490352141888 "GET /api/stores/2/orders/13/delivery-attempts/ HTTP/1.1" 200 380
+INFO 2025-05-21 13:31:28,886 basehttp 170026 140490352141888 "GET /api/stores/2/orders/13/available-drivers/ HTTP/1.1" 200 805
+INFO 2025-05-21 13:31:35,114 basehttp 170026 140490352141888 "PUT /api/stores/2/orders/13/ HTTP/1.1" 200 928
+INFO 2025-05-21 13:31:35,129 basehttp 170026 140490352141888 "PUT /api/stores/2/orders/13/delivery-attempts/16/ HTTP/1.1" 200 328
+INFO 2025-05-21 13:31:35,196 basehttp 170026 140490352141888 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 659
+INFO 2025-05-21 13:31:36,887 basehttp 170026 140490352141888 "GET /api/stores/2/orders/13/delivery-attempts/ HTTP/1.1" 200 380
+INFO 2025-05-21 13:31:36,905 basehttp 170026 140490352141888 "GET /api/stores/2/orders/13/available-drivers/ HTTP/1.1" 200 805
+INFO 2025-05-21 13:32:01,596 basehttp 170026 140490352141888 "PUT /api/stores/2/orders/13/ HTTP/1.1" 200 928
+INFO 2025-05-21 13:32:01,610 basehttp 170026 140490352141888 "PUT /api/stores/2/orders/13/delivery-attempts/16/ HTTP/1.1" 200 328
+INFO 2025-05-21 13:32:01,690 basehttp 170026 140490352141888 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 659
+INFO 2025-05-21 13:32:04,862 basehttp 170026 140490352141888 "GET /api/users/me/ HTTP/1.1" 200 400
+INFO 2025-05-21 13:32:04,869 basehttp 170026 140490360534592 "GET /api/users/1/stores/ HTTP/1.1" 200 537
+INFO 2025-05-21 13:32:04,911 basehttp 170026 140490352141888 "GET /api/stores/2/orders/?store_id=2&page=1&page_size=20&ordering=-creation_date HTTP/1.1" 200 659
+INFO 2025-05-21 13:32:09,075 basehttp 170026 140490352141888 "GET /api/stores/2/orders/13/delivery-attempts/ HTTP/1.1" 200 380
+INFO 2025-05-21 13:32:09,098 basehttp 170026 140490352141888 "GET /api/stores/2/orders/13/available-drivers/ HTTP/1.1" 200 805

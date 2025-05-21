@@ -170,29 +170,32 @@ class DeliveryAttemptSerializer(serializers.ModelSerializer):
             photo_qs = attempt.photos.all()
             if photo_qs.exists():
                 links = []
-                print("DEBUG setting is:", settings.DEBUG)
+
                 if settings.DEBUG:
                     domain = "https://localhost:8000"
                 else:
                     domain = getattr(settings, "DELIVERY_LINK_DOMAIN", "https://your-production-domain.com")
 
-                print("BEFORE signed_url:", photo_qs[1].signed_url)
-                print("BEFORE signed_url_expiry:", photo_qs[1].signed_url_expiry)
+                # SAFELY handle photo_qs[1] access
+                photo_qs_list = list(photo_qs)
+                if len(photo_qs_list) > 1:
+                    print("BEFORE signed_url:", photo_qs_list[1].signed_url)
+                    print("BEFORE signed_url_expiry:", photo_qs_list[1].signed_url_expiry)
 
-                for photo in photo_qs:
+                for photo in photo_qs_list:
                     if not photo.signed_url or not photo.signed_url_expiry or photo.signed_url_expiry < timezone.now():
                         photo.create_signed_url(expiration_minutes=2880)
 
                     short_link = f"{domain}/p/{photo.id}"
                     links.append(short_link)
 
-                print("AFTER signed_url:", photo_qs[1].signed_url)
+                if len(photo_qs_list) > 1:
+                    print("AFTER signed_url:", photo_qs_list[1].signed_url)
 
                 context["photo_links"] = "\n".join(links)
             else:
                 context["photo_links"] = "No delivery photos available."
 
-        return context
 
             
     def send_status_sms(self, attempt, event_type):

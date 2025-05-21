@@ -7,6 +7,8 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from orders.models import Order
 
+from rest_framework.parsers import MultiPartParser, FormParser
+
 class DeliveryAttemptViewSet(viewsets.ModelViewSet):
     queryset = DeliveryAttempt.objects.all()
     serializer_class = DeliveryAttemptSerializer
@@ -35,9 +37,14 @@ class DeliveryPhotoViewSet(viewsets.ModelViewSet):
     queryset = DeliveryPhoto.objects.all()
     serializer_class = DeliveryPhotoSerializer
     http_method_names = ['post', 'get']
+    parser_classes = [MultiPartParser, FormParser]
+
 
     def create(self, request, *args, **kwargs):
         # Detect list of files (bulk upload)
+        print("FILES: ", request.FILES)
+        print("DATA: ", request.data)
+
         images = request.FILES.getlist('images')  # key: "images"
         delivery_attempt_id = request.data.get('delivery_attempt')
         caption = request.data.get('caption', '')

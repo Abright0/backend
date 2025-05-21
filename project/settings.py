@@ -184,7 +184,12 @@ REST_FRAMEWORK = {
         'user': '140/minute',     # authenticated users
         'reset': '60/hour',       # custom - for password resets
         'verify': '3/hour',      # custom - for SMS verification
-    }
+    },
+        'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+        'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser',  # <-- Add this
+    ],
 
 }
 
