@@ -33,7 +33,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 GS_BUCKET_NAME = 'farm-freight'
 
-SPECIFIC_DOMAIN = 'dlfarmhome.com'
+# SPECIFIC_DOMAIN = 'dlfarmhome.com'
 
 # Define the path to your service account key file
 

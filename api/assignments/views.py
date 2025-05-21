@@ -31,7 +31,6 @@ class ScheduledItemViewSet(viewsets.ModelViewSet):
     serializer_class = ScheduledItemSerializer
     permission_classes = [AllowAny]  # or IsAuthenticated
 
-
 class DeliveryPhotoViewSet(viewsets.ModelViewSet):
     queryset = DeliveryPhoto.objects.all()
     serializer_class = DeliveryPhotoSerializer

@@ -11,9 +11,11 @@ from django_filters.rest_framework import DjangoFilterBackend
 from orders.models import Order, OrderItem
 from products.models import Product
 from stores.models import Store
-from .serializers import OrderSerializer, OrderDetailSerializer
+from .serializers import OrderSerializer, OrderDetailSerializer, OrderItemSerializer
 from assignments.models import DeliveryAttempt
 from api.accounts.serializers import UserSerializer 
+from api.assignments.serializers import DeliveryAttemptSerializer
+
 
 class OrderViewSet(viewsets.ModelViewSet):
     """
@@ -268,7 +270,47 @@ class OrderViewSet(viewsets.ModelViewSet):
         except Store.DoesNotExist:
             return Response({'detail': 'Store not found'}, status=status.HTTP_404_NOT_FOUND)
         except Exception as e:
-            # ✅ Log actual error
+            # Log actual error
             import traceback
             print('Error in available_drivers:', traceback.format_exc())
             return Response({'detail': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+    @action(detail=False, methods=['get'], url_path='driver-deliveries')
+    def driver_deliveries(self, request, store_pk=None, *args, **kwargs):
+        user = request.user
+        store_id = store_pk or self.kwargs.get("store_pk")
+
+        if not user.is_driver:
+            return Response({"error": "User is not a driver."}, status=status.HTTP_403_FORBIDDEN)
+        if not store_id:
+            return Response({"error": "Missing store_id"}, status=status.HTTP_400_BAD_REQUEST)
+
+        attempts = DeliveryAttempt.objects.filter(
+            drivers=user,
+            order__store_id=store_id
+        ).select_related("order").prefetch_related("order__items").order_by("delivery_date", "delivery_time")
+
+        page = self.paginate_queryset(attempts)
+        if page is not None:
+            data = self._enrich_with_order_data(page)
+            return self.get_paginated_response(data)
+
+        data = self._enrich_with_order_data(attempts)
+        return Response(data)
+
+    def _enrich_with_order_data(self, attempts):
+        enriched = []
+        for attempt in attempts:
+            base = DeliveryAttemptSerializer(attempt).data
+            order = attempt.order
+            base["invoice_num"] = order.invoice_num
+            base["first_name"] = order.first_name
+            base["last_name"] = order.last_name
+            base["address"] = order.address
+            base["phone_num"] = order.phone_num
+            base["customer_email"] = order.customer_email
+            base["customer_num"] = order.customer_num
+            base["notes"] = order.notes
+            base["items"] = OrderItemSerializer(order.items.all(), many=True).data
+            enriched.append(base)
+        return enriched
